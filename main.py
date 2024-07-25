@@ -7,42 +7,61 @@ def clean_text(text):
     # Tisztítsuk meg a szöveget az illegális karakterektől
     return ''.join(c if c.isprintable() else '' for c in text)
 
-def extract_author_from_pdf(pdf_path):
+def extract_information_from_pdf(pdf_path):
     with open(pdf_path, 'rb') as file:
         reader = PyPDF2.PdfReader(file)
         number_of_pages = len(reader.pages)
         text = ''
-        for page_number in range(number_of_pages):
+        for page_number in range(1, number_of_pages):  # Start from the second page (index 1)
             page = reader.pages[page_number]
             text += page.extract_text()
 
     # Tisztítsuk meg a kinyert szöveget
     text = clean_text(text)
 
-    # Extract author information using "Candidat" and clean up unwanted parts
+    general_info = {
+        "Szerző": "",
+        "Irányító tanár (ok)": "",
+        "Év": ""
+    }
+
+    # Extract author information
     author_match = re.search(r'Candidat\s*[:\-]?\s*([A-Za-záéíóöőúüűÁÉÍÓÖŐÚÜŰ\s]+)', text, re.IGNORECASE)
     if author_match:
         author = author_match.group(1).strip()
-        # Remove any trailing non-name text like "Anul absolvirii"
         author = re.sub(r'\s*Anul\s*absolvirii\s*', '', author).strip()
-        return author
+        general_info["Szerző"] = author
 
-    return ""
+    # Extract supervisor information
+    supervisor_match = re.search(r'(?:Coordonator\s*științific|Irányító\s*tanár)\s*[:\-]?\s*([A-Za-záéíóöőúüűÁÉÍÓÖŐÚÜŰ\s\.\-]+)', text, re.IGNORECASE)
+    if supervisor_match:
+        supervisor = supervisor_match.group(1).strip()
+        # Remove any unwanted text that might be trailing after the name
+        supervisor = re.sub(r'\s*Candidat.*', '', supervisor).strip()
+        general_info["Irányító tanár (ok)"] = supervisor
 
-def process_pdfs_for_authors(pdf_dir):
+    # Extract year information
+    year_match = re.search(r'Anul\s*absolvirii\s*[:\-]?\s*(\d{4})', text, re.IGNORECASE)
+    if year_match:
+        year = year_match.group(1).strip()
+        general_info["Év"] = year
+
+    return general_info
+
+def process_pdfs(pdf_dir):
     data = []
     for root, dirs, files in os.walk(pdf_dir):
         for file in files:
             if file.endswith('.pdf'):
                 pdf_path = os.path.join(root, file)
-                author = extract_author_from_pdf(pdf_path)
-                data.append({"Szerző": author})
+                info = extract_information_from_pdf(pdf_path)
+                data.append(info)
 
     df = pd.DataFrame(data)
     return df
 
 # Process the PDFs in the 'szamteches' directory
-szamteches_df = process_pdfs_for_authors('szamteches')
+szamteches_df = process_pdfs('szamteches')
 
 # Save the extracted information to an Excel file
-szamteches_df.to_excel('szamteches_authors_extracted.xlsx', index=False)
+szamteches_df.to_excel('szamteches_info_extracted.xlsx', index=False)
