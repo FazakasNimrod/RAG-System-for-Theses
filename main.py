@@ -4,7 +4,7 @@ import re
 import os
 
 def clean_text(text):
-    # Tisztítsuk meg a szöveget az illegális karakterektől
+    # Remove any non-printable characters from the text
     return ''.join(c if c.isprintable() else '' for c in text)
 
 def extract_information_from_pdf(pdf_path):
@@ -12,7 +12,8 @@ def extract_information_from_pdf(pdf_path):
         reader = PyPDF2.PdfReader(file)
         number_of_pages = len(reader.pages)
         text = ''
-        for page_number in range(1, number_of_pages):  # Start from the second page (index 1)
+        # Start from the second page (index 1)
+        for page_number in range(1, number_of_pages):  
             page = reader.pages[page_number]
             text += page.extract_text()
 
@@ -22,7 +23,8 @@ def extract_information_from_pdf(pdf_path):
     general_info = {
         "Szerző": "",
         "Irányító tanár (ok)": "",
-        "Év": ""
+        "Év": "",
+        "Kivonat": ""
     }
 
     # Extract author information
@@ -45,6 +47,12 @@ def extract_information_from_pdf(pdf_path):
     if year_match:
         year = year_match.group(1).strip()
         general_info["Év"] = year
+
+    # Extract abstract information
+    abstract_match = re.search(r'Kivonat\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|(?:Kulcsszavak|Keywords|1\.\s*BEVEZETÉS|$))', text, re.IGNORECASE)
+    if abstract_match:
+        abstract = abstract_match.group(1).strip()
+        general_info["Kivonat"] = abstract
 
     return general_info
 
