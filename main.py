@@ -17,14 +17,15 @@ def extract_information_from_pdf(pdf_path):
             page = reader.pages[page_number]
             text += page.extract_text()
 
-    # Tisztítsuk meg a kinyert szöveget
+    # Clean the extracted text
     text = clean_text(text)
 
     general_info = {
         "Szerző": "",
         "Irányító tanár (ok)": "",
         "Év": "",
-        "Kivonat": ""
+        "Kivonat": "",
+        "Kulcsszavak": ""
     }
 
     # Extract author information
@@ -53,6 +54,13 @@ def extract_information_from_pdf(pdf_path):
     if abstract_match:
         abstract = abstract_match.group(1).strip()
         general_info["Kivonat"] = abstract
+
+    # Extract keywords information
+    keywords_match = re.search(r'(?:Kulcsszavak|Keywords)\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|\n|(?:1\.\s*BEVEZETÉS|$)|\s*(?:[A-Z]{1}\.\s*|(?:Abstract|KIVONAT|1\.\s*BEVEZETÉS|$)|\s*Abstrac))', text, re.IGNORECASE)
+    if keywords_match:
+        keywords = keywords_match.group(1).strip()
+        keywords = re.sub(r'\s*[\n\r]+\s*', ', ', keywords)  # Replace line breaks with comma
+        general_info["Kulcsszavak"] = keywords
 
     return general_info
 
