@@ -24,7 +24,8 @@ def extract_information_from_pdf(pdf_path):
         "Szerző": "",
         "Irányító tanár (ok)": "",
         "Év": "",
-        "Kivonat": "",
+        "Kivonat (magyar)": "",
+        "Kivonat (angol)": "",
         "Kulcsszavak": ""
     }
 
@@ -49,11 +50,17 @@ def extract_information_from_pdf(pdf_path):
         year = year_match.group(1).strip()
         general_info["Év"] = year
 
-    # Extract abstract information
-    abstract_match = re.search(r'Kivonat\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|(?:Kulcsszavak|Keywords|1\.\s*BEVEZETÉS|$))', text, re.IGNORECASE)
-    if abstract_match:
-        abstract = abstract_match.group(1).strip()
-        general_info["Kivonat"] = abstract
+    # Extract Hungarian abstract information
+    hungarian_abstract_match = re.search(r'Kivonat\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|(?:Kulcsszavak|Keywords|1\.\s*BEVEZETÉS|$))', text, re.IGNORECASE)
+    if hungarian_abstract_match:
+        hungarian_abstract = hungarian_abstract_match.group(1).strip()
+        general_info["Kivonat (magyar)"] = hungarian_abstract
+
+    # Extract English abstract information
+    english_abstract_match = re.search(r'Abstract\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|(?:Keywords|Kulcsszavak|1\.\s*INTRODUCTION|$))', text, re.IGNORECASE)
+    if english_abstract_match:
+        english_abstract = english_abstract_match.group(1).strip()
+        general_info["Kivonat (angol)"] = english_abstract
 
     # Extract keywords information
     keywords_match = re.search(r'(?:Kulcsszavak|Keywords)\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|\n|(?:1\.\s*BEVEZETÉS|$)|\s*(?:[A-Z]{1}\.\s*|(?:Abstract|KIVONAT|1\.\s*BEVEZETÉS|$)|\s*Abstrac))', text, re.IGNORECASE)
