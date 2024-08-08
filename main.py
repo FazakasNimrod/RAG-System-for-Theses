@@ -26,7 +26,8 @@ def extract_information_from_pdf(pdf_path):
         "Év": "",
         "Kivonat (magyar)": "",
         "Kivonat (angol)": "",
-        "Kulcsszavak": ""
+        "Kulcsszavak (magyar)": "",
+        "Kulcsszavak (angol)": ""
     }
 
     # Extract author information
@@ -62,12 +63,19 @@ def extract_information_from_pdf(pdf_path):
         english_abstract = english_abstract_match.group(1).strip()
         general_info["Kivonat (angol)"] = english_abstract
 
-    # Extract keywords information
-    keywords_match = re.search(r'(?:Kulcsszavak|Keywords)\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|\n|(?:1\.\s*BEVEZETÉS|$)|\s*(?:[A-Z]{1}\.\s*|(?:Abstract|KIVONAT|1\.\s*BEVEZETÉS|$)|\s*Abstrac))', text, re.IGNORECASE)
-    if keywords_match:
-        keywords = keywords_match.group(1).strip()
-        keywords = re.sub(r'\s*[\n\r]+\s*', ', ', keywords)  # Replace line breaks with comma
-        general_info["Kulcsszavak"] = keywords
+    # Extract Hungarian keywords information
+    hungarian_keywords_match = re.search(r'Kulcsszavak\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|(?:1\.\s*BEVEZETÉS|$)|\s*(?:[A-Z]{1}\.\s*|(?:Abstract|KIVONAT|1\.\s*BEVEZETÉS|$)|\s*Abstrac))', text, re.IGNORECASE)
+    if hungarian_keywords_match:
+        hungarian_keywords = hungarian_keywords_match.group(1).strip()
+        hungarian_keywords = re.sub(r'\s*[\n\r]+\s*', ', ', hungarian_keywords)  # Replace line breaks with comma
+        general_info["Kulcsszavak (magyar)"] = hungarian_keywords
+
+    # Extract English keywords information
+    english_keywords_match = re.search(r'Keywords\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|\n|(?:\b[1-9]\b|Tartalomjegyzék))', text, re.IGNORECASE)
+    if english_keywords_match:
+        english_keywords = english_keywords_match.group(1).strip()
+        english_keywords = re.sub(r'\s*[\n\r]+\s*', ', ', english_keywords)  # Replace line breaks with comma
+        general_info["Kulcsszavak (angol)"] = english_keywords
 
     return general_info
 
