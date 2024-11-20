@@ -1,5 +1,5 @@
-import PyPDF2
-import pandas as pd
+import PyPDF2 # type: ignore
+import pandas as pd # type: ignore
 import re
 import os
 
