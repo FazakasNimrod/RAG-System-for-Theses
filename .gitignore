@@ -3,3 +3,4 @@ __pycache__/
 .DS_Store
 backend/elasticsearch/
 backend/scripts/pdf_docs/
+.env
