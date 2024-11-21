@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, g
 from elasticsearch import Elasticsearch
 from dotenv import load_dotenv
 import os
+from routes import search_routes
 
 # Load environment variables
 load_dotenv()
@@ -19,43 +20,13 @@ es = Elasticsearch(
 # Initialize Flask app
 app = Flask(__name__)
 
-@app.route('/search', methods=['GET'])
-def search():
-    """
-    Search API for querying Elasticsearch.
-    Supports filtering by year, sorting by year, and highlighting matches.
-    """
-    query = request.args.get('q', '')  # Search query
-    year = request.args.get('year')   # Optional filter by year
-    sort_order = request.args.get('sort', 'desc')  # Optional sort order, default is 'desc'
+# Register the routes
+app.register_blueprint(search_routes, url_prefix='/search')
 
-    # Build the search query
-    search_query = {
-        "query": {
-            "bool": {
-                "must": {
-                    "multi_match": {
-                        "query": query,
-                        "fields": ["abstract", "keywords^2", "author"]  # Boost 'keywords' with ^2
-                    }
-                },
-                "filter": [{"term": {"year": int(year)}}] if year else []  # Add year filter if provided
-            }
-        },
-        "sort": [{"year": {"order": sort_order}}],  # Sort by year
-        "highlight": {
-            "fields": {
-                "abstract": {},  # Highlight matches in the abstract
-                "keywords": {}   # Highlight matches in keywords
-            }
-        }
-    }
-
-    # Execute the query
-    response = es.search(index="theses", body=search_query)
-
-    # Return hits with highlighting (if available)
-    return jsonify(response['hits']['hits'])
+# Store the es connection in the app context
+@app.before_request
+def before_request():
+    g.es = es  # Store Elasticsearch connection in the 'g' object
 
 # Start the Flask server
 if __name__ == '__main__':
