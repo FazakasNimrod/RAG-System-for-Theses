@@ -1,0 +1,45 @@
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.result-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.result-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.result-abstract {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.result-keywords {
+    font-size: 14px;
+    color: #777;
+}

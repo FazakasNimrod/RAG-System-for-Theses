@@ -1,4 +1,5 @@
 import React from "react";
+import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
   if (!results) {

@@ -3,6 +3,7 @@ import SearchBar from "../components/SearchBar";
 import ResultsList from "../components/ResultsList";
 import { searchElasticsearch } from "../services/elasticsearchService";
 
+
 const SearchPage = () => {
   const [results, setResults] = useState([]);
 
