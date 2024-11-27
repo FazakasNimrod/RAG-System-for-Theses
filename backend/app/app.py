@@ -1,4 +1,5 @@
 from flask import Flask, g
+from flask_cors import CORS
 from elasticsearch import Elasticsearch
 from dotenv import load_dotenv
 import os
@@ -19,6 +20,9 @@ es = Elasticsearch(
 
 # Initialize Flask app
 app = Flask(__name__)
+
+# Enable CORS for all routes
+CORS(app)
 
 # Register the routes
 app.register_blueprint(search_routes, url_prefix='/search')
