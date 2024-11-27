@@ -4,3 +4,4 @@ __pycache__/
 backend/elasticsearch/
 backend/scripts/pdf_docs/
 .env
+frontend/node_modules/
