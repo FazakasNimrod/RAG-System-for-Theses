@@ -3,40 +3,46 @@ import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
   if (!results) {
-    return <p>An error occurred while fetching results.</p>;
+    return <p className="error-message">An error occurred while fetching results.</p>;
   }
 
   if (results.length === 0) {
-    return <p>No results found.</p>;
+    return <p className="no-results">No results found.</p>;
   }
 
   return (
-    <ul>
-      {results.map((result) => {
-        const { _id, _source, highlight } = result;
-        const { abstract, author, keywords, year } = _source;
+    <div className="result-lists">
+      <ul className="result-items">
+        {results.map((result) => {
+          const { _id, _source, highlight } = result;
+          const { abstract, author, keywords, year } = _source;
 
-        return (
-          <li key={_id}>
-            <h3>
-              {author} ({year})
-            </h3>
-            <p>
-              <strong>Abstract:</strong>{" "}
-              {highlight?.abstract
-                ? highlight.abstract.join(" ")
-                : abstract}
-            </p>
-            <p>
-              <strong>Keywords:</strong>{" "}
-              {highlight?.keywords
-                ? highlight.keywords.join(", ")
-                : keywords.join(", ")}
-            </p>
-          </li>
-        );
-      })}
-    </ul>
+          return (
+            <li key={_id} className="result-item">
+              <h3 className="result-author">
+                {author} ({year})
+              </h3>
+              <p className="result-abstract">
+                <strong>Abstract:</strong>{" "}
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: highlight?.abstract
+                      ? highlight.abstract.join(" ")
+                      : abstract,
+                  }}
+                />
+              </p>
+              <p className="result-keywords">
+                <strong>Keywords:</strong>{" "}
+                {highlight?.keywords
+                  ? highlight.keywords.join(", ")
+                  : keywords.join(", ")}
+              </p>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 };
 

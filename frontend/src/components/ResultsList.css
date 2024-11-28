@@ -1,45 +1,94 @@
-.results-list {
+.result-lists {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px auto;
+    align-items: center;
+    justify-content: flex-start;
     max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 480px;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.no-results {
-    text-align: center;
-    font-size: 18px;
-    color: #666;
+.result-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
-.result-card {
+.result-item {
     background-color: white;
-    padding: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
 }
 
-.result-card:hover {
+.result-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
-.result-title {
-    font-size: 20px;
+.result-lists em {
     font-weight: bold;
-    margin: 0 0 10px;
+    color: #008000;
+}
+
+.result-author {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
     color: #333;
 }
 
-.result-abstract {
+.result-abstract,
+.result-keywords {
     font-size: 16px;
     color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     line-height: 1.5;
 }
 
-.result-keywords {
-    font-size: 14px;
-    color: #777;
+.error-message,
+.no-results {
+    font-size: 16px;
+    color: #999;
+    text-align: center;
+    padding: 20px;
+}
+
+.result-lists::-webkit-scrollbar {
+    width: 8px;
+}
+
+.result-lists::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.result-lists::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.result-lists::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+    .result-lists {
+        height: 300px;
+        padding: 10px;
+    }
+
+    .result-item {
+        padding: 10px;
+    }
 }
