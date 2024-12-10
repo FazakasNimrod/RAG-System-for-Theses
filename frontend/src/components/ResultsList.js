@@ -2,6 +2,7 @@ import React from "react";
 import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
+  // Early return for empty results or error
   if (!results) {
     return <p className="error-message">An error occurred while fetching results.</p>;
   }
@@ -9,6 +10,11 @@ const ResultsList = ({ results }) => {
   if (results.length === 0) {
     return <p className="no-results">No results found.</p>;
   }
+
+  const handleGoToPDF = (_id) => {
+    // Open the PDF in a new tab
+    window.open(`http://localhost:5000/${_id}`, "_blank");
+  };
 
   return (
     <div className="result-lists">
@@ -38,6 +44,9 @@ const ResultsList = ({ results }) => {
                   ? highlight.keywords.join(", ")
                   : keywords.join(", ")}
               </p>
+              <button onClick={() => handleGoToPDF(_id)}>
+                Go to PDF
+              </button>
             </li>
           );
         })}
