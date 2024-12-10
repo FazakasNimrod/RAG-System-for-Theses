@@ -17,8 +17,8 @@ es = Elasticsearch(
 with open("theses.json", "r") as f:
     theses_data = json.load(f)
 
-# Index each document
-for thesis in theses_data:
-    es.index(index="theses", document=thesis)
+# Index each document with an explicit ID
+for i, thesis in enumerate(theses_data, start=1):
+    es.index(index="theses", id=i, document=thesis)
 
-print("Data indexed successfully.")
+print("Data indexed successfully with explicit IDs.")

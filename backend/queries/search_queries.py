@@ -24,4 +24,10 @@ search_query = {
 }
 
 response = es.search(index="theses", body=search_query)
-print(response)
+
+# Extract and print document IDs and their content
+for hit in response['hits']['hits']:
+    doc_id = hit['_id']
+    source = hit['_source']
+    print(f"Document ID: {doc_id}")
+    print(f"Document Content: {source}\n")

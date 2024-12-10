@@ -3,51 +3,44 @@ import json
 # Data for the theses
 theses = [
     {
+        "author": "Ambrus Barna",
+        "year": 2023,
+        "abstract": (
+            "This paper describes in detail a system and its architecture for managing direction change and braking signals on scooters and bicycle s, using a sensor with an accelerometer and gyroscope on the back of the hand. The project aims to provide a solution for direction signals on the crank without removing the hand from the handlebars, thus avoiding the resulting accidents. The user is able to indicate a change of direction by gestures such as turning the hand sideways, so that it is not necessary to take the hand completely off the steering wheel, thus maintaining the balance of the vehicle. Brake signals are automatic as a result of acceler ation sensing. The system uses two microcontrollers (ESP32 and ESP8266), one of which processes the sensor data, while the other runs a web server and lights the corresponding LEDs. The web server is responsible for the communication between the microcontr ollers and also runs a web page that acts as a user interface. On the web page, active signals such as turn signals and brake signals are displayed and can be switched on and off. Communication between the different components is wireless using WiFi techno logy."
+        ),
+        "keywords": ["microcontroller", "WiFi", "gyroscope", "accelerometer"]
+    },
+    {
         "author": "Bacs Bernat",
         "year": 2023,
         "abstract": (
-            "This thesis presents the implementation of a smart home control system. The system mainly performs home automation tasks such as temperature control, "
-            "watering of plants and automatic movement of shutter, thus facilitating the user's daily life. Nowadays, IoT devices are playing an increasingly "
-            "important role for people, and we can't imagine our lives without them. Since most people have an internet connection at home, building such an IoT system is easier, "
-            "cheaper and more efficient because there is no need for wires to communicate between devices. The system I developed and built consists of a central computer "
-            "with a touch screen display connected to it, where you can follow and intervene in the automation processes, you can see statistics about the temperature in the room, "
-            "for example. Several sensors are connected to this central part via Bluetooth or MQTT communication protocols, which provide data and perform the automation tasks. "
-            "In my thesis I document the design and construction of this system in detail, illustrating each part with diagrams."
+            "This thesis presents the implementation of a smart home control system. The system mainly performs home automation tasks such as temperature control, watering of plants and automatic movement of shutter , thus facilitating the user's daily life. Nowadays, IoT devices are playing an increasingly important role for people, and we can't imagine our lives without them. Since most  people have an internet connection at home, building such an IoT system is easier, cheaper and more efficient because there is no need for wires to communicate between devices.   The system I developed and built consists of a central computer with a touch screen display connected to it, where you can follow and intervene in the automation processes, you can see statistics about the temperature in the room, for example. Several sensors are connected to this central part via Bluetooth or MQTT communication pr otocols, which provide data and perform the automation tasks. In my thesis I document the design and construction of this system in detail, illustrating each part with diagrams."
         ),
         "keywords": ["IoT", "Home-automation", "Raspberry Pi", "MQTT"]
     },
     {
-        "author": "Kovacs Anna",
-        "year": 2022,
+        "author": "Bako Jozsef",
+        "year": 2023,
         "abstract": (
-            "This thesis explores the development of a machine learning model for predicting stock prices. The model uses historical stock data and various technical indicators "
-            "to make predictions. The goal is to provide investors with a tool that can help them make more informed decisions. The thesis covers the data collection process, "
-            "feature engineering, model selection, and evaluation. The results show that the model can achieve a reasonable level of accuracy, although there are limitations "
-            "due to the inherent unpredictability of the stock market."
+            "Measuring temperature has always played an important role in human life due to the curiosity of it’s nature. With the advance of the world and the temperatures measuring technologies, this taskhas become a trivial problem, regardless of what we measure the temperature of. The scope of this project is to create a heat follower robot and a mobile application for controlling it, which identifies the temperature extremes in a closed area and approaches it, as well. As for the app, my aim is to establish a Bluetooth connection between this and the robot and show a picture of it’s view to the user. Also, I want it to make manual control possible."
         ),
-        "keywords": ["Machine Learning", "Stock Prediction", "Data Science", "Python"]
+        "keywords": ["temperature measurement", "bluetooth", "application", "robot control"]
     },
     {
-        "author": "Nagy Peter",
-        "year": 2021,
+        "author": "Balint Adolf",
+        "year": 2023,
         "abstract": (
-            "This thesis investigates the use of blockchain technology in supply chain management. The study focuses on how blockchain can enhance transparency, security, and "
-            "efficiency in supply chains. The research includes a detailed analysis of existing supply chain issues and how blockchain can address these problems. A prototype "
-            "blockchain-based supply chain system is developed and tested to demonstrate the potential benefits. The findings suggest that blockchain can significantly improve "
-            "supply chain operations, although there are challenges related to scalability and integration with existing systems."
+            "The  topic  of  my  paper  is  documenting  and  tracking  the  game  of  backgammon  game  in  which  I  dealt  with  game  programming,  image  processing,  and  real-time  game  tracking  of  game  progres.  Backgammon  and  image  processing  cover  two  areas  of  particular  interest  to  me..  The  Romanian  Backgammon  Federation  organizes  various  national  and  international  competitions,  where tracking and automatic arbitration are of particular interest.  The  Python  programming  language  allows  for  the  creation  of  virtual  versions  of  backgammon,  which  gives  the  game  a  new  dimension  by  interactively  playing  it  on  the  computer .  The  goal  of  game  programming  was  to  enable  two  players  to  compete  against  each  other  on  the  computer  and record the game for later replay .  OpenCV  (Open  Source  Computer  Vision  Library)  is  a  popular  library  used  in  image  processing.  With  its  help,  the  computer  can  recognize  shapes  and  process  images,  allowing  for  capturing  the  sequential  playing  positions.  My  goal  in  the  field  of  image  processing,  was  to  extract  still  frames  from a video and identify the position of pieces, thus tracking the game's progress.  Therefore,  my  objective  was  to  create  an  application  by  combining  Python  and  OpenCV  that  automatically  evaluates  the  board  game.The  software  to  be  made  must  recognize  the  positions  of  pieces and tracks the players' moves, allowing for virtual gameplay between two individuals."
         ),
-        "keywords": ["Blockchain", "Supply Chain", "Transparency", "Security"]
+        "keywords": ["backgammon", "image processing", "OpenCV", "Python"]
     },
     {
-        "author": "Szabo Maria",
-        "year": 2020,
+        "author": "Bocsardi Andras",
+        "year": 2023,
         "abstract": (
-            "This thesis examines the impact of social media on mental health. The research aims to understand how different aspects of social media usage, such as time spent online "
-            "and the type of content consumed, affect mental well-being. The study involves a survey of social media users and an analysis of the collected data. The results indicate "
-            "that excessive use of social media can lead to negative mental health outcomes, such as anxiety and depression. The thesis also discusses potential strategies for mitigating "
-            "these effects, including digital detox and promoting positive online interactions."
+            "The topic of this thesis is the classification of brain tumours using convolutionalneural networks. In the first half of the paper, I will describe neural networks basedon  the  literature,  starting  from  simple  M-P  neurons  to  convolutional  neuralnetworks, covering their structure and their training. In the second half of thepaper, I present three models I developed that classified brain tumours into fourgroups with an accuracy of over 85%. The first model I implemented was a simpleconvolutional neural network. With the second model I achieved only moderateperformance  improvements  by  changing  the  architecture  and  preventingoverfitting. For both models I tuned the hyperparameters. The best performingmodel was the third one, implemented with transfer learning and using VGG16 asthe base model. This model achieved the best accuracy (96%). In developing thethree models, I used methods to continuously improve the performance of neuralnetworks  by  understanding  the  different  mechanisms  of  action.  The  model  Ideveloped  could  form  the  basis  for  an  application  that  provides  practicingradiologists with rapid preclassification in seconds, making their job easier."
         ),
-        "keywords": ["Social Media", "Mental Health", "Anxiety", "Depression"]
+        "keywords": ["convolutional neural networks", "brain tumor", "classification", "keras"]
     }
 ]
 
