@@ -5,3 +5,4 @@ backend/elasticsearch/
 backend/scripts/pdf_docs/
 .env
 frontend/node_modules/
+.vscode/

@@ -1,0 +1,243 @@
+[
+    {
+        "author": "Ambrus Barna",
+        "supervisor": "Ș.l.dr.ing. Turos László-Zsolt",
+        "year": "2023",
+        "abstract": "This paper describes in detail a system and its architecture for managing direction change and\nbraking signals on scooters and bicycles, using a sensor with an accelerometer and gyroscope on\nthe back of the hand. The project aims to provide a solution for direction signals on the crank\nwithout removing the hand from the handlebars, thus avoiding the resulting accidents. The user is\nable to indicate a change of direction by gestures such as turning the hand sideways, so that it is\nnot necessary to take the hand completely off the steering wheel, thus maintaining the balance of\nthe vehicle. Brake signals are automatic as a result of acceleration sensing. The system uses two\nmicrocontrollers (ESP32 and ESP8266), one of which processes the sensor data, while the other\nruns a web server and lights the corresponding LEDs. The web server is responsible for the\ncommunication between the microcontrollers and also runs a web page that acts as a user interface.\nOn the web page, active signals such as turn signals and brake signals are displayed and can be\nswitched on and off. Communication between the different components is wireless using WiFi\ntechnology.",
+        "keywords": [
+            "microcontroller",
+            "WiFi",
+            "gyroscope",
+            "accelerometer"
+        ]
+    },
+    {
+        "author": "Bács Bernát",
+        "supervisor": "Conf. dr. ing. Kutasi Dénes Nimród,, Ș.l. dr. ing. Szabó László Zsolt",
+        "year": "2023",
+        "abstract": "This thesis presents the implementation of a smart home control system. The system mainly\nperforms home automation tasks such as temperature control, watering of plants and automatic\nmovement of shutter, thus facilitating the user's daily life. Nowadays, IoT devices are playing an\nincreasingly important role for people, and we can't imagine our lives without them. Since most\npeople have an internet connection at home, building such an IoT system is easier, cheaper and\nmore efficient because there is no need for wires to communicate between devices.\nThe system I developed and built consists of a central computer with a touch screen display\nconnected to it, where you can follow and intervene in the automation processes, you can see\nstatistics about the temperature in the room, for example. Several sensors are connected to this\ncentral part via Bluetooth or MQTT communication protocols, which provide data and perform\nthe automation tasks. In my thesis I document the design and construction of this system in detail,\nillustrating each part with diagrams.",
+        "keywords": [
+            "IoT",
+            "Home-automation",
+            "Raspberry Pi",
+            "MQTT"
+        ]
+    },
+    {
+        "author": "Bakó József",
+        "supervisor": "Conf. dr. ing. Bakó László",
+        "year": "2023",
+        "abstract": "Measuring temperature has always played an important role in human life due to the\ncuriosity of it’s nature. With the advance of the world and the temperatures measuring\ntechnologies, this task has become a trivial problem, regardless of what we measure the\ntemperature of.\nThe scope of this project is to create a heat follower robot and a mobile application for\ncontrolling it, which identifies the temperature extremes in a closed area and approaches it, as\nwell. As for the app, my aim is to establish a Bluetooth connection between this and the robot\nand show a picture of it’s view to the user. Also, I want it to make manual control possible.",
+        "keywords": [
+            "temperature measurement",
+            "bluetooth",
+            "application",
+            "robot control."
+        ]
+    },
+    {
+        "author": "Bocsárdi András-Levente",
+        "supervisor": "Prof. dr. ing. habil. Szilágyi László",
+        "year": "2023",
+        "abstract": "The topic of this thesis is the classification of brain tumours using convolutional\nneural networks. In the first half of the paper, I will describe neural networks based\non the literature, starting from simple M-P neurons to convolutional neural\nnetworks, covering their structure and their training. In the second half of the\npaper, I present three models I developed that classified brain tumours into four\ngroups with an accuracy of over 85%. The first model I implemented was a simple\nconvolutional neural network. With the second model I achieved only moderate\nperformance improvements by changing the architecture and preventing\noverfitting. For both models I tuned the hyperparameters. The best performing\nmodel was the third one, implemented with transfer learning and using VGG16 as\nthe base model. This model achieved the best accuracy (96%). In developing the\nthree models, I used methods to continuously improve the performance of neural\nnetworks by understanding the different mechanisms of action. The model I\ndeveloped could form the basis for an application that provides practicing\nradiologists with rapid preclassification in seconds, making their job easier.",
+        "keywords": []
+    },
+    {
+        "author": "Bálint Adolf",
+        "supervisor": "Conf. dr. ing. Lefkovits László",
+        "year": "2023",
+        "abstract": "The topic of my paper is documenting and tracking the game of backgammon game in\nwhich I dealt with game programming, image processing, and real-time game tracking of game\nprogres. Backgammon and image processing cover two areas of particular interest to me.. The\nRomanian Backgammon Federation organizes various national and international competitions,\nwhere tracking and automatic arbitration are of particular interest.\nThe Python programming language allows for the creation of virtual versions of backgammon,\nwhich gives the game a new dimension by interactively playing it on the computer. The goal of\ngame programming was to enable two players to compete against each other on the computer\nand record the game for later replay.\nOpenCV (Open Source Computer Vision Library) is a popular library used in image processing.\nWith its help, the computer can recognize shapes and process images, allowing for capturing the\nsequential playing positions. My goal in the field of image processing, was to extract still frames\nfrom a video and identify the position of pieces, thus tracking the game's progress.\nTherefore, my objective was to create an application by combining Python and OpenCV that\nautomatically evaluates the board game.The software to be made must recognize the positions of\npieces and tracks the players' moves, allowing for virtual gameplay between two individuals.",
+        "keywords": [
+            "backgammon",
+            "image processing",
+            "OpenCV",
+            "Python"
+        ]
+    },
+    {
+        "author": "Csiki Krisztina",
+        "supervisor": "Șef. lucr. Dr. ing. Turos László-Zsolt",
+        "year": "2023",
+        "abstract": "Nowadays, using sensors has become so popular that we do not even notice how easy it is\nfor us to measure the world around us. Today we have the possibility and the technology to\nmeasure the physical, chemical and the biological characteristics of the world around us.\nThe goal of my thesis was to build a scalable system for sensors, created with the help of\nan Arduino, which helps in the integration of new sensors in the system for users, who may face\na challenge when integrating a new sensor in an environment with Arduino and microcontrollers.\nAt the beginning I had to create a text-based protocol, written with ASCII code, which\nprovides for the user an interface for dynamic configuration of the sensors and for the collective\ndata forwarding.\nSeveral different sensors have been integrated into the sensor system, with which it is\npossible to measure different physical quantities and monitor changes in values, but also an\ninterface for the collected data.\nFor the better understanding of the real-time data collected by the sensors with the help of\nthe Arduino I have also created a desktop application,, through which the real-time data\nmeasured by the sensors connected to the Arduino can be displayed, and it is also possible to\nsave and review the data. The communication between the application and the sensors is realized\nby serial communication.\nI designed the application to be used for laboratory purposes.",
+        "keywords": [
+            "Arduino",
+            "protocol",
+            "sensors",
+            "desktop application"
+        ]
+    },
+    {
+        "author": "Czimbalmos Ákos",
+        "supervisor": "Ș.l.dr.ing Turos László-Zsolt",
+        "year": "2023",
+        "abstract": "The purpose of the document Wireless Sensor Networks Modelling is to demonstrate the\nuse of routing protocols in the design and operation of networks. Routing protocols play a key\nrole in the selection and routing of data packets to reach their destination through the network.\nRouting protocols are based on different algorithms, which have different characteristics and\noperating principles. The aim of this documentation is to create a model to visualise the\napplication of routing protocols, the propagation of packets and the evaluation of data. It also\nprovides a means to compare the performance and efficiency of different routing protocols.\nRouting protocols are critical to the operation of wireless networks. A thorough understanding of\nthe algorithms and their implementations will allow for a better understanding of the operation of\nnetworks, the detection of potential failures, and efficient planning, optimisation and operation.\nThe documentation helps to understand the operation, advantages and limitations of different\nrouting protocols, and helps to simulate networks by providing detailed code for simulations\nwritten in the OMNeT++ framework. Three routing protocols are described, a data-centric one\n(Gossiping), a hierarchical one (LEACH) and a location-based one (GAF), their comparison,\nconclusions drawn and the performance and efficiency of the routing protocols under study.",
+        "keywords": [
+            "network",
+            "protocol",
+            "routing 1."
+        ]
+    },
+    {
+        "author": "Dénes Loránd",
+        "supervisor": "Dr. Szilágyi László",
+        "year": "2023",
+        "abstract": "A significant proportion of biological phenomena can be traced back to genetics,\nwhich is based on gene sequences. Decoding these gene sequences represents a\nsubstantial challenge in the field of biological sciences. According to a bold estimate, this\ntask could potentially engage the scientific community for the next five hundred years.\nThe aim of my thesis is to implement a simple gene sequence classification\nalgorithm and integrate this algorithm into a software, equipped with a graphical user\ninterface. This may represent a small step toward the solution of decoding gene\nsequences.\nThis implemented algorithm performs classification based on similarity data from\ngene sequence pairs within a larger sequence dataset. This methodology allows us to\nsimultaneously process large amount of protein sequences and grouping these sequences\nbased on their similarity. This is made possible by working with sparse matrices which\neliminates unnecessary operations, such as addition and multiplication with zero. At the\nsame time, this method has significant memory efficiency, because we only store the\nnone zero values.\nThis method treats the input sequence dataset as a graph. Each protein is assigned\na node within the graph, and the initial edges between the nodes are received as input\ndata from the SCOP95 database. These values were created using the BLAST algorithm\nand they’re form a sparse matrix. This algorithm is a modified form of Markov\nclustering, in which the two main operations, inflation and expansion, work against each\nother. Connected subgraphs remaining in the equilibrium state, defining the final result of\nthe clustering. The main parameter of the algorithm is the inflation rate, which\ndetermines how much the algorithm separates groups from each other.\nThe graphical user interface provides the opportunity to perform the classification\non the 11,944-element SCOP95 dataset or on its subparts, using various settings and can\ndisplay these resulting protein groups. Furthermore, from any group, we can select two\nsequences and observe the results of their alignment, which is implemented using the\nNeedleman-Wunsch algorithm.\nThe algorithm could process up to one million protein sequences in a few hours,\nbut unfortunately an appropriate real dataset was not available for this purpose.",
+        "keywords": [
+            "Markov clustering",
+            "graph",
+            "sparse matrix",
+            "efficient algorithm",
+            "bioinformatics",
+            "protein sequence"
+        ]
+    },
+    {
+        "author": "Gergely Zsolt",
+        "supervisor": "Conf. dr. Antal Margit",
+        "year": "2023",
+        "abstract": "The topic of my thesis is the design and implementation of a system that makes the management\nof events of university open days easier and more transparent for both the organizers and participants.\nUniversity open days are an annual event aimed at promoting the university among high school\nstudents and providing insight into its operation for those interested. This is an extremely important\nprocess because an outsider can really only get a deeper look into university life here before deciding\nto apply. There are several tasks involved in organizing an event, such as managing information\nrelated to the event and participants, which are slow and cumbersome to solve with traditional\nmethods, hence the need for a system that makes the whole process more effortless and faster.\nThe aim of my thesis is to create a system that offers solutions to the aforementioned problems,\nusing the advantages of two modern frameworks. My system makes it more accessible to transfer\ninformation related to events, save participant related data, and create statistics from the existing\ndataset for the organizers.\nThe system consists of three parts. I implemented the mobile application using the Flutter\nframework, which must be installed on users' phones and is platform-independent. Here, depending\non their role, users can register, create new events, modify existing events, sign up for events, and\ngenerate statistics. In the background, a Spring Boot application runs, which provides access to the\ndata stored in the database and processes and saves the data generated by the mobile application.\nThe third part is the cloud-based storage provided by Firebase, where I store the images, and the\nMySQL relational database, where I store all other data.",
+        "keywords": [
+            "platform-independent",
+            "mobile application",
+            "Flutter",
+            "Spring Boot",
+            "event."
+        ]
+    },
+    {
+        "author": "Horváth Levente",
+        "supervisor": "Ș.l. dr.ing. Fehér Áron",
+        "year": "2023",
+        "abstract": "The aim of this work is to implement a low cost, easily accessible digital sound effect unit.\nThe project involves the study of digital signal processing theory, algorithm design and\ndevelopment, and hardware implementation. In the first phase, the studied effects were tested\nunder Python with pre-sampled raw guitar sound files. In the second phase, the algorithms were\ntested on a self-developed multimedia system with an STM32G491 microcontroller using\nartificially generated and synthesized signals. The quality of the effects was tested using both\nobjective and subjective methods.",
+        "keywords": [
+            "digital signal processing",
+            "sound effects",
+            "ARM programming",
+            "Python simulation"
+        ]
+    },
+    {
+        "author": "Kántor Zsuzsa-Krisztina",
+        "supervisor": "Prof. Dr. Ing. Dávid László",
+        "year": "2023",
+        "abstract": "Today, diagnostic methods in medicine are constantly evolving, and we can now apply\ntechniques that were unimaginable before. Among the new possibilities and technological\nchallenges, I aim to find solutions that can help us recognize and treat common cardiovascular\ndiseases more effectively, thereby preventing premature or avoidable deaths.\nThe main goal of my research is to develop new and advanced diagnostic systems specifically\nfocused on the characteristics of cardiovascular diseases. These systems would enable more\naccurate and efficient diagnoses during the identification and treatment of these diseases. The\nfoundation of my approach is the utilization of electrocardiography (ECG) signals in medicine.\nThese signals provide precise and detailed information about the heart's electrical activity,\nmaking it possible to detect various heart diseases or other abnormalities.\nThe first step involves preprocessing the signals, applying filtering and other normalization\ntechniques. Then, I create an RGB color-channel image, a spectrogram. The spectrogram is a\nvisual representation that shows the frequency spectrum of the signal over time. Different shades\nof color in the channels indicate the intensity of the frequencies, making it easier to analyze the\nstructure and changes of the signal. This process helps extract essential information from the\nsignals and reduces distortions caused by noise.\nThese images serve as the input dataset for my deep learning-based training software, whose\nmain task is to recognize four specific diseases. Therefore, my system will be able to identify\npatterns or subtle details that are not visible to the human eye, providing more accurate diagnoses\nfor people. This can significantly contribute to improving healthcare outcomes and enhancing the\nquality of life.",
+        "keywords": [
+            "deep learning",
+            "cardiovascular diseases",
+            "spectrogram",
+            "signal filtering",
+            "disease diagnosis."
+        ]
+    },
+    {
+        "author": "Katona Andrea Izabella",
+        "supervisor": "Conf. dr. ing. Domokos József",
+        "year": "2023",
+        "abstract": "People have always been interested in robots. We often meet robots, not only in science,\nbut also in various areas of life. Although we used to think of human-robot interaction as science\nfiction (e.g. R2D2 from the movie Star Wars), nowadays it has become more and more a reality.\nSince people's natural communication is through speech, it is not difficult to imagine\ncontrol through speech. Voice control is an exciting topic that allows robots to be controlled by\nvoice commands. There are different methods for this, however, research is still ongoing in the\nfield. This branch of science can lead to many exciting realizations and applications in all areas of\nlife (science, entertainment, industry, etc.).\nThe purpose of my work is to present the advantages and potential of voice control in\ncontrolling mobile robots. To this end, I will present an implementation that allows controlling a\nrobot in a simulation environment as well as a physical robot with voice commands. Further on,\nyou can read about the detailed implementation, the technologies used, as well as the results of the\nmeasurements, conclusions and further development possibilities.",
+        "keywords": [
+            "mobile robots",
+            "voice control"
+        ]
+    },
+    {
+        "author": "Körmöci Csaba",
+        "supervisor": "Dr. Kátai Zoltán,, conferențiar universitar",
+        "year": "2023",
+        "abstract": "As cryptocurrencies have become more and more widespread these days, cryptocurrency\nsites and applications have become more popular. It is vital to have tools and platforms that\nallow trading cryptocurrencies. In the crypto world, these are the decentralised exchanges. These\nare platforms or applications that allow cryptocurrencies to be exchanged directly between each\nother without the need for an intermediary. In addition, decentralised exchanges provide a way to\nsupply liquidity to the system. At the same time, they also allow liquidity to be withdrawn.\nBased on this information, the aim of my thesis is to develop a mobile application that\nallows users to exchange cryptocurrencies on both Android and iOS. Note that we do not allow\nusers to buy cryptocurrencies, only to exchange them.\nIn creating my thesis, I needed to learn about the technologies, different principles and\nsolutions that make a decentralised exchange possible. These included different blockchain\ntechnologies, smart contracts and the main functionalities of decentralised exchanges.",
+        "keywords": [
+            "decentralized exchange",
+            "smart contract",
+            "crypto",
+            "blockchain"
+        ]
+    },
+    {
+        "author": "Kristóf István-Levente",
+        "supervisor": "Dr. Kátai Zoltán",
+        "year": "2022",
+        "abstract": "Nowadays, IT has become one of the fastest growing industries. We often hear about new\ntechnologies every month or even every week. For recent graduates from academic institutions to\nsucceed in such a dynamic and fast growing environment, it is essential that they have mastered\nthe basics of programming during their studies. One of the basic concepts that can give\nuniversity students a lot of headaches is recursion.\nThe aim of this paper and the accompanying visualisation software is to serve as an educational\ntool for those who wish to gain a deeper understanding of the phenomenon of recursion. The user\nis given the opportunity to visualise different recursive functions using the software. Unlike the\nusual visualization tools, this application uses the method of stairs to visualize the depth of\nrecursion.\nThe presented software can be useful not only for students who want to learn, but also for\nall those who want to explore the phenomenon of recursion by observing interesting patterns in\nvisualizations.\n7",
+        "keywords": []
+    },
+    {
+        "author": "Nüszl Richárd-István",
+        "supervisor": "Dr. Szabó László Zsolt",
+        "year": "2023",
+        "abstract": "The topic of the project is to develop a web application that connects students, companies, and\nuniversities during their internships. The goal is to develop a user-friendly platform capable of\nmanaging the entire process related to internships.\nOne of the major objectives of the project is for the application to function as a\nprofessional-oriented social platform for students and companies, thereby facilitating the\ndevelopment of professional relationships and nurturing partnerships between companies and\nuniversities.\nAnother important objective of the project is to provide students with recommendations\non the platform based on their profiles and fields of study. This allows them to find relevant\nopportunities in the field of internships. The algorithms of my recommendation system, using\ntechniques like Cosine Similarity, consider the students' skills, interests, and the requirements set\nby the companies. Thus, the platform helps students find the most suitable internship positions,\noptimizing the related processes and ensuring the effectiveness of the internships.\nTo develop the project, I am using modern web technologies such as Angular, Java\nSpring Boot, PostgreSQL, and AWS. These technologies help make the platform robust, scalable,\nsecure, and fast.",
+        "keywords": [
+            "Internship",
+            "Recommendation System",
+            "Cosine Similarity",
+            "Angular",
+            "Spring Boot"
+        ]
+    },
+    {
+        "author": "Pál Andor",
+        "supervisor": "Dr. Szabó László Zsolt",
+        "year": "2023",
+        "abstract": "The aim of the thesis is to design and develop a web application that digitises the\nchoice of subjects for the diploma. A solution was needed that would help and facilitate\nthe work of the university committee and students in the diploma topic selection process.\nOur objectives included the development of a web application that could handle a\nlarge number of data and users and could be easily used by anyone. The application\nshould meet all university requirements and could be further developed on request. Be\nsecure and ensure that the application is maintainable.\nThe objectives have been achieved in all areas. A web application has been developed\nthat secretaries can log into and create periods and invite teachers and students to the\nsystem. Teachers can upload their degree topics and students can apply for them. And\nguests can view the diploma topics they have created.\nA wide range of technologies have been used in the development. Most prominent are\nthe frontend and backend frameworks. Using Angular and Spring to boot I was able to\ndevelopahighlyscalableandsecurewebapplication. UsingPostgreSQLdatabasetostore\ndata and testing frameworks and applications Cypress and Postman for maintainability.",
+        "keywords": []
+    },
+    {
+        "author": "Rigmányi Zsombor",
+        "supervisor": "Prof. Dr. Habil. Szilágyi László",
+        "year": "2023",
+        "abstract": "The aim of this thesis is to classify chest X-rays to detect the presence of pneumonia.\nA convolutional neural network was used to achieve a more accurate classification. Our\ngoal was to develop an efficient classifier, which is a neural network created by our own\nmodel, or a neural network with GoogleNet architecture, trained for our own purposes\nusing “transfer learning” technique.\nOur research methodology was based on studying existing solutions, conducting our\nown experiments and collecting data. We applied the transfer learning technique to the\nGoogleNet architecture, which is a pre-trained large model, thus improving the classi-\nfication accuracy. Data collection was performed using chest X-rays of pneumonia and\nasymptomatic cases.\nBased on the results, we were able to develop a graphical user interface that allows\nautomaticclassificationofchestradiographsanddiagnosisofpneumonia. Theneuralnet-\nwork with GoogleNet architecture achieved outstanding accuracy on the tested dataset,\nand compared to our own classification network, produced significantly better results,\nsimilar to the results of the networks studied in the literature.\nBased on these results, we conclude that a well-written neural network interoperating\nwith the GoogleNet architecture can effectively detect pneumonia based on chest X-ray.\nThis research could contribute to the improvement of medical diagnostics, helping early\ndetection and more effective treatment.",
+        "keywords": [
+            "chest X-ray",
+            "classification",
+            "convolutional neural network",
+            "transfer learn- ing",
+            "GoogleNet architecture"
+        ]
+    },
+    {
+        "author": "Soós Izabella",
+        "supervisor": "Conf. dr. ing. Bakó László",
+        "year": "2023",
+        "abstract": "In human life, one of the most important and valuable things is time. In today's fast-paced\nworld, events have become so accelerated that it is truly challenging to keep them under control\nand manage our time effectively. To save time, numerous smart devices and systems have\nemerged, making people's lives easier. We can even say that we are living in the era of smart\nsystems.\nMy thesis’ topic encompasses such a system. It helps us not only to save time, but also\nrelieves us from a responsibility. This modern and innovative solution allows us to take care of\nour plants in the best possible way while minimizing the tasks of plant care and maximizing the\nhealth and beauty of our flowers. It assists in maintaining the plants in optimal condition, especially\nwhen we are not at home or don't have enough time for their care. The system's sensors and\ncontrollers monitor the environmental parameters of the plants, such as temperature, humidity,\nlight intensity, and their watering needs.\nThe smart flowerpot system automatically regulates watering, ensuring that the plants\nalways receive the right amount of water at the right time. We no longer need to worry about\noverwatering or underwatering, as the system takes precise care of watering our flowers.\nThrough an interactive and user interface, we can easily set the watering schedule, monitor\nthe plants' condition, and track the environmental parameters. Whether we are at home or away,\nthe system allows remote access, enabling us to stay connected with our flowers and intervene\nwhen necessary.\nFor the control of the system, I have used an ESP32 microcontroller. The ESP32 is an\nextremely versatile and powerful platform that enables full control and monitoring of my smart\nflowerpot system.",
+        "keywords": [
+            "user interface",
+            "smart system",
+            "microprocessor"
+        ]
+    },
+    {
+        "author": "Szász Attila",
+        "supervisor": "Dr. ing. Szántó Zoltán, Dr. ing. Márton Lőrinc",
+        "year": "2023",
+        "abstract": "Industrial robots are more and more wide-spread in various manufacturing and logistics processes,\nwhere accuracy, speed, and safety are important factors. Robots are capable of automating tasks\nthat are boring, dangerous, or too complex for humans. However, the collaboration between robots\nand humans represents challenges, especially when robots need to adapt flexibly to changing\nenvironments and tasks.\nThe recognition and manipulation of small objects are tasks widely used in industrial and\neducational contexts. However, determining the type and positioning of these objects is not always\nstraightforward, particularly when they have similar colors or sizes. In this paper, I present a\nmethod that enables the Baxter robot to easily differentiate cubes using ArUco markers. I describe\nhow I programmed the Baxter robot to determine the type and position of cubes on a workspace\nand arrange them accordingly. Throughout my study, I provide a detailed presentation of the\nsystem's design, implementation, and testing.\nIn my paper, I have developed a system that can control the Baxter robot to recognize and\nmanipulate cuboid-shaped objects. The system consists of three main components: an image\nprocessing module that detects and identifies objects using the OpenCV and cv2.aruco libraries, a\ncommunication module that uses the ZMQ protocol to send and receive data, and a robot control\nmodule that utilizes the ROS (Robot Operating System) libraries to control the robot's arms and\ngrippers. During the operation of the system, the robot captures an image of the workspace,\ndetermines the position and type of objects, and performs sorting based on this information.",
+        "keywords": [
+            "Baxter",
+            "ROS",
+            "ArUco",
+            "Opencv",
+            "Python",
+            "image processing",
+            "industrial and educational robotics"
+        ]
+    },
+    {
+        "author": "Szász Nimród János",
+        "supervisor": "Ș.l.dr.ing. Szántó Zoltán",
+        "year": "2023",
+        "abstract": "Nowadays, everyone has a smartphone that can solve many problems with various\napplications. Such useful applications are, for example, applications for paying our bills, but we\ncan also find many applications for managing our day-to-day tasks.\nMobile applications not only make our everyday lives easier but can also be helpful in\neducational institutions. The most commonly used mobile applications in schools and universities\nare various calculators, translators, and note-taking applications.\nHowever, applications for presenting PowerPoint presentations are not widespread among\npeople, so their number is very small and they are not the best maintained or do not have many\nfeatures that would make the use of these applications meaningful other than that the user does not\nhave to keep a separate device with them.\nMy thesis aims to design a system that allows laser pointers to be used on PowerPoint\npresentation slides with the help of our smartphone regardless of whether we have an Android or\nIOS phone. In addition, it should allow switching between slides and drawing on them. The system\nconsists of two components: one part is the server, which receives and processes data sent by our\nphone; the other part is the phone, which detects the user’s hand movements with the help of the\naccelerometer in the phone and also sends the pressing of displayed buttons to the server via WiFi.\nThe data required to connect to the server is made possible by scanning the QR code generated by\nthe server.",
+        "keywords": [
+            "Mobile application",
+            "PowerPoint",
+            "laser pointer."
+        ]
+    },
+    {
+        "author": "Szeibert Xavér",
+        "supervisor": "Conf.dr.ing. Kutasi Dénes Nimród, Ș.l.dr.ing. Szabó László Zsolt",
+        "year": "2023",
+        "abstract": "In the modern and rapidly evolving world, there is electric technology behind all our\nneeds, hobbies, and work, which we use comfortably and without problems. In current times,\nwith the increase in inflation, the prices of all necessities have risen, especially electricity.\nTherefore, if we do not pay attention to our daily energy consumption and do not make changes\nin our energy usage habits, we can easily encounter financial difficulties.\nThe aim of my thesis is to develop an IoT (Internet of Things) system that enables easy\nmeasurement and monitoring of energy consumption of electronic devices within a household.\nAdditionally, the system is capable of monitoring the production of solar panels installed in the\nhousehold. The data is stored in a database, allowing for future statistical analysis and insights.\nThis provides a more accurate understanding of energy costs and helps optimize consumption\nwhile leveraging renewable energy sources.\nThe different units communicate with each other through the MQTT protocol, where\npublishers (household appliances, solar panels) send sampled data to the broker (Raspberry Pi),\nwhere the data is processed, stored in a MongoDB database, and the processed data is sent to a\nmobile application via a REST API service.",
+        "keywords": [
+            "IoT",
+            "Smart Energy meter",
+            "MQTT",
+            "Energy Management"
+        ]
+    }
+]
