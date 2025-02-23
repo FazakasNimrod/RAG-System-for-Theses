@@ -4,7 +4,6 @@ import os
 import json
 from typing import Dict, Optional, List
 
-# Constants for field names (updated to English keys for JSON output)
 FIELD_NAMES = {
     "author": "author",
     "supervisor": "supervisor",
@@ -31,7 +30,7 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
     """Extract specific information from the cleaned text using regex patterns."""
     info = {value: "" if key != "keywords" else [] for key, value in FIELD_NAMES.items()}
 
-    # Extract Year (year)
+    # Extract Year
     year_match = re.search(r'\n\s*(20\d{2})\s*\n', text)
     if year_match:
         info[FIELD_NAMES["year"]] = year_match.group(1).strip()
@@ -40,51 +39,44 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
         if year_match:
             info[FIELD_NAMES["year"]] = year_match.group(1).strip()
 
-    # Get the number of words in the author's name from the filename
-    filename_base = os.path.splitext(os.path.basename(pdf_path))[0]  # e.g., "Pál_Andor"
-    author_word_count = len(filename_base.split('_'))  # e.g., 2 for "Pál_Andor"
+    # Extract Author and Supervisor
+    filename_base = os.path.splitext(os.path.basename(pdf_path))[0]
+    author_word_count = len(filename_base.split('_'))
 
-    # Extract all content between "Coordonator" and "20\d{2}" or section break
     coord_abs_match = re.search(
         r'Coordonator\s+[sșş]tiin[tțţ]ific:\s*Absolvent:\s*\n\s*(.+?)(?:\s*\n\s*(?:Consultant|20\d{2}|$))',
         text, re.IGNORECASE | re.DOTALL
     )
     if coord_abs_match:
-        full_content = coord_abs_match.group(1).strip()  # e.g., ", ,\nDr. Szabó László Zsolt Pál Andor"
+        full_content = coord_abs_match.group(1).strip()
         
-        # Split into lines first
-        lines = full_content.split('\n')  # Split on newlines without stripping yet
+        lines = full_content.split('\n')
         
-        # Clean each line and filter out empty results
         cleaned_lines = []
         for line in lines:
-            cleaned_line = re.sub(r'^[\s,]+|[\s,]+$', '', line)  # Remove leading/trailing spaces and commas
-            cleaned_line = re.sub(r'\s+', ' ', cleaned_line)  # Collapse multiple spaces into single spaces
-            if cleaned_line:  # Only keep non-empty lines after cleaning
+            cleaned_line = re.sub(r'^[\s,]+|[\s,]+$', '', line)
+            cleaned_line = re.sub(r'\s+', ' ', cleaned_line)
+            if cleaned_line:
                 cleaned_lines.append(cleaned_line)
         
-        # Determine if multi-line and extract accordingly
         if len(cleaned_lines) > 1:
-            # Multi-line case: Extract author from the first non-empty line
-            first_line = cleaned_lines[0]  # e.g., "Dr. Szabó László Zsolt Pál Andor"
+            first_line = cleaned_lines[0]
             words = first_line.split()
             if len(words) >= author_word_count:
-                author_words = words[-author_word_count:]  # Last n words from first non-empty line
+                author_words = words[-author_word_count:]
                 info[FIELD_NAMES["author"]] = " ".join(author_words)
-                supervisor_part_first = " ".join(words[:-author_word_count])  # Supervisor from first line
-                # Combine all supervisor parts from all cleaned lines
+                supervisor_part_first = " ".join(words[:-author_word_count])
                 supervisor_parts = [supervisor_part_first] + cleaned_lines[1:]
                 info[FIELD_NAMES["supervisor"]] = ", ".join(supervisor_parts)
             else:
                 print(f"Warning: Not enough words in first non-empty line '{first_line}' to split based on author word count {author_word_count}")
         elif len(cleaned_lines) == 1:
-            # Single-line case: Use the cleaned content as is
-            cleaned_line = cleaned_lines[0]  # e.g., "Conf. dr. ing. Bakó László Bakó József"
+            cleaned_line = cleaned_lines[0]
             words = cleaned_line.split()
             if len(words) >= author_word_count:
-                author_words = words[-author_word_count:]  # Last n words
+                author_words = words[-author_word_count:]
                 info[FIELD_NAMES["author"]] = " ".join(author_words)
-                supervisor_words = words[:-author_word_count]  # All but last n
+                supervisor_words = words[:-author_word_count]
                 info[FIELD_NAMES["supervisor"]] = " ".join(supervisor_words)
             else:
                 print(f"Warning: Not enough words in line '{cleaned_line}' to split based on author word count {author_word_count}")
@@ -93,7 +85,7 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
     else:
         print(f"Warning: Could not match 'Coordonator [sșş]tiin[tțţ]ific: Absolvent:' line in {pdf_path}")
 
-    # Extract Abstract (abstract)
+    # Extract Abstract
     abstract_match = re.search(
         r'Abstract\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|Keywords|Tartalomjegyzék|$)',
         text, re.IGNORECASE
@@ -101,9 +93,9 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
     if abstract_match:
         info[FIELD_NAMES["abstract"]] = abstract_match.group(1).strip()
 
-    # Extract Keywords (keywords) as a list
+    # Extract Keywords
     keywords_match = re.search(
-        r'Keywords\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|Tartalomjegyzék|Tartalom|Keywords|$)',
+        r'Keywords\s*[:\-]?\s*([\s\S]*?)(?:\n{2,}|Tartalomjegyzék|Tartalom|Keywords|1.|$)',
         text, re.IGNORECASE
     )
     if keywords_match:
@@ -125,7 +117,6 @@ def process_all_pdfs(folder_path: str) -> List[Dict[str, str]]:
     """Process all PDFs in the specified folder and return a list of extracted data."""
     extracted_data = []
     
-    # Iterate through all files in the folder
     for filename in os.listdir(folder_path):
         if filename.lower().endswith('.pdf'):
             pdf_path = os.path.join(folder_path, filename)
@@ -145,12 +136,11 @@ def main():
     folder_path = r"backend\scripts\pdf_docs\szamteches"
     json_path = r"backend\scripts\pdf_processing\extracted_data.json"
 
-    # Process all PDFs in the folder
     extracted_data = process_all_pdfs(folder_path)
 
-    # Write the extracted data to JSON
     write_to_json(extracted_data, json_path)
     print(f"Data from all PDFs written to {json_path}")
 
 if __name__ == "__main__":
     main()
+    
