@@ -49,7 +49,12 @@
         ],
         "year": "2023",
         "abstract": "The topic of this thesis is the classification of brain tumours using convolutional neural networks. In the first half of the paper, I will describe neural networks based on the literature, starting from simple M-P neurons to convolutional neural networks, covering their structure and their training. In the second half of the paper, I present three models I developed that classified brain tumours into four groups with an accuracy of over 85%. The first model I implemented was a simple convolutional neural network. With the second model I achieved only moderate performance improvements by changing the architecture and preventing overfitting. For both models I tuned the hyperparameters. The best performing model was the third one, implemented with transfer learning and using VGG16 as the base model. This model achieved the best accuracy (96%). In developing the three models, I used methods to continuously improve the performance of neural networks by understanding the different mechanisms of action. The model I developed could form the basis for an application that provides practicing radiologists with rapid preclassification in seconds, making their job easier.",
-        "keywords": []
+        "keywords": [
+            "performance neural",
+            "tumours groups",
+            "practicing radiologists",
+            "networks covering"
+        ]
     },
     {
         "author": "Bálint Adolf",
@@ -57,7 +62,7 @@
             "Lefkovits László"
         ],
         "year": "2023",
-        "abstract": "The topic of my paper is documenting and tracking the game of backgammon game in which I dealt with game programming, image processing, and real-time game tracking of game progres. Backgammon and image processing cover two areas of particular interest to me.. The Romanian Backgammon Federation organizes various national and international competitions, where tracking and automatic arbitration are of particular interest. The Python programming language allows for the creation of virtual versions of backgammon, which gives the game a new dimension by interactively playing it on the computer. The goal of game programming was to enable two players to compete against each other on the computer and record the game for later replay. OpenCV (Open Source Computer Vision Library) is a popular library used in image processing. With its help, the computer can recognize shapes and process images, allowing for capturing the sequential playing positions. My goal in the field of image processing, was to extract still frames from a video and identify the position of pieces, thus tracking the game's progress. Therefore, my objective was to create an application by combining Python and OpenCV that automatically evaluates the board game.The software to be made must recognize the positions of pieces and tracks the players' moves, allowing for virtual gameplay between two individuals.",
+        "abstract": "The topic of my paper is documenting and tracking the game of backgammon game in which I dealt with game programming, image processing, and real-time game tracking of game progres. Backgammon and image processing cover two areas of particular interest to me.. The Romanian Backgammon Federation organizes various national and international competitions, where tracking and automatic arbitration are of particular interest. The Python programming language allows for the creation of virtual versions of backgammon, which gives the game a new dimension by interactively playing it on the computer. The goal of game programming was to enable two players to compete against each other on the computer and record the game for later replay. OpenCV (Open Source Computer Vision Library) is a popular library used in image processing. With its help, the computer can recognize shapes and process images, allowing for capturing the sequential playing positions. My goal in the field of image processing, was to extract still frames from a video and identify the position of pieces, thus tracking the game's progress. Therefore, my objective was to create an application by combining Python and OpenCV that automatically evaluates the board game. The software to be made must recognize the positions of pieces and tracks the players' moves, allowing for virtual gameplay between two individuals.",
         "keywords": [
             "backgammon",
             "image processing",
@@ -185,7 +190,12 @@
         ],
         "year": "2022",
         "abstract": "Nowadays, IT has become one of the fastest growing industries. We often hear about new technologies every month or even every week. For recent graduates from academic institutions to succeed in such a dynamic and fast growing environment, it is essential that they have mastered the basics of programming during their studies. One of the basic concepts that can give university students a lot of headaches is recursion. The aim of this paper and the accompanying visualisation software is to serve as an educational tool for those who wish to gain a deeper understanding of the phenomenon of recursion. The user is given the opportunity to visualise different recursive functions using the software. Unlike the usual visualization tools, this application uses the method of stairs to visualize the depth of recursion. The presented software can be useful not only for students who want to learn, but also for all those who want to explore the phenomenon of recursion by observing interesting patterns in visualizations. 7",
-        "keywords": []
+        "keywords": [
+            "recursion presented",
+            "visualization tools",
+            "basics programming",
+            "interesting patterns"
+        ]
     },
     {
         "author": "Nüszl Richárd-István",
@@ -209,7 +219,12 @@
         ],
         "year": "2023",
         "abstract": "The aim of the thesis is to design and develop a web application that digitises the choice of subjects for the diploma. A solution was needed that would help and facilitate the work of the university committee and students in the diploma topic selection process. Our objectives included the development of a web application that could handle a large number of data and users and could be easily used by anyone. The application should meet all university requirements and could be further developed on request. Be secure and ensure that the application is maintainable. The objectives have been achieved in all areas. A web application has been developed that secretaries can log into and create periods and invite teachers and students to the system. Teachers can upload their degree topics and students can apply for them. And guests can view the diploma topics they have created. A wide range of technologies have been used in the development. Most prominent are the frontend and backend frameworks. Using Angular and Spring to boot I was able to developahighlyscalableandsecurewebapplication. UsingPostgreSQLdatabasetostore data and testing frameworks and applications Cypress and Postman for maintainability.",
-        "keywords": []
+        "keywords": [
+            "diploma topic",
+            "backend frameworks",
+            "data testing",
+            "angular spring"
+        ]
     },
     {
         "author": "Rigmányi Zsombor",
