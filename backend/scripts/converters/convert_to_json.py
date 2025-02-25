@@ -1,6 +1,5 @@
 import json
 
-# Data for the theses
 theses = [
     {
         "author": "Ambrus Barna",
@@ -44,6 +43,5 @@ theses = [
     }
 ]
 
-# Save to a JSON file
 with open("theses.json", "w") as json_file:
     json.dump(theses, json_file, indent=4)

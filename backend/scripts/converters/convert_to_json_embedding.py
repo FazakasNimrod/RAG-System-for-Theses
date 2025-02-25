@@ -1,10 +1,8 @@
 import json
 from sentence_transformers import SentenceTransformer
 
-# Load a pre-trained Sentence Transformers model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# Data for the theses
 theses = [
     {
         "author": "Bacs Bernat",
@@ -55,13 +53,11 @@ theses = [
     }
 ]
 
-# Add embeddings to each thesis
 for thesis in theses:
     abstract = thesis["abstract"]
-    embedding = model.encode(abstract).tolist()  # Generate the embedding vector and convert to list
-    thesis["embedding"] = embedding  # Add the embedding to the thesis dictionary
+    embedding = model.encode(abstract).tolist()
+    thesis["embedding"] = embedding
 
-# Save to a JSON file
 with open("theses_with_embeddings.json", "w") as json_file:
     json.dump(theses, json_file, indent=4)
 
