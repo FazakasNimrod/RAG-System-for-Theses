@@ -12,7 +12,7 @@ ELASTIC_USERNAME = os.getenv("ELASTIC_USERNAME")
 
 es = Elasticsearch(
     "http://localhost:9200",
-    http_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
+    basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
 )
 
 app = Flask(__name__)

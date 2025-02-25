@@ -9,7 +9,7 @@ ELASTIC_USERNAME = os.getenv("ELASTIC_USERNAME")
 
 es = Elasticsearch(
     "http://localhost:9200",
-    http_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
+    basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
 )
 
 response = es.search(index="theses_with_embeddings", query={"match_all": {}}, size=1000)
