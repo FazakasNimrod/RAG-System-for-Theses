@@ -8,30 +8,27 @@ def perform_search(es, query, year, sort_order):
     :param sort_order: Sorting order ('desc' or 'asc')
     :return: Search results as a dictionary
     """
-    # Build the search query
     search_query = {
         "query": {
             "bool": {
                 "must": {
                     "multi_match": {
                         "query": query,
-                        "fields": ["abstract", "keywords^2", "author"]  # Boost 'keywords' with ^2
+                        "fields": ["abstract", "keywords^2", "author"]
                     }
                 },
-                "filter": [{"term": {"year": int(year)}}] if year else []  # Add year filter if provided
+                "filter": [{"term": {"year": int(year)}}] if year else []
             }
         },
-        "sort": [{"year": {"order": sort_order}}],  # Sort by year
+        "sort": [{"year": {"order": sort_order}}],
         "highlight": {
             "fields": {
-                "abstract": {},  # Highlight matches in the abstract
-                "keywords": {}   # Highlight matches in keywords
+                "abstract": {},
+                "keywords": {}
             }
         }
     }
 
-    # Execute the search query
     response = es.search(index="theses", body=search_query)
 
-    # Return the search results (hits) with highlighting
     return response['hits']['hits']

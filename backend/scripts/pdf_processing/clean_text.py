@@ -75,6 +75,9 @@ def generate_keywords(abstract_str, num_keywords=4, max_length=25):
     return selected_keywords
 
 for thesis in data:
+    if 'year' in thesis and isinstance(thesis['year'], str):
+        thesis['year'] = int(thesis['year'])
+    
     if 'supervisor' in thesis:
         thesis['supervisor'] = clean_supervisors(thesis['supervisor'])
     
