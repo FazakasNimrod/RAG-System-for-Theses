@@ -2,9 +2,10 @@ import React from "react";
 import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
-  // Early return for empty results or error
   if (!results) {
-    return <p className="error-message">An error occurred while fetching results.</p>;
+    return (
+      <p className="error-message">An error occurred while fetching results.</p>
+    );
   }
 
   if (results.length === 0) {
@@ -12,7 +13,6 @@ const ResultsList = ({ results }) => {
   }
 
   const handleGoToPDF = (_id) => {
-    // Open the PDF in a new tab
     window.open(`http://localhost:5000/${_id}`, "_blank");
   };
 
@@ -21,13 +21,17 @@ const ResultsList = ({ results }) => {
       <ul className="result-items">
         {results.map((result) => {
           const { _id, _source, highlight } = result;
-          const { abstract, author, keywords, year } = _source;
+          const { abstract, author, keywords, year, supervisor } = _source;
 
           return (
             <li key={_id} className="result-item">
               <h3 className="result-author">
                 {author} ({year})
               </h3>
+              <p className="result-supervisor">
+                <strong>Supervisor:</strong>{" "}
+                {Array.isArray(supervisor) ? supervisor.join(", ") : supervisor}
+              </p>
               <p className="result-abstract">
                 <strong>Abstract:</strong>{" "}
                 <span
@@ -44,9 +48,7 @@ const ResultsList = ({ results }) => {
                   ? highlight.keywords.join(", ")
                   : keywords.join(", ")}
               </p>
-              <button onClick={() => handleGoToPDF(_id)}>
-                Go to PDF
-              </button>
+              <button onClick={() => handleGoToPDF(_id)}>Go to PDF</button>
             </li>
           );
         })}

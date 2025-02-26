@@ -29,6 +29,6 @@ def perform_search(es, query, year, sort_order):
         }
     }
 
-    response = es.search(index="theses", body=search_query)
+    response = es.search(index="cs_theses", body=search_query)
 
     return response['hits']['hits']
