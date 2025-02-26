@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SearchBar.css";
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
-  const [year, setYear] = useState("");
-  const [sort, setSort] = useState("desc");
-
-  const handleSearch = () => {
-    onSearch({ query, year, sort });
+const SearchBar = ({ query, setQuery, onSearch }) => {
+  // Handle key press events
+  const handleKeyPress = (e) => {
+    // Check if Enter key was pressed
+    if (e.key === "Enter") {
+      onSearch();
+    }
   };
 
   return (
@@ -17,18 +17,9 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Search..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyPress={handleKeyPress}
       />
-      <input
-        type="number"
-        placeholder="Filter by year"
-        value={year}
-        onChange={(e) => setYear(e.target.value)}
-      />
-      <select value={sort} onChange={(e) => setSort(e.target.value)}>
-        <option value="desc">Descending</option>
-        <option value="asc">Ascending</option>
-      </select>
-      <button onClick={handleSearch}>Search</button>
+      <button onClick={onSearch}>Search</button>
     </div>
   );
 };
