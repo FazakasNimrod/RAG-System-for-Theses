@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./ResultsList.css";
 
 const ResultsList = ({ results }) => {
-  // Early return for empty results or error
   if (!results) {
     return (
       <p className="error-message">An error occurred while fetching results.</p>
@@ -14,7 +13,6 @@ const ResultsList = ({ results }) => {
   }
 
   const handleGoToPDF = (_id) => {
-    // Open the PDF in a new tab
     window.open(`http://localhost:5000/${_id}`, "_blank");
   };
 
@@ -54,22 +52,16 @@ const ResultsList = ({ results }) => {
   );
 };
 
-// Abstract content component with inline show more/less button
 const AbstractContent = ({ abstract, highlight }) => {
   const [expanded, setExpanded] = useState(false);
   const toggleExpanded = () => setExpanded(!expanded);
 
-  // Determine if we need a "Show More" button
-  // We need it if: there are highlights (as they're partial) OR the abstract is long
   const needsExpandButton = highlight || abstract.length > 200;
 
-  // If we have highlighted content, preserve highlighting in the full abstract
   let displayContent;
 
   if (expanded) {
-    // When expanded, we still want to show highlights
     if (highlight) {
-      // Extract terms that should be highlighted
       const highlightTerms = new Set();
       highlight.forEach((fragment) => {
         const matches = fragment.match(/<em>(.*?)<\/em>/g);
@@ -81,7 +73,6 @@ const AbstractContent = ({ abstract, highlight }) => {
         }
       });
 
-      // Apply highlighting to the full abstract
       let highlightedAbstract = abstract;
       highlightTerms.forEach((term) => {
         const regex = new RegExp(`\\b${term}\\b`, "gi");
@@ -96,7 +87,6 @@ const AbstractContent = ({ abstract, highlight }) => {
       displayContent = abstract;
     }
   } else {
-    // When collapsed, show highlight fragments if available or truncated abstract
     displayContent = highlight
       ? highlight.join(" ")
       : truncateText(abstract, 200);
@@ -123,31 +113,24 @@ const AbstractContent = ({ abstract, highlight }) => {
   );
 };
 
-// Helper function to truncate text to a specified length
 function truncateText(text, maxLength) {
   if (text.length <= maxLength) return text;
   return text.substring(0, maxLength);
 }
 
-// Component to handle keywords display with highlighting
 const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
   if (!originalKeywords || originalKeywords.length === 0) {
     return "None";
   }
 
-  // If no highlighted keywords, just return the originals
   if (!highlightedKeywords || highlightedKeywords.length === 0) {
     return originalKeywords.join(", ");
   }
 
-  // Create a map of the original keywords for quick lookup
   const keywordMap = new Map();
 
-  // Create a map of terms that should be highlighted
-  // (extract the text content from the highlighted HTML)
   const highlightTerms = new Map();
   highlightedKeywords.forEach((hwk) => {
-    // Extract the text inside <em> tags if present
     const matches = hwk.match(/<em>(.*?)<\/em>/g);
     if (matches) {
       matches.forEach((match) => {
@@ -157,14 +140,11 @@ const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
     }
   });
 
-  // Convert original keywords to highlighted versions if needed
   const displayKeywords = originalKeywords.map((keyword) => {
     const lowercaseKeyword = keyword.toLowerCase();
 
-    // Check if this keyword or part of it should be highlighted
     for (const term of highlightTerms.keys()) {
       if (lowercaseKeyword.includes(term)) {
-        // Create a highlighted version by wrapping the matching part in <em>
         const regex = new RegExp(term, "gi");
         return keyword.replace(regex, (match) => `<em>${match}</em>`);
       }
@@ -173,7 +153,6 @@ const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
     return keyword;
   });
 
-  // Return as HTML
   return (
     <span dangerouslySetInnerHTML={{ __html: displayKeywords.join(", ") }} />
   );

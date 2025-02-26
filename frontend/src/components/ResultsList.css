@@ -133,7 +133,7 @@
 }
 
 button {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -144,12 +144,12 @@ button {
 }
 
 button:hover {
-  background-color: #45a049; /* Darker green */
-  transform: translateY(-3px);
+  background-color: #45a049;
+  transform: translateY(0);
 }
 
 button:active {
-  background-color: #3e8e41; /* Even darker green */
+  background-color: #3e8e41;
   transform: translateY(0);
 }
 
