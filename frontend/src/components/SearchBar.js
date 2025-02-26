@@ -2,9 +2,7 @@ import React from "react";
 import "./SearchBar.css";
 
 const SearchBar = ({ query, setQuery, onSearch }) => {
-  // Handle key press events
   const handleKeyPress = (e) => {
-    // Check if Enter key was pressed
     if (e.key === "Enter") {
       onSearch();
     }

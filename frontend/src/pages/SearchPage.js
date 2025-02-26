@@ -18,23 +18,17 @@ const SearchPage = () => {
 
   return (
     <div className="search-page">
-      {/* Sidebar positioned on the left */}
-      <Sidebar 
-        year={year} 
-        setYear={setYear} 
-        sort={sort} 
-        setSort={setSort} 
-        onFilter={handleSearch} 
+      <Sidebar
+        year={year}
+        setYear={setYear}
+        sort={sort}
+        setSort={setSort}
+        onFilter={handleSearch}
       />
-      
-      {/* Main content */}
+
       <div className="main-content">
         <h1>Search Theses</h1>
-        <SearchBar 
-          onSearch={handleSearch} 
-          query={query} 
-          setQuery={setQuery} 
-        />
+        <SearchBar onSearch={handleSearch} query={query} setQuery={setQuery} />
         <ResultsList results={results} />
       </div>
     </div>
