@@ -13,6 +13,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    padding-top: 60px;
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -44,7 +50,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -64,6 +70,11 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.app-container {
+  padding-top: 70px;
+  min-height: 100vh;
+}
+
 h1 {
   position: relative;
   text-align: center;
@@ -77,4 +88,19 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.auth-page {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-page h1 {
+  margin-bottom: 20px;
+  color: #333;
 }

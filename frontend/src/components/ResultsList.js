@@ -127,8 +127,6 @@ const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
     return originalKeywords.join(", ");
   }
 
-  const keywordMap = new Map();
-
   const highlightTerms = new Map();
   highlightedKeywords.forEach((hwk) => {
     const matches = hwk.match(/<em>(.*?)<\/em>/g);
