@@ -43,8 +43,12 @@
   color: #007bff;
 }
 
-.home-link {
+.nav-link.active {
   font-weight: 600;
+  color: #007bff;
+}
+
+.home-link {
   font-size: 18px;
 }
 

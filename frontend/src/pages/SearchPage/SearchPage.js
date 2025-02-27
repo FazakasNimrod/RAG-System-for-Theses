@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import SearchBar from "../components/SearchBar";
-import Sidebar from "../components/SideBar";
-import ResultsList from "../components/ResultsList";
-import { searchElasticsearch } from "../services/elasticsearchService";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import Sidebar from "../../components/SideBar/SideBar";
+import ResultsList from "../../components/ResultList/ResultsList";
+import { searchElasticsearch } from "../../services/elasticsearchService";
 import "./SearchPage.css";
 
 const SearchPage = () => {
