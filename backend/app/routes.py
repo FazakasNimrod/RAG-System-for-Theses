@@ -8,6 +8,7 @@ def search():
     """
     Search API for querying Elasticsearch.
     Supports filtering by year, sorting by year, and highlighting matches.
+    Add 'phrase=true' query parameter for exact phrase matching.
     """
     es = getattr(g, 'es', None)
 
@@ -17,7 +18,9 @@ def search():
     query = request.args.get('q', '')
     year = request.args.get('year')
     sort_order = request.args.get('sort', 'desc')
+    
+    is_phrase_search = request.args.get('phrase', '').lower() == 'true'
 
-    response = perform_search(es, query, year, sort_order)
+    response = perform_search(es, query, year, sort_order, is_phrase_search)
 
     return jsonify(response)

@@ -8,8 +8,7 @@
 }
 
 .sidebar h3 {
-  text-align: center;
-  margin-top: 60px;
+  margin-top: 70px; 
   margin-bottom: 20px;
   color: #333;
   font-size: 1.2rem;
@@ -46,6 +45,33 @@
 .filter-section input:focus,
 .filter-section select:focus {
   border-color: #007bff;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-option input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.radio-option label {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.search-mode-label {
+  margin-bottom: 10px;
 }
 
 .apply-filters-btn {

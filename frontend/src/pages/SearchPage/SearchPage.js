@@ -10,9 +10,10 @@ const SearchPage = () => {
   const [query, setQuery] = useState("");
   const [year, setYear] = useState("");
   const [sort, setSort] = useState("desc");
+  const [isPhrase, setIsPhrase] = useState(false);
 
   const handleSearch = async () => {
-    const data = await searchElasticsearch({ query, year, sort });
+    const data = await searchElasticsearch({ query, year, sort, isPhrase });
     setResults(data);
   };
 
@@ -23,6 +24,8 @@ const SearchPage = () => {
         setYear={setYear}
         sort={sort}
         setSort={setSort}
+        isPhrase={isPhrase}
+        setIsPhrase={setIsPhrase}
         onFilter={handleSearch}
       />
 
