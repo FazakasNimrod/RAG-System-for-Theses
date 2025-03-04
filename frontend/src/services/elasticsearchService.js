@@ -17,3 +17,24 @@ export const searchElasticsearch = async ({ query, year, sort, isPhrase }) => {
     return [];
   }
 };
+
+export const searchElasticsearchSemantic = async ({
+  query,
+  year,
+  sort,
+  limit = 10,
+}) => {
+  const params = {};
+  if (query) params.q = query;
+  if (year) params.year = year;
+  if (sort) params.sort = sort;
+  if (limit) params.limit = limit;
+
+  try {
+    const response = await axios.get(`${API_URL}semantic`, { params });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching semantic search results:", error);
+    return [];
+  }
+};

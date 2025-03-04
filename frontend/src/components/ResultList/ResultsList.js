@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ResultsList.css";
 
-const ResultsList = ({ results }) => {
+const ResultsList = ({ results, showScores = false }) => {
   if (!results) {
     return (
       <p className="error-message">An error occurred while fetching results.</p>
@@ -20,14 +20,21 @@ const ResultsList = ({ results }) => {
     <div className="result-lists">
       <ul className="result-items">
         {results.map((result) => {
-          const { _id, _source, highlight } = result;
+          const { _id, _source, highlight, _score } = result;
           const { abstract, author, keywords, year, supervisor } = _source;
 
           return (
             <li key={_id} className="result-item">
-              <h3 className="result-author">
-                {author} ({year})
-              </h3>
+              <div className="result-header">
+                <h3 className="result-author">
+                  {author} ({year})
+                </h3>
+                {showScores && _score !== undefined && (
+                  <span className="result-score">
+                    Similarity Score: {_score.toFixed(2)}
+                  </span>
+                )}
+              </div>
               <p className="result-supervisor">
                 <strong>Supervisor:</strong>{" "}
                 {Array.isArray(supervisor) ? supervisor.join(", ") : supervisor}
@@ -113,11 +120,6 @@ const AbstractContent = ({ abstract, highlight }) => {
   );
 };
 
-function truncateText(text, maxLength) {
-  if (text.length <= maxLength) return text;
-  return text.substring(0, maxLength);
-}
-
 const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
   if (!originalKeywords || originalKeywords.length === 0) {
     return "None";
@@ -155,5 +157,10 @@ const KeywordsList = ({ originalKeywords, highlightedKeywords }) => {
     <span dangerouslySetInnerHTML={{ __html: displayKeywords.join(", ") }} />
   );
 };
+
+function truncateText(text, maxLength) {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength);
+}
 
 export default ResultsList;

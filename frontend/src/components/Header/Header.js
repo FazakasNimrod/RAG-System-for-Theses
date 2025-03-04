@@ -12,11 +12,17 @@ const Header = () => {
         <div className="header-left">
           <Link
             to="/"
-            className={`nav-link home-link ${
-              currentPath === "/" ? "active" : ""
+            className={`nav-link ${currentPath === "/" ? "active" : ""}`}
+          >
+            Search
+          </Link>
+          <Link
+            to="/semantic"
+            className={`nav-link ${
+              currentPath === "/semantic" ? "active" : ""
             }`}
           >
-            Home
+            Semantic Search
           </Link>
         </div>
         <div className="header-right">
