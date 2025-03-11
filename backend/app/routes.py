@@ -1,5 +1,6 @@
 from flask import Blueprint, request, jsonify, g
 from services import perform_search, perform_semantic_search
+from ollama_rag_service import generate_rag_response, get_available_models
 
 search_routes = Blueprint('search', __name__)
 
@@ -49,3 +50,33 @@ def semantic_search():
         return jsonify(response)
     except Exception as e:
         return jsonify({"error": f"Semantic search failed: {str(e)}"}), 500
+
+@search_routes.route('/rag', methods=['POST'])
+def rag():
+    es = getattr(g, 'es', None)
+
+    if not es:
+        return jsonify({"error": "Elasticsearch connection is not available."}), 500
+
+    data = request.json
+    query = data.get('query', '')
+    model_id = data.get('model', 'llama3.2:3b')
+    top_k = data.get('top_k', 5)
+    
+    if not query:
+        return jsonify({"error": "No query provided"}), 400
+    
+    try:
+        response = generate_rag_response(es, query, model_id, top_k)
+        return jsonify(response)
+    except Exception as e:
+        return jsonify({"error": f"RAG processing failed: {str(e)}"}), 500
+
+@search_routes.route('/models', methods=['GET'])
+def models():
+    try:
+        models = get_available_models()
+        return jsonify(models)
+    except Exception as e:
+        return jsonify({"error": f"Failed to get models: {str(e)}"}), 500
+    

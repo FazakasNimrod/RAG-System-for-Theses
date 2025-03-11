@@ -24,6 +24,12 @@ const Header = () => {
           >
             Semantic Search
           </Link>
+          <Link
+            to="/rag"
+            className={`nav-link ${currentPath === "/rag" ? "active" : ""}`}
+          >
+            Ask Questions
+          </Link>
         </div>
         <div className="header-right">
           <Link
