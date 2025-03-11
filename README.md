@@ -65,8 +65,30 @@ Ensure the following are installed on your machine:
 
 4. **Set Up Elasticsearch**:
 
-   - Start the Elasticsearch service
-   - Load data into the basic and semantic indices
+   - Download Elasticsearch from the [official website](https://www.elastic.co/downloads/elasticsearch)
+   - Extract the downloaded archive into the `/backend/elasticsearch` directory of your project
+   - Start the Elasticsearch service:
+
+     ```bash
+     # Navigate to the elasticsearch directory
+     cd backend/elasticsearch
+
+     # Start Elasticsearch
+     bin/elasticsearch    # Linux/Mac
+     bin\elasticsearch.bat # Windows
+     ```
+
+   - Verify Elasticsearch is running by visiting `http://localhost:9200` in your browser
+   - Initialize the search indices:
+
+     ```bash
+     # Return to the backend directory
+     cd ..
+
+     # Run the indexing scripts
+     python scripts/index_theses.py      # For regular search index
+     python scripts/create_semantic_index.py  # For semantic search index
+     ```
 
 5. **Set Up Ollama** (for RAG functionality):
 
