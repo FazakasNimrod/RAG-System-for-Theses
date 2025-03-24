@@ -32,15 +32,32 @@ def get_embedding_model():
         _embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
     return _embedding_model
 
-def retrieve_documents(es, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+def retrieve_documents(es, query: str, top_k: int = 5, department: str = None) -> List[Dict[str, Any]]:
+    """
+    Retrieve documents based on semantic similarity for RAG
+
+    :param es: Elasticsearch client instance
+    :param query: Query string
+    :param top_k: Number of documents to retrieve
+    :param department: Optional filter by department ('cs' or 'informatics')
+    :return: List of retrieved documents
+    """
     model = get_embedding_model()
     
     query_vector = model.encode(query).tolist()
     
+    filter_clause = []
+    if department:
+        filter_clause.append({"term": {"department": department}})
+    
     search_query = {
         "query": {
             "script_score": {
-                "query": {"match_all": {}},
+                "query": {
+                    "bool": {
+                        "filter": filter_clause
+                    }
+                },
                 "script": {
                     "source": "cosineSimilarity(params.query_vector, 'abstract_vector') + 1.0",
                     "params": {
@@ -52,11 +69,24 @@ def retrieve_documents(es, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         "size": top_k
     }
     
-    response = es.search(index="cs_theses_semantic", body=search_query)
+    if department == "cs":
+        indices = ["cs_theses_semantic"]
+    elif department == "informatics":
+        indices = ["infos_theses_semantic"]
+    else:
+        indices = ["cs_theses_semantic", "infos_theses_semantic"] 
+    
+    response = es.search(index=",".join(indices), body=search_query)
     
     return response['hits']['hits']
 
 def prepare_context(documents: List[Dict[str, Any]]) -> str:
+    """
+    Prepare context from retrieved documents
+    
+    :param documents: List of retrieved documents
+    :return: Context string for RAG
+    """
     context = "RELEVANT DOCUMENTS:\n\n"
     
     for i, doc in enumerate(documents, 1):
@@ -64,12 +94,14 @@ def prepare_context(documents: List[Dict[str, Any]]) -> str:
         author = source.get("author", "Unknown Author")
         year = source.get("year", "Unknown Year")
         abstract = source.get("abstract", "No abstract available")
+        department = source.get("department", "Unknown Department")
         
         if len(abstract) > 500:
             abstract = abstract[:500] + "..."
         
         context += f"Document {i}:\n"
         context += f"Author: {author} ({year})\n"
+        context += f"Department: {department}\n"
         context += f"Abstract: {abstract}\n\n"
     
     return context
@@ -115,11 +147,21 @@ Answer:"""
         print(f"Error calling Ollama API: {str(e)}")
         return f"I encountered an error while generating a response: {str(e)}"
 
-def generate_rag_response(es, query: str, model_id: str, top_k: int = 5) -> Dict[str, Any]:
+def generate_rag_response(es, query: str, model_id: str, top_k: int = 5, department: str = None) -> Dict[str, Any]:
+    """
+    Generate RAG response
+    
+    :param es: Elasticsearch client instance
+    :param query: Query string
+    :param model_id: Ollama model ID
+    :param top_k: Number of documents to retrieve
+    :param department: Optional filter by department ('cs' or 'informatics')
+    :return: RAG response with answer and references
+    """
     try:
         model_name = next((m["name"] for m in AVAILABLE_MODELS if m["id"] == model_id), model_id)
         
-        documents = retrieve_documents(es, query, top_k)
+        documents = retrieve_documents(es, query, top_k, department)
         
         context = prepare_context(documents)
         
@@ -133,7 +175,8 @@ def generate_rag_response(es, query: str, model_id: str, top_k: int = 5) -> Dict
                 "author": source.get("author", "Unknown"),
                 "year": source.get("year", "Unknown"),
                 "score": doc["_score"],
-                "abstract_snippet": source.get("abstract", "")[:150] + "..."
+                "abstract_snippet": source.get("abstract", "")[:150] + "...",
+                "department": source.get("department", "Unknown")
             })
         
         return {

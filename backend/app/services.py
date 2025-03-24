@@ -1,6 +1,6 @@
 from sentence_transformers import SentenceTransformer
 
-def perform_search(es, query, year, sort_order, is_phrase_search=False):
+def perform_search(es, query, year=None, sort_order="desc", is_phrase_search=False, department=None):
     """
     Perform a search query in Elasticsearch.
 
@@ -9,6 +9,7 @@ def perform_search(es, query, year, sort_order, is_phrase_search=False):
     :param year: Optional filter by year
     :param sort_order: Sorting order ('desc' or 'asc')
     :param is_phrase_search: Whether to perform a phrase search (exact match)
+    :param department: Optional filter by department ('cs' or 'informatics')
     :return: Search results as a dictionary
     """
     if is_phrase_search and query:
@@ -29,11 +30,18 @@ def perform_search(es, query, year, sort_order, is_phrase_search=False):
             }
         }
 
+    filters = []
+    if year:
+        filters.append({"term": {"year": int(year)}})
+    
+    if department:
+        filters.append({"term": {"department": department}})
+
     search_query = {
         "query": {
             "bool": {
                 "must": search_fields,
-                "filter": [{"term": {"year": int(year)}}] if year else []
+                "filter": filters
             }
         },
         "sort": [{"year": {"order": sort_order}}],
@@ -45,7 +53,14 @@ def perform_search(es, query, year, sort_order, is_phrase_search=False):
         }
     }
 
-    response = es.search(index="cs_theses", body=search_query)
+    if department == "cs":
+        indices = ["cs_theses"]
+    elif department == "informatics":
+        indices = ["infos_theses"]
+    else:
+        indices = ["cs_theses", "infos_theses"] 
+
+    response = es.search(index=",".join(indices), body=search_query)
 
     return response['hits']['hits']
 
@@ -58,7 +73,7 @@ def get_model():
         _model = SentenceTransformer('all-MiniLM-L6-v2')
     return _model
 
-def perform_semantic_search(es, query, year=None, sort_order="desc", num_results=10):
+def perform_semantic_search(es, query, year=None, sort_order="desc", num_results=10, department=None):
     """
     Perform a semantic search query in Elasticsearch using vector embeddings.
 
@@ -67,6 +82,7 @@ def perform_semantic_search(es, query, year=None, sort_order="desc", num_results
     :param year: Optional filter by year
     :param sort_order: Sorting order ('desc' or 'asc')
     :param num_results: Number of results to return
+    :param department: Optional filter by department ('cs' or 'informatics')
     :return: Search results as a dictionary
     """
     if not query:
@@ -75,7 +91,12 @@ def perform_semantic_search(es, query, year=None, sort_order="desc", num_results
     model = get_model()
     query_vector = model.encode(query).tolist()
     
-    filter_clause = [{"term": {"year": int(year)}}] if year else []
+    filter_clause = []
+    if year:
+        filter_clause.append({"term": {"year": int(year)}})
+    
+    if department:
+        filter_clause.append({"term": {"department": department}})
     
     search_query = {
         "query": {
@@ -108,6 +129,13 @@ def perform_semantic_search(es, query, year=None, sort_order="desc", num_results
             {"year": {"order": sort_order}}  
         ]
     
-    response = es.search(index="cs_theses_semantic", body=search_query)
+    if department == "cs":
+        indices = ["cs_theses_semantic"]
+    elif department == "informatics":
+        indices = ["infos_theses_semantic"]
+    else:
+        indices = ["cs_theses_semantic", "infos_theses_semantic"] 
+    
+    response = es.search(index=",".join(indices), body=search_query)
     
     return response['hits']['hits']
