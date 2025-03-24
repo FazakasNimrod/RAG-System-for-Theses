@@ -16,7 +16,7 @@ def extract_raw_text(pdf_path):
         return None
 
 if __name__ == "__main__":
-    pdf_path = r"backend\scripts\pdf_docs\szamteches\Bálint_Adolf.pdf"
+    pdf_path = r"backend\scripts\pdf_docs\infos\Komuves_David_Mark_Diplomadolgozat_2023.pdf"
     
     base_name = os.path.splitext(os.path.basename(pdf_path))[0]
     output_path = f"{base_name}.txt"
