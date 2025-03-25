@@ -99,8 +99,7 @@ def prepare_context(documents: List[Dict[str, Any]]) -> str:
         if len(abstract) > 500:
             abstract = abstract[:500] + "..."
         
-        context += f"Document {i}:\n"
-        context += f"Author: {author} ({year})\n"
+        context += f"[{author} ({year})]\n"
         context += f"Department: {department}\n"
         context += f"Abstract: {abstract}\n\n"
     
@@ -113,10 +112,11 @@ I've provided some relevant research documents below. Using ONLY this informatio
 
 Important guidelines:
 - Answer in a natural, conversational way - as if explaining to a colleague
-- Don't mention the documents themselves or say phrases like "According to the documents..."
-- Don't enumerate your points unless absolutely necessary
+- When referring to the theses, use the author names (e.g., "As demonstrated by Smith (2023)..." or "The research by Jones (2022) shows...")
+- Do not use phrases like "Document 1" or "Document 2" - always refer to the authors by name
 - Keep your answer focused and concise
 - If the documents don't contain relevant information, simply state that you don't have enough information
+- Don't enumerate your points unless absolutely necessary
 
 {context}
 
