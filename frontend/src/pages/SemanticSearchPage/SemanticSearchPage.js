@@ -12,6 +12,7 @@ const SemanticSearchPage = () => {
   const [sort, setSort] = useState("desc");
   const [limit, setLimit] = useState(10);
   const [loading, setLoading] = useState(false);
+  const [department, setDepartment] = useState(null);
 
   const handleSearch = async () => {
     setLoading(true);
@@ -21,6 +22,7 @@ const SemanticSearchPage = () => {
         year,
         sort,
         limit,
+        department,
       });
       setResults(data);
     } finally {
@@ -37,6 +39,8 @@ const SemanticSearchPage = () => {
         setSort={setSort}
         limit={limit}
         setLimit={setLimit}
+        department={department}
+        setDepartment={setDepartment}
         onFilter={handleSearch}
         hidePhraseOption={true}
         hideSortOption={true}

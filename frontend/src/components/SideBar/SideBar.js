@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBar.css";
 
 const Sidebar = ({
@@ -10,11 +10,18 @@ const Sidebar = ({
   setIsPhrase,
   limit,
   setLimit,
+  department,
+  setDepartment,
   onFilter,
   hidePhraseOption = false,
   hideSortOption = false,
   showLimitOption = false,
 }) => {
+  const [departments] = useState([
+    { id: "cs", name: "Computer Science" },
+    { id: "informatics", name: "Informatics" },
+  ]);
+
   return (
     <div className="sidebar">
       <h3>Filters</h3>
@@ -29,6 +36,24 @@ const Sidebar = ({
           onChange={(e) => setYear(e.target.value)}
         />
       </div>
+
+      {setDepartment && (
+        <div className="filter-section">
+          <label htmlFor="department-filter">Department</label>
+          <select
+            id="department-filter"
+            value={department || ""}
+            onChange={(e) => setDepartment(e.target.value || null)}
+          >
+            <option value="">All Departments</option>
+            {departments.map((dept) => (
+              <option key={dept.id} value={dept.id}>
+                {dept.name}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       {!hideSortOption && setSort && (
         <div className="filter-section">

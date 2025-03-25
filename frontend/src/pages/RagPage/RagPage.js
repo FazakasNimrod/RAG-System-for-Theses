@@ -11,6 +11,7 @@ const RagPage = () => {
   const [models, setModels] = useState([]);
   const [selectedModel, setSelectedModel] = useState("");
   const [numDocs, setNumDocs] = useState(5);
+  const [department, setDepartment] = useState(null);
 
   useEffect(() => {
     const getModels = async () => {
@@ -50,7 +51,12 @@ const RagPage = () => {
     setAnswer(null);
 
     try {
-      const response = await askQuestion(query, selectedModel, numDocs);
+      const response = await askQuestion(
+        query,
+        selectedModel,
+        numDocs,
+        department
+      );
       setAnswer(response);
     } catch (err) {
       setError(
@@ -111,6 +117,20 @@ const RagPage = () => {
           </select>
         </div>
 
+        <div className="sidebar-section">
+          <label htmlFor="department-selector">Department</label>
+          <select
+            id="department-selector"
+            value={department || ""}
+            onChange={(e) => setDepartment(e.target.value || null)}
+            disabled={loading || initialLoading}
+          >
+            <option value="">All Departments</option>
+            <option value="cs">Computer Science</option>
+            <option value="informatics">Informatics</option>
+          </select>
+        </div>
+
         <div className="ollama-status">
           <span
             className={models.length > 0 ? "status-online" : "status-offline"}
@@ -121,7 +141,7 @@ const RagPage = () => {
       </div>
 
       <div className="rag-content">
-        <h1>Ask Research Questions</h1>
+        <h1>Ask Questions</h1>
 
         <form onSubmit={handleSubmit} className="question-form">
           <textarea
