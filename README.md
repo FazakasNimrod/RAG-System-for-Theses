@@ -11,7 +11,8 @@ This application is a comprehensive full-stack solution for searching, analyzing
 - **Semantic Search**: Vector-based semantic similarity search
 - **AI-Powered Question Answering**: Ask natural language questions about research topics
 - **Document References**: View source documents that inform AI answers
-- **Filtering & Sorting**: Filter by year and sort results
+- **PDF Integration**: Direct access to thesis PDFs via hash code integration
+- **Filtering & Sorting**: Filter by year, department and sort results
 - **Expandable Results**: Toggle between short and full abstracts
 - **Authentication**: User registration and login system (coming soon...)
 
@@ -24,6 +25,7 @@ This application is a comprehensive full-stack solution for searching, analyzing
 - **Frontend**: React
 - **AI Models**: Ollama with Llama models (local LLM integration)
 - **Vector Embeddings**: SentenceTransformers
+- **PDF Storage**: Docker-based PDF storage service with hash code identification
 - **Styling**: Custom CSS
 
 ---
@@ -39,6 +41,7 @@ Ensure the following are installed on your machine:
 3. **npm** (comes with Node.js)
 4. **Elasticsearch** (minimum version 8.x)
 5. **Ollama** (for AI question answering)
+6. **Docker & Docker Compose** (for PDF storage service)
 
 ### **Backend Setup**
 
@@ -79,18 +82,38 @@ Ensure the following are installed on your machine:
      ```
 
    - Verify Elasticsearch is running by visiting `http://localhost:9200` in your browser
-   - Initialize the search indices:
 
+5. **Set Up PDF Storage Service**:
+
+   - Ensure Docker and Docker Compose are installed
+   - Navigate to the PDF storage project directory:
      ```bash
-     # Return to the backend directory
-     cd ..
-
-     # Run the indexing scripts
-     python scripts/index_theses.py      # For regular search index
-     python scripts/create_semantic_index.py  # For semantic search index
+     cd ~/projects/pdf-storage
      ```
+   - Start the PDF storage service:
+     ```bash
+     docker-compose up -d
+     ```
+   - Verify it's running: `http://localhost:5000/pdfs`
 
-5. **Set Up Ollama** (for RAG functionality):
+6. **Process PDF Documents and Update Indices**:
+
+   ```bash
+   # Process CS department theses
+   python backend/scripts/pdf_processing/extarct_text_v2.py
+
+   # Process Informatics department theses
+   python backend/scripts/pdf_processing/process_infos_theses.py
+
+   # Create and update the Elasticsearch indices
+   python backend/scripts/data_loading/index_cs_theses.py
+   python backend/scripts/data_loading/generate_infos_embeddings.py
+
+   # Update all indices with hash codes from cleaned data
+   python backend/scripts/data_loading/update_indices_with_hash_codes.py
+   ```
+
+7. **Set Up Ollama** (for RAG functionality):
 
    - Install Ollama from [ollama.ai/download](https://ollama.ai/download)
    - Pull the required models:
@@ -100,7 +123,7 @@ Ensure the following are installed on your machine:
      ollama pull llama3.2:3b
      ```
 
-6. **Run the Backend**:
+8. **Run the Backend**:
    ```bash
    flask run
    ```
@@ -134,8 +157,9 @@ Ensure the following are installed on your machine:
 
 - Enter keywords in the search bar
 - Optionally enable phrase search for exact matching
-- Filter by year and sort as needed
+- Filter by year and department and sort as needed
 - View highlighted matches in results
+- Click "Go to PDF" to view the original thesis document
 
 ### **2. Semantic Search**
 
@@ -143,6 +167,7 @@ Ensure the following are installed on your machine:
 - Enter conceptual queries (doesn't require exact keyword matches)
 - Adjust the number of results to display
 - View results ranked by semantic similarity
+- Access original PDF documents with one click
 
 ### **3. AI Question Answering**
 
@@ -164,52 +189,84 @@ Ensure the following are installed on your machine:
 ### **Backend**
 
 - **API Endpoints**:
+
   - `/search`: Traditional and phrase search
   - `/search/semantic`: Vector-based semantic search
   - `/search/rag`: Retrieval-augmented generation for question answering
   - `/search/models`: Available AI models
+  - `/search/document/<hash_code>`: Get document by hash code
+  - `/search/pdf/<hash_code>`: Redirect to PDF storage
+
+- **Data Processing**:
+  - `scripts/pdf_processing/`: Extract metadata from PDFs
+  - `scripts/data_loading/`: Index documents in Elasticsearch
+  - `scripts/data_loading/update_indices_with_hash_codes.py`: Update hash codes
 
 ### **Frontend**
 
 - **Pages**:
+
   - Search (Home)
   - Semantic Search
   - Ask Questions (RAG)
   - Sign Up/Sign In
+
 - **Components**:
+
   - SearchBar
   - ResultsList
   - AbstractContent
   - Sidebar
 
+- **Services**:
+  - elasticsearchService.js: Handle search requests
+  - ragService.js: RAG functionality and PDF access
+
 ---
 
-## **Requirements**
+## **PDF Integration System**
 
-### **Backend Dependencies**
+The application integrates with a Docker-based PDF storage service that uses hash codes to identify documents:
 
-- Flask
-- Elasticsearch
-- SentenceTransformers
-- Requests
-- Python-dotenv
-- Flask-CORS
+1. **Hash Code Generation**:
 
-### **Frontend Dependencies**
+   - Each PDF is assigned a unique 10-digit hash code
+   - Hash codes are generated from filenames using SHA-256 hashing
 
-- React
-- React Router
-- Axios
-- CSS (custom styling)
+2. **Data Flow**:
+
+   - PDF processing scripts extract metadata and generate hash codes
+   - Hash codes are stored in cleaned JSON data files
+   - Elasticsearch indices are updated with hash codes
+   - Frontend uses hash codes to link to the PDF storage service
+
+3. **Viewing PDFs**:
+   - When a user clicks "Go to PDF" or "View Document"
+   - The application uses the document's hash code to locate the file
+   - User is sent to the PDF storage service URL with the hash code
+   - PDF storage service serves the document based on hash code
 
 ---
 
 ## **Troubleshooting**
 
-- **Elasticsearch Connection**: Ensure Elasticsearch is running and properly configured
-- **Ollama Models**: Verify that Ollama is running and the required models are downloaded
-- **Vector Search**: Make sure the semantic index is properly created with vector embeddings
-- **CORS Issues**: Check that Flask-CORS is properly configured
+### **Common PDF Integration Issues**
+
+- **PDFs not loading**: Ensure PDF storage service is running (`docker-compose up -d`)
+- **Wrong PDFs loading**: Run `update_indices_with_hash_codes.py` to fix hash codes
+- **Missing hash codes**: Check the cleaned data files and update the indices
+
+### **Elasticsearch Issues**
+
+- **Connection errors**: Ensure Elasticsearch is running
+- **Missing indices**: Run the indexing scripts
+- **Search returns no results**: Check your search query and filters
+
+### **Ollama Issues**
+
+- **RAG not working**: Ensure Ollama is running and models are pulled
+- **Slow responses**: Try using smaller models like llama3.2:1b
+- **Out of memory errors**: Reduce model size or response length
 
 ---
 
@@ -220,7 +277,7 @@ Ensure the following are installed on your machine:
 - User-specific search history and preferences
 - Additional filtering options
 - Custom model fine-tuning for specific domains
-- PDF viewer integration
+- Enhanced PDF viewer integration
 
 ---
 
