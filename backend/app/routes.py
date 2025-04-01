@@ -1,5 +1,5 @@
-from flask import Blueprint, request, jsonify, g
-from services import perform_search, perform_semantic_search
+from flask import Blueprint, request, jsonify, g, redirect
+from services import perform_search, perform_semantic_search, get_document_by_hash
 from ollama_rag_service import generate_rag_response, get_available_models
 
 search_routes = Blueprint('search', __name__)
@@ -96,5 +96,30 @@ def get_departments():
         {"id": "cs", "name": "Computer Science"},
         {"id": "informatics", "name": "Informatics"}
     ]
-    return jsonify(departments)    
+    return jsonify(departments)
+
+@search_routes.route('/document/<int:hash_code>', methods=['GET'])
+def get_document(hash_code):
+    """
+    Get a document by its hash code.
+    """
+    es = getattr(g, 'es', None)
+
+    if not es:
+        return jsonify({"error": "Elasticsearch connection is not available."}), 500
+
+    department = request.args.get('department')
+    document = get_document_by_hash(es, hash_code, department)
     
+    if document:
+        return jsonify(document)
+    return jsonify({"error": "Document not found"}), 404
+
+@search_routes.route('/pdf/<int:hash_code>', methods=['GET'])
+def view_pdf(hash_code):
+    """
+    Redirect to the PDF storage service to view a PDF by its hash code.
+    """
+    pdf_storage_url = "http://localhost:5000"
+    
+    return redirect(f"{pdf_storage_url}/{hash_code}")

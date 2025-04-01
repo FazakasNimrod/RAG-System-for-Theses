@@ -2,6 +2,7 @@ import pdfplumber
 import re
 import os
 import json
+import hashlib
 from typing import Dict, Optional, List
 from keybert import KeyBERT
 
@@ -15,8 +16,37 @@ FIELD_NAMES = {
     "year": "year",
     "abstract": "abstract",
     "keywords": "keywords",
-    "department": "department" 
+    "department": "department",
+    "hash_code": "hash_code"
 }
+
+def title_to_hash_code(title):
+    """
+    Convert a title to a unique 10-digit hash code
+    
+    Args:
+        title (str): The title of the PDF
+    
+    Returns:
+        int: A unique 10-digit hash code representation of the title
+    """
+    def normalize_title(title):
+        normalized = title.lower()
+        
+        normalized = re.sub(r'[^a-z0-9\s]', '', normalized)
+        normalized = re.sub(r'\s+', ' ', normalized).strip()
+        
+        return normalized
+    
+    normalized_title = normalize_title(title)
+    
+    hash_object = hashlib.sha256(normalized_title.encode())
+ 
+    full_hash = int(hash_object.hexdigest(), 16)
+    
+    ten_digit_hash = full_hash % 10000000000
+    
+    return ten_digit_hash
 
 def extract_text_from_pdf(pdf_path: str) -> Optional[str]:
     """Extract raw text from a PDF file using pdfplumber."""
@@ -115,6 +145,9 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
     
     info[FIELD_NAMES["department"]] = "informatics"
     
+    filename = os.path.basename(pdf_path)
+    info[FIELD_NAMES["hash_code"]] = title_to_hash_code(filename)
+    
     author, supervisors = extract_author_and_supervisor(text)
     
     if author:
@@ -211,6 +244,8 @@ def process_pdf(pdf_path: str) -> Dict[str, str]:
         info = {value: "" if key != "keywords" else [] for key, value in FIELD_NAMES.items()}
         info[FIELD_NAMES["author"]] = extract_author_from_filename(pdf_path)
         info[FIELD_NAMES["department"]] = "informatics"
+        filename = os.path.basename(pdf_path)
+        info[FIELD_NAMES["hash_code"]] = title_to_hash_code(filename)
         return info
     
     return extract_info(text, pdf_path)

@@ -9,7 +9,9 @@
             "WiFi",
             "gyroscope",
             "accelerometer"
-        ]
+        ],
+        "hash_code": 9426250888,
+        "department": "cs"
     },
     {
         "author": "Bács Bernát",
@@ -21,7 +23,9 @@
             "Home-automation",
             "Raspberry Pi",
             "MQTT"
-        ]
+        ],
+        "hash_code": 6375406094,
+        "department": "cs"
     },
     {
         "author": "Bakó József",
@@ -33,14 +37,18 @@
             "bluetooth",
             "application",
             "robot control."
-        ]
+        ],
+        "hash_code": 2616592750,
+        "department": "cs"
     },
     {
         "author": "Bocsárdi András-Levente",
         "supervisor": "Prof. dr. ing. habil. Szilágyi László",
         "year": "2023",
         "abstract": "The topic of this thesis is the classification of brain tumours using convolutional\nneural networks. In the first half of the paper, I will describe neural networks based\non the literature, starting from simple M-P neurons to convolutional neural\nnetworks, covering their structure and their training. In the second half of the\npaper, I present three models I developed that classified brain tumours into four\ngroups with an accuracy of over 85%. The first model I implemented was a simple\nconvolutional neural network. With the second model I achieved only moderate\nperformance improvements by changing the architecture and preventing\noverfitting. For both models I tuned the hyperparameters. The best performing\nmodel was the third one, implemented with transfer learning and using VGG16 as\nthe base model. This model achieved the best accuracy (96%). In developing the\nthree models, I used methods to continuously improve the performance of neural\nnetworks by understanding the different mechanisms of action. The model I\ndeveloped could form the basis for an application that provides practicing\nradiologists with rapid preclassification in seconds, making their job easier.",
-        "keywords": []
+        "keywords": [],
+        "hash_code": 2333422661,
+        "department": "cs"
     },
     {
         "author": "Bálint Adolf",
@@ -52,7 +60,9 @@
             "image processing",
             "OpenCV",
             "Python"
-        ]
+        ],
+        "hash_code": 1412288822,
+        "department": "cs"
     },
     {
         "author": "Csiki Krisztina",
@@ -64,7 +74,9 @@
             "protocol",
             "sensors",
             "desktop application"
-        ]
+        ],
+        "hash_code": 3708994830,
+        "department": "cs"
     },
     {
         "author": "Czimbalmos Ákos",
@@ -75,7 +87,9 @@
             "network",
             "protocol",
             "routing"
-        ]
+        ],
+        "hash_code": 2506844218,
+        "department": "cs"
     },
     {
         "author": "Dénes Loránd",
@@ -89,7 +103,9 @@
             "efficient algorithm",
             "bioinformatics",
             "protein sequence"
-        ]
+        ],
+        "hash_code": 8386069326,
+        "department": "cs"
     },
     {
         "author": "Gergely Zsolt",
@@ -102,7 +118,9 @@
             "Flutter",
             "Spring Boot",
             "event."
-        ]
+        ],
+        "hash_code": 8370559909,
+        "department": "cs"
     },
     {
         "author": "Horváth Levente",
@@ -114,7 +132,9 @@
             "sound effects",
             "ARM programming",
             "Python simulation"
-        ]
+        ],
+        "hash_code": 1029524067,
+        "department": "cs"
     },
     {
         "author": "Kántor Zsuzsa-Krisztina",
@@ -127,7 +147,9 @@
             "spectrogram",
             "signal filtering",
             "disease diagnosis."
-        ]
+        ],
+        "hash_code": 890412580,
+        "department": "cs"
     },
     {
         "author": "Katona Andrea Izabella",
@@ -137,7 +159,9 @@
         "keywords": [
             "mobile robots",
             "voice control"
-        ]
+        ],
+        "hash_code": 7581458885,
+        "department": "cs"
     },
     {
         "author": "Körmöci Csaba",
@@ -149,14 +173,18 @@
             "smart contract",
             "crypto",
             "blockchain"
-        ]
+        ],
+        "hash_code": 8084975685,
+        "department": "cs"
     },
     {
         "author": "Kristóf István-Levente",
         "supervisor": "Dr. Kátai Zoltán",
         "year": "2022",
         "abstract": "Nowadays, IT has become one of the fastest growing industries. We often hear about new\ntechnologies every month or even every week. For recent graduates from academic institutions to\nsucceed in such a dynamic and fast growing environment, it is essential that they have mastered\nthe basics of programming during their studies. One of the basic concepts that can give\nuniversity students a lot of headaches is recursion.\nThe aim of this paper and the accompanying visualisation software is to serve as an educational\ntool for those who wish to gain a deeper understanding of the phenomenon of recursion. The user\nis given the opportunity to visualise different recursive functions using the software. Unlike the\nusual visualization tools, this application uses the method of stairs to visualize the depth of\nrecursion.\nThe presented software can be useful not only for students who want to learn, but also for\nall those who want to explore the phenomenon of recursion by observing interesting patterns in\nvisualizations.\n7",
-        "keywords": []
+        "keywords": [],
+        "hash_code": 1768879450,
+        "department": "cs"
     },
     {
         "author": "Nüszl Richárd-István",
@@ -169,14 +197,18 @@
             "Cosine Similarity",
             "Angular",
             "Spring Boot"
-        ]
+        ],
+        "hash_code": 6647580175,
+        "department": "cs"
     },
     {
         "author": "Pál Andor",
         "supervisor": "Dr. Szabó László Zsolt",
         "year": "2023",
         "abstract": "The aim of the thesis is to design and develop a web application that digitises the\nchoice of subjects for the diploma. A solution was needed that would help and facilitate\nthe work of the university committee and students in the diploma topic selection process.\nOur objectives included the development of a web application that could handle a\nlarge number of data and users and could be easily used by anyone. The application\nshould meet all university requirements and could be further developed on request. Be\nsecure and ensure that the application is maintainable.\nThe objectives have been achieved in all areas. A web application has been developed\nthat secretaries can log into and create periods and invite teachers and students to the\nsystem. Teachers can upload their degree topics and students can apply for them. And\nguests can view the diploma topics they have created.\nA wide range of technologies have been used in the development. Most prominent are\nthe frontend and backend frameworks. Using Angular and Spring to boot I was able to\ndevelopahighlyscalableandsecurewebapplication. UsingPostgreSQLdatabasetostore\ndata and testing frameworks and applications Cypress and Postman for maintainability.",
-        "keywords": []
+        "keywords": [],
+        "hash_code": 2546271706,
+        "department": "cs"
     },
     {
         "author": "Rigmányi Zsombor",
@@ -189,7 +221,9 @@
             "convolutional neural network",
             "transfer learn- ing",
             "GoogleNet architecture"
-        ]
+        ],
+        "hash_code": 9553014538,
+        "department": "cs"
     },
     {
         "author": "Soós Izabella",
@@ -200,7 +234,9 @@
             "user interface",
             "smart system",
             "microprocessor"
-        ]
+        ],
+        "hash_code": 7474381893,
+        "department": "cs"
     },
     {
         "author": "Szász Attila",
@@ -215,7 +251,9 @@
             "Python",
             "image processing",
             "industrial and educational robotics"
-        ]
+        ],
+        "hash_code": 7505858309,
+        "department": "cs"
     },
     {
         "author": "Szász Nimród János",
@@ -226,7 +264,9 @@
             "Mobile application",
             "PowerPoint",
             "laser pointer."
-        ]
+        ],
+        "hash_code": 8489835894,
+        "department": "cs"
     },
     {
         "author": "Szeibert Xavér",
@@ -238,6 +278,8 @@
             "Smart Energy meter",
             "MQTT",
             "Energy Management"
-        ]
+        ],
+        "hash_code": 8961822645,
+        "department": "cs"
     }
 ]

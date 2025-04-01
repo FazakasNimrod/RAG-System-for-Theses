@@ -176,7 +176,8 @@ def generate_rag_response(es, query: str, model_id: str, top_k: int = 5, departm
                 "year": source.get("year", "Unknown"),
                 "score": doc["_score"],
                 "abstract_snippet": source.get("abstract", "")[:150] + "...",
-                "department": source.get("department", "Unknown")
+                "department": source.get("department", "Unknown"),
+                "hash_code": source.get("hash_code", None)
             })
         
         return {

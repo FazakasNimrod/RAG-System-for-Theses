@@ -2,6 +2,7 @@ import pdfplumber
 import re
 import os
 import json
+import hashlib
 from typing import Dict, Optional, List
 
 FIELD_NAMES = {
@@ -9,8 +10,38 @@ FIELD_NAMES = {
     "supervisor": "supervisor",
     "year": "year",
     "abstract": "abstract",
-    "keywords": "keywords"
+    "keywords": "keywords",
+    "hash_code": "hash_code",
+    "department": "department"
 }
+
+def title_to_hash_code(title):
+    """
+    Convert a title to a unique 10-digit hash code
+    
+    Args:
+        title (str): The title of the PDF
+    
+    Returns:
+        int: A unique 10-digit hash code representation of the title
+    """
+    def normalize_title(title):
+        normalized = title.lower()
+        
+        normalized = re.sub(r'[^a-z0-9\s]', '', normalized)
+        normalized = re.sub(r'\s+', ' ', normalized).strip()
+        
+        return normalized
+    
+    normalized_title = normalize_title(title)
+    
+    hash_object = hashlib.sha256(normalized_title.encode())
+    
+    full_hash = int(hash_object.hexdigest(), 16)
+    
+    ten_digit_hash = full_hash % 10000000000
+    
+    return ten_digit_hash
 
 def extract_text_from_pdf(pdf_path: str) -> Optional[str]:
     """Extract raw text from a PDF file using pdfplumber."""
@@ -29,6 +60,11 @@ def extract_text_from_pdf(pdf_path: str) -> Optional[str]:
 def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
     """Extract specific information from the cleaned text using regex patterns."""
     info = {value: "" if key != "keywords" else [] for key, value in FIELD_NAMES.items()}
+    
+    info[FIELD_NAMES["department"]] = "cs"
+    
+    filename = os.path.basename(pdf_path)
+    info[FIELD_NAMES["hash_code"]] = title_to_hash_code(filename)
 
     # Extract Year
     year_match = re.search(r'\n\s*(20\d{2})\s*\n', text)
@@ -84,6 +120,7 @@ def extract_info(text: str, pdf_path: str) -> Dict[str, str]:
             print(f"Warning: No non-empty lines found in captured content for {pdf_path}")
     else:
         print(f"Warning: Could not match 'Coordonator [sșş]tiin[tțţ]ific: Absolvent:' line in {pdf_path}")
+        info[FIELD_NAMES["author"]] = filename_base
 
     # Extract Abstract
     abstract_match = re.search(
@@ -110,7 +147,12 @@ def process_pdf(pdf_path: str) -> Dict[str, str]:
     """Process a PDF file and extract required information."""
     text = extract_text_from_pdf(pdf_path)
     if text is None:
-        return {value: "" if key != "keywords" else [] for key, value in FIELD_NAMES.items()}
+        info = {value: "" if key != "keywords" else [] for key, value in FIELD_NAMES.items()}
+        info[FIELD_NAMES["department"]] = "cs"
+        filename = os.path.basename(pdf_path)
+        info[FIELD_NAMES["hash_code"]] = title_to_hash_code(filename)
+        info[FIELD_NAMES["author"]] = os.path.splitext(os.path.basename(pdf_path))[0]
+        return info
     return extract_info(text, pdf_path)
 
 def process_all_pdfs(folder_path: str) -> List[Dict[str, str]]:

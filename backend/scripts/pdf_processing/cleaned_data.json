@@ -11,7 +11,9 @@
             "WiFi",
             "gyroscope",
             "accelerometer"
-        ]
+        ],
+        "hash_code": 9426250888,
+        "department": "cs"
     },
     {
         "author": "Bács Bernát",
@@ -26,7 +28,9 @@
             "Home-automation",
             "Raspberry Pi",
             "MQTT"
-        ]
+        ],
+        "hash_code": 6375406094,
+        "department": "cs"
     },
     {
         "author": "Bakó József",
@@ -40,7 +44,9 @@
             "bluetooth",
             "application",
             "robot control"
-        ]
+        ],
+        "hash_code": 2616592750,
+        "department": "cs"
     },
     {
         "author": "Bocsárdi András-Levente",
@@ -54,7 +60,9 @@
             "tumours groups",
             "practicing radiologists",
             "networks covering"
-        ]
+        ],
+        "hash_code": 2333422661,
+        "department": "cs"
     },
     {
         "author": "Bálint Adolf",
@@ -68,7 +76,9 @@
             "image processing",
             "OpenCV",
             "Python"
-        ]
+        ],
+        "hash_code": 1412288822,
+        "department": "cs"
     },
     {
         "author": "Csiki Krisztina",
@@ -82,7 +92,9 @@
             "protocol",
             "sensors",
             "desktop application"
-        ]
+        ],
+        "hash_code": 3708994830,
+        "department": "cs"
     },
     {
         "author": "Czimbalmos Ákos",
@@ -95,7 +107,9 @@
             "network",
             "protocol",
             "routing"
-        ]
+        ],
+        "hash_code": 2506844218,
+        "department": "cs"
     },
     {
         "author": "Dénes Loránd",
@@ -111,7 +125,9 @@
             "efficient algorithm",
             "bioinformatics",
             "protein sequence"
-        ]
+        ],
+        "hash_code": 8386069326,
+        "department": "cs"
     },
     {
         "author": "Gergely Zsolt",
@@ -126,7 +142,9 @@
             "Flutter",
             "Spring Boot",
             "event"
-        ]
+        ],
+        "hash_code": 8370559909,
+        "department": "cs"
     },
     {
         "author": "Horváth Levente",
@@ -140,7 +158,9 @@
             "sound effects",
             "ARM programming",
             "Python simulation"
-        ]
+        ],
+        "hash_code": 1029524067,
+        "department": "cs"
     },
     {
         "author": "Kántor Zsuzsa-Krisztina",
@@ -155,7 +175,9 @@
             "spectrogram",
             "signal filtering",
             "disease diagnosis"
-        ]
+        ],
+        "hash_code": 890412580,
+        "department": "cs"
     },
     {
         "author": "Katona Andrea Izabella",
@@ -167,7 +189,9 @@
         "keywords": [
             "mobile robots",
             "voice control"
-        ]
+        ],
+        "hash_code": 7581458885,
+        "department": "cs"
     },
     {
         "author": "Körmöci Csaba",
@@ -181,7 +205,9 @@
             "smart contract",
             "crypto",
             "blockchain"
-        ]
+        ],
+        "hash_code": 8084975685,
+        "department": "cs"
     },
     {
         "author": "Kristóf István-Levente",
@@ -195,7 +221,9 @@
             "visualization tools",
             "basics programming",
             "interesting patterns"
-        ]
+        ],
+        "hash_code": 1768879450,
+        "department": "cs"
     },
     {
         "author": "Nüszl Richárd-István",
@@ -210,7 +238,9 @@
             "Cosine Similarity",
             "Angular",
             "Spring Boot"
-        ]
+        ],
+        "hash_code": 6647580175,
+        "department": "cs"
     },
     {
         "author": "Pál Andor",
@@ -224,7 +254,9 @@
             "backend frameworks",
             "data testing",
             "angular spring"
-        ]
+        ],
+        "hash_code": 2546271706,
+        "department": "cs"
     },
     {
         "author": "Rigmányi Zsombor",
@@ -239,7 +271,9 @@
             "convolutional neural network",
             "transfer learning",
             "GoogleNet architecture"
-        ]
+        ],
+        "hash_code": 9553014538,
+        "department": "cs"
     },
     {
         "author": "Soós Izabella",
@@ -252,7 +286,9 @@
             "user interface",
             "smart system",
             "microprocessor"
-        ]
+        ],
+        "hash_code": 7474381893,
+        "department": "cs"
     },
     {
         "author": "Szász Attila",
@@ -270,7 +306,9 @@
             "Python",
             "image processing",
             "industrial and educational robotics"
-        ]
+        ],
+        "hash_code": 7505858309,
+        "department": "cs"
     },
     {
         "author": "Szász Nimród János",
@@ -283,7 +321,9 @@
             "Mobile application",
             "PowerPoint",
             "laser pointer"
-        ]
+        ],
+        "hash_code": 8489835894,
+        "department": "cs"
     },
     {
         "author": "Szeibert Xavér",
@@ -298,6 +338,8 @@
             "Smart Energy meter",
             "MQTT",
             "Energy Management"
-        ]
+        ],
+        "hash_code": 8961822645,
+        "department": "cs"
     }
 ]

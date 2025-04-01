@@ -139,3 +139,44 @@ def perform_semantic_search(es, query, year=None, sort_order="desc", num_results
     response = es.search(index=",".join(indices), body=search_query)
     
     return response['hits']['hits']
+
+def get_document_by_hash(es, hash_code, department=None):
+    """
+    Retrieve a document by its hash code.
+
+    :param es: Elasticsearch client instance
+    :param hash_code: The hash code of the document to retrieve
+    :param department: Optional filter by department ('cs' or 'informatics')
+    :return: The document or None if not found
+    """
+    filter_clause = [{"term": {"hash_code": hash_code}}]
+    
+    if department:
+        filter_clause.append({"term": {"department": department}})
+    
+    search_query = {
+        "query": {
+            "bool": {
+                "filter": filter_clause
+            }
+        },
+        "size": 1
+    }
+    
+    if department == "cs":
+        indices = ["cs_theses"]
+    elif department == "informatics":
+        indices = ["infos_theses"]
+    else:
+        indices = ["cs_theses", "infos_theses"]
+    
+    try:
+        response = es.search(index=",".join(indices), body=search_query)
+        hits = response['hits']['hits']
+        if hits:
+            return hits[0]
+        return None
+    except Exception as e:
+        print(f"Error retrieving document by hash: {e}")
+        return None
+    
