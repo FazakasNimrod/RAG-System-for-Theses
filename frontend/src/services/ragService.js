@@ -31,3 +31,15 @@ export const askQuestion = async (
     throw error;
   }
 };
+
+export const getPdfByHashCode = (hashCode) => {
+  if (!hashCode) return null;
+
+  const pdfStorageUrl = "http://localhost:5000";
+  return `${pdfStorageUrl}/${hashCode}`;
+};
+
+export const getDocumentLink = (reference) => {
+  const identifier = reference.hash_code || reference.id;
+  return getPdfByHashCode(identifier);
+};

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { getPdfUrl } from "../../services/elasticsearchService";
 import "./ResultsList.css";
 
 const ResultsList = ({ results, showScores = false }) => {
@@ -12,8 +13,13 @@ const ResultsList = ({ results, showScores = false }) => {
     return <p className="no-results">No results found.</p>;
   }
 
-  const handleGoToPDF = (_id) => {
-    window.open(`http://localhost:5000/${_id}`, "_blank");
+  const handleGoToPDF = (hash_code) => {
+    const pdfUrl = getPdfUrl(hash_code);
+    if (pdfUrl) {
+      window.open(pdfUrl, "_blank");
+    } else {
+      console.error("Invalid hash code:", hash_code);
+    }
   };
 
   return (
@@ -21,7 +27,8 @@ const ResultsList = ({ results, showScores = false }) => {
       <ul className="result-items">
         {results.map((result) => {
           const { _id, _source, highlight, _score } = result;
-          const { abstract, author, keywords, year, supervisor } = _source;
+          const { abstract, author, keywords, year, supervisor, hash_code } =
+            _source;
 
           return (
             <li key={_id} className="result-item">
@@ -50,7 +57,9 @@ const ResultsList = ({ results, showScores = false }) => {
                   highlightedKeywords={highlight?.keywords}
                 />
               </p>
-              <button onClick={() => handleGoToPDF(_id)}>Go to PDF</button>
+              <button onClick={() => handleGoToPDF(hash_code)}>
+                Go to PDF
+              </button>
             </li>
           );
         })}

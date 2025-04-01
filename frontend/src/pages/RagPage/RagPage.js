@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { fetchAvailableModels, askQuestion } from "../../services/ragService";
+import {
+  fetchAvailableModels,
+  askQuestion,
+  getDocumentLink,
+} from "../../services/ragService";
 import "./RagPage.css";
 
 const RagPage = () => {
@@ -72,6 +76,15 @@ const RagPage = () => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSubmit(e);
+    }
+  };
+
+  const openPdf = (ref) => {
+    const pdfUrl = getDocumentLink(ref);
+    if (pdfUrl) {
+      window.open(pdfUrl, "_blank");
+    } else {
+      console.error("Could not generate PDF link for reference:", ref);
     }
   };
 
@@ -233,9 +246,7 @@ const RagPage = () => {
                     <p className="reference-snippet">{ref.abstract_snippet}</p>
                     <button
                       className="view-document-btn"
-                      onClick={() =>
-                        window.open(`http://localhost:5000/${ref.id}`, "_blank")
-                      }
+                      onClick={() => openPdf(ref)}
                     >
                       View Document
                     </button>

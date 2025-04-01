@@ -47,3 +47,23 @@ export const searchElasticsearchSemantic = async ({
     return [];
   }
 };
+
+export const getDocumentByHash = async (hashCode, department = null) => {
+  const params = {};
+  if (department) params.department = department;
+
+  try {
+    const response = await axios.get(`${API_URL}document/${hashCode}`, {
+      params,
+    });
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching document with hash code ${hashCode}:`, error);
+    return null;
+  }
+};
+
+export const getPdfUrl = (hashCode) => {
+  if (!hashCode) return null;
+  return `http://localhost:5000/${hashCode}`;
+};
