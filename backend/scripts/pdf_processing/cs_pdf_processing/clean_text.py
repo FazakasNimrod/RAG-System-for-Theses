@@ -2,8 +2,8 @@ import json
 import re
 from keybert import KeyBERT
 
-input_file = 'backend\scripts\pdf_processing\extracted_data.json'
-output_file = 'backend\scripts\pdf_processing\cleaned_data.json'
+input_file = 'backend\scripts\pdf_processing\cs_pdf_processing\extracted_data.json'
+output_file = 'backend\scripts\pdf_processing\cs_pdf_processing\cleaned_data.json'
 
 with open(input_file, 'r', encoding='utf-8') as f:
     data = json.load(f)

@@ -29,7 +29,7 @@ if not es.ping():
 print("Connected to Elasticsearch!")
 
 try:
-    with open("backend/scripts/pdf_processing/cleaned_data.json", "r", encoding="utf-8") as f:
+    with open("backend\scripts\pdf_processing\cs_pdf_processing\cleaned_data.json", "r", encoding="utf-8") as f:
         theses_data = json.load(f)
     print(f"Loaded {len(theses_data)} theses from JSON file")
 except Exception as e:

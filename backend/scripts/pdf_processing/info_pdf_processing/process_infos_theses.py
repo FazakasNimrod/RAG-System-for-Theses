@@ -7,8 +7,8 @@ from typing import Dict, Optional, List
 from keybert import KeyBERT
 
 INPUT_FOLDER = "backend\scripts\pdf_docs\infos"
-OUTPUT_JSON = "backend\scripts\pdf_processing\extracted_infos_data.json"
-CLEANED_OUTPUT_JSON = "backend\scripts\pdf_processing\cleaned_infos_data.json"
+OUTPUT_JSON = "backend\scripts\pdf_processing\info_pdf_processing\extracted_infos_data.json"
+CLEANED_OUTPUT_JSON = "backend\scripts\pdf_processing\info_pdf_processing\cleaned_infos_data.json"
 
 FIELD_NAMES = {
     "author": "author",

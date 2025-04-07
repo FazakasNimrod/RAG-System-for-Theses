@@ -13,7 +13,7 @@ es = Elasticsearch(
     basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
 )
 
-with open("backend\scripts\pdf_processing\cleaned_data.json", "r", encoding="utf-8") as f:
+with open("backend\scripts\pdf_processing\cs_pdf_processing\cleaned_data.json", "r", encoding="utf-8") as f:
     theses_data = json.load(f)
 
 for i, thesis in enumerate(theses_data, start=1):

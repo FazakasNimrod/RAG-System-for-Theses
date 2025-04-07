@@ -13,8 +13,8 @@ es = Elasticsearch(
     basic_auth=(ELASTIC_USERNAME, ELASTIC_PASSWORD)
 )
 
-CS_CLEANED_DATA_PATH = "backend/scripts/pdf_processing/cleaned_data.json"
-INFOS_CLEANED_DATA_PATH = "backend/scripts/pdf_processing/cleaned_infos_data.json"
+CS_CLEANED_DATA_PATH = "backend\scripts\pdf_processing\cs_pdf_processing\cleaned_data.json"
+INFOS_CLEANED_DATA_PATH = "backend\scripts\pdf_processing\info_pdf_processing\cleaned_infos_data.json"
 
 INDICES_MAP = {
     "cs": ["cs_theses", "cs_theses_semantic"],

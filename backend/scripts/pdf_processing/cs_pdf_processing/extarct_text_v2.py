@@ -176,7 +176,7 @@ def write_to_json(data: List[Dict[str, str]], json_path: str):
 def main():
     """Main function to process all PDFs in the szamteches folder and write to JSON."""
     folder_path = r"backend\scripts\pdf_docs\szamteches"
-    json_path = r"backend\scripts\pdf_processing\extracted_data.json"
+    json_path = r"backend\scripts\pdf_processing\cs_pdf_processing\extracted_data.json"
 
     extracted_data = process_all_pdfs(folder_path)
 
