@@ -1,18 +1,23 @@
 from sentence_transformers import SentenceTransformer
+from stop_words import remove_stop_words, get_important_terms
 
-def perform_search(es, query, year=None, sort_order="desc", is_phrase_search=False, department=None):
+def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None):
     """
     Perform a search query in Elasticsearch.
 
     :param es: Elasticsearch client instance
     :param query: Search query string
     :param year: Optional filter by year
-    :param sort_order: Sorting order ('desc' or 'asc')
+    :param sort_order: Sorting order ('desc' or 'asc') for year-based sorting. 
+                       If None, sort by relevance only.
     :param is_phrase_search: Whether to perform a phrase search (exact match)
     :param department: Optional filter by department ('cs' or 'informatics')
     :return: Search results as a dictionary
     """
-    if is_phrase_search and query:
+    if not query:
+        return []
+        
+    if is_phrase_search:
         search_fields = {
             "bool": {
                 "should": [
@@ -23,10 +28,42 @@ def perform_search(es, query, year=None, sort_order="desc", is_phrase_search=Fal
             }
         }
     else:
+        filtered_query = remove_stop_words(query)
+        print(f"Original query: '{query}' -> Filtered query: '{filtered_query}'")
+        
+        if not filtered_query.strip():
+            filtered_query = query
+        
         search_fields = {
-            "multi_match": {
-                "query": query,
-                "fields": ["abstract", "keywords^2", "author"]
+            "bool": {
+                "should": [
+                    {
+                        "match": {
+                            "abstract": {
+                                "query": filtered_query,
+                                "operator": "OR",
+                                "minimum_should_match": "60%",
+                                "boost": 1.0
+                            }
+                        }
+                    },
+                    {
+                        "match": {
+                            "keywords": {
+                                "query": filtered_query,
+                                "boost": 2.0
+                            }
+                        }
+                    },
+                    {
+                        "match": {
+                            "author": {
+                                "query": filtered_query,
+                                "boost": 0.5
+                            }
+                        }
+                    }
+                ]
             }
         }
 
@@ -44,14 +81,22 @@ def perform_search(es, query, year=None, sort_order="desc", is_phrase_search=Fal
                 "filter": filters
             }
         },
-        "sort": [{"year": {"order": sort_order}}],
         "highlight": {
             "fields": {
                 "abstract": {},
                 "keywords": {}
             }
-        }
+        },
+        "size": 10 
     }
+    
+    if sort_order in ["asc", "desc"]:
+        search_query["sort"] = [
+            {"year": {"order": sort_order}},  
+            "_score"  
+        ]
+    else:
+        search_query["sort"] = ["_score"]
 
     if department == "cs":
         indices = ["cs_theses"]
@@ -73,14 +118,15 @@ def get_model():
         _model = SentenceTransformer('all-MiniLM-L6-v2')
     return _model
 
-def perform_semantic_search(es, query, year=None, sort_order="desc", num_results=10, department=None):
+def perform_semantic_search(es, query, year=None, sort_order=None, num_results=100, department=None):
     """
     Perform a semantic search query in Elasticsearch using vector embeddings.
 
     :param es: Elasticsearch client instance
     :param query: Search query string
     :param year: Optional filter by year
-    :param sort_order: Sorting order ('desc' or 'asc')
+    :param sort_order: Sorting order ('desc' or 'asc') for year-based sorting.
+                       If None, sort by relevance only.
     :param num_results: Number of results to return
     :param department: Optional filter by department ('cs' or 'informatics')
     :return: Search results as a dictionary
@@ -125,9 +171,11 @@ def perform_semantic_search(es, query, year=None, sort_order="desc", num_results
     
     if sort_order in ["asc", "desc"]:
         search_query["sort"] = [
-            "_score",
-            {"year": {"order": sort_order}}  
+            "_score", 
+            {"year": {"order": sort_order}}, 
         ]
+    else:
+        search_query["sort"] = ["_score"]  
     
     if department == "cs":
         indices = ["cs_theses_semantic"]
@@ -179,4 +227,3 @@ def get_document_by_hash(es, hash_code, department=None):
     except Exception as e:
         print(f"Error retrieving document by hash: {e}")
         return None
-    

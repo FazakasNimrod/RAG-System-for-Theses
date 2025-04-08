@@ -1316,29 +1316,12 @@
         "hash_code": 5959274983
     },
     {
-        "author": "Kőble Melinda Andrea",
-        "supervisor": [
-            "Szilágyi László"
-        ],
-        "year": 2021,
-        "abstract": "The main drawback of magnetic resonance imaging (MRI) represents the lack of a standard intensity scale. All observed numerical values are relative and can only be interpreted together with their context. Before feeding MRI data volumes to supervised learning segmentation procedures, their histograms need to be registered to each other, in in other words, they need a so-called normalization. The most popular histogram normalization technique used to assist brain MRI segmentation is the algorithm proposed by Nyúl et al in 2000, which aligns the histograms of a batch of MRI volumes without paying attention to possible focal lesions that might distort the histogram. Alternately, some recent works applied histogram normalization based on a simple linear transform, and reported achieving slightly better accuracy with them. This thesis proposes to investigate, which of the commonly used histogram normalization methods provides the most suitable preprocessed brain MRI data for accurate segmentation via machine learning techniques, and which parameter settings are likely to assure high quality results. Two publicly available brain MRI data sets are involved in the investigation, one without and the other with focal lesions. Based on the results obtained via experimental evaluation, we recommend using the histogram normalization method of Nyúl et al., with no more than five milestone that represent constraints of the normalized histogram.",
-        "keywords": [
-            "magnetic resonance imaging",
-            "brain tumor segmentation",
-            "brain tissue segmentation",
-            "histogram",
-            "histogram normalization."
-        ],
-        "department": "informatics",
-        "hash_code": 5372666978
-    },
-    {
         "author": "Lázár Zsolt",
         "supervisor": [
             "Kátai Zoltán"
         ],
         "year": 2023,
-        "abstract": "The topic of my thesis is the study of sorting algorithms and an interactive solution for teaching them. Interactiveteachingplaysanincreasinglyimportantrolethesedays. Inourfast-paced world, it is becoming more and more difficult to hold the attention of students, therefore pedagogical methodologies are needed that help the teacher to attract and retain the attention of students. In informatics, since it is a real subject that teaches logical thinking, there are many practical tasks. Among these, one of the basic informatics course materials is the sorting algorithms of number sequences. Sort Race, a software developed by me, is a website where students can better understand sorting algorithms and can also compare their knowledge within the framework of a speed game. During the thesis, I will present the structure of this software and the basic operating principles of the technologies used.",
+        "abstract": "The topic of my thesis is the study of sorting algorithms and an interactive solution for teaching them. Interactive teaching plays an increasingly important role these days. Inourfast-paced world, it is becoming more and more difficult to hold the attention of students, therefore pedagogical methodologies are needed that help the teacher to attract and retain the attention of students. In informatics, since it is a real subject that teaches logical thinking, there are many practical tasks. Among these, one of the basic informatics course materials is the sorting algorithms of number sequences. Sort Race, a software developed by me, is a website where students can better understand sorting algorithms and can also compare their knowledge within the framework of a speed game. During the thesis, I will present the structure of this software and the basic operating principles of the technologies used.",
         "keywords": [
             "sorting algorithms",
             "students informatics",
