@@ -9,19 +9,27 @@ const SearchPage = () => {
   const [results, setResults] = useState([]);
   const [query, setQuery] = useState("");
   const [year, setYear] = useState("");
-  const [sort, setSort] = useState("desc");
+  const [sort, setSort] = useState("relevance");
   const [isPhrase, setIsPhrase] = useState(false);
   const [department, setDepartment] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
-    const data = await searchElasticsearch({
-      query,
-      year,
-      sort,
-      isPhrase,
-      department,
-    });
-    setResults(data);
+    setLoading(true);
+    try {
+      const data = await searchElasticsearch({
+        query,
+        year,
+        sort,
+        isPhrase,
+        department,
+      });
+      setResults(data);
+    } catch (error) {
+      console.error("Error performing search:", error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -41,7 +49,15 @@ const SearchPage = () => {
       <div className="main-content">
         <h1>Search Theses</h1>
         <SearchBar onSearch={handleSearch} query={query} setQuery={setQuery} />
-        <ResultsList results={results} />
+
+        {loading ? (
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p>Searching...</p>
+          </div>
+        ) : (
+          <ResultsList results={results} />
+        )}
       </div>
     </div>
   );

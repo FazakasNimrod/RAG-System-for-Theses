@@ -57,14 +57,15 @@ const Sidebar = ({
 
       {!hideSortOption && setSort && (
         <div className="filter-section">
-          <label htmlFor="sort-order">Sort Order</label>
+          <label htmlFor="sort-order">Sort By Year</label>
           <select
             id="sort-order"
             value={sort}
             onChange={(e) => setSort(e.target.value)}
           >
-            <option value="desc">Descending</option>
-            <option value="asc">Ascending</option>
+            <option value="relevance">Relevance (Default)</option>
+            <option value="desc">Newest First</option>
+            <option value="asc">Oldest First</option>
           </select>
         </div>
       )}

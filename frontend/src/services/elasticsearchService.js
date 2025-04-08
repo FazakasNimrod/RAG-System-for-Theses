@@ -12,7 +12,7 @@ export const searchElasticsearch = async ({
   const params = {};
   if (query) params.q = query;
   if (year) params.year = year;
-  if (sort) params.sort = sort;
+  if (sort && sort !== "relevance") params.sort = sort;
   if (isPhrase) params.phrase = "true";
   if (department) params.department = department;
 
@@ -35,7 +35,7 @@ export const searchElasticsearchSemantic = async ({
   const params = {};
   if (query) params.q = query;
   if (year) params.year = year;
-  if (sort) params.sort = sort;
+  if (sort && sort !== "relevance") params.sort = sort;
   if (limit) params.limit = limit;
   if (department) params.department = department;
 
