@@ -13,6 +13,11 @@ This script:
 4. Indexes the data with embeddings into a new index
 """
 
+modell_name = 'all-MiniLM-L6-v2'
+#modell_name = 'BAAI/bge-small-en' 
+#modell_name = 'BAAI/bge-base-en'
+#modell_name = 'BAAI/bge-large-en'
+
 load_dotenv()
 
 ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD")
@@ -37,7 +42,7 @@ except Exception as e:
     exit(1)
 
 print("Loading SentenceTransformer model...")
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer(modell_name)
 print("Model loaded successfully")
 
 index_name = "cs_theses_semantic"

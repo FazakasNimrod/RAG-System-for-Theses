@@ -4,6 +4,11 @@ import json
 from typing import List, Dict, Any, Optional
 import os
 
+modell_name = 'all-MiniLM-L6-v2'
+#modell_name = 'bge-small-en' 
+#modell_name = 'bge-base-en'
+#modell_name = 'bge-large-en'
+
 OLLAMA_API_BASE = os.environ.get("OLLAMA_API_BASE", "http://localhost:11434/api")
 
 AVAILABLE_MODELS = [
@@ -29,7 +34,7 @@ _embedding_model = None
 def get_embedding_model():
     global _embedding_model
     if _embedding_model is None:
-        _embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        _embedding_model = SentenceTransformer(modell_name)
     return _embedding_model
 
 def retrieve_documents(es, query: str, top_k: int = 5, department: str = None) -> List[Dict[str, Any]]:

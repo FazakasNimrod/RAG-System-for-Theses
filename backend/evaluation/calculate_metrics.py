@@ -178,7 +178,7 @@ def generate_charts(metrics, output_dir):
     plt.ylabel('Value')
     plt.title('Search Metrics Comparison')
     plt.xticks(x, labels)
-    plt.legend()
+    plt.legend(loc='lower left')
     plt.ylim(0, 1)
     
     for i, v in enumerate(keyword_values):

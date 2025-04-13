@@ -1,6 +1,11 @@
 from sentence_transformers import SentenceTransformer
 from stop_words import remove_stop_words, get_important_terms
 
+modell_name = 'all-MiniLM-L6-v2'
+#modell_name = 'BAAI/bge-small-en' 
+#modell_name = 'BAAI/bge-base-en'
+#modell_name = 'BAAI/bge-large-en'
+
 def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None):
     """
     Perform a search query in Elasticsearch.
@@ -115,7 +120,7 @@ def get_model():
     """Get or initialize the SentenceTransformer model"""
     global _model
     if _model is None:
-        _model = SentenceTransformer('all-MiniLM-L6-v2')
+        _model = SentenceTransformer(modell_name)
     return _model
 
 def perform_semantic_search(es, query, year=None, sort_order=None, num_results=100, department=None):
