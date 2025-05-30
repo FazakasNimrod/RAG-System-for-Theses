@@ -49,6 +49,71 @@
         "department": "cs"
     },
     {
+        "author": "Bartha Álmos",
+        "supervisor": [
+            "Hajdu Szabolcs"
+        ],
+        "year": 2024,
+        "abstract": "The aim of the thesis is to create a system that can be integrated between a computer and the attached network. The system should be capable of monitoring and processing packets passing between the computer and the network, and modifying specified packets. One of the data packets to be modified is the NTP packet, with the goal of having the computer synchronize its internal clock according to the modified packets from the integrated system, rather than the time received from the actual servers. The second type of packet to be modified is the DNS packet, with the goal of having the computer receive a falsified response modified by the integrated system for certain domain names, containing an internally selected IPv4 address instead of the server's response. Another important task of the system is monitoring the passing traffic. The primarily observed packets are TLS, FTP, and HTTP packets, with the aim of extracting and transparently displaying relevant content. Since FTP and HTTP packets are not encrypted, information such as passwords and usernames can also be extracted. To achieve these goals, a Raspberry Pi is integrated between the computer and the network, implementing the aforementioned tasks in Python. This program uses the Scapy library to monitor network traffic, modify network packets, and display their content. It forwards packets arriving at one attached network interface to another attached network interface while processing them and saving the relevant fields.",
+        "keywords": [
+            "Raspberry",
+            "Python",
+            "Traffic Monitoring",
+            "Scapy",
+            "DNS",
+            "NTP"
+        ],
+        "hash_code": 9552242341,
+        "department": "cs"
+    },
+    {
+        "author": "Benedek Szabolcs",
+        "supervisor": [
+            "Márton Gyöngyvér"
+        ],
+        "year": 2021,
+        "abstract": "The web application built for the exam has been named „The Ride” and the purpose behind is to create a well designed and responsive platform for people who want to travel, commute and explore. The inspiration behind the idea was the fact that there are a number of Facebook groups meant to simplify the search for ride sharing, however, there are not that many individual applications built for this purpose. This was the source of inspiration behind my web application. An important factor for the project was that it must provide an added value compared to similar solutions, for example Blablacar that is currently available in our country. Facebook groups are more widespread compared to other ride sharing applications due to the personal aspect of the social media platform. Blablacar is an international company whose application is used in multiple countries, which is the reason why building a community is more difficult there. „The Ride”, on the other hand, is only available for regions in Romania and Hungary, which meant to build a stronger, more familiar connection with the local users. My goal for the application was to be able to create the entire route when adding a new ride, as well as to provide a breakdown of locations that the ride is passing through. It’s crucial that the users are provided with good recommendations for rides. This functionality is built with the help of Google Maps APIs which will be discussed further in the exam paper.",
+        "keywords": [
+            "traveling",
+            "social building",
+            "responsivity",
+            "Google Maps"
+        ],
+        "hash_code": 8426592258,
+        "department": "cs"
+    },
+    {
+        "author": "Berkeczi Arnold",
+        "supervisor": [
+            "Szilágyi László"
+        ],
+        "year": 2022,
+        "abstract": "Nowadays medical image processing is a dynamically evolving science and industry. The rapid development of computers makes it possible to implement increasingly complex procedures. However, it is also possible for the computer to trigger the more tedious part of a human expert’s work and enable the doctor to focus only on cases where the computer has found something abnormal or suspicious. With this thesis, I also want to follow this trend. I propose to implement a machine learning procedure that can efficiently and accurately segment brain tissues based on MRI scans of six-month-old infants. During the implementation, I worked with the data published at the iSeg-2017 competition. From the OpenCV machine learning library, I found the discrete AdaBoost classifier to be the most suitable for segmentation, and I added a post-processing to improve the results of the classifier. In addition, I implemented software with a graphical user interface that can be used to launch segmentation tasks, visualize the results, and manage the inventory of performed operations. The average accuracy of the implemented segmentation procedure was slightly above 85%.",
+        "keywords": [
+            "magnetic resonance imaging",
+            "machine learning",
+            "discrete AdaBoost algorithm",
+            "medical image segmentation"
+        ],
+        "hash_code": 787015244,
+        "department": "cs"
+    },
+    {
+        "author": "Blénesi Áron",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2021,
+        "abstract": "The technologies we use in our everyday lives make our lives a lot easier: with a simple mobile device,wecanpaybillsorevenmakeavideocallwhileweareonthetrain. Inadditiontothese,new demandshaveemerged,suchasgettingthroughthevirtualworldtoplaceswehaveneverbeento. In this dissertation, we present the creation of a complete 3D model of the main building of the Sapientia EMTE, which also includes a web UI presented in another dissertation, thus creating a virtualtouroftheuniversity. Thedevelopedmodelisincorporatedintothewebapplicationasastatic element. The structural structure of the model was based on the real layout plans and architectural plans of the main building. In contrast to series of photograph based approaches, this method allows theusertobetterperceivethespatiallocationofelements. The model was created using Blender, an open source modeling software. The developed model allowsustoreachanypoint,fromanyangle,thusgivingtheusertheopportunitytonavigatefreely. At the same time, we have planned different routes between the most important points of the university, whichhelpustogettothesecretariat,departmentsorlaboratoryrooms,moreeasily. Wealsoplaceda virtual billboard at certain points in the model. Information about various universities and events can bedisplayedonthese.",
+        "keywords": [
+            "3dmodel",
+            "blender",
+            "virtualtour"
+        ],
+        "hash_code": 5146342377,
+        "department": "cs"
+    },
+    {
         "author": "Bocsárdi András-Levente",
         "supervisor": [
             "Szilágyi László"
@@ -62,6 +127,24 @@
             "networks covering"
         ],
         "hash_code": 2333422661,
+        "department": "cs"
+    },
+    {
+        "author": "Bustya Balázs",
+        "supervisor": [
+            "Brassai Sándor Tihamér"
+        ],
+        "year": 2021,
+        "abstract": "Artificial neural networks have gained great popularity for their accuracy in image processing, data mining, classification tasks, and decision-making systems in which previously only humans were able to make the right decisions. However, neural networks cannot yet completely replace humans, because humans design them depending on the given task. Hardware accelerators are used to increase the performance of neural networks. There have been plenty of studies on hardware accelerators in recent years. One of the options are FPGA circuits. The main advantages of FPGAs used for hardware acceleration are parallelism, low power consumption and flexibility. Implementing neural networks on FPGA is a very time consuming and difficult task, that can only be performed by experienced professionals. The framework we have developed provides solution to this problem. The purpose of the framework is to accelerate and facilitate the implementation of neural networks \"running\" on an FPGA, to accelerate neural networks, to study optimization options in terms of size and performance, and to automate the programming process. The parameterizable neural network models, implemented by the high-level synthesis discussed in the dissertation, serve as the basis of the framework, that generates the code of the neural networks modelled in C ++ optimized by directives. The Vivado HLS tool generates the IP core of the neural network from this code. It automatically integrates into a system built in Vivado. The Vivado tool generates the bit file needed to program the FPGA and programs the circuit. The paper includes the implementation of a multilayer perceptron neural network and a radial basis function network, hardware implementations of nonlinear activation functions, comparison of fixed-point and floating-point number representations.",
+        "keywords": [
+            "neural networks",
+            "FPGA",
+            "framework",
+            "high-level synthesis",
+            "MLP",
+            "RBF"
+        ],
+        "hash_code": 3129534222,
         "department": "cs"
     },
     {
@@ -81,6 +164,23 @@
         "department": "cs"
     },
     {
+        "author": "Bíró Apor",
+        "supervisor": [
+            "Brassai Sándor Tihamér"
+        ],
+        "year": 2024,
+        "abstract": "In the present, Artificial Intelligence enjoys a lot of attention not only in Computer Science, but also in many other sciences. A few examples out of these sciences are social sciences, medicine or even agricultural sciences. Nowadays our smartphones spend more time in our hands than in our pockets. New ideas, new solutions, and new innovations are constantly born to combine agricultural sciences and computer technology. In this diploma work I wanted to incorporate different CNN based object detection algorithms into an Android application that recognizes different cultivated plant seeds through the camera of the smartphone, in real time. In addition to object detection, it performs calculations of the seeds area, mass, and size with a reference value. The 21 types of plant seeds which were trained include, for example, three types of peas, two types of corn, sunflower, wheat, barley, rye, faba bean etc. With a training dataset containing almost 50,000 samples created by me with some help, YOLOs and MobileNets were able to achieve an accuracy of almost 80%. Due to compatibility errors, I only managed to integrate the YOLO algorithms into the application. The stated goal of this thesis was an easy-to-use, accurate plant seed recognition application that works even at the fields. Finally, I managed to create an application that works in laboratory conditions, which with possible further development could also be suitable for use at the fields with possible further development.",
+        "keywords": [
+            "CNN",
+            "Deep learning",
+            "Object detection",
+            "Android",
+            "Plant Seeds"
+        ],
+        "hash_code": 891645564,
+        "department": "cs"
+    },
+    {
         "author": "Csiki Krisztina",
         "supervisor": [
             "Turos László-Zsolt"
@@ -97,6 +197,21 @@
         "department": "cs"
     },
     {
+        "author": "Csorvasi Endre",
+        "supervisor": [
+            "Domokos József"
+        ],
+        "year": 2022,
+        "abstract": "The paper is about a web application that provides a solution for companies in the complex task of inventory management. Nowadays, for every kind of task, there is an object or tool that helpsto perform this task, thus simplifying people's lives. The use of objects, tools has also become common within companies, as it has allowed them to increase productivity. Because of the many objects used, keeping track of them has become an increasing challenge for companies. Due to the virus situation, a large number of companies have given employees the opportunity to work remotely . To address these problems, I have created awebapplication that allowscompanies to easily keep track of which objects are in the possession of an employee. The application should be available to users in multiple roles. The administrator, who is responsible for the application, whose job is tomanageobjects,users anduserrequests. Usersaretheemployees who can view the objects and request the tools they need. These requests canbeaccepted or rejected by the administrators. Thanks to the webapplication ,itis easy toaccessand doesnotneed tobeconfigured for each employee. All you need to access it is the Internet and a web browser.",
+        "keywords": [
+            "web application",
+            "inventory management",
+            "layered architecture"
+        ],
+        "hash_code": 3490846224,
+        "department": "cs"
+    },
+    {
         "author": "Czimbalmos Ákos",
         "supervisor": [
             "Turos László-Zsolt"
@@ -109,6 +224,53 @@
             "routing"
         ],
         "hash_code": 2506844218,
+        "department": "cs"
+    },
+    {
+        "author": "Czirják Márk",
+        "supervisor": [
+            "Bakó László"
+        ],
+        "year": 2024,
+        "abstract": "The central theme of my thesis is SCADA systems, detailing their structure, components, and areas of use, as well as the CAN communication protocol used in the industry and embedded systems. It also covers the integration and design of their interconnection, similar to modern automotive applications. The theoretical aim of my thesis is to present the tools necessary for designing and operating a system composed of electronic control units, such as microcontrollers, sensors, and actuators. My practical aim is the implementation of uniquely tasked control units with unified CAN communication, discussing the design phases and demonstrating their operation. Achieving both of these goals involves designing and building four control units capable of operating as a coherent system, using each other's information, exchanging information between them, storing and processing data, in the presence of a graphical user interface that provides continuous feedback on the current state of the system. Thus, my thesis encompasses the theoretical foundations required for creating a system using electronic control units and CAN communication, the technologies used, the selection of hardware and software elements, their integration, and the phases of design and practical implementation.",
+        "keywords": [
+            "SCADA",
+            "CAN",
+            "ECU",
+            "embedded system"
+        ],
+        "hash_code": 6162401404,
+        "department": "cs"
+    },
+    {
+        "author": "Dali Szilárd István",
+        "supervisor": [
+            "Szabó László Zsolt"
+        ],
+        "year": 2024,
+        "abstract": "The aim of the thesis is to design a web application in order to help the organization process of the Annual Student Scientific Conference. This application will help students and organizers during the process of uploading and review of conference papers. A previous similar application existed at Sapientia University in Tărgu Mureș, but was developed with outdated technologies. The goal was to implement an application, which is based on modern technologies and provides a responsive user interface. In addition to this, it was also a goal customize the application from an administration interface according to annual needs. Menus and pages for new content are configurable from the admin dashboard. The application has been successfully implemented and assures uploading of papers on a time based schedule and the review process within deadlines. In addition, new functionalities were added , e.g. task management for the reviewers. The project is designed and developed using modern technologies that ensure the safe, fast and smooth operation of the application. The following technologies were used: React. JS, Express. JS, MySQL.",
+        "keywords": [
+            "Student Annual Conference",
+            "conference management",
+            "React.JS",
+            "Express.JS"
+        ],
+        "hash_code": 2568934650,
+        "department": "cs"
+    },
+    {
+        "author": "Demény-Székely Adorján",
+        "supervisor": [
+            "Vajda Tamás"
+        ],
+        "year": 2022,
+        "abstract": "Nowadays, geopositioning can be done on even the smallest devices, such as a smart watch or a smart phone. Each of the GPS applications uses the reverse geocoding feature of the map application to give the user accurate information about their location. To be able to do this, the map application must be backed by a serious database that stores geographic data for millions of points around the world. There are many applications that can provide very accurate map data to users. The most known applications are Google Maps, Bing Maps, Apple Maps, and the open source OpenStreetMap. One of the great advantages of OpenStreetMap is that it is open source, but it is also one of it’s weaknesses, because being open source, anyone can update the data in its database. OpenStreetMap allows for local installation through software called Nominatim, this means that companies can become independent from big companies who provide Map APIs for huge amount of money. Installing such a server requires a huge amount of disk space, and the amount of data continues to grow after installation due to updates. The aim of this dissertation is to develop a software system that allows the Nominatim web server data to be updated automatically, but also allows the user to manage the update process. The software system consists of two main components, a web application that tests the data. A server collection that allows you to update the data in the database. The web application is an ASP. NET Core application implemented with an MVC architectural pattern. This testing application allows the user to test the differences between two Nominatim servers. The server collection consists of three ubuntu servers with Nominatim software installed. Their job is to update the data in the database.",
+        "keywords": [
+            "Nominatim",
+            "automatic update",
+            "OSM database"
+        ],
+        "hash_code": 9070755036,
         "department": "cs"
     },
     {
@@ -130,6 +292,37 @@
         "department": "cs"
     },
     {
+        "author": "Dobri Ervin",
+        "supervisor": [
+            "Iclănzan Dávid"
+        ],
+        "year": 2021,
+        "abstract": "Flat foot is one of the most common orthopedic problems, which in the absence of gradual treatment and correction can also result in serious health problems later on. This unpleasant orthopedic lesion canbetreatedefficientlywithpersistentexerciseofthefoot,withphysiotherapy. Unfortunately, most children are bored with the monotony of physiotherapy, in order to create consistent perseverance they need the constant supervision, persuasion and encouragement of the physiotherapist and parents. On the other hand, children love to play, so putting physiotherapy in a playfulframeworkcanmaketherehabilitationprocesseasierforeveryoneandincreaseitsefficiency. InthedissertationIpresentaself-developed“seriousgame”framework,withthehelpofwhichvideogamescanbecontrolledwiththephysiotherapyexercisesusedinthetreatmentoftheflatfoot: the gamesarecontrolledbythemovementofthefootinsteadofpressingakey/button. Thesystemdetects the exercises in (near) real time from signals summing up the muscle activity provided by the EMG (Electromyography)bandplacedonthechild’sleg,andthensimulatesthekeystrokecorrespondingto theexerciseinthecurrentlyrunninggame,therebycontrollingit.",
+        "keywords": [
+            "seriousgames",
+            "machinelearning",
+            "neuralnetworks"
+        ],
+        "hash_code": 3763886581,
+        "department": "cs"
+    },
+    {
+        "author": "Erdős József",
+        "supervisor": [
+            "Domokos József"
+        ],
+        "year": 2022,
+        "abstract": "The new innovations of the 21st century are making our daily lives easier, one of them being food ordering apps, which were mainly used during the quarantine period in our region. In my thesis, I will compare several food ordering apps, their usage, and I will also present an application developed by me, that has been in real use for more than three months in the villages near Odorheiu Secuiesc, Cristuru Secuiesc and Gheorgheni. I used several technologies to create the application. The restaurant's internal system was written in Node.js/Express.js. The API that serves the mobile app was written in Node.js and finally for the mobile application I used React Native. In my thesis I will present in detail how the application works and how to use it. It is important to mention that I wanted to create a user interface by using the knowledge I gained at the university, which provides a ready-to-use system for the users, that is rather simple and easy to use. Another interesting aspect is that I made the application available in small villages where online food ordering was not yet available.",
+        "keywords": [
+            "mobile application",
+            "compare food",
+            "https reactnative",
+            "api"
+        ],
+        "hash_code": 9772729098,
+        "department": "cs"
+    },
+    {
         "author": "Gergely Zsolt",
         "supervisor": [
             "Antal Margit"
@@ -147,6 +340,58 @@
         "department": "cs"
     },
     {
+        "author": "Györfi Endre",
+        "supervisor": [
+            "Sulyok Csaba",
+            "Iclănzan David Andrei"
+        ],
+        "year": 2022,
+        "abstract": "Romania receives a large amount of money from the European Union to support farmers involved in agri-environmental and agricultural production. The brainchild of the project is the Milvus Association, which is involved in nature conservation research. They have observed that farmers have a big problem in obtaining information on subsidies, as there is currently no single website or application in Romania that collects subsidies and related information. To solve this problem, the APIA APP project was created, which consists of an Android application and a content management system. The aim of the application is to help local farmers to browse the subsidies available in Romania and to comply with the conditions attached to the subsidies. It also helps to follow the conditions of the subsidies already won. It helps farmers to win a grant by collecting the documents needed to win each grant. The development was done in Kotlin Multiplatform Mobile, which supports multiplatform application development, the Android part was written in Kotlin. The thesis describes the client and server application, the technologies used for its implementation, covering the architecture and the functionalities. Two persons participated in the development of the application, namely Endre Györfi and István-Lehel Balázs. The development has been divided according to functionalities, which can be followed in detail in the use-case diagram presented in the thesis.",
+        "keywords": [
+            "Milvus",
+            "farmers",
+            "subsidies",
+            "Kotlin",
+            "Multiplatform"
+        ],
+        "hash_code": 6545891107,
+        "department": "cs"
+    },
+    {
+        "author": "Gáll János",
+        "supervisor": [
+            "Bakó László"
+        ],
+        "year": 2021,
+        "abstract": "The dissertation presents a processor designed and implemented for an FPGA circuit, which I modeled on the Xilinx PicoBlaze processor. In this paper, I present the steps of design, construction, and testing. Nowadays, computer technology is developing extremely fast, with redesigning and optimizing various elements. The processor is one of the most important components of a computer that executes instructions and controls the entire system. There are several types of processor architectures, such as Harvard and Neumann architectures. I built the processor presented in my dissertation on the principles of Harvard architecture. However, I also used a two-phase piping to make better use of the processor. This allows you to perform operations much faster. During the design of the processor, I also took into account the RISC design strategy, the essence of which is that the processor has a small number and simple instructions. This makes planning easier and faster. The aim of the dissertation is to compare the two processors, PicoBlaze and the processor I designed and developed, in terms of computational performance and process control performance. The tests performed can be divided into two groups, arithmetic tests and analog signal sampling tests. During arithmetic tests, I examined factorization and Fibonacci number sequence generation for both processors. During analog signal sampling, processors had to reproduce sine and square signals of different frequencies.",
+        "keywords": [
+            "FPGA",
+            "RISC",
+            "Processoremulator",
+            "compiler",
+            "analog-to-digitalconversion"
+        ],
+        "hash_code": 1108760069,
+        "department": "cs"
+    },
+    {
+        "author": "Hammas Attila",
+        "supervisor": [
+            "Brassai Sándor Tihamér"
+        ],
+        "year": 2021,
+        "abstract": "Artificial neural networks (ANN) are widely used in solving problems like image processing, data mining, or classification. Hardware accelerators are used for increasing the performance and efficiency of neural networks. An option for implementing such an accelerator is an FPGAbased system, although developing neural networks for FPGAs is very time-consuming and requires professionals to do it. In this article, we try to tackle this problem by creating a framework that should speed up the process. At the same time, we will take a look at some efficiency optimization and speed-up options as well. The framework is written in Python and generates a C++ code whit HLS directives. This code can be compiled by Vivado HLS into a hardware descriptive language and packaged as an IP. The Vivado tool can generate a bit file that can be uploaded onto the FPGA device. Among other things, the dissertation presents a comparison of different approximations of nonlinear transformations (base functions and activation functions) in terms of accuracy, required resource, and delay needed for evaluating the transformation. The generated neural network module was integrated into a system, that we developed. Using that system, we tested the neural network module and compared it with the models implemented in Python.",
+        "keywords": [
+            "framework for neural networks",
+            "HLS",
+            "MLP",
+            "RBF",
+            "FPGA"
+        ],
+        "hash_code": 844233960,
+        "department": "cs"
+    },
+    {
         "author": "Horváth Levente",
         "supervisor": [
             "Fehér Áron"
@@ -160,6 +405,37 @@
             "Python simulation"
         ],
         "hash_code": 1029524067,
+        "department": "cs"
+    },
+    {
+        "author": "Iszlai Tamás",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2024,
+        "abstract": "Nowadays people’s lives are greatly influenced by digitalization, and most individuals possess at least one smart device that offers numerous possibilities to ease everyday life. These possibilities provide solutions to many problems, such as keeping in touch with distant relatives and friends, buying and selling products, conducting related transactions, and last but not least, navigating around the wider world. This thesis presents the creation and testing of a web server application, which is accompanied by a mobile application and an alertness monitoring algorithm introduced in two other theses. Together these components form an application that supports social activities and transportation. The web server is responsible for the backend operations and information flow of the application through a communication channel. The web server is developed using Python, a widely-used programming language with a plethora of packages. The developed application can be installed and deployed in the given environment, after which it provides functionalities such as authentication, post management, search, notifications, messaging, file upload/storage, and operations with Q&A forms.",
+        "keywords": [
+            "webserver",
+            "navigation",
+            "architecture"
+        ],
+        "hash_code": 2630669360,
+        "department": "cs"
+    },
+    {
+        "author": "Kalith Norbert",
+        "supervisor": [
+            "Vajda Tamás"
+        ],
+        "year": 2021,
+        "abstract": "The theme of my thesis is the design and implementation of a progressive web application to help teachers and students manage and track attendance. Attendance management is a frequently recurring activity in order to allow instructors to keep track of students' attendance in class. Most teachers use traditional methods to record attendance. The main drawback of these methods is that they are time-consuming processes. By using digital tools, the time spent on this activity can be minimized and attendance recording is more transparent for both teachers and students. The aim of this thesis was to design and build an application that would facilitate and speed up the process of attendance management by taking advantage of the benefits of technology. To produce the software, I tested and used a new software development methodology called Progressive Web Application. I created a platform-independent application that uses the Web NFC API technology to manage presences quickly and reliably, and I also created an Androidbased native application that uses Bluetooth technology in case the user's mobile device is not capable of using NFC technology. The result was a multi-platform progressive web application and a native application. Both software, taking into account the epidemiological situation, provide a contactless presence tracking and speed up and facilitate the management and tracking of the presence.",
+        "keywords": [
+            "presence management",
+            "progressive web application",
+            "platform independence",
+            "NFC data transmission"
+        ],
+        "hash_code": 6186140832,
         "department": "cs"
     },
     {
@@ -191,6 +467,39 @@
             "voice control"
         ],
         "hash_code": 7581458885,
+        "department": "cs"
+    },
+    {
+        "author": "Kencse Szabolcs",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2022,
+        "abstract": "The world is moving fast towards digitalization by taking huge steps in all areas of life and thus almost every person has now a smartphone. Nowadays, there are plenty of applications to facilitate our everyday tasks, however, in one of the most important areas, education, we still do not take advantage of the opportunities offered by these tools. The goal of my dissertation is to provide an alternative to the handwritten catalogue used in public education that makes it easy for all teachers, students, and parents to track student marks and absences and helps optimizing administration processes. A teacher can hold the catalogue of all the classes he teaches in his hand at the same time and note their grades at any time, as the physical limit, given by the fact that there is only one unique piece for each class, is eliminated. The students will also have the opportunity to view their marks and absences at any time without interrupting the classes and parents will be able to keep track of real data through their kid’s user as well. To implement this solution, I created a multiplatform application that is compatible with smartphones running iOS and Android, but also any device that has a web browser.",
+        "keywords": [
+            "handwritten catalogue",
+            "multiplatform application",
+            "smartphones running",
+            "kicsit több"
+        ],
+        "hash_code": 560621487,
+        "department": "cs"
+    },
+    {
+        "author": "Koncz András",
+        "supervisor": [
+            "Antal Margit"
+        ],
+        "year": 2024,
+        "abstract": "The topic of my thesis is a web interface that helps students tofind theirwayaround the university andto askfor help. My webapplicationfacilitatesthe preparationof studentsstudying at Sapientia University, Faculty ofTechnical andHumanSciences, enhances theiruniversity life bybuilding mentor-mentee relationships. Nowadays, especially for first year students, socialization and access to information is a big challenge. Thesolution isa websitethroughwhich studentscanask for andoffer helptoeach other. Thisnot onlyhelpsthem socializeina newenvironment,but alsocontributesto improving their academicperformance. My aim was to provide a user-friendlyinterfacethat makesit easyfor students tocontact each other for help. I also aimed to provide alibrary ofresources whereusers canbrowse useful links, exam papers and theses to provide them with inspiration and support. In my experience, students face many difficulties during their university years, and I believe that my website can provide a solution to these learning and orientation problems. I particularly value the features that support mentor-mentee relationships, which facilitate communication between users and helpstudents tointegrateinto theuniversity environment. My project is based on the Spring Boot framework. The client side I implemented communicates with the server side via REST API requests. Themainfeatureof theclient sideis the use of HTML, CSS and JS technologies, complemented by the Thymeleaf template engine. Using these,I havetriedto create themost transparentand user-friendlyinterfacepossible. The result of my work is a responsive and easy to use web interface, which provides functionality to help students of our university in their studies. The SapiMentor application is accessible attheaddress www.sapimentor.eu.",
+        "keywords": [
+            "mentoring",
+            "Thymeleaf",
+            "OpenAI",
+            "webapplication",
+            "Spring Boot"
+        ],
+        "hash_code": 6531063972,
         "department": "cs"
     },
     {
@@ -226,6 +535,168 @@
         "department": "cs"
     },
     {
+        "author": "Kállai Balázs",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2024,
+        "abstract": "Nowadays, most people have smartphones that allow them to solve various problems using different applications. StayConnected is an innovative application that not only helps maintain users’ social connections but also offers numerous useful features to facilitate travel and daily tasks. The current features of the application include posting pictures, exchanging messages with other users, and creating personal profiles where users can view their posts, items for sale, and events they have created. One of the main functions of the application is navigation, which works using Flutter Map. Users can create routes or trips consisting of multiple points and specify several points within a selected radius, which draws points of interest (POIs). By selecting these, the route connects these points. Holding down on a point on the map allows users to create events, such as a car meet-up. Additional features of the application include the visibility of users on the map, along with their last login location and time. The market function allows users to post items for sale, and the posting location is added to the item, which, when clicked on by another user, the app automatically plans a route from the current location to the item’s location. The application has a search function that returns results for the entered text, including market and regular posts. The app receives and notifies the user of notifications, such as when they receive a message. The server behind the map is private. We run the OSRM API on our own server, and we direct our routing requests to this server. If the private server is unavailable, the app sends requests to the standard OSRM server, maximizing reliability. The application also includes a Q&A page where users can ask questions and others can respond. The application settings include a general settings page where users can set the app’s theme (four themes are available) and select the start page (feed page, navigation page, market page, or profile page). On the profile settings page, users can change their bio, username, and profile picture. The following features are under development: a library section where users can create categories and subcategories and upload documentation they own, a virtual garage that contains users’ cars, which will later be used for speed recommendations in route planning. Special events can be created while driving, such as reporting accidents or potholes based on the existing event creation function, and we also plan to expand the Q&A page by adding the ability to rate answers and evaluate the reliability of responders.",
+        "keywords": [
+            "Flutterapplication",
+            "socialmedia",
+            "navigation"
+        ],
+        "hash_code": 9911177368,
+        "department": "cs"
+    },
+    {
+        "author": "Lukács Botond",
+        "supervisor": [
+            "Turos László-Zsolt"
+        ],
+        "year": 2022,
+        "abstract": "In today’s world, microcontroller systems can be found in a lot of things, and they have a big processing capacity and can be used in many different applications. They have a lot of functions, from making an LED blink to automating complex systems. They can also be easily connected to external components, allowing for even more diverse use cases. For this reason, the main goal of this dissertation is to create a system that can identify simple electronic components with their approximate values and pinouts. In electronics, there are many components such as resistors, capacitors, diodes, and transistors. When building a circuit, it is important to know what the component is and, more critically, what its pinout is—especially for semiconductors. Often, the identifier values are unreadable or there is no datasheet available, making component identification difficult. For this purpose, the electronic component tester was developed, which automatically identifies and displays the component values or indicates failure if it cannot identify the component. The process is fully automatic—only the component needs to be connected to the tester socket and toggle switch, or it automatically starts when connected to power. The dissertation covers microcontroller applications and their design for component recognition and measurement.",
+        "keywords": [
+            "microcontroller",
+            "transistor",
+            "identifying"
+        ],
+        "hash_code": 9884667041,
+        "department": "cs"
+    },
+    {
+        "author": "Lukács Orsolya",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2022,
+        "abstract": "Today, smartphones make most of our lives easier, as they allow us to access services that embrace our day-to-day operations. Theseservicesareavailable through a downloadable application, a website created by a specialized company. In many cases, software can save energy and time. The need to manage time can also be observed in the case of services that put our health and well-being first. As part of my dissertation, I am developing a software that provides health services. Important information is that the software is actually on-demand, serving a Client. The Client'sjob isto adviseondiet,to workasa dietitianin whichshecan use the software. The implemented application, which allows the monitoring of clients, the creation of recipes and diets, was created with the help of Flutter. We use the real-time database provided by Firebase to store the data. The application is also available to patients, where they can follow their diet, monitor their changes in body size, and scheduleappointmentswith theirdietitian. Theprimarybasisof thesoftware was to minimize the number of applications required to be used in the work of a dietitian. Similar applications have beenobserved, aswell asdifferentparameters that need to be considered when developing a medical application. The Clientalso took partinthecomplete developmentof thesoftware, andher comments and needs were taken into account. The application is a version of the expected software, for which there are still some development ideas, but for now, it fully covers the main functionalities.",
+        "keywords": [
+            "medical application development",
+            "dietitian",
+            "patient",
+            "flutter"
+        ],
+        "hash_code": 2311258494,
+        "department": "cs"
+    },
+    {
+        "author": "Lörinczi Mátyás",
+        "supervisor": [
+            "Lefkovits László",
+            "Oltean-Péter Boróka"
+        ],
+        "year": 2024,
+        "abstract": "Using Graph Algorithms on Real Networks: This project develops a web application for the Exodus organization, which is involved in organizing camps. The application provides an interface for hosts, bush camps, and teams, as well as an administrative interface to upload their data into the system. Users can easily add and update their profiles, including locations, dates, and necessary resources. The program automatically organizes the camps using a modified Kruskal algorithm, taking into account various constraints and preferences such as distance, scheduling, and participant needs. The algorithm optimizes the distribution and scheduling of the camps to be as efficient as possible. Once the camps are organized, the application visually represents them through interactive maps and charts. This allows administrators and participants to easily view camp locations, dates, and other important information. The aim of the application is to facilitate and streamline the camp organization process and to make the processes more transparent for participants.",
+        "keywords": [
+            "Exodus",
+            "webapplication",
+            "planning",
+            "graphvisualization"
+        ],
+        "hash_code": 690535069,
+        "department": "cs"
+    },
+    {
+        "author": "Madaras Ervin",
+        "supervisor": [
+            "Vajda Tamás"
+        ],
+        "year": 2022,
+        "abstract": "The project aims to develop software for a wood processing company that canrecognise PAL boards by identifying and comparing different properties. This software will help the operator of an automated crane to avoid cases where, due to humanerror,the suppliersends the wrong type of PAL plate, or where, due to the same error, the woodworking company has ordered the wrong type of PAL plate. These mistakes can lead to PAL boards, because of a different type than the one set for the automated crane, being sent to the wrong place in the warehouse or even the wrong type of board being processed. The wood processing plant provided data with images of the PAL plates, and from this, two classification algorithmswere implemented. Since onlyoneimagesampleof each PALplate exists in the database, traditional classifiers based on artificial intelligence cannot be used. For this reason, thetwoalgorithms thathave beenimplementedextract featuresfrom eachimageand use these features to compare the input sample with the images in the database for comparison. One of these methods, which has been implemented, determines the dominant colors of the images by clustering. By comparing dominantcolors,the algorithmis able todeterminehow similar two images are to each other. By calculating the Euclidean distance between the dominant colors, it can give a value for how different the two images are from each other, obviously the smaller the distance, the more similar the images are. Another method that has been implemented is to split the imagesintosegments andthen compute a histogram for each segment. These histograms are then concatenated to create a feature vector for the images. It then compares the feature vectors using chi-square distance. The conclusions are that the algorithms are sensitive to rotation. However, nice results will be obtained ifa segmentof theimagesis created, oronlyone dominantcolorisselected and compared.",
+        "keywords": [
+            "dominant color",
+            "histogram",
+            "classification",
+            "similarity measure"
+        ],
+        "hash_code": 1377752079,
+        "department": "cs"
+    },
+    {
+        "author": "Magyarosi Roland-Mihály",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2021,
+        "abstract": "Nowadays less and less attention is given to development and modernizing of Desktop applications over web and mobile. Although Desktop applications have an important role in the lives of users and IT workers. With the quick evolution of mobile phones practically everything is possible using the smartphone in our pocket, but it couldn’t and probably will not be able to surpass computers for a while. The dissertation focuses on a system designed for personal computers or laptops that perfectly meets the role of a virtual assistant in our life. The IPA (intelligent personal assistant) softwares help the uses perform easy, but frequent tasks like browsing the internet, sending emails and swiftly opening applications while the input is not codes or signals, but simply a human voice. Presumably this is the reason for the success of this science that has grown into an industry. Virtual assistants are the blessing of the 21st century, but their history dates back to 1920. Every assistant is different, but their purpose is the same: serving the user. In our case a user is person in front of a computer whose job Sapientia Sarah tries to make easier, with performing simple, but frequent commands. This technology is accessible on both smartphones, computers and recently in household appliances and cars as well. In my dissertation I studied desktop applications and development of these, voice recognition, executing voice commands and the structure, use and development of virtual assistants.",
+        "keywords": [
+            "virtual assistant",
+            "desktop application",
+            "user",
+            "technology"
+        ],
+        "hash_code": 6633082011,
+        "department": "cs"
+    },
+    {
+        "author": "Magyar Roland István",
+        "supervisor": [
+            "Fehér Áron"
+        ],
+        "year": 2024,
+        "abstract": "Research and development in bionics are crucial for individuals with disabilities, aiding in the restoration or augmentation of physical functions. The functioning of human body parts is akin to robots, responding to various signals and performing movements. By capturing and controlling these electrical impulses, we can transmit them to areas where direct connection is severed or integrate them into devices. The aim of my thesis is to demonstrate the control of a 3D-printed hand using real-time video from a camera, enabling robotic finger movements based on human hand movement. Additionally, it allows extraction of hand movement information from EMG signals, enabling control of the robotic hand with a microcontroller. The device processes EMG signals, and a 3D model and necessary software have been developed to process camera images and control the motors for appropriate finger movement. The thesis introduces the concept of bionics and its relevance, drawing parallels between the human body and robots, and emphasizing the role of electrical impulses in movement. It reviews relevant literature, focusing on neuromuscular processes, anatomy, and principles of electromyography (EMG), including types of EMG electrodes and muscle electrical activity. It provides an overview of the electronic components used, such as operational amplifiers, filters, and analog-to-digital conversion, discussing electronic noise management. Image processing techniques for controlling the robotic hand are explored, detailing digital signal processing and system integration. Specifications and system architecture are discussed, including functional and non-functional requirements, and choices for models and motors. The microcontrollers and EMG sensors used are also described. System design includes preparing the 3D model of the hand, testing the motors, processing signals, and integrating EMG electrodes. Firmware development focuses on implementing the WiFi access point, ADC reading, and spike detection of the EMG signal. Software development for image processing and data transmission to the microcontroller is also covered, describing thresholding techniques for detecting hand movements. The implementation and experimental results chapter outlines installation steps and system performance measurements. The final chapter provides general conclusions and suggests future work, discussing possible system improvements and extensions, such as integrating additional sensors and advanced signal processing algorithms. It compares similar devices and analyzes potential development directions. This project demonstrates the feasibility of controlling a 3D-printed robotic hand using EMG signals and image processing, opening new opportunities for advanced prosthetic devices.",
+        "keywords": [
+            "imageprocessing",
+            "digitalsignalprocessing",
+            "EMG",
+            "Python",
+            "ESP32"
+        ],
+        "hash_code": 895695046,
+        "department": "cs"
+    },
+    {
+        "author": "Molnár Orsolya-Izabella",
+        "supervisor": [
+            "Csaholczi Szabolcs",
+            "Iclănzan David"
+        ],
+        "year": 2024,
+        "abstract": "In recent years, the accounting sector has seen significant advancements, now employing much more modern applications to handle incoming data with greater ease and efficiency, facilitating their utilization and recording. There are already applications that streamline the accountant’s tasks with just a press of a button or a few clicks. Recently, the use of Optical Character Recognition (OCR) and artificial intelligence (AI) technologies has become widespread in accounting. These technologies have revolutionizedtheprocessingoffinancialdata. OCRtechnologyallowsfortheextractionoftext from scanned documents, whether they are invoices or receipts, enabling automatic data entry and reducing errors associated with manual input. AI algorithms provide substantial assistance in accelerating processes that would otherwise be more time-consuming for humans. However, these technologies are not infallible and may require human intervention to ensure acceptable results. The aim of my thesis is to leverage the aforementioned technologies to simplify the work of accountants through a straightforward user-friendly web environment. The application allows for the scanning and processing of key invoice data (such as invoice number, due date, total amount, buyer/seller information). The extracted text from invoices can also be translated into other languages, as the application was designed for universal use, accessible even to accountants who speak foreign languages. The system’s backend is Python-based, while the frontend utilizes JavaScript and the React framework. Data is stored in a PostgreSQL database. The optical character recognition technologies used include the well-known Tesseract and DocTR. AI-based technologies include DeepL for translation and ChatPDF for answering queries related to uploaded invoices.",
+        "keywords": [
+            "OCR",
+            "invoice management",
+            "translation",
+            "Python application",
+            "web interface 2"
+        ],
+        "hash_code": 8420305279,
+        "department": "cs"
+    },
+    {
+        "author": "Nagy Andrea",
+        "supervisor": [
+            "Dávid László"
+        ],
+        "year": 2022,
+        "abstract": "The primary aim of the dissertation is to study the electrical activity of the brain, namely the EEG-type signals and to automatically recognize specific emotions. This requires sampled data collection and I used “Muse 2” headband in order to sample and collect this data. It was asked a woman and a man for the data collection and both of them made the same experiment. I processed the raw data, then I used it to build and teach an artificial neural network, which was created with the help of Tensorflow and Keras frameworks. The secondary aim of the dissertation is to examine the spectrum of the samples and apply different transformations, then to compare them. Based on previous research I examined the processing of continuous and discrete signals and placed more emphasis on discrete transformations. Based on my results (70-80% recognition efficiency), in order for the neural network to be as accurate as possible, it is necessary to collect more data, classify them into classes by providing them in a more optimal way. To reach this goal, in the future I would like to develop a set of rules from the collected data and to classify my data based on these rules, and so I hope to achieve greater recognition efficiency.",
+        "keywords": [
+            "EEG",
+            "spectrogram",
+            "signal processing",
+            "Tensorflow",
+            "neural networks"
+        ],
+        "hash_code": 1899062594,
+        "department": "cs"
+    },
+    {
+        "author": "Nagy-Serbán Tünde",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2021,
+        "abstract": "This dissertation presents a web application, which includes a 3D virtual tour of Sapientia Hungarian University of Transylvania, Faculty of Technical and Human Sciences, from Târgu Mureș. Nowadays, people spend a large part of their day under the influence of digitalization. Most people have at least a smartphone, a PC, or a laptop, and with these, they also have access to the internet, which provides infinite possibilities. Digitalization introduces many benefits for humanity—problems can be solved using the internet and digital devices, for example: paying bills, maintaining relationships with relatives, and, not least, with the help of virtual tours, visiting places they could never physically go. This dissertation is about a web application that uses and displays a 3D model of the university building, creating a virtual tour. Anyone can attend this tour, offering the possibility to explore the building from anywhere. Besides this, the application has an informational purpose, as it provides a lot of information about the university, for example: events (like Sapi Line-Tracer), or the names and contact details of the specialist coordinators. The application includes a feature called “Take me!”, which guides the user to a selected location and shows the route to get there, greatly helping visitors. Additionally, users can freely navigate through the 3D model and discover the entire virtual environment. The system was developed for web platforms, allowing it to be used on almost any device, such as PCs, laptops, and smartphones. The application can provide significant help for new students, as well as for visiting students and teachers, to quickly familiarize themselves with the university’s main building.",
+        "keywords": [
+            "webapplication",
+            "3D model",
+            "virtual tour"
+        ],
+        "hash_code": 2047149331,
+        "department": "cs"
+    },
+    {
         "author": "Nüszl Richárd-István",
         "supervisor": [
             "Szabó László Zsolt"
@@ -240,6 +711,21 @@
             "Spring Boot"
         ],
         "hash_code": 6647580175,
+        "department": "cs"
+    },
+    {
+        "author": "Palfi Szabolcs",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2021,
+        "abstract": "These days, the majority of shopping is done online. There are tons of online shopping websites, with some kind of big sale going on almost all the time; however, these sales are most of the time made up. These false sales can be spotted only if you follow a product’s price daily for a longer period, which is a repetitive and time-consuming process. The same applies when you’re interested in purchasing products but are undecided and want to wait for a price drop. These gave the inspiration for developing our system. In this paper, we present a price monitoring system that automates the process described earlier. At predefined moments, the system wakes up and scrapes publicly available data from the Internet, which is then saved. The user can add products to their list to be followed and view the price changes on a chart. All this can be done from a Chrome browser extension or a mobile application built with Flutter. The core of the system is a Python script responsible for mining the data, periodically updating prices, and pushing new products into the database. All this is done while respecting moral and legal boundaries. All our data is stored in a Realtime Database provided by Firebase, which proved perfect for our application. After months of gathering data while using the system, we analyzed it and made several conclusions. We observed multiple patterns in price changes, but no single pattern matches every product. There were many scams regarding prices, especially during Black Friday, but also real and significant price drops. After using the system for a longer time, we can say software like this helps buyers make purchase decisions by providing useful data in an easy-to-read form.",
+        "keywords": [
+            "webscraping",
+            "browserextension",
+            "Flutterapp"
+        ],
+        "hash_code": 161681634,
         "department": "cs"
     },
     {
@@ -276,6 +762,71 @@
         "department": "cs"
     },
     {
+        "author": "Rozsnyai Arnold-Robert",
+        "supervisor": [
+            "Vajda Tamás"
+        ],
+        "year": 2022,
+        "abstract": "In recent years, there has been a rapid increase in demand for vehicles equipped with GPS. As it becomes an increasing priority for people to get from one point to another as smoothly aspossible, it can bebeneficialto beable tofilter outthe busierroad sections. It canbe helpful for the vehicle owner to know as much retrievable information about the vehicle as possible based on the route taken. The aim of the dissertation is to process the routes of the vehicles in such a way that conclusions can be drawn from them, withthe helpof whichrelevant data(averagespeed, curve coordinates) can be filtered out. The available data set is made up of different data (coordinate, speed, consumption, direction). The developed algorithm can be used to reduce the data set without losing statistically important data. The most important data contains the coordinates that result in a route change. The solution is able to detect bendsfrom whichitcan generate significantstatistics(averagespeed in a curve). As a result, it is able to compare different routes and suggest new ones. The development takes placeinASP. NET CoreWebApp andis testedinxUnit, inwhich map elements are displayed using Leaflet and OpenStreetMap.",
+        "keywords": [
+            "data set",
+            "statistics",
+            "path"
+        ],
+        "hash_code": 7265195548,
+        "department": "cs"
+    },
+    {
+        "author": "Salló Csaba",
+        "supervisor": [
+            "Turos László-Zsolt"
+        ],
+        "year": 2024,
+        "abstract": "The thesis presentsthe completedesign andimplementation ofanIoT sensorsystem. The system consists of custom ESP32-based hardware, an Arduino framework loaded onto the hardware,a Node.jsserverapplication, andaReact-based webapplication. The server application, installed on a Linux server, is accessible from external networks and achieves real-time communication using MQTT and Socket. IO protocols. The server also provides thedatabaseand GoogleHomeintegration. The hardware, along with the Arduino application, allows thehardware toconnecttothe internet, communicate with the server via the MQTT protocol, and execute commands received from the server. Through its exposed pins, various sensors can be connected to the device. Additionally, with a third-party device containing a USB-UART converter, we can upload new firmwares or even logging on serial communication. In configuration mode, the device allows setting connectiondetailswithout flashing. The React-based web application provides a responsive and user-friendly interface for users. Within the web application, hardware can be dynamically added to the user, and sensors can be attached or removed from the hardware. Through the web application, the hardware firmware canbeupdated usingthe OTAmechanism, andthe hardwarelogs canbemonitored. One of the most important features of the system is that the data is only transmitted through the private server, as long as the devices are not added to Google Home, which is not mandatory.",
+        "keywords": [
+            "IoT",
+            "ESP32",
+            "ArduinoApp",
+            "ServerApp",
+            "WebApp"
+        ],
+        "hash_code": 5305230960,
+        "department": "cs"
+    },
+    {
+        "author": "Simó Zsuzsa",
+        "supervisor": [
+            "Losonczi Lajos"
+        ],
+        "year": 2021,
+        "abstract": "Due to lung damage caused by epidemics, the need for high-efficiency, mobile ventilators that isolate operating personnel from the patient is growing worldwide. The aim is to develop a complementary system for remote patient monitoring and controlling which can act fully as a noninvasive artificial respiration assistant, representing a new approach in the field of mechanical ventilators. We have combined a completely new concept ventilation mechanism with a modern ESP32 microcontroller-based control system and a program installed on a mobile graphical user interface that allows these machines to be easily carried, operated, and controlled, while also providing closed-loop breath control. Two-way remote monitoring and control based on Internet of Things (IoT) technology allows an authorized physician connected to a wireless network to monitor respiratory parameters and adjust settings in real time, track multiple patients simultaneously, or even make clinical decisions without having to come into direct contact with the device or the patient. The parameters controlled and regulated by our machine, as well as their minimum and maximum limits, comply with the RMVS001 regulations of the international institute Medicines & Healthcare Products Regulatory Agency.",
+        "keywords": [
+            "ventilator",
+            "remote controlled",
+            "embedded microcontroller",
+            "breath control",
+            "user interface"
+        ],
+        "hash_code": 7095831972,
+        "department": "cs"
+    },
+    {
+        "author": "Solyom Botond-Őrs",
+        "supervisor": [
+            "Vajda Tamás"
+        ],
+        "year": 2021,
+        "abstract": "My license thesis aim is to realize an application, which is able to save my appointments, back to a specific time limit. In our days the concept of security it becomes more and more important in every area of our life, therefore the preservation of this, takes precedence keeping our human life. The acceleration of the world, involves the increase of meetings and contacts between people and the regular formation of this. An exponential increase of these contacts resulting from these meetings becomes a defining motive of our accelerated world. Unfortunately, in some cases it creates a negative effect in our lives, it can prevent the opportunity of preserving the security. The frequently encounters, the multitude of contacts between people, in some cases can be a threat to our heath and the safety of our material assets. During the creation of my license thesis, my goal was the implementation of an application which, with the help of Bluetooth technology, can follow where and with whom we meet and pursues a certain time limit, which we are spending with a certain person. If it is necessary warns the users about a potential contact that could pose a danger of their safety. The application was successfully implemented in the Android development environment, with the help of Bluetooth technology integrated in the smartphones. As a result, we get a phone application running on an Android operating system which can be used in case of pandemic, or in any case when is required the contact research, but it can also be used even for personal reason for the tracking of our own movements and meetings.",
+        "keywords": [
+            "contact researcher",
+            "Bluetooth",
+            "Android",
+            "safety"
+        ],
+        "hash_code": 7066234017,
+        "department": "cs"
+    },
+    {
         "author": "Soós Izabella",
         "supervisor": [
             "Bakó László"
@@ -288,6 +839,38 @@
             "microprocessor"
         ],
         "hash_code": 7474381893,
+        "department": "cs"
+    },
+    {
+        "author": "Szakáli-Vándor Árpád",
+        "supervisor": [
+            "Márton Gyöngyvér"
+        ],
+        "year": 2024,
+        "abstract": "The thesis deals with the dynamic data uploading of web applications. The goal of the project was to create a portfolio page that uses modern technologies and is therefore easy to use, responsive and dynamic at the same time. The development was made in the Vue.js framework and Typescript language, the backend tasks are provided by Firebase, mainly through the Firestore database. This allows administrators to modify the various contents of the website without basic programming knowledge. The website can be divided into several parts: the main page contains the presentation of the works, the introduction, the description of the services, and the contact information. Administrators can dynamically change data using various pre-made templates. The website is responsive, so it is easy to use and transparent on desktop computers, tablets and smartphones. In the documentation, I tried to present the technological background in sufficient detail, such as Firebase Hosting and the security measures that guarantee data protection. The main goal of the project is to demonstrate how to easily and efficiently create and manage a dynamic website using modern software development tools. The finished website was named \"DynaCraftHub\", which refers to the possibility of dynamic data upload, and is of course accessible through Firebase services.",
+        "keywords": [
+            "dynamic data upload",
+            "responsive design",
+            "Firebase",
+            "user experience"
+        ],
+        "hash_code": 5334988697,
+        "department": "cs"
+    },
+    {
+        "author": "Szalma Tamás-Zsolt",
+        "supervisor": [
+            "Szántó Zoltan"
+        ],
+        "year": 2022,
+        "abstract": "In today’s world, websites have to meet more and more expectations, serving an increasing number of users is one of the most important aspects of modern websites. A page may be browsed by 100 people in one minute and increase to 100,000 in the next minute. A modern website needs to sense this and increase or decrease the resources allocated, depending on the load. The dissertation presents a scalable web application based onKubernetes,during the creationof which I created a webshop, and then I containerized it and deployed it to a local Kubernetes cluster. The webshop allows you to browse and search for products belonging to different categories, display a specific product in detail, add products to the cart, register, login and pay by credit card. I used Spring Boot framework for the server sideof theapplication. On theclient sideI usedthe Angular framework. For the database I used a relational MySQL database. To implement the containerization, I used Docker to create the containers that are the basis for deploying the application to the Kubernetes cluster. I solved the deployment to the Kubernetes cluster with Minikube, which allowed me to use Kubernetes locally for free. In the dissertation I write in detail about the technologies used, mainly about Kubernetes and Docker, the implementation of functions, the architecture and the results achieved.",
+        "keywords": [
+            "cloud",
+            "scalable",
+            "Kubernetes",
+            "webshop"
+        ],
+        "hash_code": 2892678779,
         "department": "cs"
     },
     {
@@ -340,6 +923,52 @@
             "Energy Management"
         ],
         "hash_code": 8961822645,
+        "department": "cs"
+    },
+    {
+        "author": "Szász Arnold-Levente",
+        "supervisor": [
+            "Szántó Zoltán"
+        ],
+        "year": 2021,
+        "abstract": "Today, thanks to technological breakthroughs, mobile phones have a computing capacity unimaginable in the past. In addition to phone calls and messaging, these devices have many new features. To achieve user experience at the highest level, they need a lot of sensors and communication modules. In addition, phones can be equipped with various accessories associated with new sensors, making it possible to continuously monitor vital signs. The purpose of this diploma work is to develop a system that would benefit from the possibilities offered by sensors. The Stroke Monitor application includes two different software, which consists of a telephone application and a smartwatch application, their interaction allowing the user to monitor their heart rate even outside the hospital. The purpose of monitoring is to inform the user and the contact person in case of a possible risk of stroke which is implemented based on the data provided by the smartwatch and processed by the telephone application. It plays an important role for vulnerable users, because early medical emergency measures reduce the aftermath of stroke. The telephone application is also able to display various graphs, determine the risk score, provide daily advice to prevent the risk of stroke. During the development of the system, we used flutter technology, so the application is platform independent. The diploma thesis includes the definition of stroke, and it is recognition based on heart rate, design, implementation and development of telephone and smartwatch applications, as well as testing the system in real conditions.",
+        "keywords": [
+            "stroke",
+            "monitoring",
+            "mobile app",
+            "smartwatch app"
+        ],
+        "hash_code": 6448857901,
+        "department": "cs"
+    },
+    {
+        "author": "Udvari Balázs",
+        "supervisor": [
+            "Szabó László Zsolt"
+        ],
+        "year": 2021,
+        "abstract": "The main subject of my thesis are Class Response Systems, software applications created in order to help real time teaching methods. During the last years one of my main interest was the transformation of high school or university lectures by introducing interactivity and creating a better learning experience for the students. Consequently, my scope was the creation of a freely usable, low cost, platform independent CRS application, usable during traditional and online classes also. Creating the application, my long distance goal is to measure the efficiency of classroom teaching. Nowadays educational institutions frequently face problems caused by the distraction of students attention during classes by Internet connected smart devices. But smart devices, like mobile phones owned by almost all students could be used also for raising the efficiency of understanding during classes. Here are CRS systems coming in. In my thesis I present the basic concepts of CRS applications, compare some of widely used CRS systems, afterwards I present the project phases of my own CRS system, including testing and it’s usage in schools. My CRS application, called answeRS is a Node.js based web application which includes the basic functionalities of a CRS methods. The application assures teachers to display question queues during classes in real time, student responses are collected by using their mobile phones. Teachers can evaluate responses instantly, and consider the result for the next part of the lecture. Testing of the application with multiple users was made under real online condition and requirements were fulfilled.",
+        "keywords": [
+            "Class Response System",
+            "clicker device",
+            "classroom real time methods"
+        ],
+        "hash_code": 8410466855,
+        "department": "cs"
+    },
+    {
+        "author": "Ujfalvi Csongor-Robert",
+        "supervisor": [
+            "Szilágyi László"
+        ],
+        "year": 2021,
+        "abstract": "Even today, deaths caused by brain tumors number in the hundreds of thousands globally. Thanks to rapid improvements in medical sciences and related fields, there are now numerous systems helping medical professionals diagnose brain tumors faster than before. After diagnosis, brain tumor patients live on average only a few months more than a year, so it is essential to accelerate the diagnosis process to start treatment before it’s too late. The topic of my thesis is software that supports the development and testing of algorithms for segmenting and mapping brain tumors from volumetric MRI data. The application can display segmented and mapped brain records in 4K resolution alongside key indicators, results, and statistical data on screen. It can also store this data in a database, making it readily available for future queries. During software design, I applied many software design patterns and principles. In developing the application, I utilized many open-source and free Microsoft products, including frameworks, developer tools, and libraries.",
+        "keywords": [
+            "MRI record",
+            "User interface",
+            "Software development"
+        ],
+        "hash_code": 2552954288,
         "department": "cs"
     }
 ]

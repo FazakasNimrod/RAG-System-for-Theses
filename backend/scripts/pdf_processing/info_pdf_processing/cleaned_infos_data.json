@@ -20,10 +20,10 @@
     {
         "author": "Albert Henrietta",
         "supervisor": [
-            "Kupán A. Pál"
+            "Kupán Pál"
         ],
         "year": 2024,
-        "abstract": "The project \"Application of Database Technologies on Node.js: A Case Study of a Recipe Management Website\" aimed to develop a web-based application that allows users to search for cake recipes and administrators to add, modify and delete recipes. I will discussvarioustypesofdatabasesindetail,including SQLite,My SQL,Postgre SQL,Mongo DB, Couch DB and Oracle. The differences between databases and their applicability will also be discussed in detail. Thefirstchapterofthisdocumentprovidesanintroductiontotheworldofweb-based recipe management applications, highlighting modern online recipe search habits and the growing demand for these types of applications. The theoretical groundwork chapter introduces the technologies used in the project, such as Node.js, Express.js, EJS, and the role of HTML and CSS in frontend development. The JSON format and the different types of databases are discussed in detail, examining their advantages and disadvantages. The design and development chapter covers the objectives, requirements, and clientserverarchitecture. Iwilldescribetheproject’sfolderstructureandpracticalimplementation of using databases, including SQLite, Mongo DB and JSON-based storage solutions. The user documentation will provide a detailed description of the main functions of the website, including the home page, user and administrator pages, facilitating the use and maintenance of the system. In summary, the project provides a comprehensive overview of the application of modern web development technologies and methodologies, with a particular focus on the development of web applications for recipe management. The documentation discusses in detail the technical solutions and their practical application, thus helping developers to implement similar projects.",
+        "abstract": "The project Application of Database Technologies on Node.js: A Case Study of a Recipe Management Website aimed to develop a web-based application that allows users to search for cake recipes and administrators to add, modify, and delete recipes. I discuss various types of databases in detail, including SQLite, MySQL, PostgreSQL, MongoDB, CouchDB, and Oracle. The differences between databases and their applicability are also examined. The first chapter provides an introduction to web-based recipe management applications, highlighting modern online recipe search habits and the growing demand for such applications. The theoretical groundwork chapter introduces technologies used in the project, such as Node.js, Express.js, EJS, and the role of HTML and CSS in frontend development. The JSON format and different types of databases are discussed in detail, examining their advantages and disadvantages. The design and development chapter covers objectives, requirements, and client-server architecture. I describe the project’s folder structure and practical implementation of using databases, including SQLite, MongoDB, and JSON-based storage solutions. The user documentation provides a detailed description of main website functions, including the home page, user, and administrator pages, facilitating system use and maintenance. In summary, the project offers a comprehensive overview of modern web development technologies and methodologies, focusing on web application development for recipe management. The documentation discusses technical solutions and their practical application in detail, helping developers implement similar projects.",
         "keywords": [
             "database technologies",
             "recipe management",
@@ -44,7 +44,7 @@
         "keywords": [
             "convolutional neural network",
             "brain tumor detection",
-            "brain tumor classification."
+            "brain tumor classification"
         ],
         "department": "informatics",
         "hash_code": 4499785510
@@ -78,7 +78,7 @@
             "engagement",
             "university",
             "informatics",
-            "teacher attendance."
+            "teacher attendance"
         ],
         "department": "informatics",
         "hash_code": 6192060696
@@ -93,7 +93,7 @@
         "keywords": [
             "face",
             "eigenface",
-            "access control system."
+            "access control system"
         ],
         "department": "informatics",
         "hash_code": 1924222247
@@ -143,7 +143,7 @@
             "Exodus",
             "OAuth2.0",
             "authentication",
-            "authorisation."
+            "authorisation"
         ],
         "department": "informatics",
         "hash_code": 3849610502
@@ -175,7 +175,7 @@
         "keywords": [
             "mouse dynamics",
             "data synthesis",
-            "bot detection."
+            "bot detection"
         ],
         "department": "informatics",
         "hash_code": 5943056242
@@ -186,7 +186,7 @@
             "Jánosi-Rancz Katalin Tünde"
         ],
         "year": 2022,
-        "abstract": "Thetopicofmythesisistheimplementationofan Androidapplicationthatsimplifies the monitoring of cryptocurrency changes. There are already many similar applications on the commercial market, so it is very difficult to come up with something radical. The biggestproblemwithmostapplicationsistheoverloadeduserinterface. Onceinthehands of a market-leading application, the user spends a considerable amount of time to get to know the application well, because without a thorough knowledge of the application it becomes hard to properly use it. It is well known that time is money, and every second is crucial when it comes to cryptocurrency applications. Prices can change in a matter of seconds, so it is not a good user experience if you loose valuable information because of the application. My app goes radically against many apps on the market. The goal was to implement an application that would solve all the problems mentioned above. First of all, the big advantage of the application is its clean, simple user interface, which maximizes the cryptocurrency mapping without any distractions. After installation the application is readytouseinnotimeandwithlessthantenclicks,unlikecompetingsoftware,wherethe first few minutes go away, because the user needs to learn the application. My application hasanintuitiveuserinterface,whichallowstheusertoanalysedozensofcryptocurrencies in no time. In case of my application it is also possible to access critical functionality of the application on a smartwatch. The smartwatch can be used to take the user experience to a higher level, by maximum tracking of cryptocurrency changes.",
+        "abstract": "The topic of my thesis is the implementation of an Android application that simplifies the monitoring of cryptocurrency changes. Many similar applications already exist on the commercial market, making radical innovation difficult. The biggest problem with most apps is their overloaded user interface. Users often spend a considerable amount of time learning a market-leading app, but without thorough knowledge, it becomes hard to use properly. Since time is money, every second counts in cryptocurrency applications, as prices can change within seconds, and losing valuable information is a poor user experience. My app takes a radically different approach from many market apps. The goal was to implement an application solving all the mentioned problems. Its main advantage is a clean, simple user interface maximizing cryptocurrency tracking without distractions. After installation, the app is ready to use in no time and with fewer than ten clicks, unlike competing software that requires users to spend minutes learning it. The intuitive interface allows users to analyze dozens of cryptocurrencies quickly. Additionally, critical functionality is accessible on a smartwatch, enhancing user experience by maximizing cryptocurrency change tracking.",
         "keywords": [
             "distractions installation",
             "spends considerable",
@@ -218,11 +218,11 @@
             "Antal Margit"
         ],
         "year": 2021,
-        "abstract": "Theaimofmythesisistoanalyzeanonymousfeedbackstodrawtherightconclusions in reference to a given topic. In real life, we often need feedbacks in order to make the right decisions, changes for the future. Anonymous feedbacks give a more clear picture about the reality, than not anonymous ones, because it’s in human nature that we don’t give honest feedback or don’t give feedback at all when its content is negative. For instance, when a teacher expects feedbacks from his/her students about the quality of the lessons and teaching methods. In situations like this, it’s really important for people to get realistic feedbacks in order to learn, improve and make the right conclusions. In this project a user-friendly and efficient software was implemented which allows to collect, analyze and visualize anonymous feedbacks. An initial version of this application has been published at the beginning of this semester to allow for a case study. Therefore, students applied for the Object-oriented programming course had the opportunity to give anonymous feedback. The application allows registered users to create topics for which they request anonymous feedbacks. Within a topic, questions can be formulated in order to motivate participants for feedback. Feedbacks are collected, analyzed and visualized using word clouds.",
+        "abstract": "The aim of my thesis is to analyze anonymous feedbacks to draw the right conclusions in reference to a given topic. In real life, we often need feedbacks in order to make the right decisions, changes for the future. Anonymous feedbacks give a more clear picture about the reality, than not anonymous ones, because it’s in human nature that we don’t give honest feedback or don’t give feedback at all when its content is negative. For instance, when a teacher expects feedbacks from his/her students about the quality of the lessons and teaching methods. In situations like this, it’s really important for people to get realistic feedbacks in order to learn, improve and make the right conclusions. In this project a user-friendly and efficient software was implemented which allows to collect, analyze and visualize anonymous feedbacks. An initial version of this application has been published at the beginning of this semester to allow for a case study. Therefore, students applied for the Object-oriented programming course had the opportunity to give anonymous feedback. The application allows registered users to create topics for which they request anonymous feedbacks. Within a topic, questions can be formulated in order to motivate participants for feedback. Feedbacks are collected, analyzed and visualized using word clouds.",
         "keywords": [
             "anonymous",
             "feedback",
-            "natural language processing."
+            "natural language processing"
         ],
         "department": "informatics",
         "hash_code": 6658899619
@@ -240,7 +240,7 @@
             "confectionery website",
             "MERN stack",
             "React",
-            "MongoDB."
+            "MongoDB"
         ],
         "department": "informatics",
         "hash_code": 4827680219
@@ -256,7 +256,7 @@
             "Eysenck personality test",
             "Large Language Models",
             "comparison of personality traits",
-            "repeated completions."
+            "repeated completions"
         ],
         "department": "informatics",
         "hash_code": 6895301193
@@ -319,7 +319,7 @@
         "year": 2023,
         "abstract": "Elements that contribute to the user experience and motivation of games include puzzle games, animations, visualizations, interactions and character design itself. These important componentsnotonlymakethegameaestheticallyappealing,butalsoensureactiveparticipation and enjoyment for the player. Puzzle games are exciting challenges that require creative thinking and problem-solving skills to solve. The varied tasks encourage the player to take logical steps, combining and matching different elements or objects to reach a solution. Animationsandvisualizationsadddynamismandlivelinesstothegame. Thesemovements, transitionsandspectaculareffectsmakethegameworldmorerealisticandimmersive,capturing the player’s attention. Animations help to keep the characters and their environment in motion, adding to the interactivity and enjoyment of the game. Interaction is one of the most important elements of the game experience, as it allows the player to actively participate in the game world. The player’s actions and choices affect the gameplay and story. Interaction gives the player the opportunity to control the character, manipulate the environment and explore the possibilities of the game. The pixel art style gives the game a unique and easily recognizable visual identity. The appearance and attributes of characters influence the emotional connection and identification of players with them, and the pixel art style provides a unique aesthetic experience that evokes the atmosphere of retro games and brings back memories of the past. These elements combine to make the game enjoyable and motivating. Interaction, interesting puzzle games, animations, visualizations and good character design play a key role in enhancing the user experience and motivating players. It is important to emphasize that the lack of these elements, which are closely linked to the interactivity and interest of the games, can reduce the attractiveness of the game and do not motivate the user to continue playing.",
         "keywords": [
-            "— puzzle games",
+            "puzzle games",
             "animation",
             "visualization",
             "interaction",
@@ -336,7 +336,7 @@
             "Osztián Erika"
         ],
         "year": 2024,
-        "abstract": "Thegoaloftheprojectistocreateamobileapplicationthatallowsuserstoefficiently manage their food stocks, thereby promoting conscious shopping and reducing waste. When designing the application, a key consideration was that it should be easy and intuitive to use for all users. The app’s main features include user account management, which allows you to register and log in, as well as track your personal food inventory. Users can list and sort their products by expiration date, so they can easily see when a product expires. In addition, it is possible to add new products, modify or delete existing ones in the digital storeroom. Categorization and grouping of products is also possible, which helps users in terms of transparency and organization. Another important element of the application is household management, where multiple users can collaborate and manage a shared inventory. This way, a family or roommates can easily share and manage purchases together, optimizing food consumption and minimizing unnecessary purchases. In order to reduce conscious shopping and waste, the application can also send notifications about products that are about to expire, thus drawing the user’s attention to use them as soon as possible. This not only reduces food waste, but also makes it easier for users to manage stocks and develop more sustainable consumption habits. To develop the application, I used the latest technological tools, including Node.js and Express.js for the development of the backend part, as well as the Flutter framework for the implementation of the responsive frontend. I chose Mongo DB to manage the database, as its flexible data model and scalability were ideal for meeting the project’s needs. Overall, the application not only helps users to efficiently manage and organize their food stocks, but also indirectly contributes to the development of more sustainable consumption habits, thereby reducing unnecessary food waste and supporting conscious shopping. The project resulted in a modern, user-friendly application that offers an effective and innovative solution to a real social problem.",
+        "abstract": "The goal of the project is to create a mobile application that allows users to efficiently manage their food stocks, thereby promoting conscious shopping and reducing waste. When designing the application, a key consideration was that it should be easy and intuitive to use for all users. The app’s main features include user account management, which allows registration and login, as well as tracking personal food inventory. Users can list and sort their products by expiration date to easily see when a product expires. Additionally, it is possible to add new products, modify or delete existing ones in the digital storeroom. Categorization and grouping of products help users with transparency and organization. Another important element is household management, where multiple users can collaborate and manage a shared inventory, allowing families or roommates to share and manage purchases together, optimizing food consumption and minimizing unnecessary purchases. To reduce food waste, the application sends notifications about products nearing expiration, drawing the user’s attention to use them promptly. This feature not only reduces waste but also simplifies stock management and encourages sustainable consumption habits. The application was developed using the latest technologies, including Node.js and Express.js for backend development and Flutter for the responsive frontend. MongoDB was chosen for database management due to its flexible data model and scalability, ideal for the project’s needs. Overall, the application helps users efficiently manage and organize food stocks while promoting sustainable habits, thereby reducing unnecessary food waste and supporting conscious shopping. The project resulted in a modern, user-friendly application offering an effective and innovative solution to a real social problem.",
         "keywords": [
             "household",
             "awareness",
@@ -470,7 +470,7 @@
             "application",
             "server",
             "artisans",
-            "productivity. 4"
+            "productivity"
         ],
         "department": "informatics",
         "hash_code": 3010915280
@@ -501,7 +501,7 @@
         "keywords": [
             "authentication",
             "behavioral biometrics",
-            "typing rhythm."
+            "typing rhythm"
         ],
         "department": "informatics",
         "hash_code": 8575307361
@@ -537,7 +537,7 @@
             "Document templates",
             "PDF document generation",
             "Docker deployment",
-            "Serverless technologies."
+            "Serverless technologies"
         ],
         "department": "informatics",
         "hash_code": 3358571781
@@ -548,9 +548,9 @@
             "Egyed-Zsigmond Előd"
         ],
         "year": 2022,
-        "abstract": "Thethemeofmypaperisthestudyofthe Transilvanian Hungarianpressbylanguage processing trough different technologies. We get a ton of news, articles about events, phenomena, problems from the surrounding world. This way the news have a tremendous role in our lives, we are informed by them about the happenings in the world, or around us, in the transilvanian area. With the widespread of the internet the number of these news has grown exponentially thus making it impossible to analyze and research them only with human resources. Today the data mining industry is in an accelerated expansion trough the text analytics and the NLP methods, because these can mine information efficiently and in a fast way from big data, by half-automated methods and with the help of different algorithms. This paper will examine this subject focusing on the Transylvanian Hungarian press. We try to extract as many useful information as possible from the multitude of gathered articleswiththeaidofdifferentlibrariesandsoftware. Basedontheextractedinformation we can make statistical calculations, analyses, e.g. how popular is a person during a certain period, in the Transylvanian Hungarian press? Besides we can create visuals that everyone understands and we get a view of the press “world”. I presented my dissertation in the XXI. At the Faculty Scientific Student Conference on April 29, 2022, where I received praise as a result.",
+        "abstract": "The theme of my paper is the study of the Transylvanian Hungarian press by language processing through different technologies. We receive a large amount of news and articles about events, phenomena, and problems from the surrounding world, giving the news a tremendous role in our lives by keeping us informed about happenings locally and globally, especially in the Transylvanian area. With the widespread use of the internet, the volume of news has grown exponentially, making it impossible to analyze and research solely with human resources. Today, the data mining industry is rapidly expanding through text analytics and NLP methods, which efficiently and quickly mine information from big data using semi-automated methods and various algorithms. This paper examines this subject focusing on the Transylvanian Hungarian press. We aim to extract as much useful information as possible from the multitude of gathered articles using different libraries and software. Based on the extracted information, statistical calculations and analyses can be performed, such as measuring the popularity of a person during a certain period in the Transylvanian Hungarian press. Additionally, we create visuals that are easy to understand, providing a clear view of the press “world.” I presented my dissertation at the XXI Faculty Scientific Student Conference on April 29, 2022, where it was well received.",
         "keywords": [
-            "lytics nlp",
+            "analytics nlp",
             "transylvanian hungarian",
             "press world",
             "useful information"
@@ -583,7 +583,7 @@
         "keywords": [
             "Ant Colony algorithm",
             "data",
-            "web application."
+            "web application"
         ],
         "department": "informatics",
         "hash_code": 5268162150
@@ -595,12 +595,12 @@
             "Osztián Pálma Rozália"
         ],
         "year": 2022,
-        "abstract": "Thetopicofmythesisisthefurtherdevelopmentofthe Algo Rhythmicsenvironment, with a module that allows testing the information obtained within the environment. Since the Algo Rhythmics environment is also used to develop computational thinking, it is not only able to test the information about algorithms, but also to test the development of computational thinking thanks to this module. In previous research, when measuring students’ performance, separate testing applications were used, and to do this, the students who participated in the research had to navigate from the Algo Rhythmics site to another site, register there and then complete a test consisting of different questions. To this end, the idea of an embeddable module was born to improve the user experience and to help teachers to simplify testing within the environment and to make it easier to conduct research. I felt it was important to create a module that was easy to use and that would facilitate the work of teachers using the environment. At the same time, an important criterion was to create a competitive module with all the functionality that was available in the testing interfaces used so far. With the completed module, I was also able to create a research in which I tested the development of computational thinking through metaphors, and this research was the first to be done with this module, within the environment framework.",
+        "abstract": "The topic of my thesis is the further development of the Algo Rhythmics environment, with a module that allows testing the information obtained within the environment. Since the Algo Rhythmics environment is also used to develop computational thinking, it is not only able to test the information about algorithms, but also to test the development of computational thinking thanks to this module. In previous research, when measuring students’ performance, separate testing applications were used, and to do this, the students who participated in the research had to navigate from the Algo Rhythmics site to another site, register there and then complete a test consisting of different questions. To this end, the idea of an embeddable module was born to improve the user experience and to help teachers to simplify testing within the environment and to make it easier to conduct research. I felt it was important to create a module that was easy to use and that would facilitate the work of teachers using the environment. At the same time, an important criterion was to create a competitive module with all the functionality that was available in the testing interfaces used so far. With the completed module, I was also able to create a research in which I tested the development of computational thinking through metaphors, and this research was the first to be done with this module, within the environment framework.",
         "keywords": [
             "quiz",
             "computational thinking",
             "testing",
-            "computer science education."
+            "computer science education"
         ],
         "department": "informatics",
         "hash_code": 951901982
@@ -615,7 +615,7 @@
         "keywords": [
             "principal component analysis",
             "PCA",
-            "image compression."
+            "image compression"
         ],
         "department": "informatics",
         "hash_code": 5064907671
@@ -699,7 +699,7 @@
             "John Forbes Nash",
             "Nash equilibrium point",
             "Lemke-Howson algorithm",
-            "visualization."
+            "visualization"
         ],
         "department": "informatics",
         "hash_code": 5691030842
@@ -730,7 +730,7 @@
         "keywords": [
             "time-tracking",
             "project management",
-            "pomodoro."
+            "pomodoro"
         ],
         "department": "informatics",
         "hash_code": 5794794074
@@ -813,7 +813,7 @@
             "authentication",
             "behavioral biometrics",
             "typing rhythm",
-            "PIN-code."
+            "PIN-code"
         ],
         "department": "informatics",
         "hash_code": 226826256
@@ -897,7 +897,7 @@
             "optimal control",
             "multiple shooting",
             "nonlinear systems",
-            "gradient descent."
+            "gradient descent"
         ],
         "department": "informatics",
         "hash_code": 8905166668
@@ -1008,7 +1008,7 @@
         "keywords": [
             "urban public transportation",
             "route planning",
-            "clustering."
+            "clustering"
         ],
         "department": "informatics",
         "hash_code": 1761595622
@@ -1112,7 +1112,7 @@
             "brain tumor segmentation",
             "brain tissue segmentation",
             "histogram",
-            "histogram normalization."
+            "histogram normalization"
         ],
         "department": "informatics",
         "hash_code": 2195852773
@@ -1278,7 +1278,7 @@
             "logic game",
             "backtracking methode",
             "C++",
-            "Qt."
+            "Qt"
         ],
         "department": "informatics",
         "hash_code": 8632135325
@@ -1293,7 +1293,7 @@
         "keywords": [
             "bot detection",
             "mouse movement",
-            "anomaly detector."
+            "anomaly detector"
         ],
         "department": "informatics",
         "hash_code": 5764385507
@@ -1304,7 +1304,7 @@
             "Jánosi-Rancz Katalin Tünde"
         ],
         "year": 2024,
-        "abstract": "Softwareandplatformsthatmakeoureverydayliveseasierarebecomingincreasingly popular, especially those that help simplify workflows. Collaboration, communication and visuality have become such essential aspects that they are also widely used in the management of software projects. The application of Kanban methodology has become paramount over time and current platforms have evolved to combine this methodological tool with other agile project management philosophies, resulting in an application with a variety of functionalities. The primary goal of our thesis is to successfully implement the Kanban methodology within the application, using solutions that provide us with interesting challenges and contribute to the enhancement of our programming skills. Also, we wanted to create an application that would help small groups of people to manage tasks in specific projects. We have tried to provide our visual interface with functionalities that have proven to be indispensable after numerous scientific articles and research. The introduction of the Kanban methodology in our application is of paramount importance as it allows visual tracking of workflows, thus increasing the efficiency and structure of teams. By providing a user-friendly application that supports project management for small teams, we facilitate transparent task management and effective collaboration. The aim of our research and development was to create a tool that contributes to the development of modern project management solutions from both a practical and theoretical point of view.",
+        "abstract": "Software and platforms that make our everyday lives easier are becoming increasingly popular, especially those that help simplify workflows. Collaboration, communication and visuality have become such essential aspects that they are also widely used in the management of software projects. The application of Kanban methodology has become paramount over time and current platforms have evolved to combine this methodological tool with other agile project management philosophies, resulting in an application with a variety of functionalities. The primary goal of our thesis is to successfully implement the Kanban methodology within the application, using solutions that provide us with interesting challenges and contribute to the enhancement of our programming skills. Also, we wanted to create an application that would help small groups of people to manage tasks in specific projects. We have tried to provide our visual interface with functionalities that have proven to be indispensable after numerous scientific articles and research. The introduction of the Kanban methodology in our application is of paramount importance as it allows visual tracking of workflows, thus increasing the efficiency and structure of teams. By providing a user-friendly application that supports project management for small teams, we facilitate transparent task management and effective collaboration. The aim of our research and development was to create a tool that contributes to the development of modern project management solutions from both a practical and theoretical point of view.",
         "keywords": [
             "Kanban",
             "project management",
@@ -1457,7 +1457,7 @@
             "syntactical analysis",
             ".Net",
             "C#",
-            "Blazor."
+            "Blazor"
         ],
         "department": "informatics",
         "hash_code": 5050678336
@@ -1474,7 +1474,7 @@
             "face",
             "sound",
             "motion detection",
-            "artificial intelligence."
+            "artificial intelligence"
         ],
         "department": "informatics",
         "hash_code": 5611904374
@@ -1507,7 +1507,7 @@
             "algorithms",
             "visualization",
             "development",
-            "Android application."
+            "Android application"
         ],
         "department": "informatics",
         "hash_code": 1919311237
@@ -1523,7 +1523,7 @@
         "keywords": [
             "U-net",
             "image segmentation",
-            "convolutional neural network."
+            "convolutional neural network"
         ],
         "department": "informatics",
         "hash_code": 3981958132
@@ -1554,7 +1554,7 @@
             "event",
             "open days",
             "web application",
-            "spring boot."
+            "spring boot"
         ],
         "department": "informatics",
         "hash_code": 5097014336
@@ -1604,7 +1604,7 @@
             "education",
             "communication",
             "teacher presence",
-            "efficiency."
+            "efficiency"
         ],
         "department": "informatics",
         "hash_code": 6212248426
@@ -1680,7 +1680,7 @@
             "Szilágyi László"
         ],
         "year": 2022,
-        "abstract": "Nowadays,inourfast-developingworld,moreandmoremedicalimaginginstruments are producing an exponentially growing amount of image data. The processing of this kind of data requires high qualified medical stuff, whose training that would be very expensiveforthesystem. So,thereisanurgentneedtotrainthecomputerstoperformthe processingofthisdata,andpresentthoserecordstothemedicalstaff,whicharesuspected of containing lesions or some kind of special patterns. The aim of my dissertation is to find the most suitable machine learning algorithm to accurately and efficiently segment the brain tissues of sixth-month-old infants from volumetric MRI data. A framework was created, in which seven machine learning methods can be deployed to process the ten brain MRI records of the i Seg-2017 database. In each case, at the same time, training is performed using nine records, and tested on the tenth one. The implemented segmentation methods rely on the Open CV Machine Learning library. A graphical user interface was created to set the parameters of each algorithms, which can callanexternalconsoleapplicationtoperformthesegmentation. Severalsuchapplications can run in parallel mode. For the evaluation of the segmentation’s result, statistical methods were employed. The framework was written in C# programming language in Microsoft Visual Studio environment. From the investigated machine learning algorithms, the best result came from the discrete Ada Boost, with slightly above 84% of accuracy, which was tightly followed by Random Forest. Inefficiency,the KNNalgorithmisn’tcompetitive,butincaseoftraining with tiny sized learning data, it can produce similar accuracy to the above mentioned algorithms.",
+        "abstract": "Nowadays, in our fast-developing world, more and more medical imaging instruments are producing an exponentially growing amount of image data. Processing this data requires highly qualified medical staff, whose training would be very expensive for the system. Therefore, there is an urgent need to train computers to process this data and present to medical staff the records suspected of containing lesions or special patterns. The aim of my dissertation is to find the most suitable machine learning algorithm to accurately and efficiently segment brain tissues of six-month-old infants from volumetric MRI data. A framework was created in which seven machine learning methods were deployed to process ten brain MRI records from the iSeg-2017 database. In each case, training was performed on nine records and tested on the tenth. The implemented segmentation methods rely on the OpenCV Machine Learning library. A graphical user interface was developed to set algorithm parameters, which can call external console applications to perform segmentation. Several such applications can run in parallel. Statistical methods were used to evaluate the segmentation results. The framework was written in C# using Microsoft Visual Studio. Among the algorithms tested, discrete AdaBoost achieved the best result with slightly above 84% accuracy, closely followed by Random Forest. Although the KNN algorithm is not competitive in efficiency, it can produce similar accuracy with very small training data sets.",
         "keywords": [
             "magnetic resonance imaging",
             "brain tissue segmentation",
@@ -1752,7 +1752,7 @@
             "advertising system",
             "multi-platform",
             "website",
-            "mobile application."
+            "mobile application"
         ],
         "department": "informatics",
         "hash_code": 4773861202
@@ -1781,13 +1781,11 @@
         "year": 2021,
         "abstract": "The topic of my dissertation is the development of a software, which is a virtual assistant service provider for Sapientia University’s teachers, students and employees which can communicate in Hungarian. In today’s world everything relies on technology, there is no other way to choose virtual assistants. Nowadays, everyone has a virtual assistant on their mobile device. All of these virtual assistants have one thing in common: they mostly know English. There are situations in life where a general virtual assistant is not enough. Even if we were satisfied that it could speak Hungarian, it would not be able to answer all our questions. For example, asking Cortana, Siri, or the Google Assistant, \"What is the email address of Sapientia’s Secretary?\", we would get some of the following answers: \"Sorry, I couldn’t understand.\", \"These are the matches for Sapientia on the internet: «insert link here»\", \"Would you like me to search for secretary?\". All possible answers would either be about not understanding or searching for the",
         "keywords": [
-            ". Searching for the keywords would notbethatmuchofaproblem",
-            "howeverwewouldpreferhearingtheanswerstraightaway",
-            "than being redirected to browse the web. Keywords:virtualassistant",
-            "artificialintelligence",
+            "virtual assistant",
+            "artificial intelligence",
             "chatbot",
             "android",
-            "hungarianlanguage."
+            "hungarian language"
         ],
         "department": "informatics",
         "hash_code": 9922074968
@@ -1842,7 +1840,7 @@
             "Swift",
             "SwiftUI",
             "Firebase",
-            "database."
+            "database"
         ],
         "department": "informatics",
         "hash_code": 8653847256
@@ -1890,7 +1888,7 @@
             "mentor",
             "mentee",
             "connect",
-            "Android application."
+            "Android application"
         ],
         "department": "informatics",
         "hash_code": 9672135448
@@ -1906,7 +1904,7 @@
             "flatfoot",
             "therapeutic treatment",
             "image processing",
-            "flutter."
+            "flutter"
         ],
         "department": "informatics",
         "hash_code": 276599307
@@ -1976,7 +1974,7 @@
             "city",
             "issues",
             "web application",
-            "spring boot."
+            "spring boot"
         ],
         "department": "informatics",
         "hash_code": 4240372643
@@ -2104,7 +2102,7 @@
         "keywords": [
             "glitch",
             "image",
-            "effect."
+            "effect"
         ],
         "department": "informatics",
         "hash_code": 4104013021
@@ -2225,9 +2223,10 @@
         "hash_code": 412472599
     },
     {
-        "author": "Osztián Erika Teutsch Mihály",
+        "author": "Teutsch Mihály",
         "supervisor": [
-            "Novák Pálma Rozália"
+            "Novák Pálma Rozália",
+            "Osztián Erika"
         ],
         "year": 2024,
         "abstract": "In today’s world, a healthy lifestyle and sustainable transport are receiving more and more attention. People strive to choose environmentally friendly and healthy modes of transportation such as cycling or walking. In addition, fuel consumption and the environmental impact of vehicles play an important role in their decisions. Mobile apps that help you plan routes, track distances and time, and analyze fuel consumption can be a big help in this situation. These tools can help people choose healthier and more sustainable modes of transportation. The application I developed is a simple and effective tool for tracking and analyzing our traffic habits. The application allows us to record and analyze how much we drive, cycle or walk, and monitor fuel consumption and other important data. This helps us to make more conscious decisions in the field of transport and encourages us to choose healthier and more sustainable alternatives. The aim of my thesis is to present in detail the application I developed, all its useful functions and advantages. First, I will review research and studies related to healthy lifestyles and transportation to provide a foundation for the topic. I will present how the planning took place, and then I will give a detailed description of the concrete implementation. At the end of the thesis, I summarize the achieved results and make suggestions for further development opportunities.",
@@ -2268,7 +2267,7 @@
             "face",
             "sound",
             "motion detection",
-            "artificial intelligence."
+            "artificial intelligence"
         ],
         "department": "informatics",
         "hash_code": 3319615336
@@ -2316,7 +2315,7 @@
             "calories",
             "logging",
             "weight loss",
-            "healthy lifestyle."
+            "healthy lifestyle"
         ],
         "department": "informatics",
         "hash_code": 1933065925
@@ -2331,7 +2330,7 @@
         "keywords": [
             "security",
             "violence",
-            "artificial intelligence."
+            "artificial intelligence"
         ],
         "department": "informatics",
         "hash_code": 7127878042
@@ -2394,7 +2393,7 @@
         "keywords": [
             "online",
             "shopping",
-            "convenience."
+            "convenience"
         ],
         "department": "informatics",
         "hash_code": 6264500006
