@@ -6,7 +6,7 @@ modell_name = 'all-MiniLM-L6-v2'
 #modell_name = 'BAAI/bge-base-en'
 #modell_name = 'BAAI/bge-large-en'
 
-def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None):
+def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None, search_supervisors=False):
     """
     Perform a search query in Elasticsearch.
 
@@ -17,60 +17,82 @@ def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False
                        If None, sort by relevance only.
     :param is_phrase_search: Whether to perform a phrase search (exact match)
     :param department: Optional filter by department ('cs' or 'informatics')
+    :param search_supervisors: Whether to include supervisor field in search
     :return: Search results as a dictionary
     """
     if not query:
         return []
         
-    if is_phrase_search:
-        search_fields = {
-            "bool": {
-                "should": [
-                    {"match_phrase": {"abstract": query}},
-                    {"match_phrase": {"keywords": {"query": query, "boost": 2}}},
-                    {"match_phrase": {"author": query}}
-                ]
+    if search_supervisors:
+        if is_phrase_search:
+            search_fields = {
+                "match_phrase": {"supervisor": query}
             }
-        }
-    else:
-        filtered_query = remove_stop_words(query)
-        print(f"Original query: '{query}' -> Filtered query: '{filtered_query}'")
-        
-        if not filtered_query.strip():
-            filtered_query = query
-        
-        search_fields = {
-            "bool": {
-                "should": [
-                    {
-                        "match": {
-                            "abstract": {
-                                "query": filtered_query,
-                                "operator": "OR",
-                                "minimum_should_match": "60%",
-                                "boost": 1.0
-                            }
-                        }
-                    },
-                    {
-                        "match": {
-                            "keywords": {
-                                "query": filtered_query,
-                                "boost": 2.0
-                            }
-                        }
-                    },
-                    {
-                        "match": {
-                            "author": {
-                                "query": filtered_query,
-                                "boost": 0.5
-                            }
-                        }
+        else:
+            filtered_query = remove_stop_words(query)
+            print(f"Original query: '{query}' -> Filtered query: '{filtered_query}' (supervisor search only)")
+            
+            if not filtered_query.strip():
+                filtered_query = query
+            
+            search_fields = {
+                "match": {
+                    "supervisor": {
+                        "query": filtered_query,
+                        "operator": "OR"
                     }
-                ]
+                }
             }
-        }
+    else:
+        if is_phrase_search:
+            search_fields = {
+                "bool": {
+                    "should": [
+                        {"match_phrase": {"abstract": query}},
+                        {"match_phrase": {"keywords": {"query": query, "boost": 2}}},
+                        {"match_phrase": {"author": query}}
+                    ]
+                }
+            }
+        else:
+            filtered_query = remove_stop_words(query)
+            print(f"Original query: '{query}' -> Filtered query: '{filtered_query}'")
+            
+            if not filtered_query.strip():
+                filtered_query = query
+            
+            search_fields = {
+                "bool": {
+                    "should": [
+                        {
+                            "match": {
+                                "abstract": {
+                                    "query": filtered_query,
+                                    "operator": "OR",
+                                    "minimum_should_match": "60%",
+                                    "boost": 1.0
+                                }
+                            }
+                        },
+                        {
+                            "match": {
+                                "keywords": {
+                                    "query": filtered_query,
+                                    "boost": 2.0
+                                }
+                            }
+                        },
+                        {
+                            "match": {
+                                "author": {
+                                    "query": filtered_query,
+                                    "boost": 0.5
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
 
     filters = []
     if year:
@@ -87,13 +109,16 @@ def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False
             }
         },
         "highlight": {
-            "fields": {
-                "abstract": {},
-                "keywords": {}
-            }
+            "fields": {}
         },
         "size": 10 
     }
+    
+    if search_supervisors:
+        search_query["highlight"]["fields"]["supervisor"] = {}
+    else:
+        search_query["highlight"]["fields"]["abstract"] = {}
+        search_query["highlight"]["fields"]["keywords"] = {}
     
     if sort_order in ["asc", "desc"]:
         search_query["sort"] = [

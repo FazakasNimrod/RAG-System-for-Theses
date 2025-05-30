@@ -12,10 +12,13 @@ const Sidebar = ({
   setLimit,
   department,
   setDepartment,
+  searchSupervisors,
+  setSearchSupervisors,
   onFilter,
   hidePhraseOption = false,
   hideSortOption = false,
   showLimitOption = false,
+  showSupervisorOption = false,
 }) => {
   const [departments] = useState([
     { id: "cs", name: "Computer Science" },
@@ -93,6 +96,25 @@ const Sidebar = ({
                 onChange={() => setIsPhrase(true)}
               />
               <label htmlFor="phrase-search">Exact Phrase</label>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showSupervisorOption && setSearchSupervisors && (
+        <div className="filter-section">
+          <label className="search-mode-label">Search Target</label>
+          <div className="radio-group">
+            <div className="radio-option">
+              <input
+                type="checkbox"
+                id="search-supervisors"
+                checked={searchSupervisors}
+                onChange={(e) => setSearchSupervisors(e.target.checked)}
+              />
+              <label htmlFor="search-supervisors">
+                Search Supervisors Only
+              </label>
             </div>
           </div>
         </div>

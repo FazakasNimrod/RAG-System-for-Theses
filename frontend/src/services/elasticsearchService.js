@@ -8,6 +8,7 @@ export const searchElasticsearch = async ({
   sort,
   isPhrase,
   department,
+  searchSupervisors,
 }) => {
   const params = {};
   if (query) params.q = query;
@@ -15,6 +16,7 @@ export const searchElasticsearch = async ({
   if (sort && sort !== "relevance") params.sort = sort;
   if (isPhrase) params.phrase = "true";
   if (department) params.department = department;
+  if (searchSupervisors) params.search_supervisors = "true";
 
   try {
     const response = await axios.get(API_URL, { params });

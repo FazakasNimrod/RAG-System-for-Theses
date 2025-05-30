@@ -12,6 +12,7 @@ const SearchPage = () => {
   const [sort, setSort] = useState("relevance");
   const [isPhrase, setIsPhrase] = useState(false);
   const [department, setDepartment] = useState(null);
+  const [searchSupervisors, setSearchSupervisors] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSearch = async () => {
@@ -23,6 +24,7 @@ const SearchPage = () => {
         sort,
         isPhrase,
         department,
+        searchSupervisors,
       });
       setResults(data);
     } catch (error) {
@@ -43,7 +45,10 @@ const SearchPage = () => {
         setIsPhrase={setIsPhrase}
         department={department}
         setDepartment={setDepartment}
+        searchSupervisors={searchSupervisors}
+        setSearchSupervisors={setSearchSupervisors}
         onFilter={handleSearch}
+        showSupervisorOption={true}
       />
 
       <div className="main-content">

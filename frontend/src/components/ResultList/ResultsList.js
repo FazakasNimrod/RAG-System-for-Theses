@@ -42,10 +42,10 @@ const ResultsList = ({ results, showScores = false }) => {
                   </span>
                 )}
               </div>
-              <p className="result-supervisor">
-                <strong>Supervisor:</strong>{" "}
-                {Array.isArray(supervisor) ? supervisor.join(", ") : supervisor}
-              </p>
+              <SupervisorContent
+                supervisor={supervisor}
+                highlight={highlight?.supervisor}
+              />
               <AbstractContent
                 abstract={abstract}
                 highlight={highlight?.abstract}
@@ -65,6 +65,33 @@ const ResultsList = ({ results, showScores = false }) => {
         })}
       </ul>
     </div>
+  );
+};
+
+const SupervisorContent = ({ supervisor, highlight }) => {
+  if (!supervisor) return null;
+
+  let displaySupervisor;
+  
+  if (highlight && highlight.length > 0) {
+    displaySupervisor = highlight.join(", ");
+  } else {
+    if (Array.isArray(supervisor)) {
+      displaySupervisor = supervisor.join(", ");
+    } else {
+      displaySupervisor = supervisor;
+    }
+  }
+
+  return (
+    <p className="result-supervisor">
+      <strong>Supervisor:</strong>{" "}
+      <span
+        dangerouslySetInnerHTML={{
+          __html: displaySupervisor,
+        }}
+      />
+    </p>
   );
 };
 

@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
 }
 
 .radio-option input[type="radio"] {
@@ -64,14 +65,70 @@
   margin: 0;
 }
 
+.radio-option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.radio-option input[type="checkbox"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.radio-option input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.radio-option input[type="checkbox"]:checked::before {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.radio-option input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
 .radio-option label {
   margin: 0;
   font-weight: normal;
   cursor: pointer;
+  color: #333;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.radio-option label:hover {
+  color: #007bff;
+}
+
+.radio-option:hover input[type="checkbox"] {
+  border-color: #007bff;
 }
 
 .search-mode-label {
   margin-bottom: 10px;
+  font-weight: bold;
+  color: #555;
+  font-size: 1rem;
 }
 
 .apply-filters-btn {
@@ -83,10 +140,56 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .apply-filters-btn:hover {
   background-color: #0056b3;
+}
+
+.apply-filters-btn:active {
+  background-color: #004085;
+  transform: translateY(1px);
+}
+
+.filter-section:has(#search-supervisors) {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  margin-bottom: 25px;
+}
+
+.filter-section:has(#search-supervisors) .search-mode-label {
+  color: #495057;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.filter-section:has(#search-supervisors) .radio-option {
+  padding: 5px 0;
+}
+
+.filter-section:has(#search-supervisors) .radio-option label {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+@keyframes checkboxCheck {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.radio-option input[type="checkbox"]:checked::before {
+  animation: checkboxCheck 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
@@ -98,5 +201,18 @@
 
   .sidebar h3 {
     margin-top: 20px;
+  }
+
+  .filter-section:has(#search-supervisors) {
+    padding: 12px;
+  }
+
+  .radio-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+
+  .radio-option input[type="checkbox"]:checked::before {
+    font-size: 12px;
   }
 }
