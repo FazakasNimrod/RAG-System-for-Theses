@@ -30,6 +30,14 @@ const Header = () => {
           >
             Ask Questions
           </Link>
+          <Link
+            to="/statistics"
+            className={`nav-link ${
+              currentPath === "/statistics" ? "active" : ""
+            }`}
+          >
+            Statistics
+          </Link>
         </div>
         <div className="header-right">
           <Link

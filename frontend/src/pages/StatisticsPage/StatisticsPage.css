@@ -1,0 +1,160 @@
+.statistics-page {
+  display: flex;
+  min-height: calc(100vh - 70px);
+  padding-left: 270px;
+}
+
+.statistics-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.statistics-header {
+  margin-bottom: 30px;
+}
+
+.statistics-header h1 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.active-filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.filters-label {
+  font-weight: 600;
+  color: #495057;
+  margin-right: 5px;
+}
+
+.filter-tag {
+  background-color: #007bff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.clear-filters-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear-filters-btn:hover {
+  background-color: #c82333;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0;
+  padding: 40px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+  max-width: 500px;
+}
+
+.error-message h3 {
+  margin-bottom: 15px;
+  color: #721c24;
+}
+
+.error-message p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.retry-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.retry-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .statistics-page {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .statistics-content {
+    padding: 15px;
+  }
+
+  .statistics-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .active-filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .filter-tag {
+    font-size: 0.8rem;
+  }
+}

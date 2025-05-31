@@ -53,7 +53,7 @@
         "author": "Bagoly Norbert-Loránd",
         "supervisor": [
             "Csaholczi Szabolcs",
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2024,
         "abstract": "In today’s world, there are increasingly more companies and new ones are constantly emerging. Everycompanyhasitsemployeesandeverycompanyaimsforefficientmanagement of human resources and the work performed by employees, with a unified interface where everything can be easily managed. As each company has its own preferences, these can only be maximally satisfied with an application that can be easily personalized. The aim of my thesis is to create a mobile application that can be integrated with a web-based ERP system which helps companies track the work done by employees and facilitate communication, both in the form of messages and documents. The foundation of the web system is an Odoo framework-based website, where management has been handled up to now. The problem arose when they couldn’t accurately account for the work done and employees had to log in to the website to send a message or attach a document to a completed task. This led to the idea of greatly simplifying and enhancing the workflow with an application where employees can do all this without needing to connect to a website from their phones. To implement this, I developed a native Android application in Kotlin, utilizing a local Room database, connected via XMLRPC to the web interface where data is stored in Postgre SQL. I also had to create a module for the web interface, acting as an API between the Odoo system and my application. This module was written in Python. Key words: Work management, Odoo, ERP system, Android application, Kotlin, XMLRPC",
@@ -86,7 +86,7 @@
     {
         "author": "Bakó Lóránd",
         "supervisor": [
-            "Horobet Emil"
+            "Horobeț Emil"
         ],
         "year": 2021,
         "abstract": "The topic of my thesis consists of the use of the eigenface method, which is an important part of the principal component analysis (PCA). The face is one of the most important characteristics of the human body. Usually, by examining the human face, people can decide if a person is known or unknown to them. Recently, thanks to the development of technology and the world, people meet hundreds of human faces daily. With the knowledge of this fact, the question of whether there is a way in which the properties of the human face can be used in the virtual world arises. In studying the human face, significant aspects are the determination of different organs’ position and the determination of the specific characteristics (ex. birthmark). The analysis and the knowledge of these elements help a lot in people’s identification both in the real and the virtual life. People daily meet with a big amount of information and the human life is getting much more dependent on the elements of the virtual world. Thanks to these things, the identification of people and the access to different places to be done by using the properties of the human face was just a matter of time. In this thesis I will attempt to answer the question of whether the eigenface method deserves to be used as a part of a two-factor authentication (2FA) or not. The method will be used as the system’s first security factor, which consists of the detection of human face and of the recognition of a specific person. During the implementation, the main goal will be to make face recognition more efficient and precise. Based on the results, I will conclude if the technology used in my research is worth to be used and, based on my own results, if it is possible for the created system to be developed in a certain way.",
@@ -101,7 +101,7 @@
     {
         "author": "Bakó László Mihály",
         "supervisor": [
-            "Iclănzan Dávid"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "In this thesis, we have explored the possibility of using human-machine interfaces as a new approach to password-free secure access and user authentication. In the proposed approach, the active interface, which monitors some biometric process, serves as a non-transferable authentication token based on a secure “dead man switch”. If the connection is terminated, the system automatically revokes the privileges and logs the user out. To avoid forgery and impersonation, the system uses a one-time key protected communication protocol between the clients and the server managing access to resources. In this research, we analyzed possible solutions based on the criteria of security, convenience and cost-effectiveness, and implemented a system based on a comfortable wearable visual cortex activity monitor and a low-cost heart rate monitoring system. The completed systems were tested to assess their reliability and safety. The results of the research show that the combination of non-transferable authentication tokens, biometrics and communication protocol offers a promising alternative to password or simple token-based access control systems, as it improves security and allows for more flexible security roles, such as temporary authorised security roles.",
@@ -350,7 +350,7 @@
     {
         "author": "Buda Imola",
         "supervisor": [
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "The topic of my state exam thesis is the development and presentation of a secure attendance registration system that could be used by a university or school. The purpose of the system is to record students’ attendance using a QR code-based solution and exclude fraud. In my state exam thesis, I present the operation and advantages of the system in detail. I emphasized the security of the system, which means trust and peace of mind for students and teachers. The system provides an efficient solution for attendance registration and helps maintain the order and reliability of classes. In my conclusions, I summarize the advantages and limitations of the developed system, as well as my suggestions for possible further developments. The purpose of my state exam thesis is to provide an attendance registration system that is quick and easy to use, guarantees accurate and safe registration of students’ attendance, and prevents the possibility of fraud. The introduction of the system at a university or a school can promote more efficient and safer education, contributing to the satisfaction and effectiveness of students and teachers.",
@@ -462,7 +462,7 @@
     },
     {
         "author": "Császár Ákos",
-        "supervisor": "Horobet Emil",
+        "supervisor": "Horobeț Emil",
         "year": 2021,
         "abstract": "The topic of my thesis is the development of an application that makes the everyday life of artisans easier. The application can optimize and boost their productivity, helps with advertising and tracks the orders sent by the client. Nowadaysthemobilephoneisoneofthemostpopulardevicesbecausewecanperform quite complex tasks on them with only a few taps. Taking advantage of the popularity of these tools, I made an android application and a server, keeping in mind what functions are possible and worth to create and to make the system fast, scalable and secure. In addition the look and the simplicity of the client-side application have been prioritized in order to provide the best possible user experience. The dissertation covers the advantages and disadvantages of the technologies used, the basic security and optimization problems and solutions that arise, and answers the question of what trade-offs we need to make during development for the technologies used. Today’s modern tools often speed up the session, but they may not provide an easy and effective solution for everything.",
         "keywords": [
@@ -592,7 +592,7 @@
         "author": "Elekes Rebeka",
         "supervisor": [
             "Kátai Zoltán",
-            "Osztián Pálma Rozália"
+            "Osztián Pálma-Rozália"
         ],
         "year": 2022,
         "abstract": "The topic of my thesis is the further development of the Algo Rhythmics environment, with a module that allows testing the information obtained within the environment. Since the Algo Rhythmics environment is also used to develop computational thinking, it is not only able to test the information about algorithms, but also to test the development of computational thinking thanks to this module. In previous research, when measuring students’ performance, separate testing applications were used, and to do this, the students who participated in the research had to navigate from the Algo Rhythmics site to another site, register there and then complete a test consisting of different questions. To this end, the idea of an embeddable module was born to improve the user experience and to help teachers to simplify testing within the environment and to make it easier to conduct research. I felt it was important to create a module that was easy to use and that would facilitate the work of teachers using the environment. At the same time, an important criterion was to create a competitive module with all the functionality that was available in the testing interfaces used so far. With the completed module, I was also able to create a research in which I tested the development of computational thinking through metaphors, and this research was the first to be done with this module, within the environment framework.",
@@ -608,7 +608,7 @@
     {
         "author": "Farkas Andrea-Szilvia",
         "supervisor": [
-            "Horobet Emil"
+            "Horobeț Emil"
         ],
         "year": 2021,
         "abstract": "The aim of my thesis is the usage of principal component analysis for the compression of digital image files. Moreover, my thesis compares different methods for reaching the mentioned aim, and experiments with the variation of different constant values for implementing the ideal compression. In the world of the modern internet, the storage and sending of different image files comes with significant storage need and data traffic, and because of that the reduction of image sizes is essential. There is more than one method for image compression, in my thesis I am researching the usage of principal component analysis. Principal component analysis is rooted in statistics. During the process we are searching so called principal components, which are specific to the dataset. After the compression, we are storing only the coefficients of these. The number of principal components can be increased almost arbitrarily, and with that we can optimize the accuracy, “goodness” of the compressed data, although that obviously increases the size of the resulting compressed image data files. Since that goodness value is measurable and comparable, the best method for the compression can be found relatively easily. In my thesis I aim to search the answer for the following questions: what kind of specific characteristics of the images are affecting the goodness of the compression, what kind of changes are observable between different implementations of the principal component analysis, what kind of effects do these have on the goodness of the image, as well as on the time required for the compression? These results are compared and evaluated. In my thesis I am searching the answer/answers for the posed questions mainly by using already existing implementations. The goodness of the resulting images after the compression is measured by multiple different methods. Finally, we draw the conclusions based on the acquired results.",
@@ -688,7 +688,7 @@
     {
         "author": "Fodor Lehel",
         "supervisor": [
-            "Olteán-Péter Boróka",
+            "Oltean-Péter Boróka",
             "Farkas Csaba"
         ],
         "year": 2023,
@@ -754,7 +754,7 @@
     {
         "author": "Gábor Anita Renáta",
         "supervisor": [
-            "Horobet Emil"
+            "Horobeț Emil"
         ],
         "year": 2022,
         "abstract": "The main topic of my dissertation is the use of genetic algorithms to solve a classical problem. As we know, almost every living thing in the world around us can be traced to Darwin’s theory of evolution. A similar computer program can be processed for this process, resulting in the production of different \"individuals\" as genetic processes. There are situations in life where it is important to get the best results not only accurately but also quickly. In these cases, it can be very important which of the algorithms available to you to choose to solve the problem. The focus of my case study is the problem of graph coloring, which is still a very unknown field in the programming world. For my research, I am looking for an answer to the question of how worthwhile it is to use genetic algorithms to got a better solution than a given one. In the meantime, I have listed several aspects for my proof. Such as what is the difference between a classical solution and a genetic solution for a given task, or what happens if the initial population is less than the number of generations we will get is the result or vice versa, or what if I increase or decrease the number of colors or what will have an effect on the effectiveness of a good coloring, the number of edges or nodes. I run the survey on a self-designed software for 100 randomly generated graphs. The tests are repeated and I calculated averages to make the results even more valid. Finally I compared and evaluated the results. By the end of my research, based on the results, we draw conclusions as to why it is suitable to use a genetic algorithm. We can also delve into the problem of graph coloring.",
@@ -788,7 +788,7 @@
     {
         "author": "Gál Attila",
         "supervisor": [
-            "Györfi Ágnes",
+            "Győrfi Ágnes",
             "Kupán Pál"
         ],
         "year": 2023,
@@ -985,7 +985,7 @@
     {
         "author": "Izsák Andrea",
         "supervisor": [
-            "Katai Zoltan"
+            "Kátai Zoltán"
         ],
         "year": 2021,
         "abstract": "Nowadays, traditional, personal reservations have been replaced by reservations on the phone or on other public sites, be it for beauty salons, doctor’s offices, sports events or anything else. The purpose of the \"Need a tutor?\" Reservation System application is to make appointments for individuals as quick and efficient as possible. The project will implement two-way communication between the two target groups. One of the target audiences are students who require private lessons, who, within the framework of the application, will have the opportunity to view the data sheets of all the teachers they are interested in, as well as see the teachers’ free time. All you need to do is register, which you can easily do by entering your email address, username and password. The other target audience is a group of teachers who give lessons in one subject or several different ones, and have the opportunity to modify their calendars to suit their own needs. The software system has two main components: an application for users running on Android and IOS platforms and an application server that retrieves data from a database. The paper contains the ways of operation of the project, the technologies used for its implementation, the functionality, and a description of the further development opportunities.",
@@ -1087,7 +1087,7 @@
     {
         "author": "Kiss Krisztina Gyöngyvér",
         "supervisor": [
-            "Jánosi-Rancz Katalin-Tünde"
+            "Jánosi-Rancz Katalin Tünde"
         ],
         "year": 2023,
         "abstract": "The restaurant industry and online ordering options have seen rapid growth in recent years, creating a growing demand for convenient and easy food delivery. People want to bring the restaurant experience to their homes without sacrificing comfort and relaxation. In this digital age, restaurants need to keep up with consumer demands and find ways to serve customers in the online space. This is where a restaurant delivery app comes into play, allowing for easy and fast food ordering and delivery. The goal is to create an application that enables the restaurant to provide customers with a convenient and simple way to order from their menu. Through the app, customers can browse a wide range of dishes, view detailed descriptions and prices, and easily create their order. The app also allows for online payment, ensuring a seamless process for both users and the restaurant. The benefits of a delivery app extend beyond customer convenience and also result in more efficient and successful restaurant operations. With the app, the restaurant can easily manage orders, track the delivery process, and optimize resources. Additionally, the app enables customer data management and the building of customer relationships, which can lead to loyal customers and positive feedback in the long run. In the following document, I will provide a detailed overview of the planning and development of a restaurant delivery app.",
@@ -1120,7 +1120,7 @@
     {
         "author": "Kolumbán Attila",
         "supervisor": [
-            "Iclănzan Dávid"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "The Rubik’s Cube is one of the worlds most iconic and most interesting puzzle game. The first Rubik’s Cube was made in the year 1974 by Rubik Ernő, who was a Hungarian architect, sculptor and game designer. Since its inception, it became popular worldwide, it entertains millions of people every day. Solving the Rubik’s Cube demands attention, patients and strategic thinking of its user, but thanks to improvements of modern technology, the way of thinking needed to solve the cube is a lot easier to learn. Thanks to the improvements of our smart devices and automated robots, solving the Rubik’s Cube reached new levels. These days Rubik’s Cube solver application are available on personal computers, and also on smart phones, making the learning of new solving algorithms a lot easier. Usually an application like this show a 3D representation of a Rubik’s Cube on the screen of the device, which can be rotated by the user using fingers or a mouse. The applications then calculate an optimal solution, and shows it to the user. The user can copy these steps on his own cube, this way he can devolop his own skills. Usually its a plus, if the application is not only able to show an optimal solution, but also can show given solving algorithms, this way helping the user understand the cube more. My software is able to read in a real cube, using the camera of a smart device, this way speeding up the process of inputting the state of the cube into the application. After the scanning of the cube is done, the user can ask for an optimal solution, of which he can go through step by step, or if he feels like it, he can try to solve the cube himself. Aside from this, i wanted to implement a feature, where the user can learn given solving algorithms. For this reason exists a separate menu, where the user can choose a solving algorithm, and can see its steps on the cube. The application was made in Unity, using C#, and for finding an optimal solution i used Kociemba’s two step solving algorithm. This algorithm is well liked for its speed and low solution step count.",
@@ -1137,7 +1137,7 @@
         "author": "Kőműves Dávid-Márk",
         "supervisor": [
             "Csaholczi Szabolcs",
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "Today, the number of private entrepreneurs and businesses is growing. The idea of running a business has become more normalised, it no longer seems that only someone of the calibre of Steve Jobs or Bill Gates can run a company, so more and more young people are trying and more new businesses are being born. However, the optimal functioning of a modern business requires the right tools to help monitor certain behaviours, create a successful client-provider communication interface, help manage the resources of the business, or even shorten the time taken up by paperwork. The aim of my thesis is to find a simple, fast and attractive solution for the latter of these, more specifically for the generation and storage of tax invoices. The application I have created aims to be a guaranteed solution for businesses and entrepreneurs that sell services or products and need to generate invoice statements. The application can be made highly accessible thanks to its web-based format. I have created an easy-to-use schema for editing and saving invoices. The application also leaves room for users who do not wish to log in, but for users with an account, it provides an archive that helps not only to visualise the already created invoices, but also to highlight them statistically. The interface data is stored in a Mongo DB database, which is managed by a Node.js based REST API using Express.js and Mongoose libraries I would call this the backend oftheproject. Thefrontendpartoftheprojectwasimplementedusing Vue.js3Java Script framework.",
@@ -1219,7 +1219,7 @@
         "author": "Kovács Bence",
         "supervisor": [
             "Márton Gyöngyvér",
-            "Györfi Ágnes"
+            "Győrfi Ágnes"
         ],
         "year": 2023,
         "abstract": "Currently, the rapid spread of online ticket purchasing can be observed due to technological advancements and the increased accessibility of the internet. Through an online platform, people can now conveniently and quickly purchase tickets for various events such as concerts, theater performances, or sports events like Formula 1. Online ticket purchasing comes with numerous advantages. Customers can easily browse and choose from a wide range of ticket options. Online platforms provide detailed information about events, including dates, venues, and descriptions. Additionally, online ticket purchasing allows for ticket comparisons, price and type selections, which help customers find the best options available. Technological developments, such as secure online payment systems and electronic tickets, have contributed to the widespread adoption of online ticket purchasing. Customers can easily and safely make payments through online platforms (webshop) and receive electronic tickets that can be presented on their mobile devices or in printable form at the event. Online ticket purchasing simplifies event attendance, as customers no longer have to wait in long queues at ticket counters. The purpose of the F1 Ticket Manager application is to provide a ticket purchasing platform for Formula 1 races. Additionally, I have implemented secure purchasing and admission processes through two-step ticket authentication.",
@@ -1236,7 +1236,7 @@
         "author": "Kovács Lehel",
         "supervisor": [
             "Kátai Zoltán",
-            "Györfi Ágnes"
+            "Győrfi Ágnes"
         ],
         "year": 2022,
         "abstract": "The main topic of my thesis is to help and speed up the solution of warehousing tasks. Warehousing tasks, such as inventory, handling of outgoing and incoming goods or even the traceability of goods, are a task that requires a relatively large amount of time and human resources, which is essential for any company that supplies or distributes products. In my present thesis, I am looking for a solution to this problem as generally as possible, so that the storage needs of as many companies as possible can be provided, accuratedatacanbeprovidedandthetimeallocatedforthiscanbesignificantlyreduced. ERP systems are designed to solve these types of problems, so by putting these systems into practice and using a portable device that can communicate with them, the storage problem can be solved, but the problem of generality still exists. For the sake of generality, it is necessary that ERP and the portable device that communicates directly with it do not associate data-specific reports, but this does not benefit companies from ERP, they also need to report data. To solve this, a third company-specific component is required that makes sense of the data provided by the previous components and makes them appropriate for the company.",
@@ -1415,7 +1415,7 @@
     {
         "author": "Majla Nándor",
         "supervisor": [
-            "Horobet Emil"
+            "Horobeț Emil"
         ],
         "year": 2022,
         "abstract": "A Time Tracker is a system and/or software that keeps track of the repeating activities the user spends their time with. Many use these for various purposes including personal improvement and keeping track of billable hours. However, such systems rely on user input and thus are prone to user errors. Is it possible to implement time-tracking functionality without user interaction on a personal computer? The goal of this thesis is to discuss one possible solution to this problem: collecting usage date in a method similar to that of \"keylogger\" viruses. Using this data, a neural network can be trained to place time spans spent at the computer into user-defined activity categories. This new generated data can be the subject of further statistical analysis.",
@@ -1432,7 +1432,7 @@
         "author": "Major Zsolt",
         "supervisor": [
             "Csaholczi Szabolcs",
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "In the realm of competitive sports, it is not uncommon for individuals who follow a contest from the sidelines to immerse themselves in the world of competition to such a degree, that they passionately cheer for a favorite side or even place bets on certain competitors. The competitive curiosity of humans can manifest in various ways, ranging from the frenzy of cheering alongside numerous other fans at a live match to everyday conversations with friends at a bar on who will win today’s big game. Building upon this idea, I have developed a computer application that offers two important possibilities for users to solve dilemmas that arise in the realm of basketball championships: a system for importing and recording team and player performances, which enables us to create complex and advanced insights not only into an athlete’s personal statistics, but also to compare them with those of another party, and a championship creation program where we can form teams led by others, engage in matches with them, and maintain rankings based on those matches. To implement this system, I have developed a . Net MAUI program based on the C# language. It utilizes a My SQL-based php My Admin database system to store and retrieve data for teams, players, and their statistics. Additionally, through an API, there is a possibility to fetch statistics of real NBA players and teams for different seasons, which will be used to create multi-layered metric measurements. My application can be divided into three distinctive menu sections. The first one is the league creator, where users can employ personally created clubs in various matches. Within this section, they can assign statistics and final results to players associated with the teams, and also rank the teams and players based on different criterias. The second section is the team and player creator, where users can create teams, customize them, and also retrieve and store the seasonal performances of real teams and players in the database. The third section, which is also a crucial one, is the comparation and evaluation section, where imported teams and players can be evaluated and compared using different convoluted metrics and graphs based on the imported information based on their performance. Key words: basketball, personalized championship, match maintenance, comparisons, statistics, metrics, competitional curiosity, datamining",
@@ -1482,7 +1482,7 @@
     {
         "author": "Mátyus-Borka Erzsébet",
         "supervisor": [
-            "Iclănzan Dávid Andrei"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "Online shopping is thriving in today’s world. Customers strive to choose convenient solutions for furnishing their homes, and the first step is purchasing furniture. In recent years, online shopping has gained a significant advantage over in-person shopping with physical contact. To achieve this, there are numerous options available to interested individuals, ranging from online stores published on websites to ordering via phone calls and specifically developed mobile applications. Taking these aspects into account, I have chosen a theme for my project that aligns with current trends while also incorporating innovative technologies to enhance the user experience. My project implements an online furniture store within an Android application. The app provides a convenient and user-friendly interface for both the seller, who fulfills the role of an administrator, and the buyer, who acts as a user. From a design perspective, the user interface is clean, easily understandable, and manageable for everyone, while also offering all the necessary functions for a seamless shopping experience. Users can create their own accounts, allowing them to browse the application at their leisure, favorite products for future reference, and complete the purchase process. Perhaps the only drawback of online shopping is the difficulty in physically observing the products due to the absence of physical presence. While physical shopping allows us to use all our senses to select and examine items from every angle, touch them, and rotate them, online shops generally do not offer solutions to these issues. In my project, I have endeavored to overcome this drawback by implementing a virtual room feature that allows buyers to not only view images and read descriptions of desiredproductsbutalsoobservethemin3D,rotatethem,andplacethemproportionally within a room. This functionality enhances the shopping experience and reduces the risk of returns by offering customers the opportunity for more thorough observation.",
@@ -1498,7 +1498,7 @@
     {
         "author": "Medve Noémi Nóra",
         "supervisor": [
-            "Novák Pálma Rozália",
+            "Novák Pálma-Rozália",
             "Osztián Erika"
         ],
         "year": 2024,
@@ -1516,7 +1516,7 @@
         "author": "Mihály Bence",
         "supervisor": [
             "Kátai Zoltán",
-            "Györfi Ágnes"
+            "Győrfi Ágnes"
         ],
         "year": 2022,
         "abstract": "Nowadays, thanks to the development of machine learning, machine learning is more frequently used to analyse images. The U-net is such a convolutional neural network that was primarily developed for accurate image segmentation of biological images. The success of U-net is demonstrated by its widespread use, ranging from CT and MRI scans to vehicle detection. In my thesis I seek answers to the question that which parameters could achieve the most accurate image segmentation on a given dataset. The accurate image segmentation might help in all sorts of fields and could potentially save lives, for instance, on a CT scan, if it can detect and identify an abnormality of a tissue. During the research, we save models with different kind of parameters to compare and evaluate the differences between these models. The examined architecture with the best parameter settings results at least 97% classification accuracy and it is able to detect parts of the images, so the model provides some really good results. Since U-net is a new approach to image segmentation, it may be worthwhile to try several parameter settings that could lead to an even more accurate image segmentation architecture.",
@@ -1562,7 +1562,7 @@
     {
         "author": "Molnár Krisztián",
         "supervisor": [
-            "Egyed Zsigmond Előd"
+            "Egyed-Zsigmond Előd"
         ],
         "year": 2023,
         "abstract": "Currently, we have access to large image collections both personally and in research. Visualizing these collections can contribute to the discovery of latent patterns. The topic of my thesis is the display and visualization of large image collections in various layouts. The size of the image collections I used exceeds forty thousand images, but the theoretical upper limit surpasses this by far. I have developed an application that can display the images from the opened collection and arrange them based on extracted metadata, all within seconds. My application is built on a client-server architecture. The server is written in the Rust[rus23]programminglanguageusingthe Axumframework. Theclient,runninginthe browser, is built in Type Script[typ23] and consists of two main parts. The desired layout can be selected through a user interface created with the React[rea23] framework, and this code is also responsible for the settings of the selected layout. The part responsible for image display does not use a framework but follows a custom-designed architecture. The Web GL[web23] library is used for rendering the images. The application has gone through several development cycles. I will now present the design decisions necessary for displaying image collections of this size and support them with measurements. Furthermore, I will showcase the layouts generated by the application for the collection I used.",
@@ -1627,7 +1627,7 @@
     {
         "author": "Márk Péter",
         "supervisor": [
-            "Jánosi Rancz Katalin Tünde"
+            "Jánosi-Rancz Katalin Tünde"
         ],
         "year": 2024,
         "abstract": "The topic of my thesis is the development of a healthcare mobile application that solves the connection, communication, and data flow between patients and doctors in a way that both patients and doctors can have an efficient, fast, and secure option in their hands. People often find themselves in a situation where they need help quickly, especially with health problems. I found this topic important because I have experienced firsthand the lack of such an app where I can quickly get in touch with a trusted expert. For example, once I got sick and didn’t know where I could go, because I was in a new city. Similar situations happen every day to other people in this context. As we are now in the 21st century, applications like this already exist, but for some reason they are not yet as widespread. Many doctors still manage their diaries and appointments on paper. Similar, well-functioning applications here in Romania are only used by the larger clinics. Furthermore, I have personally experienced that one call is often not enough to get in touch with a doctor; it takes several attempts. Therefore, I felt that this was a real problem, and I wanted to create a solution for it. The application that I created was developed in Flutter, an open-source framework for mobile application development. One of the great advantages of Flutter is that it allows fast and efficient development, as you can develop for multiple platforms (Android and i OS) from a single code base. The backend of the application is built on Firebase, which is a reliable and secure backend solution, providing fast data processing and realtime data management. Using Firebase, you can easily integrate different features such as authentication, database management, and secure storage of user data. But how is my app different? Well, I felt it was important not only to find a better solution for patients, but also to create a useful interface for doctors too. For example, I focused on making it quick and easy to interpret and process patient data. To do this, I even integrated an AI chatbot to assist the doctor and make this process more efficient. In addition, a great way to manage appointments is also provided by this app. In summary, the aim of my thesis is to present an application that can be a safe, fast, and ideal choice for both patients and doctors for the problems mentioned above. The app not only facilitates contact and communication, but can even increase the speed of effective patient care.",
@@ -1711,7 +1711,7 @@
     {
         "author": "Nagy Márton-Hunor",
         "supervisor": [
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2023,
         "abstract": "In today’s world, IT and programming skills are increasingly important because the machines around us are now controlled by a kind of software, a kind of software for communicating, navigating, editing, storing and sharing documents. playing multimedia content, games, etc. These software programs are used by humans and as more and more software developers are needed, it is important that as many people as possible to learn the basics of programming. The aim of my project is to create a to create a specially designed game that allows players to easily develop logical thinking and problem solving skills needed for programming, and learn the basic operations and processes of programming. In this thesis, I attempt to answer the question of how best and most easiest and most effective way to involve beginners in this world of gamification. Another goal of the project is to provide the most advanced more advanced programmers to enjoy and challenge the app. Topics implemented In the implemented app, the player can learn about process sequencing and function calls, and the sequence of functions, the structure and operation of loops, as well as the condiand conditionality. An important part of the game is its simplicity and minimalism, so that it is easy to play easy to play. In this paper, I will present some important game development theories that contribute to help create a successful game. I will also discuss different approaches to game development technologies that can be used for game development and platforms that can be used to platforms for which games can be developed.",
@@ -1744,7 +1744,7 @@
     {
         "author": "Nagy Szilárd-Levente",
         "supervisor": [
-            "Györfi Ágnes"
+            "Győrfi Ágnes"
         ],
         "year": 2021,
         "abstract": "Nowadays, more and more people are making purchases over the internet and doing this from different types of devices, running different operating systems. Therefore, it is important to design a software that are platform-independent and available from different devices. The aim of this thesis is the implementation of a multi-platform advertising system that helps students and other users to create, share and search between ads. This concentrates supply and demand in one place, making it more likely that your ads will reach your target, making it easier for you to search for ads that fall into different categories. In my thesis, I present the existing functionalities of the system, the design process and architecture, and the subsequent implementation, showing how to create multiplatform software from a single code base that is accessible from a website and mobile application.",
@@ -1811,7 +1811,7 @@
     {
         "author": "Pálffy Rolland",
         "supervisor": [
-            "Jánosi-Rancz Katalin-Tünde"
+            "Jánosi-Rancz Katalin Tünde"
         ],
         "year": 2023,
         "abstract": "Decentralized messaging and data sharing have emerged as promising approaches to address the challenges and limitations of centralized systems in the digital era. This paper explores the concept of decentralization in the context of messaging and data sharing, highlighting its advantages and potential implications. The traditional approach to messaging and data sharing relies heavily on centralized platforms, where users’ information is stored and controlled by a single entity. However, thiscentralizedmodelhasinherentlimitations,includingprivacyconcerns,databreaches, censorship, and dependency on a single point of failure. These issues have led to growing interest in decentralized alternatives. Decentralized messaging systems utilize peer-to-peer networks and distributed protocols to enable direct communication between users, eliminating the need for intermediaries. This approach ensures greater privacy, as users have more control over their data and can communicate directly without relying on a central server. Additionally, decentralized messaging systems can resist censorship attempts, as there is no central authority to regulate or control the flow of information. Similarly, decentralized data sharing aims to democratize the access and control of data. By leveraging blockchain technology and distributed storage systems, users can securely share and store data without relying on centralized entities. This enables greater transparency, data integrity, and resilience against attacks or data loss. Moreover, decentralized data sharing incentivizes collaboration and innovation, as participants can contribute and access data in a trustless and permissionless environment. While decentralized messaging and data sharing offer numerous benefits, they also present challenges. The scalability of decentralized systems, the verification of data authenticity, and the incentivization of participants are among the key areas that require further research and development. Additionally, legal and regulatory frameworks need to adapt to accommodate the decentralized nature of these systems, ensuring both privacy protection and accountability. The aim of this thesis is to present an application based on a decentralised system and to introduce the reader to the technologies needed to build it.",
@@ -1827,7 +1827,7 @@
     {
         "author": "Páll Arnold-Barna",
         "supervisor": [
-            "Olteán-Péter Boróka",
+            "Oltean-Péter Boróka",
             "Farkas Csaba"
         ],
         "year": 2023,
@@ -2079,7 +2079,7 @@
     {
         "author": "Szabó Albert-Balázs",
         "supervisor": [
-            "Iclănzan Dávid"
+            "Iclănzan David Andrei"
         ],
         "year": 2021,
         "abstract": "One of the urging problems of today’s society is the proper reuse of products. The 79 percent of plastic waste is stored in landfills or dumped into oceans, 12 percent is incinerated and only 9 percent is recycled. Inadequate storage and improper, ineffective recycling of products can cause enormous damage. Every year, more than a hundred million marine organisms die as a result of pollution from plastic waste. Selective waste collection can be facilitated by the automatic recognition of environmental product labels on waste. The recognized symbols together with educational information, can provide sufficient knowledge for users to make the process of selective waste collection more efficient and easier. The current thesis is part of the Greensy project focusing entirely on the problem of automatic recognition of recyclable symbols, which it solves using various machine learning methods, with a corpus designed for this purpose. By creating a data set, it is possible to recognize environmental product labels from a different approach than attempts in the literature so far.",
@@ -2209,7 +2209,7 @@
     {
         "author": "Tasnádi István-Norbert",
         "supervisor": [
-            "Kovács Lehel-István"
+            "Kovács Lehel István"
         ],
         "year": 2022,
         "abstract": "Using computers is now an integral part of our lives, and we use them for many things, whether it’s to do our work at work or at home as a recreational tool such as browsing the web, listening to music, watching a film or even playing games. Video games have gained immense popularity over the last decade, where people like to sit down and play a game in their free time, either with friends or against a computer, which is expected to be as natural and smart as possible, which makes the game more enjoyable, as it can also provide a challenge to the user, which is why many game development companies are trying to put more advanced and smarter artificial intelligence into their games. The aim of my thesis is to create an artificial intelligence for a 2D platformer game that can entertain and challenge the user with its complex behaviour, making our game more enjoyable. By complex behaviour of the AI we mean the following: patrol the opponent if it has not noticed the player or if the player has fled, if it has noticed the player then chase the player or attack the player if it is close enough. To increase the intelligence of the AI, the A* path search algorithm will play a major role, which will optimally determine the shortest route between the player and the opponent, where the opponent will chase the user-controlled character along that route. To implement the game, the Unity game engine was used, while the A* Pathfinding Project plugin was loaded to apply the A* pathfinding algorithm.",
@@ -2225,7 +2225,7 @@
     {
         "author": "Teutsch Mihály",
         "supervisor": [
-            "Novák Pálma Rozália",
+            "Novák Pálma-Rozália",
             "Osztián Erika"
         ],
         "year": 2024,

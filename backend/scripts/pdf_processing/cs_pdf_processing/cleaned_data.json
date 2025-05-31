@@ -294,7 +294,7 @@
     {
         "author": "Dobri Ervin",
         "supervisor": [
-            "Iclănzan Dávid"
+            "Iclănzan David Andrei"
         ],
         "year": 2021,
         "abstract": "Flat foot is one of the most common orthopedic problems, which in the absence of gradual treatment and correction can also result in serious health problems later on. This unpleasant orthopedic lesion canbetreatedefficientlywithpersistentexerciseofthefoot,withphysiotherapy. Unfortunately, most children are bored with the monotony of physiotherapy, in order to create consistent perseverance they need the constant supervision, persuasion and encouragement of the physiotherapist and parents. On the other hand, children love to play, so putting physiotherapy in a playfulframeworkcanmaketherehabilitationprocesseasierforeveryoneandincreaseitsefficiency. InthedissertationIpresentaself-developed“seriousgame”framework,withthehelpofwhichvideogamescanbecontrolledwiththephysiotherapyexercisesusedinthetreatmentoftheflatfoot: the gamesarecontrolledbythemovementofthefootinsteadofpressingakey/button. Thesystemdetects the exercises in (near) real time from signals summing up the muscle activity provided by the EMG (Electromyography)bandplacedonthechild’sleg,andthensimulatesthekeystrokecorrespondingto theexerciseinthecurrentlyrunninggame,therebycontrollingit.",
@@ -650,7 +650,7 @@
         "author": "Molnár Orsolya-Izabella",
         "supervisor": [
             "Csaholczi Szabolcs",
-            "Iclănzan David"
+            "Iclănzan David Andrei"
         ],
         "year": 2024,
         "abstract": "In recent years, the accounting sector has seen significant advancements, now employing much more modern applications to handle incoming data with greater ease and efficiency, facilitating their utilization and recording. There are already applications that streamline the accountant’s tasks with just a press of a button or a few clicks. Recently, the use of Optical Character Recognition (OCR) and artificial intelligence (AI) technologies has become widespread in accounting. These technologies have revolutionizedtheprocessingoffinancialdata. OCRtechnologyallowsfortheextractionoftext from scanned documents, whether they are invoices or receipts, enabling automatic data entry and reducing errors associated with manual input. AI algorithms provide substantial assistance in accelerating processes that would otherwise be more time-consuming for humans. However, these technologies are not infallible and may require human intervention to ensure acceptable results. The aim of my thesis is to leverage the aforementioned technologies to simplify the work of accountants through a straightforward user-friendly web environment. The application allows for the scanning and processing of key invoice data (such as invoice number, due date, total amount, buyer/seller information). The extracted text from invoices can also be translated into other languages, as the application was designed for universal use, accessible even to accountants who speak foreign languages. The system’s backend is Python-based, while the frontend utilizes JavaScript and the React framework. Data is stored in a PostgreSQL database. The optical character recognition technologies used include the well-known Tesseract and DocTR. AI-based technologies include DeepL for translation and ChatPDF for answering queries related to uploaded invoices.",
@@ -860,7 +860,7 @@
     {
         "author": "Szalma Tamás-Zsolt",
         "supervisor": [
-            "Szántó Zoltan"
+            "Szántó Zoltán"
         ],
         "year": 2022,
         "abstract": "In today’s world, websites have to meet more and more expectations, serving an increasing number of users is one of the most important aspects of modern websites. A page may be browsed by 100 people in one minute and increase to 100,000 in the next minute. A modern website needs to sense this and increase or decrease the resources allocated, depending on the load. The dissertation presents a scalable web application based onKubernetes,during the creationof which I created a webshop, and then I containerized it and deployed it to a local Kubernetes cluster. The webshop allows you to browse and search for products belonging to different categories, display a specific product in detail, add products to the cart, register, login and pay by credit card. I used Spring Boot framework for the server sideof theapplication. On theclient sideI usedthe Angular framework. For the database I used a relational MySQL database. To implement the containerization, I used Docker to create the containers that are the basis for deploying the application to the Kubernetes cluster. I solved the deployment to the Kubernetes cluster with Minikube, which allowed me to use Kubernetes locally for free. In the dissertation I write in detail about the technologies used, mainly about Kubernetes and Docker, the implementation of functions, the architecture and the results achieved.",

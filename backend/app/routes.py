@@ -2,6 +2,18 @@ from flask import Blueprint, request, jsonify, g, redirect
 from services import perform_search, perform_semantic_search, get_document_by_hash
 from ollama_rag_service import generate_rag_response, get_available_models
 
+try:
+    from statistics_service import get_statistics, get_unique_supervisors, get_unique_years
+    print("Successfully imported statistics functions")
+except ImportError as e:
+    print(f"Failed to import statistics functions: {e}")
+    def get_statistics(es, department=None, year=None, supervisor=None):
+        return {"success": False, "error": "Statistics service not available"}
+    def get_unique_supervisors(es, department=None):
+        return []
+    def get_unique_years(es, department=None):
+        return []
+
 search_routes = Blueprint('search', __name__)
 
 @search_routes.route('/', methods=['GET'])
@@ -99,6 +111,69 @@ def get_departments():
         {"id": "informatics", "name": "Informatics"}
     ]
     return jsonify(departments)
+
+@search_routes.route('/statistics', methods=['GET'])
+def statistics():
+    """
+    Get statistics about theses with optional filtering.
+    Supports filtering by department, year, and supervisor.
+    """
+    es = getattr(g, 'es', None)
+
+    if not es:
+        return jsonify({"error": "Elasticsearch connection is not available."}), 500
+
+    department = request.args.get('department')
+    year = request.args.get('year', type=int)
+    supervisor = request.args.get('supervisor')
+
+    try:
+        stats = get_statistics(es, department, year, supervisor)
+        return jsonify(stats)
+    except Exception as e:
+        return jsonify({"error": f"Statistics failed: {str(e)}"}), 500
+
+@search_routes.route('/statistics/supervisors', methods=['GET'])
+def statistics_supervisors():
+    """
+    Get unique supervisors for statistics filtering.
+    """
+    es = getattr(g, 'es', None)
+
+    if not es:
+        return jsonify({"error": "Elasticsearch connection is not available."}), 500
+
+    department = request.args.get('department')
+    
+    print(f"API: Getting supervisors for department: {department}")
+
+    try:
+        supervisors = get_unique_supervisors(es, department)
+        print(f"API: Returning {len(supervisors)} supervisors")
+        return jsonify(supervisors)
+    except Exception as e:
+        print(f"API: Error getting supervisors: {e}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({"error": f"Failed to get supervisors: {str(e)}"}), 500
+
+@search_routes.route('/statistics/years', methods=['GET'])
+def statistics_years():
+    """
+    Get unique years for statistics filtering.
+    """
+    es = getattr(g, 'es', None)
+
+    if not es:
+        return jsonify({"error": "Elasticsearch connection is not available."}), 500
+
+    department = request.args.get('department')
+
+    try:
+        years = get_unique_years(es, department)
+        return jsonify(years)
+    except Exception as e:
+        return jsonify({"error": f"Failed to get years: {str(e)}"}), 500
 
 @search_routes.route('/document/<int:hash_code>', methods=['GET'])
 def get_document(hash_code):

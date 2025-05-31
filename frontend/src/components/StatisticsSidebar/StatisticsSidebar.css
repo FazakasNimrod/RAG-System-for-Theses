@@ -1,0 +1,150 @@
+.statistics-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.statistics-sidebar h3 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.filter-section select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filter-section select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.filter-section select:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.loading-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.filter-actions {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e9ecef;
+}
+
+.clear-all-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.clear-all-btn:hover {
+  background-color: #5a6268;
+}
+
+.filter-info {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.filter-info h4 {
+  margin-bottom: 10px;
+  color: #495057;
+  font-size: 1rem;
+}
+
+.filter-info p {
+  margin-bottom: 10px;
+  color: #6c757d;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.filter-info ul {
+  margin: 0;
+  padding-left: 15px;
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.filter-info li {
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.filter-info strong {
+  color: #495057;
+}
+
+@media (max-width: 768px) {
+  .statistics-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .statistics-sidebar h3 {
+    margin-top: 10px;
+  }
+
+  .filter-info {
+    margin-top: 20px;
+    padding: 12px;
+  }
+
+  .filter-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .filter-info p,
+  .filter-info li {
+    font-size: 0.8rem;
+  }
+}
