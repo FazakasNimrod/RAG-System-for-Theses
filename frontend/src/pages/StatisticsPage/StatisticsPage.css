@@ -49,21 +49,6 @@
   font-weight: 500;
 }
 
-.clear-filters-btn {
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.clear-filters-btn:hover {
-  background-color: #c82333;
-}
-
 .loading-container {
   display: flex;
   flex-direction: column;

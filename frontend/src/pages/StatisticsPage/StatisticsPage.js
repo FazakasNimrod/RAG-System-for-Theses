@@ -79,9 +79,6 @@ const StatisticsPage = () => {
               {supervisor && (
                 <span className="filter-tag">Supervisor: {supervisor}</span>
               )}
-              <button className="clear-filters-btn" onClick={clearFilters}>
-                Clear All
-              </button>
             </div>
           )}
         </div>

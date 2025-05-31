@@ -69,6 +69,25 @@
   padding-bottom: 10px;
 }
 
+.supervisor-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.supervisor-detail {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.no-data-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 20px;
+}
+
 .year-chart {
   display: flex;
   flex-direction: column;
@@ -223,7 +242,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .thesis-author {
@@ -274,23 +293,11 @@
   background-color: #218838;
 }
 
-.filters-summary {
-  margin-top: 30px;
+.no-theses-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
   padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  border-left: 4px solid #007bff;
-}
-
-.filters-summary h4 {
-  margin-bottom: 10px;
-  color: #495057;
-}
-
-.filter-tags {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
@@ -328,6 +335,12 @@
   .department-percentage {
     text-align: left;
   }
+
+  .thesis-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -337,11 +350,5 @@
 
   .keyword-tag {
     font-size: 0.8rem !important;
-  }
-
-  .thesis-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
   }
 }

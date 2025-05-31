@@ -13,20 +13,14 @@ def get_statistics(es, department: str = None, year: int = None, supervisor: str
     """
     print(f"Getting statistics with filters - department: {department}, year: {year}, supervisor: {supervisor}")
 
+    if supervisor:
+        return get_supervisor_specific_statistics(es, supervisor, department, year)
+
     filters = []
     if department:
         filters.append({"term": {"department": department}})
     if year:
         filters.append({"term": {"year": year}})
-    if supervisor:
-        filters.append({
-            "bool": {
-                "should": [
-                    {"term": {"supervisor.keyword": supervisor}},
-                    {"match": {"supervisor": supervisor}}
-                ]
-            }
-        })
     
     if department == "cs":
         indices = ["cs_theses"]
@@ -74,6 +68,164 @@ def get_statistics(es, department: str = None, year: int = None, supervisor: str
             "statistics": {},
             "filters_applied": {}
         }
+
+def get_supervisor_specific_statistics(es, supervisor: str, department: str = None, year: int = None):
+    """
+    Get statistics specifically for a selected supervisor by finding ALL their theses.
+    
+    :param es: Elasticsearch client instance
+    :param supervisor: The supervisor name to filter by
+    :param department: Optional filter by department
+    :param year: Optional filter by year
+    :return: Dictionary containing supervisor-specific statistics
+    """
+    print(f"Getting supervisor-specific statistics for: {supervisor}")
+    
+    if department == "cs":
+        indices = ["cs_theses"]
+    elif department == "informatics":
+        indices = ["infos_theses"]
+    else:
+        indices = ["cs_theses", "infos_theses"]
+    
+    supervisor_query = {
+        "query": {
+            "bool": {
+                "should": [
+                    {"term": {"supervisor.keyword": supervisor}},
+                    {"match": {"supervisor": supervisor}}
+                ],
+                "minimum_should_match": 1
+            }
+        },
+        "size": 10000
+    }
+    
+    try:
+        response = es.search(index=",".join(indices), body=supervisor_query)
+        all_supervisor_documents = response['hits']['hits']
+        
+        print(f"Found {len(all_supervisor_documents)} total documents for supervisor: {supervisor}")
+        
+        filtered_documents = []
+        for hit in all_supervisor_documents:
+            source = hit['_source']
+            supervisor_field = source.get('supervisor', [])
+
+            is_supervised_by = False
+            if isinstance(supervisor_field, str):
+                if ',' in supervisor_field:
+                    supervisor_list = [s.strip() for s in supervisor_field.split(',')]
+                    is_supervised_by = supervisor in supervisor_list
+                else:
+                    is_supervised_by = supervisor_field.strip() == supervisor
+            elif isinstance(supervisor_field, list):
+                is_supervised_by = supervisor in [s.strip() for s in supervisor_field if s]
+            
+            if is_supervised_by:
+                if year and source.get('year') != year:
+                    continue
+                if department and source.get('department') != department:
+                    continue
+                filtered_documents.append(hit)
+        
+        print(f"After exact matching and filters: {len(filtered_documents)} documents")
+        
+        stats = calculate_supervisor_specific_statistics(filtered_documents, supervisor)
+        
+        return {
+            "success": True,
+            "total_documents": len(filtered_documents),
+            "statistics": stats,
+            "filters_applied": {
+                "department": department,
+                "year": year,
+                "supervisor": supervisor
+            }
+        }
+        
+    except Exception as e:
+        print(f"Error getting supervisor-specific statistics: {e}")
+        return {
+            "success": False,
+            "error": str(e),
+            "total_documents": 0,
+            "statistics": {},
+            "filters_applied": {}
+        }
+
+def calculate_supervisor_specific_statistics(documents: List[Dict], supervisor: str) -> Dict[str, Any]:
+    """
+    Calculate statistics specifically for a supervisor's theses.
+    
+    :param documents: List of Elasticsearch document hits for this supervisor
+    :param supervisor: The supervisor name
+    :return: Dictionary containing calculated statistics
+    """
+    if not documents:
+        return {
+            "by_year": {},
+            "by_department": {},
+            "by_supervisor": {supervisor: 0},
+            "top_keywords": {},
+            "year_range": {"min": None, "max": None},
+            "average_abstract_length": 0,
+            "supervisors_count": 1,
+            "recent_theses": []
+        }
+    
+    years = []
+    departments = []
+    keywords = []
+    abstract_lengths = []
+    all_docs = []
+    
+    for hit in documents:
+        source = hit['_source']
+        
+        if source.get('year'):
+            years.append(int(source['year']))
+        
+        if source.get('department'):
+            departments.append(source['department'])
+        
+        keyword_field = source.get('keywords', [])
+        if isinstance(keyword_field, str):
+            keywords.extend([kw.strip() for kw in keyword_field.split(',') if kw.strip()])
+        elif isinstance(keyword_field, list):
+            keywords.extend([kw.strip() for kw in keyword_field if kw and kw.strip()])
+
+        abstract = source.get('abstract', '')
+        if abstract:
+            abstract_lengths.append(len(abstract))
+        
+        all_docs.append({
+            'author': source.get('author', 'Unknown'),
+            'year': source.get('year', 'Unknown'),
+            'department': source.get('department', 'Unknown'),
+            'supervisor': source.get('supervisor', []),
+            'hash_code': source.get('hash_code')
+        })
+    
+    year_counts = Counter(years)
+    department_counts = Counter(departments)
+    keyword_counts = Counter(keywords)
+
+    all_docs.sort(key=lambda x: int(x['year']) if x['year'] != 'Unknown' else 0, reverse=True)
+    
+    return {
+        "by_year": dict(sorted(year_counts.items())),
+        "by_department": dict(department_counts),
+        "by_supervisor": {supervisor: len(documents)},
+        "top_keywords": dict(sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:15]),
+        "year_range": {
+            "min": min(years) if years else None,
+            "max": max(years) if years else None
+        },
+        "average_abstract_length": int(sum(abstract_lengths) / len(abstract_lengths)) if abstract_lengths else 0,
+        "supervisors_count": 1,
+        "recent_theses": all_docs[:20]
+    }
 
 def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
     """
