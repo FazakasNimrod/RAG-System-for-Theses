@@ -26,8 +26,10 @@ const StatisticsSidebar = ({
     const fetchSupervisors = async () => {
       setLoadingSupervisors(true);
       try {
-        console.log(`Fetching supervisors for department: ${department}`);
-        const data = await getUniqueSupervisors(department);
+        console.log(
+          `Fetching supervisors for department: ${department}, year: ${year}`
+        );
+        const data = await getUniqueSupervisors(department, year);
         console.log(`Received ${data.length} supervisors:`, data);
         setSupervisors(data);
       } catch (error) {
@@ -39,7 +41,7 @@ const StatisticsSidebar = ({
     };
 
     fetchSupervisors();
-  }, [department]);
+  }, [department, year]);
 
   useEffect(() => {
     const fetchYears = async () => {
@@ -74,7 +76,7 @@ const StatisticsSidebar = ({
     onFilterChange({
       department,
       year: yearValue,
-      supervisor,
+      supervisor: null,
     });
   };
 

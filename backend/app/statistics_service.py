@@ -12,7 +12,7 @@ def get_statistics(es, department: str = None, year: int = None, supervisor: str
     :return: Dictionary containing various statistics
     """
     print(f"Getting statistics with filters - department: {department}, year: {year}, supervisor: {supervisor}")
-    
+
     filters = []
     if department:
         filters.append({"term": {"department": department}})
@@ -130,7 +130,7 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
             keywords.extend([kw.strip() for kw in keyword_field.split(',') if kw.strip()])
         elif isinstance(keyword_field, list):
             keywords.extend([kw.strip() for kw in keyword_field if kw and kw.strip()])
-        
+
         abstract = source.get('abstract', '')
         if abstract:
             abstract_lengths.append(len(abstract))
@@ -153,7 +153,7 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
     department_counts = Counter(departments)
     supervisor_counts = Counter(supervisors)
     keyword_counts = Counter(keywords)
-    
+
     current_year = max(years) if years else 2023
     recent_theses = [
         doc for doc in all_docs 
@@ -164,30 +164,33 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
     return {
         "by_year": dict(sorted(year_counts.items())),
         "by_department": dict(department_counts),
-        "by_supervisor": dict(sorted(supervisor_counts.items(), key=lambda x: x[1], reverse=True)[:20]), 
-        "top_keywords": dict(sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:15]), 
+        "by_supervisor": dict(sorted(supervisor_counts.items(), key=lambda x: x[1], reverse=True)[:20]),
+        "top_keywords": dict(sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:15]),
         "year_range": {
             "min": min(years) if years else None,
             "max": max(years) if years else None
         },
         "average_abstract_length": int(sum(abstract_lengths) / len(abstract_lengths)) if abstract_lengths else 0,
         "supervisors_count": len(set(supervisors)),
-        "recent_theses": recent_theses[:10] 
+        "recent_theses": recent_theses[:10]
     }
 
-def get_unique_supervisors(es, department: str = None):
+def get_unique_supervisors(es, department: str = None, year: int = None):
     """
     Get a list of unique supervisors for filter dropdown.
     
     :param es: Elasticsearch client instance
     :param department: Optional filter by department
+    :param year: Optional filter by year
     :return: List of unique supervisor names
     """
-    print(f"Getting supervisors for department: {department}")
+    print(f"Getting supervisors for department: {department}, year: {year}")
     
     filters = []
     if department:
         filters.append({"term": {"department": department}})
+    if year:
+        filters.append({"term": {"year": year}})
     
     if department == "cs":
         indices = ["cs_theses"]
@@ -196,7 +199,7 @@ def get_unique_supervisors(es, department: str = None):
     else:
         indices = ["cs_theses", "infos_theses"]
     
-    print(f"Searching indices: {indices}")
+    print(f"Searching indices: {indices} with filters: {filters}")
 
     try:
         if filters:
@@ -234,7 +237,7 @@ def get_unique_supervisors(es, department: str = None):
                         supervisor_set.add(supervisor_field.strip())
         
         supervisors = sorted(list(supervisor_set))
-        print(f"Found {len(supervisors)} unique supervisors")
+        print(f"Found {len(supervisors)} unique supervisors for the given filters")
         return supervisors
         
     except Exception as e:

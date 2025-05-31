@@ -144,11 +144,12 @@ def statistics_supervisors():
         return jsonify({"error": "Elasticsearch connection is not available."}), 500
 
     department = request.args.get('department')
+    year = request.args.get('year', type=int)
     
-    print(f"API: Getting supervisors for department: {department}")
+    print(f"API: Getting supervisors for department: {department}, year: {year}")
 
     try:
-        supervisors = get_unique_supervisors(es, department)
+        supervisors = get_unique_supervisors(es, department, year)
         print(f"API: Returning {len(supervisors)} supervisors")
         return jsonify(supervisors)
     except Exception as e:

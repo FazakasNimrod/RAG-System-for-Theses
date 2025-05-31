@@ -24,9 +24,10 @@ export const getStatistics = async ({
   }
 };
 
-export const getUniqueSupervisors = async (department = null) => {
+export const getUniqueSupervisors = async (department = null, year = null) => {
   const params = {};
   if (department) params.department = department;
+  if (year) params.year = year;
 
   console.log("Getting supervisors with params:", params);
 
