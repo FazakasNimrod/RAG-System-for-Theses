@@ -4,9 +4,23 @@
 
 .stats-overview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+  .stats-overview {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-overview {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 
 .stat-card {
@@ -39,6 +53,9 @@
   font-size: 1rem;
   color: #666;
   font-weight: 500;
+  line-height: 1.3;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .stat-subtitle {
@@ -67,6 +84,53 @@
   font-weight: 600;
   border-bottom: 2px solid #f8f9fa;
   padding-bottom: 10px;
+}
+
+.word-cloud-section {
+  grid-column: 1 / -1;
+  min-height: 500px;
+}
+
+.word-cloud-description {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.word-cloud-description p {
+  margin: 0;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.filter-note {
+  font-weight: 500;
+  color: #007bff;
+}
+
+.word-cloud-legend {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #e7f3ff;
+  border-radius: 6px;
+  border: 1px solid #b3d9ff;
+}
+
+.legend-text {
+  margin: 0;
+  color: #0c5aa6;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.main-word-cloud {
+  margin: 20px 0;
+}
+
+.supervisor-word-cloud {
+  margin: 15px 0;
 }
 
 .supervisor-info {
@@ -195,26 +259,6 @@
   font-weight: 500;
 }
 
-.keywords-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-}
-
-.keyword-tag {
-  background: linear-gradient(45deg, #007bff, #0056b3);
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: transform 0.2s;
-}
-
-.keyword-tag:hover {
-  transform: scale(1.05);
-}
-
 .recent-theses {
   grid-column: 1 / -1;
 }
@@ -302,7 +346,7 @@
 
 @media (max-width: 768px) {
   .stats-overview {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
 
@@ -341,14 +385,27 @@
     align-items: flex-start;
     gap: 5px;
   }
-}
 
-@media (max-width: 480px) {
-  .stats-overview {
-    grid-template-columns: 1fr;
+  .word-cloud-section {
+    min-height: 400px;
   }
 
-  .keyword-tag {
-    font-size: 0.8rem !important;
+  .word-cloud-description {
+    padding: 12px;
+  }
+
+  .word-cloud-legend {
+    padding: 10px;
+  }
+
+  .legend-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-overview {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import WordCloud from "../WordCloud/WordCloud";
 import "./StatisticsDisplay.css";
 
 const StatisticsDisplay = ({ statistics }) => {
@@ -126,29 +127,26 @@ const StatisticsDisplay = ({ statistics }) => {
               )}
             </div>
 
-            <div className="stats-section">
-              <h3>Research Areas (Keywords)</h3>
-              <div className="keywords-cloud">
-                {Object.entries(stats.top_keywords || {})
-                  .slice(0, 15)
-                  .map(([keyword, count]) => (
-                    <div
-                      key={keyword}
-                      className="keyword-tag"
-                      style={{
-                        fontSize: `${Math.min(
-                          1.5,
-                          0.8 +
-                            (count /
-                              Math.max(...Object.values(stats.top_keywords))) *
-                              0.7
-                        )}rem`,
-                      }}
-                    >
-                      {keyword} ({count})
-                    </div>
-                  ))}
+            <div className="stats-section word-cloud-section">
+              <h3>Research Areas Word Cloud</h3>
+              <div className="word-cloud-description">
+                <p>
+                  Interactive visualization of research keywords and topics.
+                  Hover over words to see frequency details.
+                </p>
               </div>
+              {stats.keyword_cloud_data &&
+              stats.keyword_cloud_data.length > 0 ? (
+                <WordCloud
+                  data={stats.keyword_cloud_data}
+                  height={350}
+                  className="supervisor-word-cloud"
+                />
+              ) : (
+                <div className="no-data-message">
+                  No research keywords found for this supervisor.
+                </div>
+              )}
             </div>
 
             <div className="stats-section recent-theses">
@@ -266,28 +264,76 @@ const StatisticsDisplay = ({ statistics }) => {
               </div>
             </div>
 
-            <div className="stats-section">
-              <h3>Most Common Keywords</h3>
-              <div className="keywords-cloud">
-                {Object.entries(stats.top_keywords || {})
-                  .slice(0, 12)
-                  .map(([keyword, count]) => (
-                    <div
-                      key={keyword}
-                      className="keyword-tag"
-                      style={{
-                        fontSize: `${Math.min(
-                          1.5,
-                          0.8 +
-                            (count /
-                              Math.max(...Object.values(stats.top_keywords))) *
-                              0.7
-                        )}rem`,
-                      }}
-                    >
-                      {keyword} ({count})
+            <div className="stats-section word-cloud-section">
+              <h3>Research Trends - Keyword Cloud</h3>
+              {stats.keyword_cloud_data &&
+              stats.keyword_cloud_data.length > 0 ? (
+                <WordCloud
+                  data={stats.keyword_cloud_data}
+                  height={400}
+                  className="main-word-cloud"
+                />
+              ) : (
+                <div className="no-data-message">
+                  No research keywords found for the selected filters.
+                </div>
+              )}
+              <div className="word-cloud-legend">
+                <p className="legend-text">
+                  💡 <strong>Tip:</strong> Hover over keywords to see exact
+                  frequencies. The size reflects how commonly these topics
+                  appear in theses.
+                </p>
+              </div>
+            </div>
+
+            <div className="stats-section recent-theses">
+              <h3>Recent Theses</h3>
+              <div className="thesis-list">
+                {(stats.recent_theses || [])
+                  .slice(0, 8)
+                  .map((thesis, index) => (
+                    <div key={index} className="thesis-item">
+                      <div className="thesis-header">
+                        <div className="thesis-author">{thesis.author}</div>
+                        <div className="thesis-year">{thesis.year}</div>
+                      </div>
+                      <div className="thesis-details">
+                        <div className="thesis-department">
+                          {thesis.department === "cs"
+                            ? "Computer Science"
+                            : "Informatics"}
+                        </div>
+                        {Array.isArray(thesis.supervisor) ? (
+                          <div className="thesis-supervisor">
+                            Supervisor: {thesis.supervisor.join(", ")}
+                          </div>
+                        ) : thesis.supervisor ? (
+                          <div className="thesis-supervisor">
+                            Supervisor: {thesis.supervisor}
+                          </div>
+                        ) : null}
+                      </div>
+                      {thesis.hash_code && (
+                        <button
+                          className="view-pdf-btn"
+                          onClick={() =>
+                            window.open(
+                              `http://localhost:5000/${thesis.hash_code}`,
+                              "_blank"
+                            )
+                          }
+                        >
+                          View PDF
+                        </button>
+                      )}
                     </div>
                   ))}
+                {(!stats.recent_theses || stats.recent_theses.length === 0) && (
+                  <div className="no-theses-message">
+                    No recent theses found for the selected filters.
+                  </div>
+                )}
               </div>
             </div>
           </>

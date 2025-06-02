@@ -1,5 +1,163 @@
 from collections import Counter, defaultdict
 from typing import Dict, List, Any, Optional
+import re
+import string
+
+def normalize_keyword(keyword: str) -> str:
+    """
+    Normalize a keyword to handle duplicates and variations.
+    
+    :param keyword: Raw keyword string
+    :return: Normalized keyword string
+    """
+    if not keyword or not isinstance(keyword, str):
+        return ""
+
+    normalized = keyword.lower().strip()
+
+    normalized = normalized.strip(string.punctuation + ' ')
+    
+    normalized = re.sub(r'[.,;:!?()"\']', '', normalized)
+    
+    normalized = re.sub(r'\s+', ' ', normalized)
+    normalized = re.sub(r'-+', '-', normalized)
+    
+    keyword_mappings = {
+        'javascript': 'JavaScript',
+        'python': 'Python',
+        'java': 'Java',
+        'react': 'React',
+        'angular': 'Angular',
+        'vue': 'Vue',
+        'nodejs': 'Node.js',
+        'node.js': 'Node.js',
+        'node js': 'Node.js',
+        
+        'machine learning': 'Machine Learning',
+        'machine-learning': 'Machine Learning',
+        'ml': 'Machine Learning',
+        'artificial intelligence': 'Artificial Intelligence',
+        'artificial-intelligence': 'Artificial Intelligence',
+        'ai': 'Artificial Intelligence',
+        'deep learning': 'Deep Learning',
+        'deep-learning': 'Deep Learning',
+        'neural networks': 'Neural Networks',
+        'neural-networks': 'Neural Networks',
+        'cnn': 'CNN',
+        'convolutional neural networks': 'CNN',
+        'rnn': 'RNN',
+        
+        'mysql': 'MySQL',
+        'postgresql': 'PostgreSQL',
+        'mongodb': 'MongoDB',
+        'database': 'Database',
+        'db': 'Database',
+        
+        'html': 'HTML',
+        'css': 'CSS',
+        'web application': 'Web Application',
+        'web app': 'Web Application',
+        'webapp': 'Web Application',
+        'web-application': 'Web Application',
+        'mobile app': 'Mobile Application',
+        'mobile application': 'Mobile Application',
+        'mobile-application': 'Mobile Application',
+        
+        'spring boot': 'Spring Boot',
+        'spring-boot': 'Spring Boot',
+        'express': 'Express.js',
+        'express.js': 'Express.js',
+        'expressjs': 'Express.js',
+        'flask': 'Flask',
+        'django': 'Django',
+        
+        'iot': 'IoT',
+        'internet of things': 'IoT',
+        'api': 'API',
+        'rest api': 'REST API',
+        'rest-api': 'REST API',
+        'restapi': 'REST API',
+        'bluetooth': 'Bluetooth',
+        'wifi': 'WiFi',
+        'wi-fi': 'WiFi',
+        
+        'image processing': 'Image Processing',
+        'image-processing': 'Image Processing',
+        'opencv': 'OpenCV',
+        'computer vision': 'Computer Vision',
+        'computer-vision': 'Computer Vision',
+        
+        'arduino': 'Arduino',
+        'raspberry pi': 'Raspberry Pi',
+        'raspberry-pi': 'Raspberry Pi',
+        'esp32': 'ESP32',
+        'microcontroller': 'Microcontroller',
+        'fpga': 'FPGA',
+        
+        'user interface': 'User Interface',
+        'user-interface': 'User Interface',
+        'ui': 'User Interface',
+        'user experience': 'User Experience',
+        'user-experience': 'User Experience',
+        'ux': 'User Experience',
+        'algorithm': 'Algorithm',
+        'algorithms': 'Algorithm',
+        'data mining': 'Data Mining',
+        'data-mining': 'Data Mining',
+        'data analysis': 'Data Analysis',
+        'data-analysis': 'Data Analysis',
+ 
+        'medical imaging': 'Medical Imaging',
+        'medical-imaging': 'Medical Imaging',
+        'healthcare': 'Healthcare',
+        'health care': 'Healthcare',
+        'telemedicine': 'Telemedicine',
+        
+        'cybersecurity': 'Cybersecurity',
+        'cyber security': 'Cybersecurity',
+        'cyber-security': 'Cybersecurity',
+        'encryption': 'Encryption',
+        'authentication': 'Authentication',
+        'security': 'Security',
+        
+        'network': 'Network',
+        'networking': 'Network',
+        'wireless': 'Wireless',
+        'protocol': 'Protocol',
+        'protocols': 'Protocol',
+    }
+    
+    if normalized in keyword_mappings:
+        return keyword_mappings[normalized]
+    
+    return normalized.title() if normalized else ""
+
+def extract_and_normalize_keywords(keyword_field) -> List[str]:
+    """
+    Extract and normalize keywords from various field formats.
+    
+    :param keyword_field: Keywords in string or list format
+    :return: List of normalized keywords
+    """
+    keywords = []
+    
+    if isinstance(keyword_field, str):
+        if ',' in keyword_field:
+            keywords = [kw.strip() for kw in keyword_field.split(',') if kw.strip()]
+        elif ';' in keyword_field:
+            keywords = [kw.strip() for kw in keyword_field.split(';') if kw.strip()]
+        elif keyword_field.strip():
+            keywords = [keyword_field.strip()]
+    elif isinstance(keyword_field, list):
+        keywords = [kw.strip() for kw in keyword_field if kw and isinstance(kw, str) and kw.strip()]
+
+    normalized_keywords = []
+    for keyword in keywords:
+        normalized = normalize_keyword(keyword)
+        if normalized and len(normalized) > 1:
+            normalized_keywords.append(normalized)
+    
+    return normalized_keywords
 
 def get_statistics(es, department: str = None, year: int = None, supervisor: str = None):
     """
@@ -168,6 +326,7 @@ def calculate_supervisor_specific_statistics(documents: List[Dict], supervisor: 
             "by_department": {},
             "by_supervisor": {supervisor: 0},
             "top_keywords": {},
+            "keyword_cloud_data": [],
             "year_range": {"min": None, "max": None},
             "average_abstract_length": 0,
             "supervisors_count": 1,
@@ -190,10 +349,8 @@ def calculate_supervisor_specific_statistics(documents: List[Dict], supervisor: 
             departments.append(source['department'])
         
         keyword_field = source.get('keywords', [])
-        if isinstance(keyword_field, str):
-            keywords.extend([kw.strip() for kw in keyword_field.split(',') if kw.strip()])
-        elif isinstance(keyword_field, list):
-            keywords.extend([kw.strip() for kw in keyword_field if kw and kw.strip()])
+        normalized_keywords = extract_and_normalize_keywords(keyword_field)
+        keywords.extend(normalized_keywords)
 
         abstract = source.get('abstract', '')
         if abstract:
@@ -211,6 +368,11 @@ def calculate_supervisor_specific_statistics(documents: List[Dict], supervisor: 
     department_counts = Counter(departments)
     keyword_counts = Counter(keywords)
 
+    keyword_cloud_data = [
+        {"text": keyword, "value": count}
+        for keyword, count in sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:50]
+    ]
+
     all_docs.sort(key=lambda x: int(x['year']) if x['year'] != 'Unknown' else 0, reverse=True)
     
     return {
@@ -218,6 +380,7 @@ def calculate_supervisor_specific_statistics(documents: List[Dict], supervisor: 
         "by_department": dict(department_counts),
         "by_supervisor": {supervisor: len(documents)},
         "top_keywords": dict(sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:15]),
+        "keyword_cloud_data": keyword_cloud_data,
         "year_range": {
             "min": min(years) if years else None,
             "max": max(years) if years else None
@@ -240,6 +403,7 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
             "by_department": {},
             "by_supervisor": {},
             "top_keywords": {},
+            "keyword_cloud_data": [],
             "year_range": {"min": None, "max": None},
             "average_abstract_length": 0,
             "supervisors_count": 0,
@@ -278,10 +442,8 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
                         supervisors.append(sup.strip())
         
         keyword_field = source.get('keywords', [])
-        if isinstance(keyword_field, str):
-            keywords.extend([kw.strip() for kw in keyword_field.split(',') if kw.strip()])
-        elif isinstance(keyword_field, list):
-            keywords.extend([kw.strip() for kw in keyword_field if kw and kw.strip()])
+        normalized_keywords = extract_and_normalize_keywords(keyword_field)
+        keywords.extend(normalized_keywords)
 
         abstract = source.get('abstract', '')
         if abstract:
@@ -306,6 +468,11 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
     supervisor_counts = Counter(supervisors)
     keyword_counts = Counter(keywords)
 
+    keyword_cloud_data = [
+        {"text": keyword, "value": count}
+        for keyword, count in sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:50]
+    ]
+
     current_year = max(years) if years else 2023
     recent_theses = [
         doc for doc in all_docs 
@@ -318,6 +485,7 @@ def calculate_document_statistics(documents: List[Dict]) -> Dict[str, Any]:
         "by_department": dict(department_counts),
         "by_supervisor": dict(sorted(supervisor_counts.items(), key=lambda x: x[1], reverse=True)[:20]),
         "top_keywords": dict(sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)[:15]),
+        "keyword_cloud_data": keyword_cloud_data,
         "year_range": {
             "min": min(years) if years else None,
             "max": max(years) if years else None

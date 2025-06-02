@@ -1,0 +1,143 @@
+.word-cloud-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-cloud-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.6;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.tag-cloud {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+  line-height: 1.8;
+}
+
+.tag-cloud-word {
+  transition: all 0.2s ease !important;
+  font-family: "Arial", sans-serif !important;
+  margin: 3px !important;
+  padding: 4px 8px !important;
+  border-radius: 4px !important;
+  user-select: none;
+  display: inline-block !important;
+}
+
+.tag-cloud-word:hover {
+  font-weight: bold !important;
+  background-color: rgba(0, 123, 255, 0.1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  z-index: 10;
+}
+
+.word-cloud-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.word-cloud-wrapper {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tag-cloud span {
+  line-height: 1.6 !important;
+  word-spacing: 2px;
+}
+
+.tag-cloud-word[style*="color: rgb("] {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .word-cloud-container {
+    min-height: 250px;
+  }
+
+  .word-cloud-wrapper {
+    padding: 15px;
+  }
+
+  .tag-cloud {
+    padding: 10px;
+    line-height: 1.6;
+  }
+
+  .tag-cloud-word {
+    margin: 2px !important;
+    padding: 3px 6px !important;
+    font-size: 0.9em !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .word-cloud-container {
+    min-height: 200px;
+  }
+
+  .word-cloud-wrapper {
+    padding: 10px;
+  }
+
+  .tag-cloud {
+    padding: 8px;
+    line-height: 1.5;
+  }
+
+  .tag-cloud-word {
+    margin: 1px !important;
+    padding: 2px 4px !important;
+    font-size: 0.8em !important;
+  }
+}
+
+@media print {
+  .word-cloud-container {
+    background: white;
+    border: 1px solid #000;
+  }
+
+  .tag-cloud-word {
+    color: #000 !important;
+    background-color: transparent !important;
+  }
+}
