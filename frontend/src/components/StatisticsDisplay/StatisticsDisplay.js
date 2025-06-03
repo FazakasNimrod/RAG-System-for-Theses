@@ -113,14 +113,6 @@ const StatisticsDisplay = ({ statistics }) => {
                   <strong>Total Theses Supervised:</strong>{" "}
                   {supervisorThesesCount}
                 </div>
-                {filters_applied.department && (
-                  <div className="supervisor-detail">
-                    <strong>Department:</strong>{" "}
-                    {filters_applied.department === "cs"
-                      ? "Computer Science"
-                      : "Informatics"}
-                  </div>
-                )}
               </div>
             </div>
 
