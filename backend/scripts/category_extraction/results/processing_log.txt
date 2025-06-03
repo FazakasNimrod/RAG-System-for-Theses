@@ -1,0 +1,438 @@
+Abstract Topic Summarization Log - Started at 2025-06-02 15:50:39.688378
+============================================================
+
+[2025-06-02 15:50:39] 🚀 Starting processing of 206 abstracts
+[2025-06-02 15:50:39] 📝 Processing 1/206: Bács Bernát (2023)
+[2025-06-02 15:51:06] ✅ Successfully processed Bács Bernát
+[2025-06-02 15:51:06] 📝 Processing 2/206: Bakó József (2023)
+[2025-06-02 15:51:10] ✅ Successfully processed Bakó József
+[2025-06-02 15:51:11] 📝 Processing 3/206: Bartha Álmos (2024)
+[2025-06-02 15:51:15] ✅ Successfully processed Bartha Álmos
+[2025-06-02 15:51:16] 📝 Processing 4/206: Benedek Szabolcs (2021)
+[2025-06-02 15:51:21] ✅ Successfully processed Benedek Szabolcs
+[2025-06-02 15:51:21] 📝 Processing 5/206: Berkeczi Arnold (2022)
+[2025-06-02 15:51:26] ✅ Successfully processed Berkeczi Arnold
+[2025-06-02 15:51:26] 📝 Processing 6/206: Blénesi Áron (2021)
+[2025-06-02 15:51:31] ✅ Successfully processed Blénesi Áron
+[2025-06-02 15:51:32] 📝 Processing 7/206: Bocsárdi András-Levente (2023)
+[2025-06-02 15:51:36] ✅ Successfully processed Bocsárdi András-Levente
+[2025-06-02 15:51:37] 📝 Processing 8/206: Bustya Balázs (2021)
+[2025-06-02 15:51:42] ✅ Successfully processed Bustya Balázs
+[2025-06-02 15:51:42] 📝 Processing 9/206: Bálint Adolf (2023)
+[2025-06-02 15:51:47] ✅ Successfully processed Bálint Adolf
+[2025-06-02 15:51:48] 📝 Processing 10/206: Bíró Apor (2024)
+[2025-06-02 15:51:52] ✅ Successfully processed Bíró Apor
+[2025-06-02 15:51:53] 📊 Progress: 10/206 processed (10 successful, 0 errors)
+[2025-06-02 15:51:53] 📝 Processing 11/206: Csiki Krisztina (2023)
+[2025-06-02 15:51:57] ✅ Successfully processed Csiki Krisztina
+[2025-06-02 15:51:58] 📝 Processing 12/206: Csorvasi Endre (2022)
+[2025-06-02 15:52:03] ✅ Successfully processed Csorvasi Endre
+[2025-06-02 15:52:03] 📝 Processing 13/206: Czimbalmos Ákos (2023)
+[2025-06-02 15:52:08] ✅ Successfully processed Czimbalmos Ákos
+[2025-06-02 15:52:08] 📝 Processing 14/206: Czirják Márk (2024)
+[2025-06-02 15:52:13] ✅ Successfully processed Czirják Márk
+[2025-06-02 15:52:13] 📝 Processing 15/206: Dali Szilárd István (2024)
+[2025-06-02 15:52:17] ✅ Successfully processed Dali Szilárd István
+[2025-06-02 15:52:18] 📝 Processing 16/206: Demény-Székely Adorján (2022)
+[2025-06-02 15:52:23] ✅ Successfully processed Demény-Székely Adorján
+[2025-06-02 15:52:24] 📝 Processing 17/206: Dénes Loránd (2023)
+[2025-06-02 15:52:29] ✅ Successfully processed Dénes Loránd
+[2025-06-02 15:52:30] 📝 Processing 18/206: Dobri Ervin (2021)
+[2025-06-02 15:52:34] ✅ Successfully processed Dobri Ervin
+[2025-06-02 15:52:35] 📝 Processing 19/206: Erdős József (2022)
+[2025-06-02 15:52:39] ✅ Successfully processed Erdős József
+[2025-06-02 15:52:39] 📝 Processing 20/206: Gergely Zsolt (2023)
+[2025-06-02 15:52:44] ✅ Successfully processed Gergely Zsolt
+[2025-06-02 15:52:45] 📊 Progress: 20/206 processed (20 successful, 0 errors)
+[2025-06-02 15:52:45] 📝 Processing 21/206: Györfi Endre (2022)
+[2025-06-02 15:52:49] ✅ Successfully processed Györfi Endre
+[2025-06-02 15:52:50] 📝 Processing 22/206: Gáll János (2021)
+[2025-06-02 15:52:55] ✅ Successfully processed Gáll János
+[2025-06-02 15:52:55] 📝 Processing 23/206: Hammas Attila (2021)
+[2025-06-02 15:53:00] ✅ Successfully processed Hammas Attila
+[2025-06-02 15:53:01] 📝 Processing 24/206: Horváth Levente (2023)
+[2025-06-02 15:53:04] ✅ Successfully processed Horváth Levente
+[2025-06-02 15:53:05] 📝 Processing 25/206: Iszlai Tamás (2024)
+[2025-06-02 15:53:09] ✅ Successfully processed Iszlai Tamás
+[2025-06-02 15:53:10] 📝 Processing 26/206: Kalith Norbert (2021)
+[2025-06-02 15:53:14] ✅ Successfully processed Kalith Norbert
+[2025-06-02 15:53:15] 📝 Processing 27/206: Kántor Zsuzsa-Krisztina (2023)
+[2025-06-02 15:53:20] ✅ Successfully processed Kántor Zsuzsa-Krisztina
+[2025-06-02 15:53:21] 📝 Processing 28/206: Katona Andrea Izabella (2023)
+[2025-06-02 15:53:25] ✅ Successfully processed Katona Andrea Izabella
+[2025-06-02 15:53:26] 📝 Processing 29/206: Kencse Szabolcs (2022)
+[2025-06-02 15:53:30] ✅ Successfully processed Kencse Szabolcs
+[2025-06-02 15:53:31] 📝 Processing 30/206: Koncz András (2024)
+[2025-06-02 15:53:36] ✅ Successfully processed Koncz András
+[2025-06-02 15:53:37] 📊 Progress: 30/206 processed (30 successful, 0 errors)
+[2025-06-02 15:53:37] 📝 Processing 31/206: Körmöci Csaba (2023)
+[2025-06-02 15:53:40] ✅ Successfully processed Körmöci Csaba
+[2025-06-02 15:53:41] 📝 Processing 32/206: Kristóf István-Levente (2022)
+[2025-06-02 15:53:45] ✅ Successfully processed Kristóf István-Levente
+[2025-06-02 15:53:46] 📝 Processing 33/206: Kállai Balázs (2024)
+[2025-06-02 15:53:52] ✅ Successfully processed Kállai Balázs
+[2025-06-02 15:53:52] 📝 Processing 34/206: Lukács Botond (2022)
+[2025-06-02 15:53:57] ✅ Successfully processed Lukács Botond
+[2025-06-02 15:53:57] 📝 Processing 35/206: Lukács Orsolya (2022)
+[2025-06-02 15:54:02] ✅ Successfully processed Lukács Orsolya
+[2025-06-02 15:54:03] 📝 Processing 36/206: Lörinczi Mátyás (2024)
+[2025-06-02 15:54:07] ✅ Successfully processed Lörinczi Mátyás
+[2025-06-02 15:54:07] 📝 Processing 37/206: Madaras Ervin (2022)
+[2025-06-02 15:54:13] ✅ Successfully processed Madaras Ervin
+[2025-06-02 15:54:13] 📝 Processing 38/206: Magyarosi Roland-Mihály (2021)
+[2025-06-02 15:54:18] ✅ Successfully processed Magyarosi Roland-Mihály
+[2025-06-02 15:54:19] 📝 Processing 39/206: Magyar Roland István (2024)
+[2025-06-02 15:54:25] ✅ Successfully processed Magyar Roland István
+[2025-06-02 15:54:25] 📝 Processing 40/206: Molnár Orsolya-Izabella (2024)
+[2025-06-02 15:54:30] ✅ Successfully processed Molnár Orsolya-Izabella
+[2025-06-02 15:54:31] 📊 Progress: 40/206 processed (40 successful, 0 errors)
+[2025-06-02 15:54:31] 📝 Processing 41/206: Nagy Andrea (2022)
+[2025-06-02 15:54:35] ✅ Successfully processed Nagy Andrea
+[2025-06-02 15:54:36] 📝 Processing 42/206: Nagy-Serbán Tünde (2021)
+[2025-06-02 15:54:41] ✅ Successfully processed Nagy-Serbán Tünde
+[2025-06-02 15:54:41] 📝 Processing 43/206: Nüszl Richárd-István (2023)
+[2025-06-02 15:54:46] ✅ Successfully processed Nüszl Richárd-István
+[2025-06-02 15:54:46] 📝 Processing 44/206: Palfi Szabolcs (2021)
+[2025-06-02 15:54:51] ✅ Successfully processed Palfi Szabolcs
+[2025-06-02 15:54:52] 📝 Processing 45/206: Pál Andor (2023)
+[2025-06-02 15:54:56] ✅ Successfully processed Pál Andor
+[2025-06-02 15:54:57] 📝 Processing 46/206: Rigmányi Zsombor (2023)
+[2025-06-02 15:55:02] ✅ Successfully processed Rigmányi Zsombor
+[2025-06-02 15:55:02] 📝 Processing 47/206: Rozsnyai Arnold-Robert (2022)
+[2025-06-02 15:55:07] ✅ Successfully processed Rozsnyai Arnold-Robert
+[2025-06-02 15:55:07] 📝 Processing 48/206: Salló Csaba (2024)
+[2025-06-02 15:55:12] ✅ Successfully processed Salló Csaba
+[2025-06-02 15:55:12] 📝 Processing 49/206: Simó Zsuzsa (2021)
+[2025-06-02 15:55:17] ✅ Successfully processed Simó Zsuzsa
+[2025-06-02 15:55:17] 📝 Processing 50/206: Solyom Botond-Őrs (2021)
+[2025-06-02 15:55:22] ✅ Successfully processed Solyom Botond-Őrs
+[2025-06-02 15:55:23] 📊 Progress: 50/206 processed (50 successful, 0 errors)
+[2025-06-02 15:55:23] 📝 Processing 51/206: Soós Izabella (2023)
+[2025-06-02 15:55:28] ✅ Successfully processed Soós Izabella
+[2025-06-02 15:55:28] 📝 Processing 52/206: Szakáli-Vándor Árpád (2024)
+[2025-06-02 15:55:33] ✅ Successfully processed Szakáli-Vándor Árpád
+[2025-06-02 15:55:33] 📝 Processing 53/206: Szalma Tamás-Zsolt (2022)
+[2025-06-02 15:55:38] ✅ Successfully processed Szalma Tamás-Zsolt
+[2025-06-02 15:55:39] 📝 Processing 54/206: Szász Attila (2023)
+[2025-06-02 15:55:44] ✅ Successfully processed Szász Attila
+[2025-06-02 15:55:44] 📝 Processing 55/206: Szász Nimród János (2023)
+[2025-06-02 15:55:49] ✅ Successfully processed Szász Nimród János
+[2025-06-02 15:55:49] 📝 Processing 56/206: Szeibert Xavér (2023)
+[2025-06-02 15:55:54] ✅ Successfully processed Szeibert Xavér
+[2025-06-02 15:55:54] 📝 Processing 57/206: Szász Arnold-Levente (2021)
+[2025-06-02 15:55:59] ✅ Successfully processed Szász Arnold-Levente
+[2025-06-02 15:56:00] 📝 Processing 58/206: Udvari Balázs (2021)
+[2025-06-02 15:56:04] ✅ Successfully processed Udvari Balázs
+[2025-06-02 15:56:05] 📝 Processing 59/206: Ujfalvi Csongor-Robert (2021)
+[2025-06-02 15:56:09] ✅ Successfully processed Ujfalvi Csongor-Robert
+[2025-06-02 15:56:10] 📝 Processing 60/206: Ambrus Barna (2023)
+[2025-06-02 15:56:14] ✅ Successfully processed Ambrus Barna
+[2025-06-02 15:56:15] 📊 Progress: 60/206 processed (60 successful, 0 errors)
+[2025-06-02 15:56:15] 📝 Processing 61/206: Ábrám Szilveszter Levente (2024)
+[2025-06-02 15:56:19] ✅ Successfully processed Ábrám Szilveszter Levente
+[2025-06-02 15:56:20] 📝 Processing 62/206: Albert Henrietta (2024)
+[2025-06-02 15:56:24] ✅ Successfully processed Albert Henrietta
+[2025-06-02 15:56:25] 📝 Processing 63/206: Albert-Tóth Szilárd (2024)
+[2025-06-02 15:56:29] ✅ Successfully processed Albert-Tóth Szilárd
+[2025-06-02 15:56:30] 📝 Processing 64/206: Bagoly Norbert-Loránd (2024)
+[2025-06-02 15:56:35] ✅ Successfully processed Bagoly Norbert-Loránd
+[2025-06-02 15:56:35] 📝 Processing 65/206: Bakos Csongor-Attila (2023)
+[2025-06-02 15:56:40] ✅ Successfully processed Bakos Csongor-Attila
+[2025-06-02 15:56:41] 📝 Processing 66/206: Bakó Lóránd (2021)
+[2025-06-02 15:56:46] ✅ Successfully processed Bakó Lóránd
+[2025-06-02 15:56:46] 📝 Processing 67/206: Bakó László Mihály (2023)
+[2025-06-02 15:56:51] ✅ Successfully processed Bakó László Mihály
+[2025-06-02 15:56:51] 📝 Processing 68/206: Balázs Endre (2023)
+[2025-06-02 15:56:56] ✅ Successfully processed Balázs Endre
+[2025-06-02 15:56:57] 📝 Processing 69/206: Balint Csongor (2024)
+[2025-06-02 15:57:01] ✅ Successfully processed Balint Csongor
+[2025-06-02 15:57:02] 📝 Processing 70/206: Bálint Lehel (2023)
+[2025-06-02 15:57:07] ✅ Successfully processed Bálint Lehel
+[2025-06-02 15:57:07] 📊 Progress: 70/206 processed (70 successful, 0 errors)
+[2025-06-02 15:57:07] 📝 Processing 71/206: Ballai Tamás-Attila (2021)
+[2025-06-02 15:57:12] ✅ Successfully processed Ballai Tamás-Attila
+[2025-06-02 15:57:12] 📝 Processing 72/206: Barabási Róbert Zsolt (2022)
+[2025-06-02 15:57:16] ✅ Successfully processed Barabási Róbert Zsolt
+[2025-06-02 15:57:17] 📝 Processing 73/206: Bârle Armand (2024)
+[2025-06-02 15:57:21] ✅ Successfully processed Bârle Armand
+[2025-06-02 15:57:22] 📝 Processing 74/206: Bartalis Zoltán-Krisztián (2021)
+[2025-06-02 15:57:26] ✅ Successfully processed Bartalis Zoltán-Krisztián
+[2025-06-02 15:57:27] 📝 Processing 75/206: Bartis Andrea-Nereman (2024)
+[2025-06-02 15:57:33] ✅ Successfully processed Bartis Andrea-Nereman
+[2025-06-02 15:57:33] 📝 Processing 76/206: Beder Norbert (2024)
+[2025-06-02 15:57:39] ✅ Successfully processed Beder Norbert
+[2025-06-02 15:57:39] 📝 Processing 77/206: Bedő László (2022)
+[2025-06-02 15:57:44] ✅ Successfully processed Bedő László
+[2025-06-02 15:57:44] 📝 Processing 78/206: Berszan Róbert (2022)
+[2025-06-02 15:57:50] ✅ Successfully processed Berszan Róbert
+[2025-06-02 15:57:51] 📝 Processing 79/206: Biró Tünde-Anna (2021)
+[2025-06-02 15:57:55] ✅ Successfully processed Biró Tünde-Anna
+[2025-06-02 15:57:55] 📝 Processing 80/206: Bodor Benjamin (2023)
+[2025-06-02 15:58:01] ✅ Successfully processed Bodor Benjamin
+[2025-06-02 15:58:01] 📊 Progress: 80/206 processed (80 successful, 0 errors)
+[2025-06-02 15:58:01] 📝 Processing 81/206: Borsos Blanka-Andrea (2024)
+[2025-06-02 15:58:06] ✅ Successfully processed Borsos Blanka-Andrea
+[2025-06-02 15:58:07] 📝 Processing 82/206: Buda Imola (2023)
+[2025-06-02 15:58:11] ✅ Successfully processed Buda Imola
+[2025-06-02 15:58:11] 📝 Processing 83/206: Burszán Hunor (2023)
+[2025-06-02 15:58:17] ✅ Successfully processed Burszán Hunor
+[2025-06-02 15:58:18] 📝 Processing 84/206: Béres Tamas (2024)
+[2025-06-02 15:58:23] ✅ Successfully processed Béres Tamas
+[2025-06-02 15:58:23] 📝 Processing 85/206: Böjthe Róbert Zoltán (2024)
+[2025-06-02 15:58:27] ✅ Successfully processed Böjthe Róbert Zoltán
+[2025-06-02 15:58:28] 📝 Processing 86/206: Cioma Roland-Sándor (2022)
+[2025-06-02 15:58:33] ✅ Successfully processed Cioma Roland-Sándor
+[2025-06-02 15:58:33] 📝 Processing 87/206: Csegezi-Balázs Csongor (2022)
+[2025-06-02 15:58:38] ✅ Successfully processed Csegezi-Balázs Csongor
+[2025-06-02 15:58:38] 📝 Processing 88/206: Csegzi Hunor (2023)
+[2025-06-02 15:58:43] ✅ Successfully processed Csegzi Hunor
+[2025-06-02 15:58:44] 📝 Processing 89/206: Császár Ákos (2021)
+[2025-06-02 15:58:48] ✅ Successfully processed Császár Ákos
+[2025-06-02 15:58:49] 📝 Processing 90/206: Csép Tamás (2022)
+[2025-06-02 15:58:53] ✅ Successfully processed Csép Tamás
+[2025-06-02 15:58:54] 📊 Progress: 90/206 processed (90 successful, 0 errors)
+[2025-06-02 15:58:54] 📝 Processing 91/206: Demény Zsófia (2022)
+[2025-06-02 15:58:58] ✅ Successfully processed Demény Zsófia
+[2025-06-02 15:58:59] 📝 Processing 92/206: Demeter Evelin-Delinke (2024)
+[2025-06-02 15:59:04] ✅ Successfully processed Demeter Evelin-Delinke
+[2025-06-02 15:59:04] 📝 Processing 93/206: Derzsi Dániel (2023)
+[2025-06-02 15:59:10] ✅ Successfully processed Derzsi Dániel
+[2025-06-02 15:59:10] 📝 Processing 94/206: Donáth Dániel-Zsolt (2022)
+[2025-06-02 15:59:15] ✅ Successfully processed Donáth Dániel-Zsolt
+[2025-06-02 15:59:15] 📝 Processing 95/206: Drágos Norbert-János (2022)
+[2025-06-02 15:59:19] ✅ Successfully processed Drágos Norbert-János
+[2025-06-02 15:59:20] 📝 Processing 96/206: Dávid Tamás (2021)
+[2025-06-02 15:59:25] ✅ Successfully processed Dávid Tamás
+[2025-06-02 15:59:25] 📝 Processing 97/206: Elekes Rebeka (2022)
+[2025-06-02 15:59:30] ✅ Successfully processed Elekes Rebeka
+[2025-06-02 15:59:30] 📝 Processing 98/206: Farkas Andrea-Szilvia (2021)
+[2025-06-02 15:59:35] ✅ Successfully processed Farkas Andrea-Szilvia
+[2025-06-02 15:59:36] 📝 Processing 99/206: Fechită Cătălin-Francisc (2022)
+[2025-06-02 15:59:40] ✅ Successfully processed Fechită Cătălin-Francisc
+[2025-06-02 15:59:41] 📝 Processing 100/206: Fekete Dániel (2023)
+[2025-06-02 15:59:46] ✅ Successfully processed Fekete Dániel
+[2025-06-02 15:59:46] 📊 Progress: 100/206 processed (100 successful, 0 errors)
+[2025-06-02 15:59:46] 📝 Processing 101/206: Felmeri Zsolt (2021)
+[2025-06-02 15:59:52] ✅ Successfully processed Felmeri Zsolt
+[2025-06-02 15:59:52] 📝 Processing 102/206: Fodor László-Carlos (2024)
+[2025-06-02 15:59:57] ✅ Successfully processed Fodor László-Carlos
+[2025-06-02 15:59:57] 📝 Processing 103/206: Fodor Lehel (2023)
+[2025-06-02 16:00:02] ✅ Successfully processed Fodor Lehel
+[2025-06-02 16:00:03] 📝 Processing 104/206: Fülöp Zoltán (2022)
+[2025-06-02 16:00:07] ✅ Successfully processed Fülöp Zoltán
+[2025-06-02 16:00:08] 📝 Processing 105/206: Füzi Botond (2022)
+[2025-06-02 16:00:13] ✅ Successfully processed Füzi Botond
+[2025-06-02 16:00:14] 📝 Processing 106/206: Füzi Zalán (2023)
+[2025-06-02 16:00:18] ✅ Successfully processed Füzi Zalán
+[2025-06-02 16:00:18] 📝 Processing 107/206: Gábor Anita Renáta (2022)
+[2025-06-02 16:00:23] ✅ Successfully processed Gábor Anita Renáta
+[2025-06-02 16:00:24] 📝 Processing 108/206: Gábos Alpár (2023)
+[2025-06-02 16:00:29] ✅ Successfully processed Gábos Alpár
+[2025-06-02 16:00:29] 📝 Processing 109/206: Gál Attila (2023)
+[2025-06-02 16:00:34] ✅ Successfully processed Gál Attila
+[2025-06-02 16:00:34] 📝 Processing 110/206: Gergely Zsolt (2021)
+[2025-06-02 16:00:39] ✅ Successfully processed Gergely Zsolt
+[2025-06-02 16:00:39] 📊 Progress: 110/206 processed (110 successful, 0 errors)
+[2025-06-02 16:00:39] 📝 Processing 111/206: Gólya Gergő (2024)
+[2025-06-02 16:00:43] ✅ Successfully processed Gólya Gergő
+[2025-06-02 16:00:44] 📝 Processing 112/206: Halász Botond (2021)
+[2025-06-02 16:00:49] ✅ Successfully processed Halász Botond
+[2025-06-02 16:00:50] 📝 Processing 113/206: Hamza Balázs (2022)
+[2025-06-02 16:00:54] ✅ Successfully processed Hamza Balázs
+[2025-06-02 16:00:55] 📝 Processing 114/206: Hegyeli András (2024)
+[2025-06-02 16:01:00] ✅ Successfully processed Hegyeli András
+[2025-06-02 16:01:00] 📝 Processing 115/206: Horváth Áron (2021)
+[2025-06-02 16:01:05] ✅ Successfully processed Horváth Áron
+[2025-06-02 16:01:05] 📝 Processing 116/206: Horvath János (2023)
+[2025-06-02 16:01:10] ✅ Successfully processed Horvath János
+[2025-06-02 16:01:10] 📝 Processing 117/206: Incze Levente (2021)
+[2025-06-02 16:01:16] ✅ Successfully processed Incze Levente
+[2025-06-02 16:01:16] 📝 Processing 118/206: Incze Zsolt-Tamás (2023)
+[2025-06-02 16:01:21] ✅ Successfully processed Incze Zsolt-Tamás
+[2025-06-02 16:01:22] 📝 Processing 119/206: Iuhos Imola (2023)
+[2025-06-02 16:01:26] ✅ Successfully processed Iuhos Imola
+[2025-06-02 16:01:27] 📝 Processing 120/206: Ivácson Ingrid Brigitta (2022)
+[2025-06-02 16:01:33] ✅ Successfully processed Ivácson Ingrid Brigitta
+[2025-06-02 16:01:33] 📊 Progress: 120/206 processed (120 successful, 0 errors)
+[2025-06-02 16:01:33] 📝 Processing 121/206: Izsák Andrea (2021)
+[2025-06-02 16:01:38] ✅ Successfully processed Izsák Andrea
+[2025-06-02 16:01:38] 📝 Processing 122/206: Kacsó Róbert (2023)
+[2025-06-02 16:01:42] ✅ Successfully processed Kacsó Róbert
+[2025-06-02 16:01:43] 📝 Processing 123/206: Kecskés-Kerestély Dávid-Attila (2022)
+[2025-06-02 16:01:47] ✅ Successfully processed Kecskés-Kerestély Dávid-Attila
+[2025-06-02 16:01:48] 📝 Processing 124/206: Kedves Dávid (2024)
+[2025-06-02 16:01:53] ✅ Successfully processed Kedves Dávid
+[2025-06-02 16:01:54] 📝 Processing 125/206: Kedves Norbert (2022)
+[2025-06-02 16:01:59] ✅ Successfully processed Kedves Norbert
+[2025-06-02 16:02:00] 📝 Processing 126/206: Kiss Bence (2024)
+[2025-06-02 16:02:04] ✅ Successfully processed Kiss Bence
+[2025-06-02 16:02:05] 📝 Processing 127/206: Kiss Krisztina Gyöngyvér (2023)
+[2025-06-02 16:02:09] ✅ Successfully processed Kiss Krisztina Gyöngyvér
+[2025-06-02 16:02:10] 📝 Processing 128/206: Kőble Melinda Andrea (2022)
+[2025-06-02 16:02:14] ✅ Successfully processed Kőble Melinda Andrea
+[2025-06-02 16:02:15] 📝 Processing 129/206: Kolumbán Attila (2023)
+[2025-06-02 16:02:21] ✅ Successfully processed Kolumbán Attila
+[2025-06-02 16:02:21] 📝 Processing 130/206: Kőműves Dávid-Márk (2023)
+[2025-06-02 16:02:27] ✅ Successfully processed Kőműves Dávid-Márk
+[2025-06-02 16:02:27] 📊 Progress: 130/206 processed (130 successful, 0 errors)
+[2025-06-02 16:02:27] 📝 Processing 131/206: Koncz Hunor (2024)
+[2025-06-02 16:02:31] ✅ Successfully processed Koncz Hunor
+[2025-06-02 16:02:32] 📝 Processing 132/206: Koncz Krisztián (2023)
+[2025-06-02 16:02:36] ✅ Successfully processed Koncz Krisztián
+[2025-06-02 16:02:36] 📝 Processing 133/206: Kovács Attila (2021)
+[2025-06-02 16:02:42] ✅ Successfully processed Kovács Attila
+[2025-06-02 16:02:42] 📝 Processing 134/206: Kovács Bálint-Hunor (2024)
+[2025-06-02 16:02:49] ✅ Successfully processed Kovács Bálint-Hunor
+[2025-06-02 16:02:49] 📝 Processing 135/206: Kovács Bence (2023)
+[2025-06-02 16:02:54] ✅ Successfully processed Kovács Bence
+[2025-06-02 16:02:55] 📝 Processing 136/206: Kovács Lehel (2022)
+[2025-06-02 16:02:59] ✅ Successfully processed Kovács Lehel
+[2025-06-02 16:03:00] 📝 Processing 137/206: Kovacs Lehel-Levente (2023)
+[2025-06-02 16:03:04] ✅ Successfully processed Kovacs Lehel-Levente
+[2025-06-02 16:03:05] 📝 Processing 138/206: Kovács Norbert (2022)
+[2025-06-02 16:03:10] ✅ Successfully processed Kovács Norbert
+[2025-06-02 16:03:10] 📝 Processing 139/206: Kovács Andrea (2022)
+[2025-06-02 16:03:15] ✅ Successfully processed Kovács Andrea
+[2025-06-02 16:03:16] 📝 Processing 140/206: Kéri Csaba (2024)
+[2025-06-02 16:03:20] ✅ Successfully processed Kéri Csaba
+[2025-06-02 16:03:21] 📊 Progress: 140/206 processed (140 successful, 0 errors)
+[2025-06-02 16:03:21] 📝 Processing 141/206: Lázár Zsolt (2023)
+[2025-06-02 16:03:25] ✅ Successfully processed Lázár Zsolt
+[2025-06-02 16:03:25] 📝 Processing 142/206: Lőrincz Csaba (2021)
+[2025-06-02 16:03:31] ✅ Successfully processed Lőrincz Csaba
+[2025-06-02 16:03:31] 📝 Processing 143/206: Lukács Zsombor (2024)
+[2025-06-02 16:03:35] ✅ Successfully processed Lukács Zsombor
+[2025-06-02 16:03:36] 📝 Processing 144/206: Lukács Krisztina-Beáta (2022)
+[2025-06-02 16:03:40] ✅ Successfully processed Lukács Krisztina-Beáta
+[2025-06-02 16:03:40] 📝 Processing 145/206: Magyari Dóra (2023)
+[2025-06-02 16:03:45] ✅ Successfully processed Magyari Dóra
+[2025-06-02 16:03:46] 📝 Processing 146/206: Májai Henrietta-Zita (2024)
+[2025-06-02 16:03:50] ✅ Successfully processed Májai Henrietta-Zita
+[2025-06-02 16:03:51] 📝 Processing 147/206: Majla Nándor (2022)
+[2025-06-02 16:03:55] ✅ Successfully processed Majla Nándor
+[2025-06-02 16:03:55] 📝 Processing 148/206: Major Zsolt (2023)
+[2025-06-02 16:04:01] ✅ Successfully processed Major Zsolt
+[2025-06-02 16:04:02] 📝 Processing 149/206: Makkai Nándor (2021)
+[2025-06-02 16:04:06] ✅ Successfully processed Makkai Nándor
+[2025-06-02 16:04:06] 📝 Processing 150/206: Marton Szilárd (2021)
+[2025-06-02 16:04:11] ✅ Successfully processed Marton Szilárd
+[2025-06-02 16:04:12] 📊 Progress: 150/206 processed (150 successful, 0 errors)
+[2025-06-02 16:04:12] 📝 Processing 151/206: Mátyus-Borka Erzsébet (2023)
+[2025-06-02 16:04:17] ✅ Successfully processed Mátyus-Borka Erzsébet
+[2025-06-02 16:04:17] 📝 Processing 152/206: Medve Noémi Nóra (2024)
+[2025-06-02 16:04:22] ✅ Successfully processed Medve Noémi Nóra
+[2025-06-02 16:04:22] 📝 Processing 153/206: Mihály Bence (2022)
+[2025-06-02 16:04:27] ✅ Successfully processed Mihály Bence
+[2025-06-02 16:04:27] 📝 Processing 154/206: Mihály Etele (2024)
+[2025-06-02 16:04:31] ✅ Successfully processed Mihály Etele
+[2025-06-02 16:04:32] 📝 Processing 155/206: Moldovan Adrienn (2022)
+[2025-06-02 16:04:36] ✅ Successfully processed Moldovan Adrienn
+[2025-06-02 16:04:36] 📝 Processing 156/206: Molnár Krisztián (2023)
+[2025-06-02 16:04:41] ✅ Successfully processed Molnár Krisztián
+[2025-06-02 16:04:42] 📝 Processing 157/206: Molnár Tamás (2021)
+[2025-06-02 16:04:47] ✅ Successfully processed Molnár Tamás
+[2025-06-02 16:04:47] 📝 Processing 158/206: Molnár Balázs (2021)
+[2025-06-02 16:04:53] ✅ Successfully processed Molnár Balázs
+[2025-06-02 16:04:53] 📝 Processing 159/206: Mózes Botond (2021)
+[2025-06-02 16:04:58] ✅ Successfully processed Mózes Botond
+[2025-06-02 16:04:59] 📝 Processing 160/206: Márk Péter (2024)
+[2025-06-02 16:05:04] ✅ Successfully processed Márk Péter
+[2025-06-02 16:05:05] 📊 Progress: 160/206 processed (160 successful, 0 errors)
+[2025-06-02 16:05:05] 📝 Processing 161/206: Máté Noémi (2024)
+[2025-06-02 16:05:09] ✅ Successfully processed Máté Noémi
+[2025-06-02 16:05:10] 📝 Processing 162/206: Nágó Márk (2024)
+[2025-06-02 16:05:15] ✅ Successfully processed Nágó Márk
+[2025-06-02 16:05:16] 📝 Processing 163/206: Nagy Hunor-Zalán (2022)
+[2025-06-02 16:05:20] ✅ Successfully processed Nagy Hunor-Zalán
+[2025-06-02 16:05:21] 📝 Processing 164/206: Nagy Krisztián-Endre (2022)
+[2025-06-02 16:05:25] ✅ Successfully processed Nagy Krisztián-Endre
+[2025-06-02 16:05:26] 📝 Processing 165/206: Nagy Márton-Hunor (2023)
+[2025-06-02 16:05:31] ✅ Successfully processed Nagy Márton-Hunor
+[2025-06-02 16:05:31] 📝 Processing 166/206: Nagy Szabolcs (2024)
+[2025-06-02 16:05:36] ✅ Successfully processed Nagy Szabolcs
+[2025-06-02 16:05:36] 📝 Processing 167/206: Nagy Szilárd-Levente (2021)
+[2025-06-02 16:05:40] ✅ Successfully processed Nagy Szilárd-Levente
+[2025-06-02 16:05:41] 📝 Processing 168/206: Nyitrai Orsolya Éva (2023)
+[2025-06-02 16:05:47] ✅ Successfully processed Nyitrai Orsolya Éva
+[2025-06-02 16:05:47] 📝 Processing 169/206: Németh Franciska (2021)
+[2025-06-02 16:05:52] ✅ Successfully processed Németh Franciska
+[2025-06-02 16:05:52] 📝 Processing 170/206: Oniga Kriszta (2024)
+[2025-06-02 16:05:57] ✅ Successfully processed Oniga Kriszta
+[2025-06-02 16:05:58] 📊 Progress: 170/206 processed (170 successful, 0 errors)
+[2025-06-02 16:05:58] 📝 Processing 171/206: Pálffy Rolland (2023)
+[2025-06-02 16:06:03] ✅ Successfully processed Pálffy Rolland
+[2025-06-02 16:06:04] 📝 Processing 172/206: Páll Arnold-Barna (2023)
+[2025-06-02 16:06:08] ✅ Successfully processed Páll Arnold-Barna
+[2025-06-02 16:06:09] 📝 Processing 173/206: Péter Kristóf (2021)
+[2025-06-02 16:06:14] ✅ Successfully processed Péter Kristóf
+[2025-06-02 16:06:14] 📝 Processing 174/206: Pinkóczi József (2022)
+[2025-06-02 16:06:19] ✅ Successfully processed Pinkóczi József
+[2025-06-02 16:06:20] 📝 Processing 175/206: Portik Andrea (2023)
+[2025-06-02 16:06:24] ✅ Successfully processed Portik Andrea
+[2025-06-02 16:06:25] 📝 Processing 176/206: Portik Johanna-Timea (2024)
+[2025-06-02 16:06:30] ✅ Successfully processed Portik Johanna-Timea
+[2025-06-02 16:06:30] 📝 Processing 177/206: Részeg Alpár (2023)
+[2025-06-02 16:06:35] ✅ Successfully processed Részeg Alpár
+[2025-06-02 16:06:36] 📝 Processing 178/206: Sallai József-Adrian (2023)
+[2025-06-02 16:06:41] ✅ Successfully processed Sallai József-Adrian
+[2025-06-02 16:06:41] 📝 Processing 179/206: Schifler Patricia-Vivien (2024)
+[2025-06-02 16:06:47] ✅ Successfully processed Schifler Patricia-Vivien
+[2025-06-02 16:06:47] 📝 Processing 180/206: Sikó Márk-Levente (2023)
+[2025-06-02 16:06:52] ✅ Successfully processed Sikó Márk-Levente
+[2025-06-02 16:06:52] 📊 Progress: 180/206 processed (180 successful, 0 errors)
+[2025-06-02 16:06:52] 📝 Processing 181/206: Siko Szabolcs (2024)
+[2025-06-02 16:06:57] ✅ Successfully processed Siko Szabolcs
+[2025-06-02 16:06:58] 📝 Processing 182/206: Simon Péter (2024)
+[2025-06-02 16:07:02] ✅ Successfully processed Simon Péter
+[2025-06-02 16:07:03] 📝 Processing 183/206: Sipos Ernő (2022)
+[2025-06-02 16:07:07] ✅ Successfully processed Sipos Ernő
+[2025-06-02 16:07:08] 📝 Processing 184/206: Somai Norbert-Attila (2022)
+[2025-06-02 16:07:13] ✅ Successfully processed Somai Norbert-Attila
+[2025-06-02 16:07:13] 📝 Processing 185/206: Stoica Attila (2023)
+[2025-06-02 16:07:18] ✅ Successfully processed Stoica Attila
+[2025-06-02 16:07:19] 📝 Processing 186/206: Suciu Aksza (2024)
+[2025-06-02 16:07:24] ✅ Successfully processed Suciu Aksza
+[2025-06-02 16:07:24] 📝 Processing 187/206: Szabó Albert-Balázs (2021)
+[2025-06-02 16:07:29] ✅ Successfully processed Szabó Albert-Balázs
+[2025-06-02 16:07:30] 📝 Processing 188/206: Szabó Henrietta (2021)
+[2025-06-02 16:07:35] ✅ Successfully processed Szabó Henrietta
+[2025-06-02 16:07:36] 📝 Processing 189/206: Szakács Dávid (2022)
+[2025-06-02 16:07:42] ✅ Successfully processed Szakács Dávid
+[2025-06-02 16:07:42] 📝 Processing 190/206: Szentgyörgyi Bernád-Krisztián (2024)
+[2025-06-02 16:07:46] ✅ Successfully processed Szentgyörgyi Bernád-Krisztián
+[2025-06-02 16:07:47] 📊 Progress: 190/206 processed (190 successful, 0 errors)
+[2025-06-02 16:07:47] 📝 Processing 191/206: Szilveszter Dávid (2022)
+[2025-06-02 16:07:52] ✅ Successfully processed Szilveszter Dávid
+[2025-06-02 16:07:53] 📝 Processing 192/206: Szövérfi Dániel (2024)
+[2025-06-02 16:07:58] ✅ Successfully processed Szövérfi Dániel
+[2025-06-02 16:07:59] 📝 Processing 193/206: Tamás Szabolcs-Huba (2022)
+[2025-06-02 16:08:04] ✅ Successfully processed Tamás Szabolcs-Huba
+[2025-06-02 16:08:04] 📝 Processing 194/206: Tankó Tamás (2023)
+[2025-06-02 16:08:09] ✅ Successfully processed Tankó Tamás
+[2025-06-02 16:08:09] 📝 Processing 195/206: Tasnádi István-Norbert (2022)
+[2025-06-02 16:08:15] ✅ Successfully processed Tasnádi István-Norbert
+[2025-06-02 16:08:15] 📝 Processing 196/206: Teutsch Mihály (2024)
+[2025-06-02 16:08:20] ✅ Successfully processed Teutsch Mihály
+[2025-06-02 16:08:20] 📝 Processing 197/206: Timar Máté-Ádám (2022)
+[2025-06-02 16:08:26] ✅ Successfully processed Timar Máté-Ádám
+[2025-06-02 16:08:27] 📝 Processing 198/206: Toducz Endre (2021)
+[2025-06-02 16:08:31] ✅ Successfully processed Toducz Endre
+[2025-06-02 16:08:31] 📝 Processing 199/206: Török Csongor (2023)
+[2025-06-02 16:08:37] ✅ Successfully processed Török Csongor
+[2025-06-02 16:08:37] 📝 Processing 200/206: Tóth Ádám (2022)
+[2025-06-02 16:08:43] ✅ Successfully processed Tóth Ádám
+[2025-06-02 16:08:44] 📊 Progress: 200/206 processed (200 successful, 0 errors)
+[2025-06-02 16:08:44] 📝 Processing 201/206: Tövisi Zoltan (2023)
+[2025-06-02 16:08:49] ✅ Successfully processed Tövisi Zoltan
+[2025-06-02 16:08:49] 📝 Processing 202/206: Vaida Márk Ádám (2021)
+[2025-06-02 16:08:54] ✅ Successfully processed Vaida Márk Ádám
+[2025-06-02 16:08:54] 📝 Processing 203/206: Váncza Tibor (2022)
+[2025-06-02 16:08:59] ✅ Successfully processed Váncza Tibor
+[2025-06-02 16:08:59] 📝 Processing 204/206: Veress Henrietta (2024)
+[2025-06-02 16:09:05] ✅ Successfully processed Veress Henrietta
+[2025-06-02 16:09:05] 📝 Processing 205/206: Veres Napsugár Anna (2023)
+[2025-06-02 16:09:10] ✅ Successfully processed Veres Napsugár Anna
+[2025-06-02 16:09:10] 📝 Processing 206/206: Vrencian Lilla (2023)
+[2025-06-02 16:09:15] ✅ Successfully processed Vrencian Lilla
+[2025-06-02 16:09:16] 🎉 Processing completed!
+[2025-06-02 16:09:16] 📊 Final results: 206 successful, 0 errors

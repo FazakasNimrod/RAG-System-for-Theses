@@ -1,0 +1,149 @@
+.topic-description {
+  margin-bottom: 15px;
+}
+
+.topic-description-text {
+  color: #666;
+  font-size: 0.95rem;
+  text-align: center;
+  margin: 0;
+}
+
+.topic-loading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.topic-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.topic-loading-text {
+  color: #666;
+  font-size: 1rem;
+}
+
+.topic-error-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 8px;
+  border: 1px solid #f5c6cb;
+}
+
+.topic-error-text {
+  margin: 0 0 10px 0;
+  font-weight: 500;
+}
+
+.topic-error-hint {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+.topic-no-data-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.topic-no-data-text {
+  color: #999;
+  font-style: italic;
+  margin: 0;
+}
+
+.topic-chart-container {
+  width: 100%;
+  height: 550px;
+}
+
+.custom-tooltip {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip-title {
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.tooltip-value {
+  margin: 5px 0 0 0;
+  color: #666;
+}
+
+.pie-label {
+  fill: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.topic-legend {
+  padding-top: 15px;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.legend-item {
+  color: inherit;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .topic-chart-container {
+    height: 450px;
+  }
+
+  .topic-description-text {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  .topic-loading-container,
+  .topic-no-data-container {
+    padding: 30px 15px;
+  }
+
+  .custom-tooltip {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .topic-chart-container {
+    height: 400px;
+  }
+
+  .topic-description-text {
+    font-size: 0.85rem;
+  }
+
+  .topic-loading-spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+  }
+}

@@ -13,6 +13,7 @@
     "react-scripts": "^5.0.1",
     "react-tagcloud": "^2.3.3",
     "react-wordcloud": "^1.2.7",
+    "recharts": "^2.15.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

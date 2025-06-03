@@ -1,0 +1,209 @@
+Abstract Topic Summaries - Generated at 2025-06-02 15:50:39.691377
+============================================================
+
+Bács Bernát (2023) [CS]: Smart Home Automation, IoT, Sensors, Bluetooth, MQTT
+Bakó József (2023) [CS]: Robotics, IoT, Temperature Measurement
+Bartha Álmos (2024) [CS]: Network Security, Packet Manipulation, Python, Scapy, Networking
+Benedek Szabolcs (2021) [CS]: Web Development, Ride Sharing, Google Maps APIs
+Berkeczi Arnold (2022) [CS]: Machine Learning, Computer Vision, Healthcare, MRI, Brain Segmentation
+Blénesi Áron (2021) [CS]: Blender, 3D modeling, Virtual Reality
+Bocsárdi András-Levente (2023) [CS]: Machine Learning, Convolutional Neural Networks, Brain Tumours, Healthcare
+Bustya Balázs (2021) [CS]: Artificial Neural Networks, Hardware Accelerators, FPGA, High-Level Synthesis, Multilayer Perceptron
+Bálint Adolf (2023) [CS]: Game Programming, Image Processing, OpenCV, Python, Backgammon
+Bíró Apor (2024) [CS]: Artificial Intelligence, Computer Vision, Agriculture
+Csiki Krisztina (2023) [CS]: Arduino, Sensors, IoT, Laboratory
+Csorvasi Endre (2022) [CS]: Web Development, Inventory Management, Remote Work
+Czimbalmos Ákos (2023) [CS]: Wireless Sensor Networks, Routing Protocols, IoT
+Czirják Márk (2024) [CS]: SCADA systems, CAN communication protocol, Embedded Systems, Automotive Applications, Microcontrollers.
+Dali Szilárd István (2024) [CS]: Web Development, React, MySQL, Education, Conference Management
+Demény-Székely Adorján (2022) [CS]: Geopositioning, GPS, OpenStreetMap
+Dénes Loránd (2023) [CS]: Gene Sequence Classification, Bioinformatics, Computational Biology
+Dobri Ervin (2021) [CS]: Machine Learning, Physiotherapy, Gaming
+Erdős József (2022) [CS]: Node.js, React Native, Food Ordering Apps
+Gergely Zsolt (2023) [CS]: Flutter, Spring Boot, Firebase, MySQL, Event Management
+Györfi Endre (2022) [CS]: Android, Kotlin, Agriculture, EU, Subsidies
+Gáll János (2021) [CS]: FPGA, Processor Design, RISC Architecture, Analog Signal Processing
+Hammas Attila (2021) [CS]: Artificial Neural Networks, Hardware Accelerators, FPGAs, Deep Learning, Python
+Horváth Levente (2023) [CS]: Digital Signal Processing, Microcontrollers, Python
+Iszlai Tamás (2024) [CS]: Python, Web Development, Social Media, Mobile App, Alertness Monitoring
+Kalith Norbert (2021) [CS]: Progressive Web App, Attendance Management, Education, Android, Bluetooth
+Kántor Zsuzsa-Krisztina (2023) [CS]: Electrocardiography, Deep Learning, Cardiovascular Diseases, Medical Imaging
+Katona Andrea Izabella (2023) [CS]: Voice Control, Artificial Intelligence, Robotics, Simulation, Natural Language Processing
+Kencse Szabolcs (2022) [CS]: Mobile App Development, Education Technology, Digitalization
+Koncz András (2024) [CS]: Spring Boot, Web Development, Education, Mentorship, University Life
+Körmöci Csaba (2023) [CS]: blockchain, cryptocurrency, decentralized exchange
+Kristóf István-Levente (2022) [CS]: Recursion, Programming, Education, Visualisation, Software
+Kállai Balázs (2024) [CS]: Flutter Map, Navigation, Mobile App Development
+Lukács Botond (2022) [CS]: Microcontrollers, Electronics, Component Identification
+Lukács Orsolya (2022) [CS]: Flutter, Firebase, Healthcare, Software Development
+Lörinczi Mátyás (2024) [CS]: Graph Algorithms, Web Development, Organization/Camp Management
+Madaras Ervin (2022) [CS]: Machine Learning, Computer Vision, Wood Processing, Image Analysis
+Magyarosi Roland-Mihály (2021) [CS]: Desktop Applications, Voice Recognition, Virtual Assistants
+Magyar Roland István (2024) [CS]: Bionics, EMG signals, Robotics, Image Processing, Prosthetics
+Molnár Orsolya-Izabella (2024) [CS]: Optical Character Recognition, Artificial Intelligence, Python, PostgreSQL, JavaScript
+Nagy Andrea (2022) [CS]: Artificial Neural Network, EEG, Emotion Recognition
+Nagy-Serbán Tünde (2021) [CS]: Web Development, Virtual Reality, Education
+Nüszl Richárd-István (2023) [CS]: Web Development, Artificial Intelligence, Education, Internships, Recommendation Systems
+Palfi Szabolcs (2021) [CS]: Python, Artificial Intelligence, E-commerce, Data Analysis, Realtime Database
+Pál Andor (2023) [CS]: Web Development, Education Technology, Angular, Spring, PostgreSQL
+Rigmányi Zsombor (2023) [CS]: Machine Learning, Computer Vision, Healthcare, Convolutional Neural Networks, Transfer Learning
+Rozsnyai Arnold-Robert (2022) [CS]: GPS, Route Optimization, ASP.NET Core
+Salló Csaba (2024) [CS]: IoT, ESP32, React, Node.js, MQTT
+Simó Zsuzsa (2021) [CS]: IoT, Ventilation, Artificial Respiration, Medical Devices, Telemedicine
+Solyom Botond-Őrs (2021) [CS]: Bluetooth, Android, Security
+Soós Izabella (2023) [CS]: Smart Systems, IoT, Microcontrollers, Sensors, Automation
+Szakáli-Vándor Árpád (2024) [CS]: Vue.js, Firebase, Web Development, Dynamic Data, Responsive Design
+Szalma Tamás-Zsolt (2022) [CS]: Web Development, Kubernetes, Docker, Spring Boot, Angular
+Szász Attila (2023) [CS]: Industrial Robotics, Computer Vision, Automation
+Szász Nimród János (2023) [CS]: Mobile App Development, IoT, Education, PowerPoint Presentation
+Szeibert Xavér (2023) [CS]: IoT, Energy Efficiency, Renewable Energy, Data Analytics, Internet of Things.
+Szász Arnold-Levente (2021) [CS]: Flutter, IoT, Healthcare, Stroke, Mobile Applications
+Udvari Balázs (2021) [CS]: Class Response Systems, Node.js, Education, IoT, Web Development
+Ujfalvi Csongor-Robert (2021) [CS]: Machine Learning, Computer Vision, Healthcare, MRI, Algorithm Development
+Ambrus Barna (2023) [CS]: Sensor Technology, IoT, Microcontrollers
+Ábrám Szilveszter Levente (2024) [INFORMATICS]: Sports Technology, Social Networking, Community Building
+Albert Henrietta (2024) [INFORMATICS]: Node.js, Database Management, Web Development
+Albert-Tóth Szilárd (2024) [INFORMATICS]: Deep Learning, Computer Vision, Healthcare, Convolutional Neural Networks
+Bagoly Norbert-Loránd (2024) [INFORMATICS]: Android, Kotlin, Odoo, ERP system, XMLRPC
+Bakos Csongor-Attila (2023) [INFORMATICS]: Event Management System, Web Development, Education, Centralized Platform, Attendance Tracking
+Bakó Lóránd (2021) [INFORMATICS]: Face Recognition, Principal Component Analysis, Security
+Bakó László Mihály (2023) [INFORMATICS]: Human-Machine Interfaces, Biometrics, Security
+Balázs Endre (2023) [INFORMATICS]: Algorithmic games, Education, Gamification, C programming language
+Balint Csongor (2024) [INFORMATICS]: Authentication, Authorization, Security, Web Development, SAML
+Bálint Lehel (2023) [INFORMATICS]: Android, Education, Statistics, .NET Core, Strapi.io
+Ballai Tamás-Attila (2021) [INFORMATICS]: Machine Learning, Bot Detection, Web Applications
+Barabási Róbert Zsolt (2022) [INFORMATICS]: Android, Cryptocurrency, User Interface, Mobile App Development
+Bârle Armand (2024) [INFORMATICS]: Mobile App Development, Security, Archery
+Bartalis Zoltán-Krisztián (2021) [INFORMATICS]: Object-oriented programming, Software Development, Education
+Bartis Andrea-Nereman (2024) [INFORMATICS]: I must point out that the provided abstract does not appear to be an academic thesis. It seems to be a marketing or business description of a confectionery website. However, if we were to extract key topic words from this text, they would likely
+Beder Norbert (2024) [INFORMATICS]: Eysenck Personality Test, Large Language Models, NLP, Web Development, Psychology
+Bedő László (2022) [INFORMATICS]: Android App Development, Education Technology, Personalization
+Berszan Róbert (2022) [INFORMATICS]: Image Recognition, Computer Vision, Image Classification, Distance Metrics, Advanced Driver Assistance Systems
+Biró Tünde-Anna (2021) [INFORMATICS]: Web GL, ASP NET MVC, Image Visualization
+Bodor Benjamin (2023) [INFORMATICS]: Game Development, Animation, Interactivity
+Borsos Blanka-Andrea (2024) [INFORMATICS]: Mobile App Development, Sustainable Consumption, Food Management
+Buda Imola (2023) [INFORMATICS]: Attendance registration system, QR code technology, Education, Security
+Burszán Hunor (2023) [INFORMATICS]: Demand Forecasting, Artificial Intelligence, Inventory Management, Data Mining, Time Series Analysis
+Béres Tamas (2024) [INFORMATICS]: IT system, Planner application, Web development, Team management, Visualisation.
+Böjthe Róbert Zoltán (2024) [INFORMATICS]: Autonomous Robots, Computer Vision, Indoor Navigation
+Cioma Roland-Sándor (2022) [INFORMATICS]: Artificial Intelligence, Natural Language Processing, Document Digitization, Angular, REST API
+Csegezi-Balázs Csongor (2022) [INFORMATICS]: Webcam, 3D Representation, Algorithm
+Csegzi Hunor (2023) [INFORMATICS]: Web Development, Education Technology, Data Management
+Császár Ákos (2021) [INFORMATICS]: Android, Mobile App Development, Productivity Optimization
+Csép Tamás (2022) [INFORMATICS]: Digital Image Processing, OpenCV, Web Interface
+Demény Zsófia (2022) [INFORMATICS]: Biometrics, Behavioral Biometrics, Security
+Demeter Evelin-Delinke (2024) [INFORMATICS]: Mobile Phones, Education Technology, Digital Learning Platforms
+Derzsi Dániel (2023) [INFORMATICS]: Real Estate, Software Architecture, Artificial Intelligence
+Donáth Dániel-Zsolt (2022) [INFORMATICS]: Natural Language Processing, Text Analytics, Data Mining
+Drágos Norbert-János (2022) [INFORMATICS]: Graph Theory, Gamification, Education
+Dávid Tamás (2021) [INFORMATICS]: Ant Colony Algorithm, Optimization, Education, Web Development
+Elekes Rebeka (2022) [INFORMATICS]: Algo Rhythmics, Computational Thinking, Education
+Farkas Andrea-Szilvia (2021) [INFORMATICS]: Image Compression, Principal Component Analysis, Statistics
+Fechită Cătălin-Francisc (2022) [INFORMATICS]: Text Editor, Programming, Development Environment
+Fekete Dániel (2023) [INFORMATICS]: Web Development, Artificial Intelligence, Accessibility
+Felmeri Zsolt (2021) [INFORMATICS]: Software Development, Cybersecurity, Keyloggers
+Fodor László-Carlos (2024) [INFORMATICS]: Social Media, Cycling, Mobile Applications
+Fodor Lehel (2023) [INFORMATICS]: Game Theory, Prisoner's Dilemma, Algorithm, Python
+Fülöp Zoltán (2022) [INFORMATICS]: React, Firebase, No SQL database, The TVDB, Web Development
+Füzi Botond (2022) [INFORMATICS]: Android application development, Time management, Productivity
+Füzi Zalán (2023) [INFORMATICS]: Cryptographic systems, Education, Security, Software development
+Gábor Anita Renáta (2022) [INFORMATICS]: Genetic Algorithms, Graph Coloring, Optimization
+Gábos Alpár (2023) [INFORMATICS]: Online Courses, Learning Platforms, Software Development
+Gál Attila (2023) [INFORMATICS]: Mobile App Development, Navigation Systems, Ticketing System
+Gergely Zsolt (2021) [INFORMATICS]: Authentication, Biometrics, Android
+Gólya Gergő (2024) [INFORMATICS]: Artificial Intelligence, Real Estate, Web Development
+Halász Botond (2021) [INFORMATICS]: Neural Networks, Android, Traffic Signs, Computer Vision
+Hamza Balázs (2022) [INFORMATICS]: Web Development, Information Retrieval, Education
+Hegyeli András (2024) [INFORMATICS]: React Native, Cycling, Bike Maintenance
+Horváth Áron (2021) [INFORMATICS]: Optimal Control, Mathematics, Computational Methods
+Horvath János (2023) [INFORMATICS]: Mobile App Development, Education Technology, API Integration
+Incze Levente (2021) [INFORMATICS]: Software Engineering, Education, C++, Algorithmic Thinking
+Incze Zsolt-Tamás (2023) [INFORMATICS]: Flutter, Firebase, Food Recipes, Cooking, Gastronomy
+Iuhos Imola (2023) [INFORMATICS]: Open GL, Unity, Virtual Reality, Education, Bible
+Ivácson Ingrid Brigitta (2022) [INFORMATICS]: Online Education, Graph Algorithms, Programming, Web Applications, Statistics
+Izsák Andrea (2021) [INFORMATICS]: Android, iOS, Database, Education, Communication
+Kacsó Róbert (2023) [INFORMATICS]: Urban Planning, Transportation Optimization, Mobile Applications
+Kecskés-Kerestély Dávid-Attila (2022) [INFORMATICS]: Construction, Building Materials, Mobile App
+Kedves Dávid (2024) [INFORMATICS]: Machine Learning, Computer Vision, Healthcare, Convolutional Neural Networks
+Kedves Norbert (2022) [INFORMATICS]: Quiz Software Development, Web Applications, Education
+Kiss Bence (2024) [INFORMATICS]: Project Management, Kanban Methodology, Software Development
+Kiss Krisztina Gyöngyvér (2023) [INFORMATICS]: Restaurant App Development, Mobile Technology, Food Delivery Systems
+Kőble Melinda Andrea (2022) [INFORMATICS]: Machine Learning, Computer Vision, MRI, Image Segmentation, Histogram Normalization
+Kolumbán Attila (2023) [INFORMATICS]: Artificial Intelligence, Computer Vision, Puzzle Solving, Unity, C#
+Kőműves Dávid-Márk (2023) [INFORMATICS]: Web Development, Business Management, Tax Invoicing, Mongo DB, Node.js, Express.js, Vue.js
+Koncz Hunor (2024) [INFORMATICS]: Real Estate, Web Development, Data Collection, Artificial Intelligence
+Koncz Krisztián (2023) [INFORMATICS]: Web Development, Social Networking, Music Recommendation
+Kovács Attila (2021) [INFORMATICS]: Server, Android, Shopping Cart Comparison, E-commerce, Web Development
+Kovács Bálint-Hunor (2024) [INFORMATICS]: Mathematical Animation, Education Technology, Web Development, TypeScript, React, Animation Libraries
+Kovács Bence (2023) [INFORMATICS]: Online ticket purchasing, Technology, E-commerce, Formula 1, Authentication
+Kovács Lehel (2022) [INFORMATICS]: ERP, IoT, Warehousing, Logistics, Supply Chain Management
+Kovacs Lehel-Levente (2023) [INFORMATICS]: Game Development, Software Engineering, Education
+Kovács Norbert (2022) [INFORMATICS]: Logic Games, Software Development, Education
+Kovács Andrea (2022) [INFORMATICS]: Bot Detection, Artificial Intelligence, Computer Vision, Synthetic Data, Time Series Analysis
+Kéri Csaba (2024) [INFORMATICS]: Software Development, Kanban Methodology, Project Management, Agile, Collaboration
+Lázár Zsolt (2023) [INFORMATICS]: Sorting algorithms, Education, Informatics, Software Development
+Lőrincz Csaba (2021) [INFORMATICS]: Mobile Device Management, Software Development, Security, Web API, Mobile Application
+Lukács Zsombor (2024) [INFORMATICS]: Music Recommendation, Web Development, Data Analysis
+Lukács Krisztina-Beáta (2022) [INFORMATICS]: Programming techniques, Education, Exercise, Computational Thinking
+Magyari Dóra (2023) [INFORMATICS]: Personalized Content Recommendation, Image Analysis, User Experience
+Májai Henrietta-Zita (2024) [INFORMATICS]: E-learning, Programming, Education, Game Development, Learning Management Systems.
+Majla Nándor (2022) [INFORMATICS]: Machine Learning, Neural Networks, Time Tracking, Keylogger
+Major Zsolt (2023) [INFORMATICS]: basketball, C#, My SQL, php My Admin, .Net MAUI
+Makkai Nándor (2021) [INFORMATICS]: Natural Language Processing, .Net, Education, Blazor
+Marton Szilárd (2021) [INFORMATICS]: Artificial Intelligence, Surveillance Systems, Security
+Mátyus-Borka Erzsébet (2023) [INFORMATICS]: Android App Development, Virtual Reality, E-commerce
+Medve Noémi Nóra (2024) [INFORMATICS]: Algorithms, Database Management Systems, Android
+Mihály Bence (2022) [INFORMATICS]: Machine Learning, Image Segmentation, Computer Vision, Healthcare
+Mihály Etele (2024) [INFORMATICS]: Machine Learning, Stock Market Analysis, Data Generation
+Moldovan Adrienn (2022) [INFORMATICS]: Web Development, Open Days, Event Management
+Molnár Krisztián (2023) [INFORMATICS]: Rust, Web GL, React, Image Collection Visualization
+Molnár Tamás (2021) [INFORMATICS]: Web Development, Human Resource Management, Employee Management
+Molnár Balázs (2021) [INFORMATICS]: Web Development, Education Technology, Programming Competitions
+Mózes Botond (2021) [INFORMATICS]: Machine Learning, Biometrics, Security
+Márk Péter (2024) [INFORMATICS]: Flutter, Firebase, Healthcare, Artificial Intelligence
+Máté Noémi (2024) [INFORMATICS]: Web Development, Education Technology, Interactive Learning
+Nágó Márk (2024) [INFORMATICS]: Mobile App Development, Environmental Sustainability, Social Impact
+Nagy Hunor-Zalán (2022) [INFORMATICS]: Machine Learning, Computer Vision, Healthcare
+Nagy Krisztián-Endre (2022) [INFORMATICS]: Mobile App Development, Cross-platform Development, Android
+Nagy Márton-Hunor (2023) [INFORMATICS]: Game Development, Programming, Education
+Nagy Szabolcs (2024) [INFORMATICS]: Gamification, Mobile Applications, Personal Development
+Nagy Szilárd-Levente (2021) [INFORMATICS]: Software Development, Multi-platform, Advertising System
+Nyitrai Orsolya Éva (2023) [INFORMATICS]: Next.js, D3, Recharts, Nest.js, TypeScript, Go Lang, Pandas, Education, Data Visualization
+Németh Franciska (2021) [INFORMATICS]: Virtual Assistant, Natural Language Processing, Education, Hungarian Language, Software Development
+Oniga Kriszta (2024) [INFORMATICS]: Mobile Devices, Education Technology, Programming Languages
+Pálffy Rolland (2023) [INFORMATICS]: Decentralization, Blockchain, Messaging Systems
+Páll Arnold-Barna (2023) [INFORMATICS]: iOS App Development, Swift, Firebase, Event Tracking
+Péter Kristóf (2021) [INFORMATICS]: Image Collection Management, Java, CBIR, No Sql, MongoDB
+Pinkóczi József (2022) [INFORMATICS]: Open GL, Unity, Virtual Reality, Education
+Portik Andrea (2023) [INFORMATICS]: Mobile App Development, Android, Education, Guidance Systems
+Portik Johanna-Timea (2024) [INFORMATICS]: Flutter, Health In Motion, Flatfoot, Therapy, Rehabilitation
+Részeg Alpár (2023) [INFORMATICS]: Game Design, 2D Games, Software Development, Educational Technology
+Sallai József-Adrian (2023) [INFORMATICS]: Web Development, Sales Contracts, Public Administration, Modern Web Standards, User Experience
+Schifler Patricia-Vivien (2024) [INFORMATICS]: Artificial Intelligence, Game Theory, Reinforcement Learning
+Sikó Márk-Levente (2023) [INFORMATICS]: Software Development, Urban Planning, Civic Engagement
+Siko Szabolcs (2024) [INFORMATICS]: Volunteering, Social Development, Platform Development, Server-Side Implementation, Community Building
+Simon Péter (2024) [INFORMATICS]: Artificial Intelligence, Machine Learning, Natural Language Processing, Filtering, Security
+Sipos Ernő (2022) [INFORMATICS]: Satellite Images, Algorithm Development, Android, GPU Processing
+Somai Norbert-Attila (2022) [INFORMATICS]: Android, Mobile App Development, Social Networking
+Stoica Attila (2023) [INFORMATICS]: Dynamic Programming, Artificial Intelligence, Education, Optimization, Computer Graphics.
+Suciu Aksza (2024) [INFORMATICS]: Table Reservation System, Mobile Application Development, User Experience Design
+Szabó Albert-Balázs (2021) [INFORMATICS]: Machine Learning, Computer Vision, Recycling, Waste Management
+Szabó Henrietta (2021) [INFORMATICS]: Android Development, Image Editing, Pixel Sorting
+Szakács Dávid (2022) [INFORMATICS]: Web Development, Artificial Intelligence, Testing Automation, Electron, Next.js
+Szentgyörgyi Bernád-Krisztián (2024) [INFORMATICS]: Financial Management, Mobile Applications, User Experience
+Szilveszter Dávid (2022) [INFORMATICS]: Mathematical Modelling, Population Dynamics, Optimization Algorithms
+Szövérfi Dániel (2024) [INFORMATICS]: Cryptocurrency, Blockchain, Security, Wallets, Technology
+Tamás Szabolcs-Huba (2022) [INFORMATICS]: Extensions, Local Storage, User Data, Browser, Plugin Development
+Tankó Tamás (2023) [INFORMATICS]: Graph Theory, Algorithms, Data Mining
+Tasnádi István-Norbert (2022) [INFORMATICS]: Artificial Intelligence, Game Development, Unity Engine
+Teutsch Mihály (2024) [INFORMATICS]: Mobile Apps, Transportation, Sustainability
+Timar Máté-Ádám (2022) [INFORMATICS]: Mobile Applications, E-commerce, Android Frameworks, .NET Frameworks, Home Decoration
+Toducz Endre (2021) [INFORMATICS]: Algorithms, Graph Theory, Programming, Software Development
+Török Csongor (2023) [INFORMATICS]: Chess Algorithms, Artificial Intelligence, Game Theory
+Tóth Ádám (2022) [INFORMATICS]: Task Planning, Productivity Software, Mobile App Development, Android, Web Application
+Tövisi Zoltan (2023) [INFORMATICS]: Java Spring Boot, React, Postgre SQL, Calorie Tracking, Health and Wellness
+Vaida Márk Ádám (2021) [INFORMATICS]: Artificial Intelligence, Security Systems, Computer Vision
+Váncza Tibor (2022) [INFORMATICS]: Adblock, React, Security, Web Development, Browser Add-ons
+Veress Henrietta (2024) [INFORMATICS]: React, Web Development, Volunteering, Mobile App, .NET MAUI
+Veres Napsugár Anna (2023) [INFORMATICS]: Web Development, Multiplayer Games, Education
+Vrencian Lilla (2023) [INFORMATICS]: .NET, Dockerization, E-commerce, Online Shopping, Web Development

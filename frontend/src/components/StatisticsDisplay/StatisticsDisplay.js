@@ -1,5 +1,6 @@
 import React from "react";
 import WordCloud from "../WordCloud/WordCloud";
+import TopicPieChart from "../TopicPieChart/TopicPieChart";
 import "./StatisticsDisplay.css";
 
 const StatisticsDisplay = ({ statistics }) => {
@@ -72,6 +73,34 @@ const StatisticsDisplay = ({ statistics }) => {
       </div>
 
       <div className="stats-grid">
+        {!filters_applied?.supervisor && (
+          <>
+            <TopicPieChart
+              department={filters_applied?.department}
+              year={filters_applied?.year}
+              supervisor={filters_applied?.supervisor}
+            />
+
+            <div className="stats-section">
+              <h3>Top Supervisors</h3>
+              <div
+                className="supervisor-list"
+                style={{ maxHeight: "100%", overflowY: "auto" }}
+              >
+                {Object.entries(stats.by_supervisor || {})
+                  .sort(([, a], [, b]) => b - a)
+                  .slice(0, 10)
+                  .map(([supervisor, count]) => (
+                    <div key={supervisor} className="supervisor-item">
+                      <div className="supervisor-name">{supervisor}</div>
+                      <div className="supervisor-count">{count} theses</div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </>
+        )}
+
         {filters_applied?.supervisor ? (
           <>
             <div className="stats-section">
@@ -192,32 +221,34 @@ const StatisticsDisplay = ({ statistics }) => {
           </>
         ) : (
           <>
-            <div className="stats-section">
-              <h3>Distribution by Year</h3>
-              <div className="year-chart">
-                {Object.entries(stats.by_year || {})
-                  .sort(([a], [b]) => parseInt(b) - parseInt(a))
-                  .map(([year, count]) => (
-                    <div key={year} className="year-bar">
-                      <div className="year-label">{year}</div>
-                      <div className="bar-container">
-                        <div
-                          className="bar"
-                          style={{
-                            width: `${
-                              (count /
-                                Math.max(...Object.values(stats.by_year))) *
-                              100
-                            }%`,
-                          }}
-                        >
-                          <span className="bar-count">{count}</span>
+            {!filters_applied?.year && (
+              <div className="stats-section">
+                <h3>Distribution by Year</h3>
+                <div className="year-chart">
+                  {Object.entries(stats.by_year || {})
+                    .sort(([a], [b]) => parseInt(b) - parseInt(a))
+                    .map(([year, count]) => (
+                      <div key={year} className="year-bar">
+                        <div className="year-label">{year}</div>
+                        <div className="bar-container">
+                          <div
+                            className="bar"
+                            style={{
+                              width: `${
+                                (count /
+                                  Math.max(...Object.values(stats.by_year))) *
+                                100
+                              }%`,
+                            }}
+                          >
+                            <span className="bar-count">{count}</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {Object.keys(stats.by_department || {}).length > 1 && (
               <div className="stats-section">
@@ -248,21 +279,6 @@ const StatisticsDisplay = ({ statistics }) => {
                 </div>
               </div>
             )}
-
-            <div className="stats-section">
-              <h3>Top Supervisors</h3>
-              <div className="supervisor-list">
-                {Object.entries(stats.by_supervisor || {})
-                  .sort(([, a], [, b]) => b - a)
-                  .slice(0, 10)
-                  .map(([supervisor, count]) => (
-                    <div key={supervisor} className="supervisor-item">
-                      <div className="supervisor-name">{supervisor}</div>
-                      <div className="supervisor-count">{count} theses</div>
-                    </div>
-                  ))}
-              </div>
-            </div>
 
             <div className="stats-section word-cloud-section">
               <h3>Research Trends - Keyword Cloud</h3>
