@@ -24,6 +24,7 @@ def search():
     Add 'phrase=true' query parameter for exact phrase matching.
     Add 'department=cs' or 'department=informatics' to filter by department.
     Add 'search_supervisors=true' to include supervisor field in search.
+    Add 'limit=50' to control number of results (default: 50, max: 100).
     """
     es = getattr(g, 'es', None)
 
@@ -34,11 +35,12 @@ def search():
     year = request.args.get('year')
     sort_order = request.args.get('sort', 'desc')
     department = request.args.get('department') 
+    limit = min(int(request.args.get('limit', 50)), 100)
     
     is_phrase_search = request.args.get('phrase', '').lower() == 'true'
     search_supervisors = request.args.get('search_supervisors', '').lower() == 'true'
 
-    response = perform_search(es, query, year, sort_order, is_phrase_search, department, search_supervisors)
+    response = perform_search(es, query, year, sort_order, is_phrase_search, department, search_supervisors, limit)
 
     return jsonify(response)
 

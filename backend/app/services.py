@@ -6,7 +6,7 @@ modell_name = 'all-MiniLM-L6-v2'
 #modell_name = 'BAAI/bge-base-en'
 #modell_name = 'BAAI/bge-large-en'
 
-def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None, search_supervisors=False):
+def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False, department=None, search_supervisors=False, limit=50):
     """
     Perform a search query in Elasticsearch.
 
@@ -18,6 +18,7 @@ def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False
     :param is_phrase_search: Whether to perform a phrase search (exact match)
     :param department: Optional filter by department ('cs' or 'informatics')
     :param search_supervisors: Whether to include supervisor field in search
+    :param limit: Maximum number of results to return (default: 50)
     :return: Search results as a dictionary
     """
     if not query:
@@ -111,7 +112,7 @@ def perform_search(es, query, year=None, sort_order=None, is_phrase_search=False
         "highlight": {
             "fields": {}
         },
-        "size": 10 
+        "size": limit
     }
     
     if search_supervisors:

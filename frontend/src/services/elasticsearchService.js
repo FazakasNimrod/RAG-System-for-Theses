@@ -9,6 +9,7 @@ export const searchElasticsearch = async ({
   isPhrase,
   department,
   searchSupervisors,
+  limit = 50,
 }) => {
   const params = {};
   if (query) params.q = query;
@@ -17,6 +18,7 @@ export const searchElasticsearch = async ({
   if (isPhrase) params.phrase = "true";
   if (department) params.department = department;
   if (searchSupervisors) params.search_supervisors = "true";
+  if (limit) params.limit = limit;
 
   try {
     const response = await axios.get(API_URL, { params });

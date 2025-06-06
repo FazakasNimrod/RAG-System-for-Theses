@@ -45,15 +45,19 @@ const SearchPage = () => {
         setIsPhrase={setIsPhrase}
         department={department}
         setDepartment={setDepartment}
-        searchSupervisors={searchSupervisors}
-        setSearchSupervisors={setSearchSupervisors}
         onFilter={handleSearch}
-        showSupervisorOption={true}
+        showSupervisorOption={false} // Hide supervisor option from sidebar
       />
 
       <div className="main-content">
         <h1>Search Theses</h1>
-        <SearchBar onSearch={handleSearch} query={query} setQuery={setQuery} />
+        <SearchBar
+          onSearch={handleSearch}
+          query={query}
+          setQuery={setQuery}
+          searchSupervisors={searchSupervisors}
+          setSearchSupervisors={setSearchSupervisors}
+        />
 
         {loading ? (
           <div className="loading-container">
