@@ -73,6 +73,7 @@ const StatisticsDisplay = ({ statistics }) => {
       </div>
 
       <div className="stats-grid">
+        {/* Topic Distribution Pie Chart and Top Supervisors - Only show when supervisor is NOT selected */}
         {!filters_applied?.supervisor && (
           <>
             <TopicPieChart
@@ -160,7 +161,7 @@ const StatisticsDisplay = ({ statistics }) => {
               stats.keyword_cloud_data.length > 0 ? (
                 <WordCloud
                   data={stats.keyword_cloud_data}
-                  height={350}
+                  height={450}
                   className="supervisor-word-cloud"
                 />
               ) : (
@@ -213,6 +214,7 @@ const StatisticsDisplay = ({ statistics }) => {
           </>
         ) : (
           <>
+            {/* Only show Distribution by Year if no specific year is selected */}
             {!filters_applied?.year && (
               <div className="stats-section">
                 <h3>Distribution by Year</h3>
@@ -278,7 +280,7 @@ const StatisticsDisplay = ({ statistics }) => {
               stats.keyword_cloud_data.length > 0 ? (
                 <WordCloud
                   data={stats.keyword_cloud_data}
-                  height={400}
+                  height={500}
                   className="main-word-cloud"
                 />
               ) : (
