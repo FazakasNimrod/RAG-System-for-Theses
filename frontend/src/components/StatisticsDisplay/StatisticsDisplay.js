@@ -73,7 +73,6 @@ const StatisticsDisplay = ({ statistics }) => {
       </div>
 
       <div className="stats-grid">
-        {/* Topic Distribution Pie Chart and Top Supervisors - Only show when supervisor is NOT selected */}
         {!filters_applied?.supervisor && (
           <>
             <TopicPieChart
@@ -214,7 +213,6 @@ const StatisticsDisplay = ({ statistics }) => {
           </>
         ) : (
           <>
-            {/* Only show Distribution by Year if no specific year is selected */}
             {!filters_applied?.year && (
               <div className="stats-section">
                 <h3>Distribution by Year</h3>
