@@ -1,207 +1,207 @@
-Ambrus Barna, 2023, cs - Web & Mobile Application Development
+Ambrus Barna, 2023, cs - IoT, Embedded Systems & Hardware
 Bács Bernát, 2023, cs - IoT, Embedded Systems & Hardware
-Bakó József, 2023, cs - Web & Mobile Application Development
+Bakó József, 2023, cs - IoT, Embedded Systems & Hardware
 Bartha Álmos, 2024, cs - Security & Network Systems
 Benedek Szabolcs, 2021, cs - Web & Mobile Application Development
-Berkeczi Arnold, 2022, cs - Security & Network Systems
-Blénesi Áron, 2021, cs - Security & Network Systems
+Berkeczi Arnold, 2022, cs - Healthcare & Bioinformatics
+Blénesi Áron, 2021, cs - Artificial Intelligence & Machine Learning
 Bocsárdi András-Levente, 2023, cs - Artificial Intelligence & Machine Learning
 Bustya Balázs, 2021, cs - Artificial Intelligence & Machine Learning
-Bálint Adolf, 2023, cs - Security & Network Systems
+Bálint Adolf, 2023, cs - Artificial Intelligence & Machine Learning
 Bíró Apor, 2024, cs - Artificial Intelligence & Machine Learning
 Csiki Krisztina, 2023, cs - IoT, Embedded Systems & Hardware
 Csorvasi Endre, 2022, cs - Web & Mobile Application Development
 Czimbalmos Ákos, 2023, cs - Security & Network Systems
 Czirják Márk, 2024, cs - IoT, Embedded Systems & Hardware
 Dali Szilárd István, 2024, cs - Web & Mobile Application Development
-Demény-Székely Adorján, 2022, cs - Security & Network Systems
-Dénes Loránd, 2023, cs - Security & Network Systems
-Dobri Ervin, 2021, cs - Security & Network Systems
+Demény-Székely Adorján, 2022, cs - Artificial Intelligence & Machine Learning
+Dénes Loránd, 2023, cs - Artificial Intelligence & Machine Learning
+Dobri Ervin, 2021, cs - Artificial Intelligence & Machine Learning
 Erdős József, 2022, cs - Web & Mobile Application Development
 Gergely Zsolt, 2023, cs - Web & Mobile Application Development
-Györfi Endre, 2022, cs - Security & Network Systems
+Györfi Endre, 2022, cs - Web & Mobile Application Development
 Gáll János, 2021, cs - IoT, Embedded Systems & Hardware
 Hammas Attila, 2021, cs - Artificial Intelligence & Machine Learning
-Horváth Levente, 2023, cs - Security & Network Systems
+Horváth Levente, 2023, cs - IoT, Embedded Systems & Hardware
 Iszlai Tamás, 2024, cs - Web & Mobile Application Development
-Kalith Norbert, 2021, cs - Security & Network Systems
-Kántor Zsuzsa-Krisztina, 2023, cs - Security & Network Systems
+Kalith Norbert, 2021, cs - Web & Mobile Application Development
+Kántor Zsuzsa-Krisztina, 2023, cs - Healthcare & Bioinformatics
 Katona Andrea Izabella, 2023, cs - Artificial Intelligence & Machine Learning
 Kencse Szabolcs, 2022, cs - Security & Network Systems
-Koncz András, 2024, cs - Security & Network Systems
+Koncz András, 2024, cs - Web & Mobile Application Development
 Körmöci Csaba, 2023, cs - Artificial Intelligence & Machine Learning
-Kristóf István-Levente, 2022, cs - Security & Network Systems
+Kristóf István-Levente, 2022, cs - Education Technology & Gamification
 Kállai Balázs, 2024, cs - Web & Mobile Application Development
-Lukács Botond, 2022, cs - Security & Network Systems
-Lukács Orsolya, 2022, cs - Healthcare & Bioinformatics
+Lukács Botond, 2022, cs - IoT, Embedded Systems & Hardware
+Lukács Orsolya, 2022, cs - Security & Network Systems
 Lörinczi Mátyás, 2024, cs - Web & Mobile Application Development
-Madaras Ervin, 2022, cs - Security & Network Systems
-Magyarosi Roland-Mihály, 2021, cs - Artificial Intelligence & Machine Learning
-Magyar Roland István, 2024, cs - Healthcare & Bioinformatics
-Molnár Orsolya-Izabella, 2024, cs - Security & Network Systems
-Nagy Andrea, 2022, cs - Security & Network Systems
+Madaras Ervin, 2022, cs - Artificial Intelligence & Machine Learning
+Magyarosi Roland-Mihály, 2021, cs - Web & Mobile Application Development
+Magyar Roland István, 2024, cs - Artificial Intelligence & Machine Learning
+Molnár Orsolya-Izabella, 2024, cs - Artificial Intelligence & Machine Learning
+Nagy Andrea, 2022, cs - Artificial Intelligence & Machine Learning
 Nagy-Serbán Tünde, 2021, cs - Web & Mobile Application Development
-Nüszl Richárd-István, 2023, cs - Security & Network Systems
-Palfi Szabolcs, 2021, cs - Web & Mobile Application Development
+Nüszl Richárd-István, 2023, cs - Web & Mobile Application Development
+Palfi Szabolcs, 2021, cs - Artificial Intelligence & Machine Learning
 Pál Andor, 2023, cs - Web & Mobile Application Development
-Rigmányi Zsombor, 2023, cs - Artificial Intelligence & Machine Learning
-Rozsnyai Arnold-Robert, 2022, cs - Security & Network Systems
+Rigmányi Zsombor, 2023, cs - Healthcare & Bioinformatics
+Rozsnyai Arnold-Robert, 2022, cs - Artificial Intelligence & Machine Learning
 Salló Csaba, 2024, cs - IoT, Embedded Systems & Hardware
-Simó Zsuzsa, 2021, cs - Security & Network Systems
+Simó Zsuzsa, 2021, cs - Healthcare & Bioinformatics
 Solyom Botond-Őrs, 2021, cs - Security & Network Systems
-Soós Izabella, 2023, cs - Web & Mobile Application Development
+Soós Izabella, 2023, cs - IoT, Embedded Systems & Hardware
 Szakáli-Vándor Árpád, 2024, cs - Web & Mobile Application Development
 Szalma Tamás-Zsolt, 2022, cs - Web & Mobile Application Development
-Szász Attila, 2023, cs - Security & Network Systems
+Szász Attila, 2023, cs - Artificial Intelligence & Machine Learning
 Szász Nimród János, 2023, cs - Web & Mobile Application Development
 Szeibert Xavér, 2023, cs - IoT, Embedded Systems & Hardware
-Szász Arnold-Levente, 2021, cs - Security & Network Systems
+Szász Arnold-Levente, 2021, cs - Healthcare & Bioinformatics
 Udvari Balázs, 2021, cs - Security & Network Systems
-Ujfalvi Csongor-Robert, 2021, cs - Security & Network Systems
-Ábrám Szilveszter Levente, 2024, info - Security & Network Systems
+Ujfalvi Csongor-Robert, 2021, cs - Healthcare & Bioinformatics
+Ábrám Szilveszter Levente, 2024, info - Education Technology & Gamification
 Albert Henrietta, 2024, info - Web & Mobile Application Development
-Albert-Tóth Szilárd, 2024, info - Security & Network Systems
+Albert-Tóth Szilárd, 2024, info - Artificial Intelligence & Machine Learning
 Bagoly Norbert-Loránd, 2024, info - Web & Mobile Application Development
-Bakos Csongor-Attila, 2023, info - Security & Network Systems
+Bakos Csongor-Attila, 2023, info - Web & Mobile Application Development
 Bakó Lóránd, 2021, info - Artificial Intelligence & Machine Learning
 Bakó László Mihály, 2023, info - Security & Network Systems
 Balázs Endre, 2023, info - Education Technology & Gamification
 Balint Csongor, 2024, info - Security & Network Systems
-Bálint Lehel, 2023, info - Security & Network Systems
+Bálint Lehel, 2023, info - Education Technology & Gamification
 Ballai Tamás-Attila, 2021, info - Security & Network Systems
 Barabási Róbert Zsolt, 2022, info - Web & Mobile Application Development
 Bârle Armand, 2024, info - Security & Network Systems
-Bartalis Zoltán-Krisztián, 2021, info - Security & Network Systems
-Bartis Andrea-Nereman, 2024, info - Security & Network Systems
-Beder Norbert, 2024, info - Security & Network Systems
+Bartalis Zoltán-Krisztián, 2021, info - Artificial Intelligence & Machine Learning
+Bartis Andrea-Nereman, 2024, info - Web & Mobile Application Development
+Beder Norbert, 2024, info - Artificial Intelligence & Machine Learning
 Bedő László, 2022, info - Web & Mobile Application Development
 Berszan Róbert, 2022, info - Artificial Intelligence & Machine Learning
 Biró Tünde-Anna, 2021, info - Web & Mobile Application Development
-Bodor Benjamin, 2023, info - Web & Mobile Application Development
-Borsos Blanka-Andrea, 2024, info - Security & Network Systems
-Buda Imola, 2023, info - Security & Network Systems
-Burszán Hunor, 2023, info - Security & Network Systems
+Bodor Benjamin, 2023, info - Security & Network Systems
+Borsos Blanka-Andrea, 2024, info - Web & Mobile Application Development
+Buda Imola, 2023, info - Web & Mobile Application Development
+Burszán Hunor, 2023, info - Artificial Intelligence & Machine Learning
 Béres Tamas, 2024, info - Web & Mobile Application Development
-Böjthe Róbert Zoltán, 2024, info - Security & Network Systems
+Böjthe Róbert Zoltán, 2024, info - IoT, Embedded Systems & Hardware
 Cioma Roland-Sándor, 2022, info - Web & Mobile Application Development
-Csegezi-Balázs Csongor, 2022, info - Security & Network Systems
-Csegzi Hunor, 2023, info - Security & Network Systems
+Csegezi-Balázs Csongor, 2022, info - Web & Mobile Application Development
+Csegzi Hunor, 2023, info - Web & Mobile Application Development
 Császár Ákos, 2021, info - Web & Mobile Application Development
-Csép Tamás, 2022, info - Security & Network Systems
+Csép Tamás, 2022, info - Artificial Intelligence & Machine Learning
 Demény Zsófia, 2022, info - Security & Network Systems
-Demeter Evelin-Delinke, 2024, info - Security & Network Systems
-Derzsi Dániel, 2023, info - Web & Mobile Application Development
-Donáth Dániel-Zsolt, 2022, info - Security & Network Systems
-Drágos Norbert-János, 2022, info - Security & Network Systems
-Dávid Tamás, 2021, info - Web & Mobile Application Development
-Elekes Rebeka, 2022, info - Security & Network Systems
+Demeter Evelin-Delinke, 2024, info - Web & Mobile Application Development
+Derzsi Dániel, 2023, info - Security & Network Systems
+Donáth Dániel-Zsolt, 2022, info - Artificial Intelligence & Machine Learning
+Drágos Norbert-János, 2022, info - Education Technology & Gamification
+Dávid Tamás, 2021, info - Artificial Intelligence & Machine Learning
+Elekes Rebeka, 2022, info - Web & Mobile Application Development
 Farkas Andrea-Szilvia, 2021, info - Artificial Intelligence & Machine Learning
 Fechită Cătălin-Francisc, 2022, info - Web & Mobile Application Development
-Fekete Dániel, 2023, info - Web & Mobile Application Development
+Fekete Dániel, 2023, info - Artificial Intelligence & Machine Learning
 Felmeri Zsolt, 2021, info - Security & Network Systems
-Fodor László-Carlos, 2024, info - Security & Network Systems
-Fodor Lehel, 2023, info - Security & Network Systems
+Fodor László-Carlos, 2024, info - Web & Mobile Application Development
+Fodor Lehel, 2023, info - Artificial Intelligence & Machine Learning
 Fülöp Zoltán, 2022, info - Web & Mobile Application Development
-Füzi Botond, 2022, info - Security & Network Systems
+Füzi Botond, 2022, info - Web & Mobile Application Development
 Füzi Zalán, 2023, info - Security & Network Systems
 Gábor Anita Renáta, 2022, info - Artificial Intelligence & Machine Learning
-Gábos Alpár, 2023, info - Security & Network Systems
+Gábos Alpár, 2023, info - Education Technology & Gamification
 Gál Attila, 2023, info - Web & Mobile Application Development
 Gergely Zsolt, 2021, info - Security & Network Systems
 Gólya Gergő, 2024, info - Artificial Intelligence & Machine Learning
 Halász Botond, 2021, info - Artificial Intelligence & Machine Learning
-Hamza Balázs, 2022, info - Security & Network Systems
+Hamza Balázs, 2022, info - Web & Mobile Application Development
 Hegyeli András, 2024, info - Web & Mobile Application Development
-Horváth Áron, 2021, info - Security & Network Systems
+Horváth Áron, 2021, info - Artificial Intelligence & Machine Learning
 Horvath János, 2023, info - Web & Mobile Application Development
-Incze Levente, 2021, info - Security & Network Systems
-Incze Zsolt-Tamás, 2023, info - Security & Network Systems
-Iuhos Imola, 2023, info - Security & Network Systems
-Ivácson Ingrid Brigitta, 2022, info - Security & Network Systems
-Izsák Andrea, 2021, info - Security & Network Systems
-Kacsó Róbert, 2023, info - Security & Network Systems
+Incze Levente, 2021, info - Education Technology & Gamification
+Incze Zsolt-Tamás, 2023, info - Web & Mobile Application Development
+Iuhos Imola, 2023, info - Web & Mobile Application Development
+Ivácson Ingrid Brigitta, 2022, info - Web & Mobile Application Development
+Izsák Andrea, 2021, info - Web & Mobile Application Development
+Kacsó Róbert, 2023, info - Artificial Intelligence & Machine Learning
 Kecskés-Kerestély Dávid-Attila, 2022, info - Security & Network Systems
-Kedves Dávid, 2024, info - Security & Network Systems
+Kedves Dávid, 2024, info - Artificial Intelligence & Machine Learning
 Kedves Norbert, 2022, info - Web & Mobile Application Development
 Kiss Bence, 2024, info - Web & Mobile Application Development
 Kiss Krisztina Gyöngyvér, 2023, info - Web & Mobile Application Development
-Kőble Melinda Andrea, 2022, info - Healthcare & Bioinformatics
-Kolumbán Attila, 2023, info - Security & Network Systems
+Kőble Melinda Andrea, 2022, info - Artificial Intelligence & Machine Learning
+Kolumbán Attila, 2023, info - Web & Mobile Application Development
 Kőműves Dávid-Márk, 2023, info - Web & Mobile Application Development
 Koncz Hunor, 2024, info - Web & Mobile Application Development
 Koncz Krisztián, 2023, info - Web & Mobile Application Development
 Kovács Attila, 2021, info - Web & Mobile Application Development
-Kovács Bálint-Hunor, 2024, info - Security & Network Systems
+Kovács Bálint-Hunor, 2024, info - Education Technology & Gamification
 Kovács Bence, 2023, info - Web & Mobile Application Development
-Kovács Lehel, 2022, info - Security & Network Systems
-Kovacs Lehel-Levente, 2023, info - Artificial Intelligence & Machine Learning
-Kovács Norbert, 2022, info - Security & Network Systems
+Kovács Lehel, 2022, info - Web & Mobile Application Development
+Kovacs Lehel-Levente, 2023, info - Web & Mobile Application Development
+Kovács Norbert, 2022, info - Artificial Intelligence & Machine Learning
 Kovács Andrea, 2022, info - Security & Network Systems
-Kéri Csaba, 2024, info - Security & Network Systems
-Lázár Zsolt, 2023, info - Security & Network Systems
+Kéri Csaba, 2024, info - Web & Mobile Application Development
+Lázár Zsolt, 2023, info - Education Technology & Gamification
 Lőrincz Csaba, 2021, info - Web & Mobile Application Development
-Lukács Zsombor, 2024, info - Security & Network Systems
+Lukács Zsombor, 2024, info - Web & Mobile Application Development
 Lukács Krisztina-Beáta, 2022, info - Security & Network Systems
 Magyari Dóra, 2023, info - Artificial Intelligence & Machine Learning
-Májai Henrietta-Zita, 2024, info - Security & Network Systems
-Majla Nándor, 2022, info - Security & Network Systems
-Major Zsolt, 2023, info - Security & Network Systems
-Makkai Nándor, 2021, info - Security & Network Systems
+Májai Henrietta-Zita, 2024, info - Education Technology & Gamification
+Majla Nándor, 2022, info - Artificial Intelligence & Machine Learning
+Major Zsolt, 2023, info - Artificial Intelligence & Machine Learning
+Makkai Nándor, 2021, info - Artificial Intelligence & Machine Learning
 Marton Szilárd, 2021, info - Artificial Intelligence & Machine Learning
 Mátyus-Borka Erzsébet, 2023, info - Web & Mobile Application Development
-Medve Noémi Nóra, 2024, info - Security & Network Systems
+Medve Noémi Nóra, 2024, info - Web & Mobile Application Development
 Mihály Bence, 2022, info - Artificial Intelligence & Machine Learning
 Mihály Etele, 2024, info - Artificial Intelligence & Machine Learning
 Moldovan Adrienn, 2022, info - Web & Mobile Application Development
-Molnár Krisztián, 2023, info - Web & Mobile Application Development
+Molnár Krisztián, 2023, info - Artificial Intelligence & Machine Learning
 Molnár Tamás, 2021, info - Web & Mobile Application Development
-Molnár Balázs, 2021, info - Education Technology & Gamification
+Molnár Balázs, 2021, info - Web & Mobile Application Development
 Mózes Botond, 2021, info - Security & Network Systems
-Márk Péter, 2024, info - Security & Network Systems
-Máté Noémi, 2024, info - Security & Network Systems
+Márk Péter, 2024, info - Artificial Intelligence & Machine Learning
+Máté Noémi, 2024, info - Web & Mobile Application Development
 Nágó Márk, 2024, info - Security & Network Systems
-Nagy Hunor-Zalán, 2022, info - Healthcare & Bioinformatics
+Nagy Hunor-Zalán, 2022, info - Artificial Intelligence & Machine Learning
 Nagy Krisztián-Endre, 2022, info - Web & Mobile Application Development
-Nagy Márton-Hunor, 2023, info - Security & Network Systems
-Nagy Szabolcs, 2024, info - Security & Network Systems
+Nagy Márton-Hunor, 2023, info - Education Technology & Gamification
+Nagy Szabolcs, 2024, info - Education Technology & Gamification
 Nagy Szilárd-Levente, 2021, info - Web & Mobile Application Development
-Nyitrai Orsolya Éva, 2023, info - Security & Network Systems
-Németh Franciska, 2021, info - Security & Network Systems
+Nyitrai Orsolya Éva, 2023, info - Education Technology & Gamification
+Németh Franciska, 2021, info - Artificial Intelligence & Machine Learning
 Oniga Kriszta, 2024, info - Education Technology & Gamification
-Pálffy Rolland, 2023, info - Security & Network Systems
-Páll Arnold-Barna, 2023, info - Artificial Intelligence & Machine Learning
-Péter Kristóf, 2021, info - Web & Mobile Application Development
+Pálffy Rolland, 2023, info - Artificial Intelligence & Machine Learning
+Páll Arnold-Barna, 2023, info - Web & Mobile Application Development
+Péter Kristóf, 2021, info - Artificial Intelligence & Machine Learning
 Pinkóczi József, 2022, info - Web & Mobile Application Development
 Portik Andrea, 2023, info - Web & Mobile Application Development
-Portik Johanna-Timea, 2024, info - Security & Network Systems
+Portik Johanna-Timea, 2024, info - Web & Mobile Application Development
 Részeg Alpár, 2023, info - Security & Network Systems
 Sallai József-Adrian, 2023, info - Web & Mobile Application Development
-Schifler Patricia-Vivien, 2024, info - Security & Network Systems
+Schifler Patricia-Vivien, 2024, info - Artificial Intelligence & Machine Learning
 Sikó Márk-Levente, 2023, info - Web & Mobile Application Development
-Siko Szabolcs, 2024, info - Security & Network Systems
+Siko Szabolcs, 2024, info - Web & Mobile Application Development
 Simon Péter, 2024, info - Artificial Intelligence & Machine Learning
-Sipos Ernő, 2022, info - Security & Network Systems
+Sipos Ernő, 2022, info - Artificial Intelligence & Machine Learning
 Somai Norbert-Attila, 2022, info - Web & Mobile Application Development
-Stoica Attila, 2023, info - Security & Network Systems
-Suciu Aksza, 2024, info - Security & Network Systems
+Stoica Attila, 2023, info - Education Technology & Gamification
+Suciu Aksza, 2024, info - Web & Mobile Application Development
 Szabó Albert-Balázs, 2021, info - Artificial Intelligence & Machine Learning
-Szabó Henrietta, 2021, info - Web & Mobile Application Development
+Szabó Henrietta, 2021, info - Artificial Intelligence & Machine Learning
 Szakács Dávid, 2022, info - Web & Mobile Application Development
 Szentgyörgyi Bernád-Krisztián, 2024, info - Web & Mobile Application Development
-Szilveszter Dávid, 2022, info - Security & Network Systems
+Szilveszter Dávid, 2022, info - Artificial Intelligence & Machine Learning
 Szövérfi Dániel, 2024, info - Security & Network Systems
 Tamás Szabolcs-Huba, 2022, info - Web & Mobile Application Development
-Tankó Tamás, 2023, info - Security & Network Systems
+Tankó Tamás, 2023, info - Artificial Intelligence & Machine Learning
 Tasnádi István-Norbert, 2022, info - Artificial Intelligence & Machine Learning
-Teutsch Mihály, 2024, info - Security & Network Systems
+Teutsch Mihály, 2024, info - Artificial Intelligence & Machine Learning
 Timar Máté-Ádám, 2022, info - Web & Mobile Application Development
-Toducz Endre, 2021, info - Security & Network Systems
+Toducz Endre, 2021, info - Artificial Intelligence & Machine Learning
 Török Csongor, 2023, info - Artificial Intelligence & Machine Learning
-Tóth Ádám, 2022, info - Security & Network Systems
-Tövisi Zoltan, 2023, info - Security & Network Systems
+Tóth Ádám, 2022, info - Web & Mobile Application Development
+Tövisi Zoltan, 2023, info - Web & Mobile Application Development
 Vaida Márk Ádám, 2021, info - Security & Network Systems
 Váncza Tibor, 2022, info - Security & Network Systems
-Veress Henrietta, 2024, info - Security & Network Systems
-Veres Napsugár Anna, 2023, info - Security & Network Systems
+Veress Henrietta, 2024, info - Web & Mobile Application Development
+Veres Napsugár Anna, 2023, info - Web & Mobile Application Development
 Vrencian Lilla, 2023, info - Web & Mobile Application Development
 //

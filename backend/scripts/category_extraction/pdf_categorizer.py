@@ -20,7 +20,7 @@ import requests
 from pathlib import Path
 
 OLLAMA_API_BASE = "http://localhost:11434/api"
-OLLAMA_MODEL = "llama3.2:3b"
+OLLAMA_MODEL = "llama3.1:8b"
 
 CATEGORIES = {
     "1": "Artificial Intelligence & Machine Learning",
@@ -276,7 +276,7 @@ def main():
         if processed % 10 == 0:
             print(f"✓ Processed {processed} theses...")
     
-    output_file = "backend\scripts\category_extraction\results\categorized_theses.txt"
+    output_file = "backend/scripts/category_extraction/results/categorized_theses.txt"
     try:
         with open(output_file, 'w', encoding='utf-8') as f:
             for result in results:
