@@ -20,6 +20,24 @@ export const getStatistics = async ({
     return response.data;
   } catch (error) {
     console.error("Error fetching statistics:", error);
+
+    if (!department && !year && !supervisor) {
+      try {
+        console.log("Trying with empty string parameters...");
+        const response = await axios.get(`${API_URL}statistics`, {
+          params: {
+            department: "",
+            year: "",
+            supervisor: "",
+          },
+        });
+        console.log("Alternative request succeeded:", response.data);
+        return response.data;
+      } catch (altError) {
+        console.error("Alternative request also failed:", altError);
+      }
+    }
+
     throw error;
   }
 };
