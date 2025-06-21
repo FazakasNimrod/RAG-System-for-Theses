@@ -1,5 +1,5 @@
 from sentence_transformers import SentenceTransformer
-from stop_words import remove_stop_words, get_important_terms
+from utils import remove_stop_words, get_important_terms
 
 modell_name = 'all-MiniLM-L6-v2'
 #modell_name = 'BAAI/bge-small-en' 

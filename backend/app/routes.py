@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify, g, redirect
-from services import perform_search, perform_semantic_search, get_document_by_hash
+from search_services import perform_search, perform_semantic_search, get_document_by_hash
 from ollama_rag_service import generate_rag_response, get_available_models
 
 try:

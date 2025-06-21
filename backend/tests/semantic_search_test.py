@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 from elasticsearch import Elasticsearch
-from services import perform_search, perform_semantic_search
+from search_services import perform_search, perform_semantic_search
 import json
 
 """

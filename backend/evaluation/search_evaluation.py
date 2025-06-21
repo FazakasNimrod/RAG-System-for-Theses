@@ -7,7 +7,7 @@ import json
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-from services import perform_search, perform_semantic_search
+from search_services import perform_search, perform_semantic_search
 
 modell_name = 'all-MiniLM-L6-v2'
 #modell_name = 'BAAI/bge-small-en' 
@@ -142,7 +142,7 @@ def log_debug_info(debug_file, user_input, reference_hash, keyword_results, sema
             f.write(f"{'='*80}\n\n")
             
             try:
-                from app.stop_words import remove_stop_words
+                from utils import remove_stop_words
                 filtered_query = remove_stop_words(user_input)
                 f.write(f"Original query: '{user_input}'\n")
                 f.write(f"Filtered query: '{filtered_query}'\n\n")
