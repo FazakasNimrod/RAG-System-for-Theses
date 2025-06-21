@@ -1,32 +1,64 @@
-# **Theses Search & Question-Answering Application**
+# **ThesisFinder: Intelligent Search in Academic Theses**
 
 ## **Project Overview**
 
-This application is a comprehensive full-stack solution for searching, analyzing, and interacting with academic theses. Built with a powerful combination of traditional search, semantic search, and AI-powered question answering capabilities, it enables researchers to find information more effectively through multiple search paradigms.
+ThesisFinder is a comprehensive full-stack solution for searching, analyzing, and interacting with academic theses. Built with a powerful combination of traditional search, semantic search, and AI-powered question answering capabilities, it enables researchers to find information more effectively through multiple search paradigms. The system combines modern web technologies with advanced AI to create an intuitive platform for academic research discovery.
 
 ### **Key Features**
 
-- **Traditional Search**: Full-text search with keyword highlighting
+- **Traditional Search**: Full-text search with keyword highlighting and stop word handling
 - **Phrase Search**: Exact phrase matching for precise queries
-- **Semantic Search**: Vector-based semantic similarity search
-- **AI-Powered Question Answering**: Ask natural language questions about research topics
-- **Document References**: View source documents that inform AI answers
-- **PDF Integration**: Direct access to thesis PDFs via hash code integration
-- **Filtering & Sorting**: Filter by year, department and sort results
+- **Semantic Search**: Vector-based semantic similarity search using SentenceTransformers
+- **AI-Powered Question Answering**: RAG (Retrieval-Augmented Generation) system with multiple LLM options
+- **Hybrid AI Models**: Support for both local (Ollama) and cloud-based (Gemini API) language models
+- **Document References**: View source documents that inform AI answers with relevance scores
+- **PDF Integration**: Direct access to thesis PDFs via hash code identification system
+- **Advanced Filtering & Sorting**: Filter by year, department, supervisor, and sort results
+- **Statistics Dashboard**: Comprehensive analytics with visualizations, word clouds, and trend analysis
+- **Supervisor Search**: Specialized search functionality for thesis supervisors
 - **Expandable Results**: Toggle between short and full abstracts
-- **Authentication**: User registration and login system (coming soon...)
 
 ---
 
 ## **Technology Stack**
 
-- **Backend**: Flask (Python)
-- **Search Engine**: Elasticsearch with vector search capabilities
-- **Frontend**: React
-- **AI Models**: Ollama with Llama models (local LLM integration)
-- **Vector Embeddings**: SentenceTransformers
-- **PDF Storage**: Docker-based PDF storage service with hash code identification
-- **Styling**: Custom CSS
+### **Backend Technologies**
+- **Framework**: Flask (Python) with RESTful API design
+- **Search Engine**: Elasticsearch 8.x with vector search capabilities
+- **AI Integration**: 
+  - Ollama (local LLM hosting) supporting Llama 3.1/3.2 models
+  - Google Gemini API (cloud-based) for enhanced performance
+- **Vector Embeddings**: SentenceTransformers (all-MiniLM-L6-v2)
+- **Testing**: pytest for unit and integration testing
+- **Data Processing**: Custom PDF processing and hash code generation
+
+### **Frontend Technologies**
+- **Framework**: React with modern hooks and functional components
+- **Routing**: React Router for SPA navigation
+- **HTTP Client**: Axios for API communication
+- **Visualizations**: 
+  - Recharts for statistical charts and graphs
+  - React TagCloud for keyword visualization
+- **Styling**: Custom CSS with responsive design
+
+### **Infrastructure**
+- **PDF Storage**: Docker-based storage service with PostgreSQL
+- **Data Storage**: Elasticsearch indices for both traditional and semantic search
+- **Development**: Git version control with modular architecture
+
+---
+
+## **System Architecture**
+
+ThesisFinder follows a microservices-inspired architecture with five main components:
+
+1. **Frontend (React)**: User interface and interaction layer
+2. **Backend (Flask)**: API server and business logic
+3. **Elasticsearch**: Search engine and data storage
+4. **PDF Storage Service**: Document storage and retrieval
+5. **AI Services**: Ollama (local) and Gemini API (cloud) for question answering
+
+The system uses RESTful APIs for communication between components, enabling independent development and scaling of each service.
 
 ---
 
@@ -37,248 +69,388 @@ This application is a comprehensive full-stack solution for searching, analyzing
 Ensure the following are installed on your machine:
 
 1. **Python 3.8+**
-2. **Node.js 16+**
-3. **npm** (comes with Node.js)
-4. **Elasticsearch** (minimum version 8.x)
-5. **Ollama** (for AI question answering)
-6. **Docker & Docker Compose** (for PDF storage service)
+2. **Node.js 16+** and **npm**
+3. **Elasticsearch 8.x**
+4. **Ollama** (for local AI models)
+5. **Docker & Docker Compose** (for PDF storage service)
+6. **Git** (for version control)
 
 ### **Backend Setup**
 
 1. **Clone the Repository**:
-
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/FazakasNimrod/RAG-System-for-Theses.git
+   cd RAG-System-for-Theses
    ```
 
-2. **Create a Python Virtual Environment**:
-
+2. **Create Python Virtual Environment**:
    ```bash
    python -m venv venv
-   source venv/bin/activate   # For Linux/Mac
-   venv\Scripts\activate      # For Windows
+   source venv/bin/activate   # Linux/Mac
+   venv\Scripts\activate      # Windows
    ```
 
-3. **Install Backend Dependencies**:
-
+3. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
+   pip install google-generativeai  # For Gemini API support
    ```
 
-4. **Set Up Elasticsearch**:
+4. **Configure Environment Variables**:
+   ```bash
+   # Create .env file in backend directory
+   ELASTIC_USERNAME=your_username
+   ELASTIC_PASSWORD=your_password
+   OLLAMA_API_BASE=http://localhost:11434/api
+   GEMINI_API_KEY=your_gemini_api_key  # Optional, for Gemini API
+   ```
 
-   - Download Elasticsearch from the [official website](https://www.elastic.co/downloads/elasticsearch)
-   - Extract the downloaded archive into the `/backend/elasticsearch` directory of your project
-   - Start the Elasticsearch service:
-
+5. **Set Up Elasticsearch**:
+   - Download from [official website](https://www.elastic.co/downloads/elasticsearch)
+   - Extract to `/backend/elasticsearch` directory
+   - Start Elasticsearch:
      ```bash
-     # Navigate to the elasticsearch directory
      cd backend/elasticsearch
-
-     # Start Elasticsearch
      bin/elasticsearch    # Linux/Mac
      bin\elasticsearch.bat # Windows
      ```
+   - Verify at `http://localhost:9200`
 
-   - Verify Elasticsearch is running by visiting `http://localhost:9200` in your browser
-
-5. **Set Up PDF Storage Service**:
-
-   - Ensure Docker and Docker Compose are installed
-   - Navigate to the PDF storage project directory:
-     ```bash
-     cd ~/projects/pdf-storage
-     ```
-   - Start the PDF storage service:
-     ```bash
-     docker-compose up -d
-     ```
-   - Verify it's running: `http://localhost:5000/pdfs`
-
-6. **Process PDF Documents and Update Indices**:
-
+6. **Set Up PDF Storage Service**:
    ```bash
-   # Process CS department theses
-   python backend/scripts/pdf_processing/extarct_text_v2.py
+   cd ~/projects/pdf-storage
+   docker-compose up -d
+   ```
+   - Verify at `http://localhost:5000/pdfs`
 
-   # Process Informatics department theses
+7. **Process and Index Documents**:
+   ```bash
+   # Extract metadata from PDFs
+   python backend/scripts/pdf_processing/extract_text_v2.py
    python backend/scripts/pdf_processing/process_infos_theses.py
 
-   # Create and update the Elasticsearch indices
+   # Create Elasticsearch indices
    python backend/scripts/data_loading/index_cs_theses.py
    python backend/scripts/data_loading/generate_infos_embeddings.py
 
-   # Update all indices with hash codes from cleaned data
+   # Update hash codes for PDF integration
    python backend/scripts/data_loading/update_indices_with_hash_codes.py
    ```
 
-7. **Set Up Ollama** (for RAG functionality):
-
-   - Install Ollama from [ollama.ai/download](https://ollama.ai/download)
-   - Pull the required models:
-     ```bash
-     ollama pull llama3.1:8b
-     ollama pull llama3.2:1b
-     ollama pull llama3.2:3b
-     ```
-
-8. **Run the Backend**:
+8. **Set Up AI Models**:
+   
+   **For Ollama (Local):**
    ```bash
+   # Install Ollama from ollama.ai
+   ollama pull llama3.1:8b
+   ollama pull llama3.2:3b
+   ollama pull llama3.2:1b
+   ```
+
+   **For Gemini API (Cloud):**
+   - Get API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Add to environment variables: `GEMINI_API_KEY=your_key_here`
+
+9. **Run Backend**:
+   ```bash
+   cd backend
    flask run
    ```
-   The API will be available at `http://127.0.0.1:5000`.
+   API available at `http://127.0.0.1:5000`
 
 ### **Frontend Setup**
 
-1. **Navigate to the Frontend Directory**:
-
+1. **Navigate to Frontend**:
    ```bash
    cd frontend
    ```
 
-2. **Install Frontend Dependencies**:
-
+2. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-3. **Run the Frontend**:
+3. **Run Frontend**:
    ```bash
    npm start
    ```
-   The frontend will be available at `http://localhost:3000`.
+   Application available at `http://localhost:3000`
 
 ---
 
 ## **Usage Guide**
 
 ### **1. Traditional Search**
-
-- Enter keywords in the search bar
-- Optionally enable phrase search for exact matching
-- Filter by year and department and sort as needed
-- View highlighted matches in results
-- Click "Go to PDF" to view the original thesis document
+- **Basic Search**: Enter keywords for full-text search across abstracts
+- **Phrase Search**: Enable exact phrase matching with quotes
+- **Filters**: Apply year, department, and supervisor filters
+- **Supervisor Search**: Dedicated search within supervisor names
+- **Sorting**: Sort by relevance or year (ascending/descending)
+- **Results**: View highlighted matches with expandable abstracts
 
 ### **2. Semantic Search**
+- **Conceptual Queries**: Search by meaning, not just keywords
+- **Similarity Scores**: View relevance scores for each result
+- **Flexible Results**: Adjust number of results (1-50)
+- **Cross-Language Understanding**: Find related concepts even with different terminology
 
-- Navigate to the "Semantic Search" page
-- Enter conceptual queries (doesn't require exact keyword matches)
-- Adjust the number of results to display
-- View results ranked by semantic similarity
-- Access original PDF documents with one click
+### **3. AI Question Answering (RAG)**
+- **Natural Language Queries**: Ask questions in plain English
+- **Model Selection**: Choose between:
+  - **Ollama Models** (Local):
+    - Llama 3.1 8B: Best for complex reasoning
+    - Llama 3.2 3B: Balanced performance
+    - Llama 3.2 1B: Fastest responses
+  - **Gemini Models** (Cloud):
+    - Gemini 1.5 Pro: Most capable model
+    - Gemini 1.5 Flash: Fast and efficient
+- **Source References**: View documents used to generate answers
+- **Context-Aware Responses**: Answers based on actual thesis content
 
-### **3. AI Question Answering**
+### **4. Statistics Dashboard**
+- **Overview Cards**: Total documents, supervisors, years, average abstract length
+- **Filtering Options**: Department, year, supervisor-specific views
+- **Visualizations**:
+  - Research topics distribution (pie chart)
+  - Yearly trends (bar chart)
+  - Supervisor rankings
+  - Research keywords word cloud
+- **Recent Theses**: Latest submissions with metadata
 
-- Navigate to the "Ask Questions" page
-- Select a model (options vary by size and performance)
-- Type your research question
-- View generated answer and source documents
-- Click "View Document" to access original PDFs
+### **5. PDF Document Access**
+- **Direct Access**: Click "Go to PDF" from any search result
+- **Hash-Based Routing**: Secure document identification
+- **Browser Integration**: View PDFs directly in browser
+- **Download Option**: Save documents locally
 
-### **4. User Authentication**
+---
 
-- Sign up for a new account to save preferences
-- Sign in to access personalized features
+## **API Documentation**
+
+### **Core Endpoints**
+
+```
+GET  /search                     # Traditional keyword search
+GET  /search/semantic           # Semantic vector search
+POST /search/rag               # AI question answering
+GET  /search/models            # Available AI models
+GET  /search/statistics        # Statistical data
+GET  /search/statistics/supervisors  # Supervisor list
+GET  /search/statistics/years  # Available years
+GET  /search/document/<hash>   # Document by hash code
+GET  /search/pdf/<hash>        # PDF redirect
+```
+
+### **Query Parameters**
+
+**Search Endpoints:**
+- `q`: Query string
+- `year`: Filter by year
+- `department`: Filter by department (cs/informatics)
+- `sort`: Sort order (relevance/asc/desc)
+- `phrase`: Enable phrase search (true/false)
+- `search_supervisors`: Search in supervisor names (true/false)
+- `limit`: Number of results (default: 50, max: 100)
+
+**RAG Endpoint (POST):**
+```json
+{
+  "query": "Your question here",
+  "model": "llama3.1:8b",
+  "top_k": 5,
+  "department": "cs"
+}
+```
 
 ---
 
 ## **Project Structure**
 
-### **Backend**
-
-- **API Endpoints**:
-
-  - `/search`: Traditional and phrase search
-  - `/search/semantic`: Vector-based semantic search
-  - `/search/rag`: Retrieval-augmented generation for question answering
-  - `/search/models`: Available AI models
-  - `/search/document/<hash_code>`: Get document by hash code
-  - `/search/pdf/<hash_code>`: Redirect to PDF storage
-
-- **Data Processing**:
-  - `scripts/pdf_processing/`: Extract metadata from PDFs
-  - `scripts/data_loading/`: Index documents in Elasticsearch
-  - `scripts/data_loading/update_indices_with_hash_codes.py`: Update hash codes
-
-### **Frontend**
-
-- **Pages**:
-
-  - Search (Home)
-  - Semantic Search
-  - Ask Questions (RAG)
-  - Sign Up/Sign In
-
-- **Components**:
-
-  - SearchBar
-  - ResultsList
-  - AbstractContent
-  - Sidebar
-
-- **Services**:
-  - elasticsearchService.js: Handle search requests
-  - ragService.js: RAG functionality and PDF access
+```
+ThesisFinder/
+├── backend/
+│   ├── app/
+│   │   ├── app.py                    # Flask application entry
+│   │   ├── routes.py                 # API endpoints
+│   │   ├── search_services.py        # Search services
+│   │   ├── ollama_rag_service.py     # RAG implementation
+│   │   └── statistics_service.py     # Statistics calculations
+│   ├── scripts/
+│   │   ├── pdf_processing/           # PDF metadata extraction
+│   │   ├── data_loading/            # Elasticsearch indexing
+│   │   └── category_extraction/     # Topic categorization
+│   ├── tests/
+│   │   ├── unit_tests/              # Unit tests
+│   │   └── integration_tests/       # Integration tests
+│   └── elasticsearch/               # Elasticsearch installation
+├── frontend/
+│   ├── src/
+│   │   ├── components/              # React components
+│   │   ├── pages/                   # Page components
+│   │   ├── services/                # API communication
+│   │   └── styles/                  # CSS styling
+│   └── public/                      # Static assets
+└── docs/                           # Documentation
+```
 
 ---
 
-## **PDF Integration System**
+## **Data Model**
 
-The application integrates with a Docker-based PDF storage service that uses hash codes to identify documents:
+### **Elasticsearch Indices**
 
-1. **Hash Code Generation**:
+**Base Document Structure:**
+```json
+{
+  "author": "String",
+  "supervisor": ["String"] | "String",
+  "year": Number,
+  "abstract": "String",
+  "keywords": ["String"],
+  "department": "cs" | "informatics",
+  "hash_code": Number
+}
+```
 
-   - Each PDF is assigned a unique 10-digit hash code
-   - Hash codes are generated from filenames using SHA-256 hashing
+**Semantic Index (Additional Field):**
+```json
+{
+  "abstract_vector": [Float] // 384-dimensional embedding
+}
+```
 
-2. **Data Flow**:
+### **Hash Code System**
+- **Generation**: SHA-256 hash of normalized filename → 10-digit integer
+- **Purpose**: Unique document identification across system components
+- **Usage**: Links Elasticsearch documents to PDF storage
 
-   - PDF processing scripts extract metadata and generate hash codes
-   - Hash codes are stored in cleaned JSON data files
-   - Elasticsearch indices are updated with hash codes
-   - Frontend uses hash codes to link to the PDF storage service
+---
 
-3. **Viewing PDFs**:
-   - When a user clicks "Go to PDF" or "View Document"
-   - The application uses the document's hash code to locate the file
-   - User is sent to the PDF storage service URL with the hash code
-   - PDF storage service serves the document based on hash code
+## **Performance Metrics**
+
+Based on evaluation with 122 test queries:
+
+| Metric | Lexical Search | Semantic Search |
+|--------|---------------|-----------------|
+| MRR | 0.893 | 0.906 |
+| Recall@1 | 0.852 | 0.843 |
+| Recall@3 | 0.921 | 0.965 |
+| Recall@5 | 0.947 | 0.982 |
+
+**Key Insights:**
+- Semantic search excels at finding relevant documents in top 3-5 results
+- Both methods achieve high accuracy (>85% first-result accuracy)
+- Hybrid approach recommended for optimal user experience
+
+---
+
+## **Testing**
+
+### **Running Tests**
+
+```bash
+# Unit tests
+pytest tests/unit_tests/ -v
+
+# Integration tests  
+python run_integration_tests.py
+
+# Specific test
+pytest tests/unit_tests/test_statistics_service.py::TestClass::test_method -v
+```
+
+### **Test Coverage**
+- **Unit Tests**: 23 tests covering core functionality
+- **Integration Tests**: 9 tests covering API endpoints
+- **Performance Tests**: Search accuracy evaluation
+- **Components Tested**: Statistics service, search functionality, data processing
 
 ---
 
 ## **Troubleshooting**
 
-### **Common PDF Integration Issues**
+### **Common Issues**
 
-- **PDFs not loading**: Ensure PDF storage service is running (`docker-compose up -d`)
-- **Wrong PDFs loading**: Run `update_indices_with_hash_codes.py` to fix hash codes
-- **Missing hash codes**: Check the cleaned data files and update the indices
+**Search Problems:**
+- **No results**: Check Elasticsearch status and index existence
+- **Slow performance**: Verify Elasticsearch memory allocation
+- **Incorrect results**: Re-run indexing scripts
 
-### **Elasticsearch Issues**
+**PDF Integration:**
+- **PDFs not loading**: Ensure Docker service is running (`docker-compose up -d`)
+- **Wrong PDFs**: Run `update_indices_with_hash_codes.py`
+- **Missing hash codes**: Check cleaned data files
 
-- **Connection errors**: Ensure Elasticsearch is running
-- **Missing indices**: Run the indexing scripts
-- **Search returns no results**: Check your search query and filters
+**AI/RAG Issues:**
+- **Ollama not working**: Verify service is running (`ollama list`)
+- **Gemini API errors**: Check API key configuration
+- **Slow responses**: Use smaller models (llama3.2:1b)
+- **Out of memory**: Reduce model size or batch size
 
-### **Ollama Issues**
+**Development Issues:**
+- **Port conflicts**: Change ports in configuration
+- **Environment variables**: Verify .env file setup
+- **Dependencies**: Update requirements.txt packages
 
-- **RAG not working**: Ensure Ollama is running and models are pulled
-- **Slow responses**: Try using smaller models like llama3.2:1b
-- **Out of memory errors**: Reduce model size or response length
+---
+
+## **Performance Optimization**
+
+### **Search Performance**
+- **Elasticsearch**: Allocated 4GB+ RAM for optimal performance
+- **Indexing**: Use bulk operations for large datasets
+- **Queries**: Implement query caching for frequent searches
+
+### **AI Performance**
+- **Local Models**: Use GPU acceleration if available
+- **Cloud Models**: Implement request batching for Gemini API
+- **Caching**: Cache embeddings and frequent responses
+
+---
+
+## **Security Considerations**
+
+- **API Keys**: Store in environment variables, never in code
+- **PDF Access**: Hash-based identification prevents direct file access
+- **Input Validation**: Sanitize all user inputs
+- **Rate Limiting**: Implement for API endpoints (recommended)
 
 ---
 
 ## **Future Enhancements**
 
-- Backend implementation for authentication system
-- Conversational memory for follow-up questions
-- User-specific search history and preferences
-- Additional filtering options
-- Custom model fine-tuning for specific domains
-- Enhanced PDF viewer integration
+### **Short-term**
+- User authentication and personalization
+- Advanced filtering options (topic categories)
+- Export functionality (citations, bibliographies)
+- Mobile app development
+
+### **Long-term**
+- Multi-language support
+- Collaborative features (notes, annotations)
+- Advanced analytics dashboard
+- Integration with academic databases
+- Custom model fine-tuning for domain-specific tasks
 
 ---
 
-Enjoy exploring academic research with multiple search paradigms! 📚🔍
+## **Citation**
+
+If you use ThesisFinder in your research, please cite:
+
+```
+Fazakas, N. (2025). ThesisFinder: Intelligent Search in Academic Theses. 
+University "Sapientia" of Cluj-Napoca, Faculty of Technical and Human Sciences, Târgu Mureș.
+```
+
+---
+
+## **Support**
+
+- **Repository**: [GitHub](https://github.com/FazakasNimrod/RAG-System-for-Theses)
+- **Issues**: Report bugs and request features via GitHub Issues
+- **Documentation**: Comprehensive thesis documentation available in repository
+
+---
+
+**Enjoy exploring academic research with multiple search paradigms!** 📚🔍🤖
