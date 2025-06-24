@@ -10,7 +10,7 @@
   border: 2px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 285px);
+  height: calc(100vh - 235px);
   overflow-y: auto;
   box-sizing: border-box;
 }
